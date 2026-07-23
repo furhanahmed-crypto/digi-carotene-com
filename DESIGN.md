@@ -2,7 +2,7 @@
 
 Architecture and visual guidance for the Digi Carotene agency website. Keep the system simple, consistent, and easy to extend.
 
-## Product shape
+## Product Shape
 
 This is a **marketing website**, not an application product.
 
@@ -14,55 +14,46 @@ app route (metadata + composition)
 ```
 
 - **Routes** own SEO metadata and page composition.
-- **Sections** own one job each: hero, proof, services overview, process, CTA, etc.
-- **Shared UI** stays small and reusable (buttons, nav, footer, motion helpers).
+- **Sections** own one job each: hero, platform overview, capabilities, case studies, etc.
+- **Shared UI** stays small and reusable (buttons, nav, footer, motion helpers, breadcrumb banner).
 - Prefer server-rendered content; hydrate only interactive or animated islands.
 
-## Visual direction
+## Visual Direction
 
 Primary inspiration:
-
-- **Framer** — premium composition, scroll presence, confident motion
-- **Resend** — dark, minimal, high-contrast marketing surfaces
-- **Jasper** — content clarity, banner restraint, modern minimal messaging (not Jasper’s product chrome)
+- **Framer** — premium composition, scroll presence, confident motion, glassmorphic floating menus
+- **Resend** — dark, minimal, high-contrast marketing surfaces, delicate line work
+- **Jasper** — content clarity, banner restraint, modern minimal messaging
 
 Brand test: the first viewport should still feel like Digi Carotene if the nav were removed.
 
-## Composition rules
+## Premium UI Conventions
 
-- One composition in the first viewport — not a dashboard.
-- Brand first: Digi Carotene / digicarotene.com as a hero-level signal.
-- Hero budget: brand, one headline, one short support line, one CTA group, one dominant visual plane.
-- One job per section: one purpose, one headline, usually one short supporting sentence.
-- Default: no cards. Use card-like containers only when they help interaction or scanning of real choices.
-- Prefer full-bleed or edge-to-edge hero imagery over inset media cards.
-- Reduce clutter: avoid pill clusters, stat strips, icon rows, and competing promo blocks in the hero.
+### 1. Translucent Glassmorphism (dropdowns & headers)
+To maintain alignment with modern visual trends, navigation elements, popups, and dialogs should avoid muddy solid colors.
+- Use `backdrop-blur-lg` and translucent backgrounds (e.g., `bg-background/80` or `bg-card/50`).
+- Borders should be subtle and translucent (e.g., `border border-border/50`).
+- Hover states on buttons or dropdown links should use subtle scale translations (`hover:translate-x-0.5`) and transparent overlays (e.g., `hover:bg-foreground/[0.04]`).
+
+### 2. Custom Inline SVGs over Heavy Images
+Instead of loading static rasterized images (like `.png` or `.jpeg`), prefer hand-coded, clean, reactive inline SVG vectors.
+- **Performance**: High lighthouse scores, absolute minimal asset footprint.
+- **Retina Scaling**: Perfect vector crispness across all screen densities.
+- **State Reactivity**: SVGs can animate or translate their child components in response to React state changes or group hovers. Use Tailwind's transition properties on SVG `<g>`, `<path>`, or `<circle>` elements.
+
+### 3. Glow & Parallax Depth
+- Use radial glows on hover: absolute background wrappers (e.g., `bg-gradient-to-b from-primary/5 via-transparent to-transparent`) that activate on parent hover.
+- Keep glows restrained and color-matched to avoid a childish look.
 
 ## Motion
 
 - Use motion for hierarchy and presence (scroll reveals, restrained parallax, CTA emphasis).
-- Prefer 2–3 intentional motions on key views over many small effects.
-- Keep scroll effects smooth and performance-friendly; avoid layout thrash and heavy continuous filters.
+- Integrate **Lenis** as the smooth scrolling foundation with a lerp value between `0.05` and `0.1` for fluid, buttery-smooth page flows.
+- Keep scroll effects smooth and performance-friendly; avoid layout thrash.
 - Honor `prefers-reduced-motion`.
 
-## UI system
-
-- Tailwind + shadcn/ui as the base system (`components/ui/`).
-- Define a clear color direction with CSS variables in `app/globals.css`.
-- Avoid default AI-looking themes (generic purple gradients, cream + terracotta clichés, broadsheet newspaper layouts).
-- Use expressive typography that fits a modern agency brand; avoid default system stacks for display type.
-- Keep spacing, radius, borders, and CTA styles consistent across pages.
-- `lucide-react` for icons when icons are actually needed.
-
-## Content tone
-
-- Clear, confident agency copy focused on outcomes in SEO, AEO, and GEO.
-- Short banners and section intros; let visuals and hierarchy do work.
-- Services (digital, offline, PR) should be introduced as structured narratives, not encyclopedias dumped into shared constants.
-
-## Quality bar
-
-- Small files, obvious patterns, precise names.
-- Add abstractions only when reuse is real.
-- Optimize for Core Web Vitals: lean client JS, stable layouts, optimized media.
-- If a pattern repeats, document it here or in `README.md` instead of re-explaining it every time.
+## Page Header / Breadcrumb Banner
+All secondary pages should compose a consistent, premium Page Header ("Breadcrumb Banner") featuring:
+- A soft, color-matched radial glow.
+- Clean typography pairing (`font-lustria` for headings, `font-sans` for metadata).
+- Reusable, simple, minimalist layout.

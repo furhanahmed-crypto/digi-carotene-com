@@ -3,6 +3,7 @@ import { Geist_Mono, Inter, Lustria } from "next/font/google"
 
 import "./globals.css"
 import { Header } from "@/components/home/Header"
+import { Footer } from "@/components/shared/Footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider"
 import { cn } from "@/lib/utils"
@@ -80,6 +81,7 @@ export default function RootLayout({
           <SmoothScrollProvider>
             <Header />
             {children}
+            <Footer />
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>
