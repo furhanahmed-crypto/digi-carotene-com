@@ -4,6 +4,7 @@ import { Geist_Mono, Inter, Lustria } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/home/Header"
 import { ThemeProvider } from "@/components/theme-provider"
+import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider"
 import { cn } from "@/lib/utils"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
@@ -76,8 +77,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
+          <SmoothScrollProvider>
+            <Header />
+            {children}
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>
