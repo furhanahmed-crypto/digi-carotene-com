@@ -29,11 +29,11 @@ export function WhyChooseUs() {
   }
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden border-y border-border/50 bg-muted/5">
+    <section className="relative py-16 md:py-20 overflow-hidden border-y border-border/50 bg-muted/5">
       <div className="mx-auto max-w-6xl px-6">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 md:mb-20">
+        <div className="max-w-3xl mb-10 md:mb-12">
           <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary mb-3 block">
             Why Brands Choose Digi Carotene
           </span>

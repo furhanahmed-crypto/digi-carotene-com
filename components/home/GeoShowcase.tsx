@@ -4,7 +4,7 @@ import { CheckCircle2, ChevronRight, MessageSquare, ShieldCheck, Zap } from "luc
 
 export function GeoShowcase() {
   return (
-    <section className="relative py-24 md:py-32 border-y border-border/50 bg-muted/10">
+    <section className="relative py-16 md:py-20 border-y border-border/50 bg-muted/10">
       <div className="absolute inset-y-0 right-0 -z-10 w-1/3 bg-[radial-gradient(circle_at_right,rgba(255,80,0,0.04),transparent_50%)]" />
 
       <div className="mx-auto max-w-6xl px-6">

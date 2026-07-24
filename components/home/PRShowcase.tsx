@@ -4,7 +4,7 @@ import { Award, Globe, Newspaper, Radio } from "lucide-react"
 
 export function PRShowcase() {
   return (
-    <section className="relative py-24 md:py-32 border-t border-border/50 bg-muted/5">
+    <section className="relative py-16 md:py-20 border-t border-border/50 bg-muted/5">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           

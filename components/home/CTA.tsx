@@ -8,7 +8,7 @@ import { contactHref } from "@/constants/home/navigation"
 
 export function CTA() {
   return (
-    <section className="relative overflow-hidden py-24 md:py-32 border-t border-border/50">
+    <section className="relative overflow-hidden py-16 md:py-20 border-t border-border/50">
       {/* Background gradients */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom,rgba(255,80,0,0.06),transparent_60%)]" />
       <div className="absolute bottom-0 left-1/2 -z-10 h-64 w-96 -translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />

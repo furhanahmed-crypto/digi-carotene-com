@@ -3,8 +3,7 @@
 import * as React from "react"
 import { ArrowRight, Sparkles } from "lucide-react"
 import Link from "next/link"
-
-import { contactHref } from "@/constants/home/navigation"
+import { useLenis } from "lenis/react"
 
 // Definition of each service with its custom-coded premium vector visual
 const digitalServices = [
@@ -302,76 +301,138 @@ const digitalServices = [
 
 export function ServicesGrid() {
   const [hoveredCard, setHoveredCard] = React.useState<number | null>(null)
+  const sectionRef = React.useRef<HTMLElement>(null)
+  const trackRef = React.useRef<HTMLDivElement>(null)
+  const progressBarRef = React.useRef<HTMLDivElement>(null)
+  const maxTranslateRef = React.useRef(0)
+  const [scrollHeight, setScrollHeight] = React.useState("200vh")
+
+  const measureTrack = React.useCallback(() => {
+    const track = trackRef.current
+    if (!track) return
+
+    const overflow = Math.max(track.scrollWidth - window.innerWidth, 0)
+    maxTranslateRef.current = overflow
+    setScrollHeight(`${window.innerHeight + overflow}px`)
+  }, [])
+
+  const updateProgress = React.useCallback(() => {
+    const section = sectionRef.current
+    const track = trackRef.current
+    const bar = progressBarRef.current
+    if (!section || !track) return
+
+    const total = section.offsetHeight - window.innerHeight
+    const progress =
+      total <= 0
+        ? 0
+        : Math.min(Math.max(-section.getBoundingClientRect().top / total, 0), 1)
+
+    track.style.transform = `translate3d(${-(maxTranslateRef.current * progress)}px, 0, 0)`
+
+    if (bar) {
+      bar.style.width = `${progress * 100}%`
+    }
+  }, [])
+
+  React.useEffect(() => {
+    measureTrack()
+    updateProgress()
+
+    const onResize = () => {
+      measureTrack()
+      updateProgress()
+    }
+
+    window.addEventListener("resize", onResize)
+    return () => window.removeEventListener("resize", onResize)
+  }, [measureTrack, updateProgress])
+
+  // Sync with Lenis RAF so progress updates during the smooth lerp, not only when it ends
+  useLenis(() => {
+    updateProgress()
+  })
 
   return (
-    <section className="py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary mb-3 block">
+    <section
+      ref={sectionRef}
+      className="relative"
+      style={{ height: scrollHeight }}
+    >
+      <div className="sticky top-0 flex h-svh flex-col justify-center overflow-hidden py-10 md:py-12">
+        <div className="mx-auto mb-8 max-w-6xl px-6 text-center md:mb-10">
+          <span className="mb-2 block text-xs font-mono font-semibold uppercase tracking-wider text-primary">
             Digital Capabilities
           </span>
-          <h2 className="font-lustria text-3xl md:text-5xl font-normal tracking-tight mb-4 bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text text-transparent">
+          <h2 className="mb-3 bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text font-lustria text-3xl font-normal tracking-tight text-transparent md:text-4xl">
             Unified Digital Marketing Ecosystem
           </h2>
-          <p className="text-muted-foreground font-sans font-light text-sm md:text-base leading-relaxed">
-            We operate at the intersection of technical precision and artistic brand craft, scaling your presence across every digital touchpoint.
+          <p className="mx-auto max-w-2xl font-sans text-sm font-light leading-relaxed text-muted-foreground md:text-base">
+            Scroll to explore — vertical motion drives these cards horizontally across the full capability set.
           </p>
         </div>
 
-        {/* 3x3 Premium Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {digitalServices.map((service, index) => {
-            const isHovered = hoveredCard === index
-            return (
-              <div
-                key={service.title}
-                className={`group relative rounded-3xl border border-border bg-card/20 overflow-hidden flex flex-col justify-between h-[420px] transition-all duration-500 hover:shadow-xl ${service.themeColor}`}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                {/* Radial Glow */}
-                <div className={`absolute inset-0 bg-gradient-to-b ${service.bgGradient} via-transparent to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500`} />
+        <div className="relative w-full overflow-hidden">
+          <div
+            ref={trackRef}
+            className="flex w-max gap-5 px-6 will-change-transform md:gap-6 md:px-10"
+          >
+            {digitalServices.map((service, index) => {
+              const isHovered = hoveredCard === index
+              return (
+                <div
+                  key={service.title}
+                  className={`group relative flex h-[380px] w-[300px] shrink-0 flex-col justify-between overflow-hidden rounded-3xl border border-border bg-card/20 transition-all duration-500 hover:shadow-xl md:h-[400px] md:w-[340px] ${service.themeColor}`}
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-b ${service.bgGradient} via-transparent to-transparent opacity-40 transition-opacity duration-500 group-hover:opacity-100`}
+                  />
 
-                {/* Inline SVG Vector Representation Pane */}
-                <div className="relative h-44 w-full border-b border-border/40 bg-muted/10 overflow-hidden">
-                  {/* Subtle Grid overlay */}
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:12px_12px]" />
-                  {service.renderVisual(isHovered)}
-                </div>
-
-                {/* Content & Details Section */}
-                <div className="p-6 flex flex-col justify-between flex-1">
-                  <div>
-                    {/* Header with Sparkle indicator */}
-                    <div className="flex items-center gap-1.5 mb-2">
-                      <Sparkles className={`size-3.5 ${service.accentText} opacity-80 group-hover:animate-pulse`} />
-                      <h3 className="font-lustria text-lg font-medium text-foreground group-hover:text-primary transition-colors">
-                        {service.title}
-                      </h3>
-                    </div>
-
-                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed font-sans font-light">
-                      {service.description}
-                    </p>
+                  <div className="relative h-40 w-full overflow-hidden border-b border-border/40 bg-muted/10 md:h-44">
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:12px_12px]" />
+                    {service.renderVisual(isHovered)}
                   </div>
 
-                  {/* Navigation Trigger link */}
-                  <Link
-                    href={service.href}
-                    className={`inline-flex items-center gap-1.5 text-xs font-mono font-semibold ${service.accentText} group/link mt-4`}
-                  >
-                    View Capability Architecture
-                    <ArrowRight className="size-3.5 transition-transform group-hover/link:translate-x-1" />
-                  </Link>
-                </div>
+                  <div className="relative z-10 flex flex-1 flex-col justify-between p-5 md:p-6">
+                    <div>
+                      <div className="mb-2 flex items-center gap-1.5">
+                        <Sparkles
+                          className={`size-3.5 ${service.accentText} opacity-80 group-hover:animate-pulse`}
+                        />
+                        <h3 className="font-lustria text-lg font-medium text-foreground transition-colors group-hover:text-primary">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="font-sans text-xs font-light leading-relaxed text-muted-foreground md:text-sm">
+                        {service.description}
+                      </p>
+                    </div>
 
-                {/* Double Border overlay for depth */}
-                <div className="absolute inset-px -z-10 rounded-3xl bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity blur-sm" />
-              </div>
-            )
-          })}
+                    <Link
+                      href={service.href}
+                      className={`mt-4 inline-flex items-center gap-1.5 text-xs font-mono font-semibold ${service.accentText} group/link`}
+                    >
+                      View Capability Architecture
+                      <ArrowRight className="size-3.5 transition-transform group-hover/link:translate-x-1" />
+                    </Link>
+                  </div>
+
+                  <div className="absolute inset-px -z-10 rounded-3xl bg-gradient-to-tr from-primary/5 to-transparent opacity-0 blur-sm transition-opacity group-hover:opacity-100" />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="mx-auto mt-8 w-full max-w-xs px-6">
+          <div className="h-0.5 overflow-hidden rounded-full bg-border/60">
+            <div
+              ref={progressBarRef}
+              className="h-full w-0 rounded-full bg-primary"
+            />
+          </div>
         </div>
       </div>
     </section>

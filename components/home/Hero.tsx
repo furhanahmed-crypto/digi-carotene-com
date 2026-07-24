@@ -8,7 +8,7 @@ import { contactHref } from "@/constants/home/navigation"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+    <section className="relative overflow-hidden pt-28 pb-16 md:pt-32 md:pb-20">
       {/* Background radial glow */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,80,0,0.08),transparent_50%)]" />
       <div className="absolute top-20 left-1/2 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />

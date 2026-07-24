@@ -10,11 +10,11 @@ export function AgencyPlatform() {
   const [hoveredCard, setHoveredCard] = React.useState<number | null>(null)
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden border-t border-border/50">
+    <section className="relative py-16 md:py-20 overflow-hidden border-t border-border/50">
       <div className="mx-auto max-w-6xl px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary mb-3 block">
             The Digi Carotene Platform
           </span>

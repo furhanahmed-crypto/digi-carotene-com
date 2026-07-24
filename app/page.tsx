@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero"
+import { ClientsMarquee } from "@/components/home/ClientsMarquee"
 import { GeoShowcase } from "@/components/home/GeoShowcase"
 import { AgencyPlatform } from "@/components/home/AgencyPlatform"
 import { ServicesGrid } from "@/components/home/ServicesGrid"
@@ -9,9 +10,9 @@ import { CTA } from "@/components/home/CTA"
 
 export default function Page() {
   return (
-    <main className="relative flex flex-col min-h-svh">
-      {/* Page Sections */}
+    <main className="relative flex min-h-svh flex-col">
       <Hero />
+      <ClientsMarquee />
       <GeoShowcase />
       <AgencyPlatform />
       <ServicesGrid />

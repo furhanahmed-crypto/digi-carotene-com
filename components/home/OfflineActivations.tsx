@@ -250,7 +250,7 @@ export function OfflineActivations() {
   const [hoveredCard, setHoveredCard] = React.useState<number | null>(null)
 
   return (
-    <section className="py-24 md:py-32 border-t border-border/50 bg-[radial-gradient(circle_at_bottom,rgba(255,80,0,0.03),transparent_40%)]">
+    <section className="py-16 md:py-20 border-t border-border/50 bg-[radial-gradient(circle_at_bottom,rgba(255,80,0,0.03),transparent_40%)]">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
