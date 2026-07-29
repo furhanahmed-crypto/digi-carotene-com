@@ -34,7 +34,9 @@ export function Header() {
           "mx-auto w-full max-w-6xl rounded-2xl transition-all duration-300",
           isScrolled
             ? "max-w-5xl border border-border bg-card/80 px-4 py-3 shadow-sm backdrop-blur-md"
-            : "px-6 py-4"
+            : isMenuOpen
+              ? "border border-border bg-card/90 px-6 py-4 shadow-sm backdrop-blur-md"
+              : "px-6 py-4"
         )}
       >
         <div className="flex items-center justify-between gap-4">
