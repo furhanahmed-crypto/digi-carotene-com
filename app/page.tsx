@@ -1,5 +1,5 @@
 import { Hero } from "@/components/home/Hero"
-import { CredibilityStrip } from "@/components/home/CredibilityStrip"
+import { ClientsMarquee } from "@/components/home/ClientsMarquee"
 import { Problem } from "@/components/home/Problem"
 import { Capabilities } from "@/components/home/Capabilities"
 import { Industries } from "@/components/home/Industries"
@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <main className="relative flex min-h-svh flex-col">
       <Hero />
-      <CredibilityStrip />
+      <ClientsMarquee />
       <Problem />
       <Capabilities />
       <Industries />

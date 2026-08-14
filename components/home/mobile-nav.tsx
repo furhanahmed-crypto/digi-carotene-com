@@ -186,7 +186,7 @@ export function MobileNav({
         open ? "mt-4 max-h-[70vh] opacity-100" : "max-h-0 opacity-0"
       )}
     >
-      <div className="flex flex-col gap-1 border-t border-border py-4">
+      <div className="flex flex-col gap-1 border-t border-border px-4 py-4">
         {mainNav.map((item) => (
           <MobileEntry key={item.title} item={item} onNavigate={onClose} />
         ))}

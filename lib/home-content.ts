@@ -1,166 +1,256 @@
 export const homeContent = {
   hero: {
-    eyebrow: "Digital marketing & branding · Hyderabad",
-    headlineBefore: "You've outgrown random marketing. You need ",
-    headlineAccent: "one team.",
-    body: "Digi Carotene is the marketing partner for restaurants, clinics, schools, salons, and growing brands that are done stitching together freelancers and vendors. Strategy, creative, performance, and execution — owned by one accountable team.",
-    primaryCta: { label: "Start a conversation", href: "/contact" },
-    secondaryCta: { label: "How we work", href: "#approach" },
+    eyebrow: "The Optimization Agency for the AI Era",
+    headlineBefore: "Win the New Front Door of ",
+    headlineAccent: "Search & Discovery",
+    body: "We help premium brands rank on Google, get cited by AI answer engines like Perplexity, and dominate local markets with unforgettable real-world marketing activations.",
+    primaryCta: { label: "Get Your GEO Score", href: "/contact" },
+    secondaryCta: { label: "Explore Our Services", href: "/services" },
   },
   capabilities: {
     eyebrow: "What we do",
-    headline:
-      "Strategy, then creative, then performance, then the work of actually running it.",
-    body: "Four pillars. One plan. Not eleven disconnected services competing for your attention.",
+    headline: "Unified digital marketing, AI search, and real-world activations.",
+    body: "Digi Carotene is the engine for forward-thinking brand discovery — bridging SEO, AEO, and GEO with digital, offline, and PR execution.",
     pillars: [
       {
-        id: "strategy",
+        id: "discovery",
         number: "01",
-        title: "Strategy",
+        title: "Search & AI Discovery",
         summary:
-          "Diagnose how the business actually grows. Then choose the few moves that will matter this year.",
-        items: ["Marketing strategy", "Content strategy"],
-      },
-      {
-        id: "creative",
-        number: "02",
-        title: "Brand & Creative",
-        summary:
-          "The look, the language, the assets — made to work in the market, not just in a deck.",
-        items: ["Branding", "Creative design", "Video production", "Content"],
-      },
-      {
-        id: "performance",
-        number: "03",
-        title: "Performance",
-        summary:
-          "Spend with a hypothesis. Measure against the business, not against a vanity dashboard.",
+          "Traditional SEO gets you blue links. AEO and GEO make sure answer engines cite you.",
         items: [
-          "Social media marketing",
-          "Meta Ads",
-          "Google Ads",
-          "Lead generation",
+          {
+            label: "Search Engine Optimization",
+            body: "Traditional and conversational organic search positioning that keeps your brand authority first on Google.",
+          },
+          {
+            label: "AEO (Answer Engine Optimization)",
+            body: "Structuring core brand content so LLM-based assistants parse, understand, and return your brand as the definitive recommendation.",
+          },
+          {
+            label: "GEO (Generative Engine Optimization)",
+            body: "Maximizing citation share in generative outputs. Semantic nodes, authoritative footprints, and co-occurrences so ChatGPT, Gemini, Perplexity, and SearchGPT quote you.",
+          },
+          {
+            label: "Brand-governed authority",
+            body: "Align messaging across public indexes so AI answer engines present your value proposition accurately and consistently.",
+          },
         ],
       },
       {
-        id: "presence",
-        number: "04",
-        title: "Presence",
+        id: "digital",
+        number: "02",
+        title: "Digital Marketing",
         summary:
-          "The place people land, and the local signals that get them there.",
-        items: ["Website development", "Local marketing"],
+          "A unified digital ecosystem — performance, content, social, and the site — built to feed search and conversion.",
+        items: [
+          {
+            label: "Performance Marketing",
+            body: "Highly targeted, high-intent paid search and social campaigns that convert impressions into pipeline and profit.",
+          },
+          {
+            label: "Growth Marketing",
+            body: "Data-driven, full-funnel experimentation and customer acquisition strategies that scale brand presence and revenue.",
+          },
+          {
+            label: "Content Marketing",
+            body: "On-brand, rich copy and storytelling assets designed to answer audience queries and fuel SEO and AEO pipelines.",
+          },
+          {
+            label: "Social Media Marketing",
+            body: "Community building, brand narrative distribution, and platform-specific content that drives engagement.",
+          },
+          {
+            label: "Web Design & Development",
+            body: "Bespoke, fast websites with Framer-level motion and architectures built for SEO and AEO.",
+          },
+          {
+            label: "Personal Branding",
+            body: "Positioning founders, executives, and leaders as industry authorities through guided storytelling and profile optimization.",
+          },
+        ],
+      },
+      {
+        id: "offline",
+        number: "03",
+        title: "Offline & Experiential",
+        summary:
+          "Digital does not live in a vacuum. Premium activations turn local attention into measurable brand footprint.",
+        items: [
+          {
+            label: "Mall activations",
+            body: "Engaging high-intent retail crowds with interactive popups, product sensory booths, and direct-to-consumer experiences.",
+          },
+          {
+            label: "Campus activations",
+            body: "Connect with Gen-Z and student demographics through festivals, bootcamps, and brand sponsorships.",
+          },
+          {
+            label: "Theatre & metro branding",
+            body: "High-attention cinema audiences and high-frequency urban transit — foyer branding, wraps, and digital takeovers.",
+          },
+          {
+            label: "Corporate events & popups",
+            body: "Product launches, summits, and temporary retail spaces built for urgency, storytelling, and media hype.",
+          },
+          {
+            label: "Influencer campaigns",
+            body: "Bridging online and offline by aligning local influencers to show up and broadcast physical events.",
+          },
+        ],
+      },
+      {
+        id: "pr",
+        number: "04",
+        title: "PR & Brand Communications",
+        summary:
+          "Narrative architectures that demand attention — and serve as high-quality semantic sources for answer engines.",
+        items: [
+          {
+            label: "Media placements",
+            body: "High-authority press distribution that also functions as citation data for conversational search.",
+          },
+          {
+            label: "Executive narrative",
+            body: "Founder and leadership stories mapped so coverage, profiles, and AI summaries stay on-message.",
+          },
+          {
+            label: "Crisis defense",
+            body: "Prepared language, disclosures, and response paths so the public record stays governed.",
+          },
+          {
+            label: "Brand voice compliance",
+            body: "Unified values, voice, and guidelines across web indexes, social, and AI prompts.",
+          },
+        ],
       },
     ],
   },
+  problem: {
+    eyebrow: "Next-gen discovery",
+    headline: "Generative search is here. Is your brand being cited?",
+    body: "Traditional SEO gets you blue links. Conversational AI search engines like ChatGPT, Perplexity, Gemini, and SearchGPT answer user queries directly. If your brand voice isn't optimized for conversational references, you don't exist in the new front door of discovery.",
+    closer:
+      "Most brands still treat marketing as a pile of channels. Search, social, events, and PR never talk to each other — so neither do Google, answer engines, or the people standing in a mall.",
+    mark: "The antidote",
+    markBody:
+      "AEO structures your content for answer engines. GEO maximizes citation share. Offline activations and PR feed the same brand story into the real world and the public record.",
+  },
   industries: {
-    eyebrow: "Industries",
-    headline: "We get this business. Not a generic version of it.",
-    body: "Same craft, different realities. A restaurant does not need a clinic's marketing, and a school does not need a salon's.",
+    eyebrow: "Who we work with",
+    headline: "Premium brands that need to be found — online, in AI, and in the room.",
+    body: "Same craft, different arenas. We specialize in discovery: search rankings, conversational citations, and unforgettable local presence.",
     items: [
       {
-        id: "restaurants-hospitality",
-        title: "Restaurants & Hospitality",
-        body: "Footfall, delivery, reviews, and a brand that feels as considered as the room. Menus, offers, and ads talking to the same guest.",
+        id: "consumer-retail",
+        title: "Consumer & Retail Brands",
+        body: "Mall activations, popups, and performance media that turn footfall into pipeline — with a brand that still looks considered.",
       },
       {
-        id: "healthcare",
-        title: "Healthcare",
-        body: "Trust first. Then appointments. Local search, clear messaging, and campaigns that don't make a clinic sound like a startup.",
+        id: "local-market",
+        title: "Local Market Leaders",
+        body: "Maps, neighbourhood visibility, residential activations, and search that wins the area you actually serve.",
       },
       {
-        id: "education",
-        title: "Education",
-        body: "Admissions seasons are real deadlines. Reputation, parent communication, and a presence that matches the institution — not a template.",
+        id: "founder-led",
+        title: "Founder-Led Companies",
+        body: "Personal branding, executive narrative, and PR so the person and the company show up as one authority.",
       },
       {
-        id: "salons-beauty",
-        title: "Salons & Beauty",
-        body: "The work is visual. The problem is usually bookings and retention. Brand, content, and local ads that fill the chair.",
+        id: "campus-genz",
+        title: "Campus & Youth Audiences",
+        body: "Festivals, sponsorships, and social that meet Gen-Z where they already gather — then route intent into digital workflows.",
       },
       {
-        id: "local-service",
-        title: "Local & Service Businesses",
-        body: "Leads, maps, and a reputation you can actually manage. Less posting for the sake of it. More calls and enquiries.",
+        id: "corporate",
+        title: "Corporate & B2B",
+        body: "Launches, summits, thought leadership, and GEO so the brand is the answer when buyers ask an AI.",
       },
       {
         id: "growing-brands",
-        title: "Growing Brands",
-        body: "You've outgrown DIY. Identity, campaigns, and performance under one plan — so the next stage isn't a jumble of vendors.",
+        title: "Growing Premium Brands",
+        body: "You've outgrown random acts of marketing. SEO, AEO, GEO, digital, offline, and PR under one execution platform.",
       },
     ],
   },
   work: {
     eyebrow: "Selected work",
-    headline: "Real case studies will live here. Not invented ones.",
-    body: "Until names, outcomes, and assets are confirmed, this section stays honest. Short and empty beats long and padded.",
+    headline: "Case studies that prove discovery — not invented dashboards.",
+    body: "Until names, outcomes, and assets are confirmed, this section stays honest. Real GEO, AEO, and activation work will live here.",
     placeholders: [
       {
         id: "case-1",
         label: "[[Client / project name — to confirm]]",
-        meta: "[[Industry — to confirm]]",
-        summary: "[[Outcome in one sentence — to confirm]]",
+        meta: "[[GEO / AEO / search — to confirm]]",
+        summary: "[[Citation or ranking outcome in one sentence — to confirm]]",
       },
       {
         id: "case-2",
         label: "[[Client / project name — to confirm]]",
-        meta: "[[Industry — to confirm]]",
-        summary: "[[Outcome in one sentence — to confirm]]",
+        meta: "[[Offline activation — to confirm]]",
+        summary: "[[Footfall-to-pipeline outcome in one sentence — to confirm]]",
       },
       {
         id: "case-3",
         label: "[[Client / project name — to confirm]]",
-        meta: "[[Industry — to confirm]]",
-        summary: "[[Outcome in one sentence — to confirm]]",
+        meta: "[[PR & brand — to confirm]]",
+        summary: "[[Narrative or media outcome in one sentence — to confirm]]",
       },
     ],
   },
   approach: {
     eyebrow: "How we work",
-    headline: "A process that starts with the business, not a channel menu.",
+    headline: "The execution platform for modern marketing.",
     steps: [
       {
         number: "01",
-        title: "Listen to the business",
-        body: "How you make money, who you serve, and where marketing is leaking. We start there — not with a package.",
+        title: "Diagnose discovery",
+        body: "We scan how you show up on Google and in answer engines — citation gaps, content structure, and local presence — then set the GEO and AEO brief.",
       },
       {
         number: "02",
-        title: "Set the strategy",
-        body: "One plan. Priorities, audiences, offers, and what we will not do. This is what keeps later work honest.",
+        title: "Unify the digital ecosystem",
+        body: "Performance, content, social, and the website are built to one plan so search, ads, and brand voice compound instead of competing.",
       },
       {
         number: "03",
-        title: "Make the work",
-        body: "Brand, content, website, campaigns — built to the plan, by one team, so the pieces fit.",
+        title: "Activate the real world",
+        body: "Mall, campus, transit, and events with zero-leak paths from physical footprint into digital workflows and conversational follow-up.",
       },
       {
         number: "04",
-        title: "Run and tighten",
-        body: "Performance isn't a launch. We watch what the market does and adjust. You get one account, not four status emails.",
+        title: "Govern the narrative",
+        body: "PR, brand voice, and compliance so every index — web, social, and AI — tells the same story. Then we tighten what the market actually does.",
       },
     ],
   },
   whyUs: {
-    eyebrow: "Why Digi Carotene",
-    headline:
-      "Not another agency that 'does social.' A partner that owns the system.",
+    eyebrow: "Why brands choose Digi Carotene",
+    headline: "Built for scale. Backed by advanced optimization.",
     points: [
       {
-        title: "One accountable team",
-        body: "You shouldn't have to be the project manager between a designer, an ads person, and a website vendor.",
+        title: "Conversational citation score",
+        body: "Track and raise your citation footprint on Perplexity, Gemini, ChatGPT, and SearchGPT. Make sure your brand is the answer the engine returns.",
       },
       {
-        title: "We talk about your business, not our channels",
-        body: "A restaurant is not a clinic. The work starts with that difference.",
+        title: "Offline experiential pipelines",
+        body: "Synchronize mall, theatre, and campus footfall directly into digital workflows. Real-world presence linked to online conversion.",
       },
       {
-        title: "Strategy before spend",
-        body: "Ads without a plan are expensive noise. We'd rather do fewer things that compound.",
+        title: "Enterprise brand voice compliance",
+        body: "Unified values, voice, and disclosures across search engines, social networks, and artificial intelligence indexes.",
       },
       {
-        title: "Hyderabad, on purpose",
-        body: "Local businesses, local competition, local search. We don't treat this market as a generic India brief.",
+        title: "One execution platform",
+        body: "We engineer technical precision and brand craft together — SEO, AEO, GEO, digital, offline, and PR — so marketing strategy becomes execution.",
       },
     ],
+  },
+  cta: {
+    eyebrow: "Complimentary audit",
+    headline: "How visible is your brand in AI search results?",
+    body: "Get a complimentary GEO & AEO diagnostic scan. We'll analyze your conversational citation rates, identify content gaps, and map your offline activation potential.",
+    primary: { label: "Get Your Free Scan", href: "/contact" },
+    secondary: { label: "Talk with our Founders", href: "/contact" },
   },
 } as const

@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Sparkles, ArrowUpRight } from "lucide-react"
 
 import { contactHref, mainNav } from "@/constants/home/navigation"
+import { SiteLogo } from "@/components/shared/site-logo"
 
 const servicesNav = mainNav.find((item) => item.type === "groups")
 const serviceGroups =
@@ -31,10 +32,8 @@ export function Footer() {
           
           {/* Column 1: Logo & Agency Bio (Lg: 4 Cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="group inline-flex items-center gap-2">
-              <span className="font-lustria text-xl tracking-tight text-foreground transition-colors group-hover:text-primary">
-                Digi Carotene
-              </span>
+            <Link href="/" className="group inline-flex items-center" aria-label="Digi Carotene home">
+              <SiteLogo heightClassName="h-16" />
             </Link>
             <p className="text-xs md:text-sm text-muted-foreground font-sans font-light leading-relaxed max-w-sm">
               We engineer the intersection of technical precision and artistic brand craft. Bridging AI conversational citations (SEO/AEO/GEO) with sensory real-world offline experiential activations.

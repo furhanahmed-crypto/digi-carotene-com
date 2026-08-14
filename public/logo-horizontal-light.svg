@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 40" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Digi Carotene</title>
+  <polygon points="0,6 22,6 28,34 0,34" fill="#E2571F"/>
+  <rect x="6" y="13" width="3" height="14" fill="#F7F4EE"/>
+  <text
+    x="38"
+    y="19"
+    fill="#1C1A17"
+    font-family="ui-sans-serif, system-ui, Inter, Helvetica, Arial, sans-serif"
+    font-size="8"
+    font-weight="600"
+    letter-spacing="2.4"
+  >DIGI</text>
+  <text
+    x="38"
+    y="33"
+    fill="#1C1A17"
+    font-family="ui-serif, Georgia, 'Times New Roman', serif"
+    font-size="16"
+    font-weight="500"
+    letter-spacing="-0.3"
+  >Carotene</text>
+</svg>

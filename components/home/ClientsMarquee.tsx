@@ -141,7 +141,7 @@ function MarqueeRow() {
 
 export function ClientsMarquee() {
   return (
-    <section className="relative overflow-hidden border-y border-border/50 bg-muted/10 py-6">
+    <section className="relative overflow-hidden border-y border-border bg-muted/10 py-6">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent md:w-28" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent md:w-28" />
 
