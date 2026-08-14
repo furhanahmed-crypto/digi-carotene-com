@@ -1,24 +1,24 @@
 import { Hero } from "@/components/home/Hero"
-import { ClientsMarquee } from "@/components/home/ClientsMarquee"
-import { GeoShowcase } from "@/components/home/GeoShowcase"
-import { AgencyPlatform } from "@/components/home/AgencyPlatform"
-import { ServicesGrid } from "@/components/home/ServicesGrid"
-import { OfflineActivations } from "@/components/home/OfflineActivations"
-import { PRShowcase } from "@/components/home/PRShowcase"
-import { WhyChooseUs } from "@/components/home/WhyChooseUs"
+import { CredibilityStrip } from "@/components/home/CredibilityStrip"
+import { Problem } from "@/components/home/Problem"
+import { Capabilities } from "@/components/home/Capabilities"
+import { Industries } from "@/components/home/Industries"
+import { Work } from "@/components/home/Work"
+import { Approach } from "@/components/home/Approach"
+import { WhyUs } from "@/components/home/WhyUs"
 import { CTA } from "@/components/home/CTA"
 
 export default function Page() {
   return (
     <main className="relative flex min-h-svh flex-col">
       <Hero />
-      <ClientsMarquee />
-      <GeoShowcase />
-      <AgencyPlatform />
-      <ServicesGrid />
-      <OfflineActivations />
-      <PRShowcase />
-      <WhyChooseUs />
+      <CredibilityStrip />
+      <Problem />
+      <Capabilities />
+      <Industries />
+      <Work />
+      <Approach />
+      <WhyUs />
       <CTA />
     </main>
   )

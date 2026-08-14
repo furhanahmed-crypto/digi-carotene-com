@@ -1,0 +1,88 @@
+digi-carotene-build-prompt
+Master Build Prompt — Digi Carotene Website
+Use this as a single, self-contained prompt (for Claude, another AI coding assistant, or a human developer) to build the Digi Carotene website. It's the distilled output of a full research → strategy → design system → IA → copy process — everything below is a decision already made, not a question to re-litigate. Feed it to a fresh session and it should reproduce this build.
+1. What you're building
+A website for Digi Carotene, a digital marketing and branding agency based in Hyderabad, India, serving restaurants & hospitality, healthcare, education, salons & beauty, local/service businesses, and growing brands. Core capabilities: marketing strategy, branding, creative design, video production, content strategy, social media marketing, performance marketing (Meta Ads, Google Ads), website development, lead generation, local marketing.
+Positioning: Digi Carotene is the marketing partner for businesses that have outgrown random-acts-of-marketing — one accountable team doing strategy, creative, performance, and execution, instead of a business stitching together freelancers and vendors. The test every page should pass: a visitor should think "they understand my business, not just marketing," not "they're good at social media."
+Brand personality: premium, intelligent, creative, confident, human, strategic, business-focused, modern (not futuristic). Explicitly avoid: corporate stiffness, SaaS-dashboard chrome, oversaturated color, generic template card-grids, buzzword copy ("take your business to the next level," "unlock your potential," "360-degree agency," "your success is our success"), animation for its own sake.
+The one ownable creative idea: the name. Carotene is a real pigment — use that as the reason for a warm, confident terracotta/amber accent color against a restrained "paper and ink" neutral base, instead of generic marketing-agency blue or a dark sci-fi theme. One accent color, used only with intent (CTAs, key numbers, hover states) — not decoration.
+2. Hard constraint: no fabrication
+Do not invent client names, logos, testimonials, statistics, awards, press mentions, years of experience, or team size. Anywhere real proof doesn't exist yet:
+Mark it as an explicit placeholder in the code (e.g. [[Client logos — to confirm]]), never as a real-looking fake value.
+If a whole section would be nothing but fabricated content (e.g. testimonials with no real quotes available), omit the section entirely rather than fill it with placeholder quotes. An absent section is honest; a fake one isn't.
+Ship a PLACEHOLDERS.md (or equivalent) listing every one of these gaps so they're trivial to find and fill later.
+3. Design system
+Typography
+Display/headline font: Fraunces (variable serif) — warm, editorial, premium, not corporate.
+Body/UI font: Inter (variable sans) — highly legible at small sizes, neutral enough to let the serif carry personality.
+Scale (desktop → mobile): H1 72px/40px (line-height 1.05, tracking -0.01em) · H2 44px/30px (1.1) · H3 26px/21px (1.2) · Body 18px/16px (1.6) · Small/labels 14px/13px (tracking +0.03em, often uppercase) · Buttons 16px/15px.
+Color
+Role
+Value
+Primary background
+#F7F4EE (warm paper)
+Secondary background
+#EFE8DA
+Primary text
+#1C1A17 (warm near-black ink)
+Secondary text
+#6B6459
+Accent (Carotene)
+#E2571F — CTAs, key numbers, underlines, hover only
+Primary button
+ink bg / paper text → hover: accent bg
+Border
+#E1D9C8 hairline
+Dark section (used sparingly for contrast)
+#1C1A17 bg / #F7F4EE text / accent highlights
+
+Rule: if a section has no CTA, stat, or key moment, it should have no accent color in it.
+Layout
+Max content width 1280px in a 1440px canvas. 12-col grid desktop (24px gutter) / 4-col mobile (16px gutter).
+Side margins: 96px desktop → 48px laptop → 32px tablet → 20px mobile.
+Section vertical spacing: ~140px desktop / ~72px mobile.
+Card radius 12px. Button radius 8px — deliberately not a rounded pill (pill buttons read as generic SaaS).
+Images full-bleed within the grid, no heavy drop shadows; hairline 1px borders instead of shadows for cards/dividers.
+No stock photography of generic "business people" — if no real photography exists yet, let typography and color carry the design rather than filling space with generic imagery.
+Motion (restrained, on purpose)
+Section headers/cards: fade + 8px rise on scroll into view (~200ms), once, with slight stagger for grouped items. Respect prefers-reduced-motion.
+Hover: underline draw-in on text links; buttons shift color + scale ~1.02; case-study images scale ~1.03.
+Sticky header that slightly compresses on scroll; CTA always visible.
+Explicitly avoid: cursor-follow effects, 3D tilt cards, autoplay hero video, animated number counters (a real static number is fine; an animated count-up implies a level of "look how impressive" that doesn't fit un-fabricated data).
+4. Sitemap
+Six primary nav items, chosen deliberately — no page exists just because other agencies have one:
+Home — does the persuading; carries positioning, capability overview, industries teaser, work teaser, approach, primary conversion path.
+Services — one page, anchored sections per capability grouped into four pillars (Strategy / Brand & Creative / Performance / Presence), not eleven thin separate pages. (Dedicated SEO landing pages per service are a good later addition once there's real case-study proof to back each one.)
+Industries — one page, sectioned by vertical (Restaurants & Hospitality, Healthcare, Education, Salons & Beauty, Local & Service Businesses, Growing Brands).
+Work — case studies / selected work, sized to however many real examples exist; short and honest beats long and padded.
+About — founder's story, mission, and the "how we work" process content (no separate Process page — folded in here to avoid a thin standalone page).
+Contact — form + real contact details + location (Hyderabad).
+Plus a /privacy page (legal text sourced from the client, not drafted by design/dev) and a proper 404.
+Deferred, not rejected: an Insights/Blog section — only add once there's a real commitment to publish regularly; an abandoned blog hurts credibility more than no blog.
+5. Homepage structure (in order)
+Hero — one confident positioning line (not "Digital Marketing Agency in Hyderabad"), primary CTA + secondary CTA, restrained visual (no fake live dashboard).
+Credibility strip — real client logos once available; until then, an honest line about who you work with — never fabricated logos or numbers.
+The problem — names the real problem (scattered marketing, no unifying strategy) in plain language, no jargon.
+What we do — capability overview organized around Strategy → Creative → Performance → Execution, not a flat icon list.
+Industries — vertical range with enough specificity per vertical to read as "we get this business."
+Work — selected work with business context; degrade gracefully to placeholders if nothing real exists yet.
+Approach — how the agency actually works (4-step process), demonstrating "strategy not just execution."
+Why Digi Carotene — direct differentiation, earned through specificity not superlatives.
+Social proof — only if real, attributable testimonials exist (name + title, ideally photo). Omit if not.
+Final CTA — one-line value restatement + primary CTA repeated.
+6. Copy voice
+Confident, clear, human, strategic. Short sentences allowed to land hard. No filler like "take your business to the next level," "unlock your digital potential," "360-degree digital marketing agency," "your success is our success." Write toward specific business outcomes, not abstractions. (Full homepage + subpage copy already drafted — see the companion digi-carotene-copy.md; reuse it or rewrite in this voice if regenerating from scratch.)
+7. Technical implementation
+Stack: Next.js (App Router) + TypeScript + Tailwind CSS v4.
+Fonts: self-host Fraunces and Inter as variable fonts. If building in an environment without outbound access to fonts.googleapis.com, use the @fontsource-variable/fraunces and @fontsource-variable/inter npm packages (imported CSS, no network fetch at build time) instead of next/font/google, and point Tailwind's -font-display / -font-sans theme tokens at the resulting family names ("Fraunces Variable", "Inter Variable").
+Component architecture: shared Header, Footer, Container, Button, PageHero, and a small Reveal client component wrapping the scroll-into-view fade/rise (IntersectionObserver-based, single responsibility, reused across every section). Each homepage section is its own component (Hero, CredibilityStrip, Problem, Capabilities, Industries, Work, Approach, WhyUs, FinalCta) so subpages can reuse them (e.g. /services reuses Capabilities, /industries reuses Industries).
+Content: centralize all copy in one typed content file (e.g. src/lib/content.ts) rather than hardcoding strings in components — makes copy edits and placeholder auditing trivial.
+SEO: per-page Metadata (title template, description), targeting terms like "digital marketing agency Hyderabad," "performance marketing agency Hyderabad," "branding agency Hyderabad," "digital marketing for restaurants/healthcare/education" — worked into real headings and body copy, never keyword-stuffed.
+Accessibility: semantic HTML, visible focus states on interactive elements, aria-labels on icon-only controls (e.g. the mobile menu toggle), respect prefers-reduced-motion.
+Quality bar before calling it done: production build with zero errors, zero ESLint errors, every nav link resolves (no 404s except a real 404 page), zero browser console errors, verified at both desktop (~1440px) and mobile (~390px) viewports, verified that the scroll-reveal actually triggers on real scroll (not just at page load).
+8. What NOT to do
+Don't skip straight to code without the research → positioning → design system → IA sequence above already baked in (it is, here — this prompt is that output).
+Don't reproduce the layout or copy of any specific researched competitor site verbatim — this system was synthesized from patterns across ~16 agency sites (Instrument, Huge, Work & Co, Ramotion, NoGood, Pentagram, Clay, Schbang, Social Beat, etc.), not copied from one.
+Don't add a testimonials section, stats counter, or client logo wall unless real inputs exist for it.
+Don't use rounded-pill buttons, dark sci-fi dashboard themes, or generic blue/purple SaaS palettes — those are exactly what this system was built to avoid.
+

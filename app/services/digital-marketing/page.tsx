@@ -8,8 +8,8 @@ import { PageHeader } from "@/components/shared/page-header"
 
 const digitalServices = [
   {
-    slug: "ppc",
-    title: "Pay Per Click (PPC)",
+    slug: "performance-marketing",
+    title: "Performance Marketing",
     desc: "Highly targeted, high-intent paid search and social campaigns that convert impressions into pipeline and profit.",
     themeColor: "group-hover:border-emerald-500/20 hover:shadow-emerald-500/5",
     accentText: "text-emerald-500",
@@ -245,6 +245,42 @@ const digitalServices = [
           <circle cx="159" cy="60" r="4" fill="#eab308" />
           <line x1="135" y1="60" x2="140" y2="60" stroke="var(--border)" strokeWidth="1" />
           <line x1="183" y1="60" x2="178" y2="60" stroke="var(--border)" strokeWidth="1" />
+        </g>
+      </svg>
+    )
+  },
+  {
+    slug: "growth-marketing",
+    title: "Growth Marketing",
+    desc: "Data-driven, full-funnel experimentation and customer acquisition strategies that scale brand presence and revenue.",
+    themeColor: "group-hover:border-primary/20 hover:shadow-primary/5",
+    accentText: "text-primary",
+    bgGradient: "from-primary/5",
+    renderVisual: (isHovered: boolean) => (
+      <svg className="absolute inset-0 size-full" viewBox="0 0 318 120" fill="none">
+        <g opacity="0.3" className="stroke-primary/30">
+          <line x1="0" y1="40" x2="318" y2="40" strokeWidth="0.75" strokeDasharray="3 3" />
+          <line x1="0" y1="80" x2="318" y2="80" strokeWidth="0.75" strokeDasharray="3 3" />
+        </g>
+        {/* Growth Bars */}
+        <g className="transition-transform duration-500" style={{ transform: isHovered ? "translateY(-2px)" : "translateY(0)" }}>
+          <rect x="60" y="70" width="12" height="20" rx="2" fill="var(--border)" opacity="0.5" />
+          <rect x="85" y="55" width="12" height="35" rx="2" fill="var(--border)" opacity="0.7" />
+          <rect x="110" y="40" width="12" height="50" rx="2" fill="var(--border)" />
+          <rect x="135" y="20" width="12" height="70" rx="2" fill="rgba(226,87,31,0.2)" stroke="#E2571F" strokeWidth="1" />
+        </g>
+        {/* Upward Curve */}
+        <path
+          d="M50,95 Q100,90 140,40 T240,15"
+          stroke="#E2571F"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          className="transition-all duration-700"
+          style={{ strokeDasharray: "300", strokeDashoffset: isHovered ? "0" : "15" }}
+        />
+        <g className="transition-transform duration-500" style={{ transform: isHovered ? "translate(240px, 15px) scale(1.1)" : "translate(240px, 15px)" }}>
+          <circle r="10" fill="var(--card)" stroke="#E2571F" strokeWidth="1.5" />
+          <circle r="3.5" fill="#E2571F" />
         </g>
       </svg>
     )

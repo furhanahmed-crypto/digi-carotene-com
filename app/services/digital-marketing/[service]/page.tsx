@@ -2,7 +2,8 @@ import { DigitalServiceDetail } from "./service-detail"
 
 export function generateStaticParams() {
   return [
-    "ppc",
+    "performance-marketing",
+    "growth-marketing",
     "seo",
     "content",
     "social",

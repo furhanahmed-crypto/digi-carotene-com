@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { Geist_Mono, Inter, Lustria } from "next/font/google"
+import { cookies } from "next/headers"
+import { Geist_Mono, Inter, Fraunces } from "next/font/google"
 
 import "./globals.css"
 import { Header } from "@/components/home/Header"
@@ -10,10 +11,9 @@ import { cn } from "@/lib/utils"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
-const lustria = Lustria({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-lustria",
+  variable: "--font-display",
 })
 
 const fontMono = Geist_Mono({
@@ -54,11 +54,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const themeCookie = (await cookies()).get("theme")?.value
+  const themeClass = themeCookie === "dark" ? "dark" : "light"
+
   return (
     <html
       lang="en"
@@ -67,16 +70,16 @@ export default function RootLayout({
         "antialiased",
         "font-sans",
         inter.variable,
-        lustria.variable,
-        fontMono.variable
+        fraunces.variable,
+        fontMono.variable,
+        themeClass
       )}
+      style={{ colorScheme: themeClass }}
     >
       <body>
         <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
+          defaultTheme="light"
+          initialTheme={themeClass}
         >
           <SmoothScrollProvider>
             <Header />

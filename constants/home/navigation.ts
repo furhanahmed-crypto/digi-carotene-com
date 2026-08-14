@@ -53,7 +53,8 @@ export const mainNav: NavItem[] = [
         title: "Digital Marketing",
         href: "/services/digital-marketing",
         items: [
-          { title: "Pay Per Click", href: "/services/digital-marketing/ppc" },
+          { title: "Performance Marketing", href: "/services/digital-marketing/performance-marketing" },
+          { title: "Growth Marketing", href: "/services/digital-marketing/growth-marketing" },
           {
             title: "Search Engine Optimization",
             href: "/services/digital-marketing/seo",

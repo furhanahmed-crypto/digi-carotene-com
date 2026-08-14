@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { useTheme } from "next-themes"
+import { useTheme } from "@/components/theme-provider"
 
 import { cn } from "@/lib/utils"
 
