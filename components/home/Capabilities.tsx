@@ -53,7 +53,7 @@ export function Capabilities() {
     return () => observer.disconnect()
   }, [pillars])
 
-  const scrollToPillar = (id: string) => {
+  const scrollToPillar = (id: PillarId) => {
     const target = sectionRefs.current[id]
     if (!target) return
 
