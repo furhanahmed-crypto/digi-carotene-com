@@ -13,10 +13,12 @@ import { cn } from "@/lib/utils"
 
 const HEADER_OFFSET = 112
 
+type PillarId = (typeof homeContent.capabilities.pillars)[number]["id"]
+
 export function Capabilities() {
   const { capabilities } = homeContent
   const pillars = capabilities.pillars
-  const [activeId, setActiveId] = React.useState(pillars[0]?.id ?? "strategy")
+  const [activeId, setActiveId] = React.useState<PillarId>(pillars[0].id)
   const lenis = useLenis()
   const sectionRefs = React.useRef<Record<string, HTMLElement | null>>({})
 
@@ -37,7 +39,9 @@ export function Capabilities() {
           )
 
         const next = visible[0]?.target.getAttribute("data-pillar-id")
-        if (next) setActiveId(next)
+        if (next && pillars.some((pillar) => pillar.id === next)) {
+          setActiveId(next as PillarId)
+        }
       },
       {
         rootMargin: `-${HEADER_OFFSET}px 0px -45% 0px`,
