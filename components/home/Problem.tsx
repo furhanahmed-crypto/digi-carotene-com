@@ -1,5 +1,6 @@
 import { homeContent } from "@/lib/home-content"
 import { Container } from "@/components/shared/container"
+import { ImagePlaceholder } from "@/components/shared/image-placeholder"
 import { Reveal } from "@/components/shared/reveal"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { SectionMark } from "@/components/shared/section-mark"
@@ -15,6 +16,10 @@ export function Problem() {
             <SectionHeading
               eyebrow={problem.eyebrow}
               title={problem.headline}
+            />
+            <ImagePlaceholder
+              label="Discovery visual — image to confirm"
+              className="mt-10 aspect-video w-full lg:mt-12"
             />
           </Reveal>
 

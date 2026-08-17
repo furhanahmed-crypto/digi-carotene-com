@@ -4,28 +4,25 @@ import { Reveal } from "@/components/shared/reveal"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { SectionMark } from "@/components/shared/section-mark"
 
-import { CaseStudiesCarousel } from "./work/case-studies-carousel"
+import { VisualBentoGrid } from "./visual-showcase/visual-bento-grid"
 
-export function Work() {
-  const { work } = homeContent
+export function VisualShowcase() {
+  const { visualShowcase } = homeContent
 
   return (
-    <section
-      id="work"
-      className="border-t border-border bg-background py-[72px] lg:py-[140px]"
-    >
+    <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
       <Container>
         <Reveal>
-          <SectionMark>{work.eyebrow}</SectionMark>
+          <SectionMark>{visualShowcase.eyebrow}</SectionMark>
           <SectionHeading
             className="mt-6"
-            eyebrow="Case studies"
-            title={work.headline}
-            body={work.body}
+            eyebrow="Campaign & activation"
+            title={visualShowcase.headline}
+            body={visualShowcase.body}
           />
         </Reveal>
 
-        <CaseStudiesCarousel items={work.placeholders} />
+        <VisualBentoGrid />
       </Container>
     </section>
   )

@@ -1,5 +1,6 @@
 import { homeContent } from "@/lib/home-content"
 import { Container } from "@/components/shared/container"
+import { ParallaxSection } from "@/components/shared/parallax-section"
 import { Reveal } from "@/components/shared/reveal"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { SectionMark } from "@/components/shared/section-mark"
@@ -8,7 +9,10 @@ export function Approach() {
   const { approach } = homeContent
 
   return (
-    <section id="approach" className="border-t border-border bg-secondary py-[72px] lg:py-[140px]">
+    <ParallaxSection
+      id="approach"
+      className="border-t border-border bg-secondary py-[72px] lg:py-[140px]"
+    >
       <Container>
         <Reveal>
           <SectionMark>{approach.eyebrow}</SectionMark>
@@ -42,6 +46,6 @@ export function Approach() {
           ))}
         </ol>
       </Container>
-    </section>
+    </ParallaxSection>
   )
 }

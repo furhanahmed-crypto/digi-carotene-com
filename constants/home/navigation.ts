@@ -161,3 +161,6 @@ export const mainNav: NavItem[] = [
 ]
 
 export const contactHref = "/contact"
+
+export const whatsappHref =
+  "https://wa.me/971501234567?text=Hi%20Digi%20Carotene%2C%20I%27d%20like%20to%20discuss%20a%20project."

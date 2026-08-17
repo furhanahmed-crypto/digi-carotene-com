@@ -3,6 +3,7 @@ import { ClientsMarquee } from "@/components/home/ClientsMarquee"
 import { Problem } from "@/components/home/Problem"
 import { Capabilities } from "@/components/home/Capabilities"
 import { Industries } from "@/components/home/Industries"
+import { VisualShowcase } from "@/components/home/VisualShowcase"
 import { Work } from "@/components/home/Work"
 import { Approach } from "@/components/home/Approach"
 import { WhyUs } from "@/components/home/WhyUs"
@@ -16,6 +17,7 @@ export default function Page() {
       <Problem />
       <Capabilities />
       <Industries />
+      <VisualShowcase />
       <Work />
       <Approach />
       <WhyUs />

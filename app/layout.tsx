@@ -5,6 +5,8 @@ import { Geist_Mono, Inter, Fraunces } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/home/Header"
 import { Footer } from "@/components/shared/Footer"
+import { BackToTop } from "@/components/shared/back-to-top"
+import { FloatingContactActions } from "@/components/shared/floating-contact-actions"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider"
 import { cn } from "@/lib/utils"
@@ -85,6 +87,8 @@ export default async function RootLayout({
             <Header />
             {children}
             <Footer />
+            <BackToTop />
+            <FloatingContactActions />
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>

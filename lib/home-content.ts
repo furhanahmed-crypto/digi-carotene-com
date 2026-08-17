@@ -144,32 +144,76 @@ export const homeContent = {
       {
         id: "consumer-retail",
         title: "Consumer & Retail Brands",
-        body: "Mall activations, popups, and performance media that turn footfall into pipeline — with a brand that still looks considered.",
+        body: "Mall activations, popups, and performance media that turn footfall into pipeline — with a brand that still looks considered. We plan the full path from first impression in-store to the ad, the landing page, and the local listing.",
+        detail:
+          "We connect shelf presence, paid social, and local search so the same customer sees one story from the aisle to the answer engine. Campaign creative, offer architecture, and review strategy are governed under one brief — not three vendors guessing.",
       },
       {
         id: "local-market",
         title: "Local Market Leaders",
-        body: "Maps, neighbourhood visibility, residential activations, and search that wins the area you actually serve.",
+        body: "Maps, neighbourhood visibility, residential activations, and search that wins the area you actually serve. For clinics, salons, restaurants, and service businesses, discovery is hyper-local — and the work must reflect that.",
+        detail:
+          "From review strategy to residential booths, the work is built for how people discover and choose businesses near them. GEO and AEO content, maps optimisation, and on-ground activations route real neighbourhood intent into measurable enquiries.",
       },
       {
         id: "founder-led",
         title: "Founder-Led Companies",
-        body: "Personal branding, executive narrative, and PR so the person and the company show up as one authority.",
+        body: "Personal branding, executive narrative, and PR so the person and the company show up as one authority. When the founder is the brand, every profile, press line, and AI summary must tell the same story.",
+        detail:
+          "Profiles, press, and conversational search are aligned so AI summaries and media coverage tell the same founder story. Thought leadership, LinkedIn presence, and citation-ready content compound into one governed public record.",
       },
       {
         id: "campus-genz",
         title: "Campus & Youth Audiences",
-        body: "Festivals, sponsorships, and social that meet Gen-Z where they already gather — then route intent into digital workflows.",
+        body: "Festivals, sponsorships, and social that meet Gen-Z where they already gather — then route intent into digital workflows. Youth marketing only works when the on-ground moment and the feed feel like the same brand.",
+        detail:
+          "On-ground energy becomes measurable pipeline through QR paths, retargeting, and content built for how students actually share. Campus booths, influencer moments, and short-form creative are planned as one system — not a one-off activation.",
       },
       {
         id: "corporate",
         title: "Corporate & B2B",
-        body: "Launches, summits, thought leadership, and GEO so the brand is the answer when buyers ask an AI.",
+        body: "Launches, summits, thought leadership, and GEO so the brand is the answer when buyers ask an AI. B2B discovery now happens in search, in answer engines, and in the room — all three need the same narrative.",
+        detail:
+          "Executive visibility, event presence, and structured content work together so search, social, and sales enablement stay governed. Launch campaigns, keynote PR, and citation-ready pages are built to compound long after the event ends.",
       },
       {
         id: "growing-brands",
         title: "Growing Premium Brands",
-        body: "You've outgrown random acts of marketing. SEO, AEO, GEO, digital, offline, and PR under one execution platform.",
+        body: "You've outgrown random acts of marketing. SEO, AEO, GEO, digital, offline, and PR under one execution platform — because the next stage of growth needs one accountable team, not another vendor inbox.",
+        detail:
+          "One plan replaces the vendor pile — strategy, creative, performance, activations, and the site all accountable to the same brief. We diagnose where discovery leaks, unify the channels that matter, and run the work with one rhythm.",
+      },
+    ],
+  },
+  visualShowcase: {
+    eyebrow: "In the market",
+    headline: "Campaign visuals, activations, and the work in frame.",
+    body: "A curated glimpse of creative and experiential output — placeholders until campaign assets are confirmed.",
+    items: [
+      {
+        id: "visual-1",
+        label: "Campaign hero — image to confirm",
+        layout: "hero" as const,
+      },
+      {
+        id: "visual-2",
+        label: "Activation moment — image to confirm",
+        layout: "wide" as const,
+      },
+      {
+        id: "visual-3",
+        label: "Brand shoot — image to confirm",
+        layout: "square" as const,
+      },
+      {
+        id: "visual-4",
+        label: "Event footprint — image to confirm",
+        layout: "tall" as const,
+      },
+      {
+        id: "visual-5",
+        label: "Digital creative — image to confirm",
+        layout: "banner" as const,
       },
     ],
   },
@@ -195,6 +239,24 @@ export const homeContent = {
         label: "[[Client / project name — to confirm]]",
         meta: "[[PR & brand — to confirm]]",
         summary: "[[Narrative or media outcome in one sentence — to confirm]]",
+      },
+      {
+        id: "case-4",
+        label: "[[Client / project name — to confirm]]",
+        meta: "[[Performance marketing — to confirm]]",
+        summary: "[[Paid search or social outcome in one sentence — to confirm]]",
+      },
+      {
+        id: "case-5",
+        label: "[[Client / project name — to confirm]]",
+        meta: "[[Website & conversion — to confirm]]",
+        summary: "[[Site or funnel outcome in one sentence — to confirm]]",
+      },
+      {
+        id: "case-6",
+        label: "[[Client / project name — to confirm]]",
+        meta: "[[Integrated discovery — to confirm]]",
+        summary: "[[Cross-channel outcome in one sentence — to confirm]]",
       },
     ],
   },
