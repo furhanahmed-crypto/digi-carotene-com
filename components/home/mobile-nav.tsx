@@ -56,7 +56,7 @@ function MobileGroup({
       <div
         className={cn(
           "overflow-hidden pl-3 transition-all duration-300 ease-in-out",
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
         )}
       >
         {group.href ? (
@@ -161,7 +161,7 @@ function MobileEntry({
       <div
         className={cn(
           "overflow-hidden pl-3 transition-all duration-300 ease-in-out",
-          open ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"
         )}
       >
         {item.groups.map((group) => (
@@ -181,9 +181,12 @@ export function MobileNav({
 }) {
   return (
     <div
+      data-lenis-prevent
       className={cn(
-        "overflow-hidden transition-all duration-300 ease-in-out lg:hidden",
-        open ? "mt-4 max-h-[70vh] opacity-100" : "max-h-0 opacity-0"
+        "transition-all duration-300 ease-in-out lg:hidden",
+        open
+          ? "mt-4 max-h-[min(70vh,calc(100dvh-6rem))] overflow-y-auto overscroll-contain opacity-100"
+          : "max-h-0 overflow-hidden opacity-0"
       )}
     >
       <div className="flex flex-col gap-1 border-t border-border px-4 py-4">
