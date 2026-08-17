@@ -7,6 +7,7 @@ import { VisualShowcase } from "@/components/home/VisualShowcase"
 import { Work } from "@/components/home/Work"
 import { Approach } from "@/components/home/Approach"
 import { WhyUs } from "@/components/home/WhyUs"
+import { FAQ } from "@/components/home/FAQ"
 import { CTA } from "@/components/home/CTA"
 
 export default function Page() {
@@ -21,6 +22,7 @@ export default function Page() {
       <Work />
       <Approach />
       <WhyUs />
+      <FAQ />
       <CTA />
     </main>
   )

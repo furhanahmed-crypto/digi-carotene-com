@@ -177,6 +177,32 @@
   }
 }
 
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--accordion-panel-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--accordion-panel-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@utility animate-accordion-down {
+  animation: accordion-down 200ms ease-out;
+}
+
+@utility animate-accordion-up {
+  animation: accordion-up 200ms ease-out;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);

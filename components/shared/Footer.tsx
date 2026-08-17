@@ -35,20 +35,20 @@ export function Footer() {
             <Link href="/" className="group inline-flex items-center" aria-label="Digi Carotene home">
               <SiteLogo heightClassName="h-16" />
             </Link>
-            <p className="text-xs md:text-sm text-muted-foreground font-sans font-light leading-relaxed max-w-sm">
+            <p className="max-w-sm text-sm leading-[1.6] text-muted-foreground md:text-base">
               We engineer the intersection of technical precision and artistic brand craft. Bridging AI conversational citations (SEO/AEO/GEO) with sensory real-world offline experiential activations.
             </p>
-            <div className="flex items-center gap-2 text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
+            <div className="text-[13px] font-medium tracking-[0.03em] text-muted-foreground uppercase">
               Hyderabad, India
             </div>
           </div>
 
           {/* Column 2: About Sub-links (Lg: 2 Cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs text-foreground/80 font-bold uppercase tracking-wider">
+            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
               About
             </h4>
-            <ul className="space-y-2 text-xs md:text-sm font-sans font-light text-muted-foreground">
+            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground">
               <li>
                 <Link href="/about" className="hover:text-primary transition-colors hover:translate-x-0.5 inline-block">
                   Mission Overview
@@ -74,10 +74,10 @@ export function Footer() {
 
           {/* Column 3: Digital Services (Lg: 2 Cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs text-foreground/80 font-bold uppercase tracking-wider">
+            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
               Digital Services
             </h4>
-            <ul className="space-y-2 text-xs md:text-sm font-sans font-light text-muted-foreground">
+            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground">
               {digitalGroup?.items?.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -93,10 +93,10 @@ export function Footer() {
 
           {/* Column 4: Offline / Experiential (Lg: 2 Cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs text-foreground/80 font-bold uppercase tracking-wider">
+            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
               Offline Marketing
             </h4>
-            <ul className="space-y-2 text-xs md:text-sm font-sans font-light text-muted-foreground">
+            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground">
               {offlineGroup?.items?.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -112,10 +112,10 @@ export function Footer() {
 
           {/* Column 5: Resources & Inquiries (Lg: 2 Cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-mono text-xs text-foreground/80 font-bold uppercase tracking-wider">
+            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
               Resources
             </h4>
-            <ul className="space-y-2 text-xs md:text-sm font-sans font-light text-muted-foreground">
+            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground">
               {prGroup?.href ? (
                 <li>
                   <Link
@@ -147,7 +147,7 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom (Legal and copyrights) */}
-        <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 text-[13px] font-medium tracking-[0.03em] text-muted-foreground uppercase md:flex-row">
           <div>
             &copy; {currentYear} Digi Carotene. All rights reserved.
           </div>

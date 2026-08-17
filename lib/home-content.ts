@@ -382,6 +382,38 @@ export const homeContent = {
       },
     ],
   },
+  faq: {
+    eyebrow: "FAQ",
+    kicker: "Clarity",
+    headline: "Frequently asked questions",
+    items: [
+      {
+        question: "What is GEO and AEO, and do I still need SEO?",
+        answer:
+          "SEO still ranks you on Google. AEO structures your content so answer engines can parse and recommend you. GEO maximizes citation share in generative outputs from ChatGPT, Gemini, Perplexity, and SearchGPT. We run all three as one discovery program — not as separate vendors.",
+      },
+      {
+        question: "Do you only do digital marketing?",
+        answer:
+          "No. Digital, offline activations, and PR sit on one plan. Mall, campus, theatre, and metro work feed the same brand story as search, ads, and the site — so Google, AI engines, and people in the room see one voice.",
+      },
+      {
+        question: "Who do you work with?",
+        answer:
+          "Premium brands that need to be found — restaurants and hospitality, healthcare, education, salons and beauty, local service businesses, and growing brands. The work is Hyderabad-rooted and built for businesses that have outgrown scattered marketing.",
+      },
+      {
+        question: "How do we start?",
+        answer:
+          "Begin with a conversation or a complimentary GEO and AEO scan. We look at how you show up in search and answer engines, where the gaps are, and whether activations or PR should sit in the first brief. No fabricated dashboards — a clear next step.",
+      },
+      {
+        question: "Where is Digi Carotene based?",
+        answer:
+          "Hyderabad, India. We work with brands here and with teams that need one accountable studio for strategy, creative, performance, and execution.",
+      },
+    ],
+  },
   cta: {
     eyebrow: "Complimentary audit",
     headline: "How visible is your brand in AI search results?",

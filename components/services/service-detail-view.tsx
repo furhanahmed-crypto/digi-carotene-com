@@ -1,8 +1,4 @@
-"use client"
-
-import * as React from "react"
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
 import { Container } from "@/components/shared/container"
@@ -13,6 +9,12 @@ import { ListingCard } from "@/components/shared/listing-card"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { Button } from "@/components/ui/button"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { contactHref } from "@/constants/home/navigation"
 
 export type ServiceFaq = {
@@ -56,8 +58,6 @@ export function ServiceDetailView({
   categoryHref,
   relatedBasePath,
 }: ServiceDetailViewProps) {
-  const [activeFaqIndex, setActiveFaqIndex] = React.useState<number | null>(null)
-
   return (
     <div className="min-h-svh">
       <PageHeader
@@ -113,16 +113,16 @@ export function ServiceDetailView({
                   key={item}
                   as="li"
                   delayMs={index * 40}
-                  className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10"
+                  className="border-b border-line py-8 transition-colors hover:bg-secondary/40 md:py-10"
                 >
-                  <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
+                  <div className="border-carotene md:border-l-2 md:pl-6">
                     <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
                       {index + 1}
                     </p>
+                    <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                      {item}
+                    </h3>
                   </div>
-                  <p className="text-base leading-[1.6] text-muted-foreground md:col-span-8 md:text-lg">
-                    {item}
-                  </p>
                 </Reveal>
               ))}
             </ul>
@@ -186,22 +186,22 @@ export function ServiceDetailView({
                   key={industry}
                   as="li"
                   delayMs={index * 40}
-                  className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10"
+                  className="border-b border-line py-8 transition-colors hover:bg-secondary/40 md:py-10"
                 >
-                  <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-                    <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
-                      {index + 1}
-                    </p>
-                    <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium">
-                      {industry}
-                    </h3>
-                  </div>
-                  <div className="md:col-span-8">
+                  <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-8">
+                    <div className="border-carotene md:border-l-2 md:pl-6">
+                      <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                        {index + 1}
+                      </p>
+                      <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                        {industry}
+                      </h3>
+                    </div>
                     <Button
                       nativeButton={false}
                       render={<Link href={contactHref} />}
                       size="sm"
-                      className="w-fit"
+                      className="w-fit md:mr-2"
                     >
                       Know more
                     </Button>
@@ -220,32 +220,22 @@ export function ServiceDetailView({
                 title="Frequently asked questions"
               />
             </Reveal>
-            <div className="mt-10 divide-y divide-line border border-line">
-              {data.faqs.map((faq, index) => {
-                const isOpen = activeFaqIndex === index
-                return (
-                  <div key={faq.question} className="bg-background">
-                    <button
-                      type="button"
-                      className="flex w-full items-center justify-between gap-4 p-5 text-left"
-                      onClick={() => setActiveFaqIndex(isOpen ? null : index)}
-                    >
-                      <span className="font-display text-[18px] leading-[1.3] font-medium">
-                        {faq.question}
-                      </span>
-                      <ChevronDown
-                        className={`size-4 shrink-0 text-muted-foreground transition-transform ${isOpen ? "rotate-180 text-carotene" : ""}`}
-                      />
-                    </button>
-                    {isOpen ? (
-                      <p className="border-t border-line px-5 pb-5 pt-4 text-base leading-[1.6] text-muted-foreground">
-                        {faq.answer}
-                      </p>
-                    ) : null}
-                  </div>
-                )
-              })}
-            </div>
+            <Accordion className="mt-10 border border-line">
+              {data.faqs.map((faq, index) => (
+                <AccordionItem
+                  key={faq.question}
+                  value={`faq-${index}`}
+                  className="border-line not-last:border-b px-4"
+                >
+                  <AccordionTrigger className="font-display rounded-none py-5 text-left text-[18px] leading-[1.3] font-medium hover:no-underline md:text-[21px]">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-5 text-base leading-[1.6] text-muted-foreground md:text-lg">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
 
           {related.length > 0 ? (
