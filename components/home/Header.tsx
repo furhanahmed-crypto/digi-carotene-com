@@ -56,6 +56,7 @@ export function Header() {
           <div className="hidden items-center gap-2 py-3 pr-3 lg:flex">
             <ModeToggle />
             <Button
+              variant="default"
               nativeButton={false}
               render={<Link href={contactHref} />}
               className={cn("hidden", isScrolled && "inline-flex")}

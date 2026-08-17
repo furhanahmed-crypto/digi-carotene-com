@@ -1,12 +1,7 @@
-"use client"
-
-import * as React from "react"
 import { notFound } from "next/navigation"
-import Link from "next/link"
-import { ArrowLeft, ArrowRight, CheckCircle2, Sparkles, Compass, Milestone, ShieldCheck, Cpu, ChevronDown, ChevronRight } from "lucide-react"
+import type { ReactNode } from "react"
 
-import { Button } from "@/components/ui/button"
-import { contactHref } from "@/constants/home/navigation"
+import { ServiceDetailView } from "@/components/services/service-detail-view"
 
 interface FAQItem {
   question: string
@@ -29,7 +24,7 @@ interface ServiceData {
   faqs: FAQItem[]
   kpiName: string
   kpiValue: string
-  renderVisual: (isHovered: boolean) => React.ReactNode
+  renderVisual: (isHovered: boolean) => ReactNode
 }
 
 const serviceData: Record<string, ServiceData> = {
@@ -459,266 +454,41 @@ const serviceData: Record<string, ServiceData> = {
   }
 }
 
+function toViewData(data: ServiceData) {
+  return {
+    title: data.title,
+    description: data.description,
+    whatIs: data.whatIs,
+    approach: data.approach,
+    deliverables: data.deliverables,
+    effectiveFor: data.effectiveFor,
+    faqs: data.faqs,
+  }
+}
+
 export function OfflineServiceDetail({ service }: { service: string }) {
-  const [isVisualHovered, setIsVisualHovered] = React.useState(false)
-  const [activeFaqIndex, setActiveFaqIndex] = React.useState<number | null>(null)
   const data = serviceData[service]
 
   if (!data) {
     notFound()
   }
 
-  // Auto-generate related services from the same category
-  const relatedServices = Object.keys(serviceData)
+  const related = Object.keys(serviceData)
     .filter((key) => key !== service)
     .slice(0, 2)
     .map((key) => ({
       slug: key,
-      ...serviceData[key]
+      title: serviceData[key].title,
+      description: serviceData[key].description,
     }))
 
   return (
-    <div className="min-h-svh pb-16">
-      {/* 1. Breadcrumb & 2. Hero */}
-      <section className="relative overflow-hidden border-b border-border/50 bg-background pt-24 pb-12 md:pt-28 md:pb-16">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(226,87,31,0.03),transparent_60%)]" />
-        <div className="mx-auto max-w-6xl px-6">
-          
-          {/* Breadcrumb Trail */}
-          <nav className="flex items-center gap-1.5 text-xs font-mono text-muted-foreground mb-8" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
-            <ChevronRight className="size-3 text-muted-foreground/40" />
-            <Link href="/services/offline-marketing" className="hover:text-foreground transition-colors">Services</Link>
-            <ChevronRight className="size-3 text-muted-foreground/40" />
-            <span className="text-foreground font-medium truncate">{data.title}</span>
-          </nav>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Hero Left Content */}
-            <div className="lg:col-span-7 space-y-4">
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-widest text-primary">
-                <Sparkles className="size-3" /> Omnichannel Strategy Spec
-              </div>
-              <h1 className="font-lustria text-3xl sm:text-4xl md:text-5xl font-normal leading-tight tracking-tight text-foreground">
-                {data.title}
-              </h1>
-              <p className="max-w-xl font-sans text-base md:text-lg font-light leading-relaxed text-muted-foreground">
-                {data.description}
-              </p>
-              <div className="pt-4">
-                <Button nativeButton={false} render={<Link href={contactHref} />} size="lg" className="rounded-xl px-6 h-12 text-base font-medium group">
-                  <span className="flex items-center gap-1.5">
-                    Get Started with {data.title}
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Button>
-              </div>
-            </div>
-
-            {/* Hero Right Visual */}
-            <div 
-              className="lg:col-span-5 relative"
-              onMouseEnter={() => setIsVisualHovered(true)}
-              onMouseLeave={() => setIsVisualHovered(false)}
-            >
-              <div className="relative rounded-3xl border border-border/80 bg-card/30 p-6 shadow-2xl h-[280px] overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:12px_12px]" />
-                <div className="size-44 flex items-center justify-center">
-                  {data.renderVisual(isVisualHovered)}
-                </div>
-                <div className={`absolute -inset-px -z-10 rounded-[30px] bg-gradient-to-tr ${data.accentColor} to-transparent opacity-40 blur-md`} />
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <div className="mx-auto max-w-6xl px-6 mt-12 md:mt-16 space-y-16 md:space-y-24">
-        {/* Back Link */}
-        <Link
-          href="/services/offline-marketing"
-          className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors group"
-        >
-          <ArrowLeft className="size-3.5 transition-transform group-hover:-translate-x-1" /> Back to Offline Services
-        </Link>
-
-        {/* 3. "What is [Service]?" (AEO Paragraph) */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-4">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5 mb-2">
-              <Compass className="size-3.5" /> SERVICE PHILOSOPHY
-            </span>
-            <h2 className="font-lustria text-2xl md:text-3xl font-normal tracking-tight">
-              What is {data.title}?
-            </h2>
-          </div>
-          <div className="lg:col-span-8 space-y-6">
-            <p className="text-foreground font-sans font-light text-lg leading-relaxed border-l-2 border-primary/20 pl-6">
-              {data.whatIs}
-            </p>
-          </div>
-        </section>
-
-        {/* 4. What's included (Deliverables List) */}
-        <section className="border-t border-border/50 pt-12 md:pt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <div className="lg:col-span-4 space-y-3">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5">
-              <ShieldCheck className="size-3.5" /> KEY ARTIFACTS
-            </span>
-            <h3 className="font-lustria text-2xl md:text-3xl font-normal">What We Produce</h3>
-            <p className="text-xs text-muted-foreground font-sans font-light leading-relaxed max-w-sm">
-              A concrete, honest list of physical deliverables and experiential assets engineered to drive tangible brand authority.
-            </p>
-          </div>
-          
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {data.deliverables.map((item, idx) => (
-              <div key={idx} className="flex gap-3 items-start p-4 rounded-xl border border-border bg-card/20 hover:bg-card/40 transition-colors">
-                <CheckCircle2 className="size-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm text-muted-foreground font-sans font-light leading-relaxed">{item}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* 5. Our approach to [Service] (4-Step Framework) */}
-        <section className="border-t border-border/50 pt-12 md:pt-16 space-y-8">
-          <div className="max-w-2xl">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5 mb-3">
-              <Milestone className="size-3.5" /> DEPLOYMENT TRACKS
-            </span>
-            <h3 className="font-lustria text-2xl md:text-3xl font-normal tracking-tight">
-              Our 4-Step Experiential Roadmap
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {data.approach.map((step, idx) => (
-              <div key={idx} className="group relative rounded-2xl border border-border bg-card/15 p-6 transition-all duration-300 hover:border-primary/20 hover:bg-card/30">
-                <div className="font-mono text-xs text-primary font-bold mb-4">PHASE 0{idx + 1} // {step.title.toUpperCase()}</div>
-                <h4 className="font-lustria text-lg font-medium text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {step.title}
-                </h4>
-                <p className="text-xs text-muted-foreground leading-relaxed font-sans font-light">
-                  {step.description}
-                </p>
-                <div className="absolute inset-px -z-10 rounded-2xl bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity blur-sm" />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* 6. Particularly effective for (Industry Links) */}
-        <section className="border-t border-border/50 pt-12 md:pt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-4">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5 mb-2">
-              <Cpu className="size-3.5" /> TARGET ALIGNMENT
-            </span>
-            <h3 className="font-lustria text-2xl md:text-3xl font-normal">Particularly Effective For</h3>
-          </div>
-          <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {data.effectiveFor.map((industry, idx) => (
-                <div key={idx} className="p-5 rounded-2xl border border-border bg-card/10 flex flex-col justify-between h-36 hover:border-primary/10 transition-colors">
-                  <h4 className="font-lustria text-base font-medium text-foreground">{industry}</h4>
-                  <p className="text-xs text-muted-foreground font-sans font-light leading-relaxed">
-                    Tailored physical integration to guarantee local footfall, trial enrollment, and regional brand loyalty.
-                  </p>
-                  <Link href="/contact" className="text-[10px] font-mono text-primary uppercase tracking-wider hover:underline mt-2 inline-flex items-center gap-1">
-                    Inquire for {industry} <ArrowRight className="size-3" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 7. FAQ (Accordion + Schema) */}
-        <section className="border-t border-border/50 pt-12 md:pt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div className="lg:col-span-4">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5 mb-2">
-              <Compass className="size-3.5" /> CLARITY & INSIGHT
-            </span>
-            <h3 className="font-lustria text-2xl md:text-3xl font-normal">Frequently Asked Questions</h3>
-          </div>
-          <div className="lg:col-span-8 space-y-4">
-            {data.faqs.map((faq, idx) => {
-              const isOpen = activeFaqIndex === idx
-              return (
-                <div key={idx} className="border border-border rounded-xl overflow-hidden bg-card/10">
-                  <button
-                    type="button"
-                    className="w-full text-left p-5 flex items-center justify-between gap-4 font-lustria text-sm sm:text-base font-medium text-foreground hover:text-primary transition-colors"
-                    onClick={() => setActiveFaqIndex(isOpen ? null : idx)}
-                  >
-                    <span>{faq.question}</span>
-                    <ChevronDown className={`size-4 text-muted-foreground transition-transform duration-300 shrink-0 ${isOpen ? "rotate-180 text-primary" : ""}`} />
-                  </button>
-                  <div className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-48 border-t border-border" : "max-h-0"}`}>
-                    <p className="p-5 text-xs sm:text-sm text-muted-foreground font-sans font-light leading-relaxed bg-muted/5">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </section>
-
-        {/* 8. Related services (Topical Clustering) */}
-        <section className="border-t border-border/50 pt-12 md:pt-16 space-y-8">
-          <div className="max-w-2xl">
-            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5 mb-3">
-              <Milestone className="size-3.5" /> TOPICAL CLUSTERING
-            </span>
-            <h3 className="font-lustria text-2xl md:text-3xl font-normal tracking-tight">
-              Related Capabilities
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {relatedServices.map((rel) => (
-              <Link
-                key={rel.slug}
-                href={`/services/offline-marketing/${rel.slug}`}
-                className="group p-6 rounded-2xl border border-border bg-card/10 hover:border-primary/20 hover:bg-card/20 transition-all duration-300 flex flex-col justify-between h-44"
-              >
-                <div>
-                  <h4 className="font-lustria text-lg font-medium text-foreground group-hover:text-primary transition-colors mb-2">
-                    {rel.title}
-                  </h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed font-sans font-light line-clamp-2">
-                    {rel.description}
-                  </p>
-                </div>
-                <div className="text-[10px] font-mono text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1">
-                  Explore Spec <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* 9. Final CTA */}
-        <section className="border-t border-border/50 pt-12 md:pt-16 text-center max-w-3xl mx-auto space-y-6">
-          <h3 className="font-lustria text-2xl sm:text-3xl md:text-4xl font-normal tracking-tight leading-tight">
-            Ready to scale your physical brand presence?
-          </h3>
-          <p className="text-muted-foreground font-sans font-light text-sm sm:text-base leading-relaxed">
-            Let&apos;s build a high-impact, compliant experiential framework tailored to your business goals.
-          </p>
-          <div className="pt-4">
-            <Button nativeButton={false} render={<Link href={contactHref} />} size="lg" className="rounded-xl px-8 h-12 text-base font-medium group">
-              <span className="flex items-center gap-1.5">
-                Get Started with Digi Carotene
-                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Button>
-          </div>
-        </section>
-
-      </div>
-    </div>
+    <ServiceDetailView
+      data={toViewData(data)}
+      related={related}
+      categoryLabel="Offline Marketing"
+      categoryHref="/services/offline-marketing"
+      relatedBasePath="/services/offline-marketing"
+    />
   )
 }

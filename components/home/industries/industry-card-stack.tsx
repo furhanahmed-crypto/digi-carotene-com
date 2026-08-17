@@ -8,7 +8,7 @@ import { useIndustryCardStack } from "@/hooks/use-industry-card-stack"
 import { IndustryStackCard } from "./industry-stack-card"
 
 export function IndustryCardStack() {
-  const { items } = homeContent.industries
+  const { items, knowMore } = homeContent.industries
   const sectionRef = React.useRef<HTMLElement>(null)
   const cardRefs = React.useRef<(HTMLElement | null)[]>([])
 
@@ -31,6 +31,10 @@ export function IndustryCardStack() {
           body={item.body}
           detail={item.detail}
           imageLabel={`${item.title} — image to confirm`}
+          knowMoreLabel={knowMore.label}
+          knowMoreHref={knowMore.href}
+          secondaryCtaLabel={item.secondaryCta.label}
+          secondaryCtaHref={item.secondaryCta.href}
           zIndex={items.length - index}
         />
       ))}

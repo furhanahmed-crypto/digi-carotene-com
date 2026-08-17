@@ -8,6 +8,7 @@ type RevealProps = {
   children: ReactNode
   className?: string
   delayMs?: number
+  as?: "div" | "li"
 }
 
 function subscribeReducedMotion(onChange: () => void) {
@@ -16,8 +17,13 @@ function subscribeReducedMotion(onChange: () => void) {
   return () => media.removeEventListener("change", onChange)
 }
 
-export function Reveal({ children, className, delayMs = 0 }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null)
+export function Reveal({
+  children,
+  className,
+  delayMs = 0,
+  as: Tag = "div",
+}: RevealProps) {
+  const ref = useRef<HTMLElement>(null)
   const [visible, setVisible] = useState(false)
   const prefersReduced = useSyncExternalStore(
     subscribeReducedMotion,
@@ -48,8 +54,8 @@ export function Reveal({ children, className, delayMs = 0 }: RevealProps) {
   const shown = prefersReduced || visible
 
   return (
-    <div
-      ref={ref}
+    <Tag
+      ref={ref as never}
       className={cn(
         "transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none",
         shown ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0",
@@ -58,6 +64,6 @@ export function Reveal({ children, className, delayMs = 0 }: RevealProps) {
       style={{ transitionDelay: shown ? `${delayMs}ms` : "0ms" }}
     >
       {children}
-    </div>
+    </Tag>
   )
 }

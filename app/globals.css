@@ -161,6 +161,10 @@
   }
 }
 
+@utility glass-panel {
+  @apply rounded-xl border border-border bg-card/80 shadow-sm backdrop-blur-md;
+}
+
 @utility link-underline {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;

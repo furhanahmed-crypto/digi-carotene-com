@@ -1,8 +1,28 @@
+import { PLACEHOLDER_IMAGES } from "./placeholder-images"
+
 export const homeContent = {
   hero: {
     eyebrow: "The Optimization Agency for the AI Era",
-    headlineBefore: "Win the New Front Door of ",
-    headlineAccent: "Search & Discovery",
+    slides: [
+      {
+        id: "search-discovery",
+        headlineBefore: "Win the New Front Door of ",
+        headlineAccent: "Search & Discovery",
+        imageSrc: PLACEHOLDER_IMAGES[0],
+      },
+      {
+        id: "ai-citation",
+        headlineBefore: "Be the Brand AI Engines ",
+        headlineAccent: "Choose to Cite",
+        imageSrc: PLACEHOLDER_IMAGES[1],
+      },
+      {
+        id: "market-presence",
+        headlineBefore: "Turn Local Attention into ",
+        headlineAccent: "Visible Demand",
+        imageSrc: PLACEHOLDER_IMAGES[2],
+      },
+    ],
     body: "We help premium brands rank on Google, get cited by AI answer engines like Perplexity, and dominate local markets with unforgettable real-world marketing activations.",
     primaryCta: { label: "Get Your GEO Score", href: "/contact" },
     secondaryCta: { label: "Explore Our Services", href: "/services" },
@@ -11,29 +31,35 @@ export const homeContent = {
     eyebrow: "What we do",
     headline: "Unified digital marketing, AI search, and real-world activations.",
     body: "Digi Carotene is the engine for forward-thinking brand discovery — bridging SEO, AEO, and GEO with digital, offline, and PR execution.",
+    knowMore: { label: "Know more" },
     pillars: [
       {
         id: "discovery",
         number: "01",
         title: "Search & AI Discovery",
+        image: PLACEHOLDER_IMAGES[0],
         summary:
           "Traditional SEO gets you blue links. AEO and GEO make sure answer engines cite you.",
         items: [
           {
             label: "Search Engine Optimization",
             body: "Traditional and conversational organic search positioning that keeps your brand authority first on Google.",
+            href: "/services/digital-marketing/seo",
           },
           {
             label: "AEO (Answer Engine Optimization)",
             body: "Structuring core brand content so LLM-based assistants parse, understand, and return your brand as the definitive recommendation.",
+            href: "/services/digital-marketing/seo",
           },
           {
             label: "GEO (Generative Engine Optimization)",
             body: "Maximizing citation share in generative outputs. Semantic nodes, authoritative footprints, and co-occurrences so ChatGPT, Gemini, Perplexity, and SearchGPT quote you.",
+            href: "/services/digital-marketing/seo",
           },
           {
             label: "Brand-governed authority",
             body: "Align messaging across public indexes so AI answer engines present your value proposition accurately and consistently.",
+            href: "/contact",
           },
         ],
       },
@@ -41,32 +67,39 @@ export const homeContent = {
         id: "digital",
         number: "02",
         title: "Digital Marketing",
+        image: PLACEHOLDER_IMAGES[1],
         summary:
           "A unified digital ecosystem — performance, content, social, and the site — built to feed search and conversion.",
         items: [
           {
             label: "Performance Marketing",
             body: "Highly targeted, high-intent paid search and social campaigns that convert impressions into pipeline and profit.",
+            href: "/services/digital-marketing/performance-marketing",
           },
           {
             label: "Growth Marketing",
             body: "Data-driven, full-funnel experimentation and customer acquisition strategies that scale brand presence and revenue.",
+            href: "/services/digital-marketing/growth-marketing",
           },
           {
             label: "Content Marketing",
             body: "On-brand, rich copy and storytelling assets designed to answer audience queries and fuel SEO and AEO pipelines.",
+            href: "/services/digital-marketing/content",
           },
           {
             label: "Social Media Marketing",
             body: "Community building, brand narrative distribution, and platform-specific content that drives engagement.",
+            href: "/services/digital-marketing/social",
           },
           {
             label: "Web Design & Development",
             body: "Bespoke, fast websites with Framer-level motion and architectures built for SEO and AEO.",
+            href: "/services/digital-marketing/web",
           },
           {
             label: "Personal Branding",
             body: "Positioning founders, executives, and leaders as industry authorities through guided storytelling and profile optimization.",
+            href: "/services/digital-marketing/personal-branding",
           },
         ],
       },
@@ -74,28 +107,34 @@ export const homeContent = {
         id: "offline",
         number: "03",
         title: "Offline & Experiential",
+        image: PLACEHOLDER_IMAGES[2],
         summary:
           "Digital does not live in a vacuum. Premium activations turn local attention into measurable brand footprint.",
         items: [
           {
             label: "Mall activations",
             body: "Engaging high-intent retail crowds with interactive popups, product sensory booths, and direct-to-consumer experiences.",
+            href: "/services/offline-marketing/mall-activations",
           },
           {
             label: "Campus activations",
             body: "Connect with Gen-Z and student demographics through festivals, bootcamps, and brand sponsorships.",
+            href: "/services/offline-marketing/campus-activations",
           },
           {
             label: "Theatre & metro branding",
             body: "High-attention cinema audiences and high-frequency urban transit — foyer branding, wraps, and digital takeovers.",
+            href: "/services/offline-marketing/theatre-marketing",
           },
           {
             label: "Corporate events & popups",
             body: "Product launches, summits, and temporary retail spaces built for urgency, storytelling, and media hype.",
+            href: "/services/offline-marketing/corporate-events",
           },
           {
             label: "Influencer campaigns",
             body: "Bridging online and offline by aligning local influencers to show up and broadcast physical events.",
+            href: "/services/offline-marketing/influencer-campaigns",
           },
         ],
       },
@@ -103,24 +142,29 @@ export const homeContent = {
         id: "pr",
         number: "04",
         title: "PR & Brand Communications",
+        image: PLACEHOLDER_IMAGES[0],
         summary:
           "Narrative architectures that demand attention — and serve as high-quality semantic sources for answer engines.",
         items: [
           {
             label: "Media placements",
             body: "High-authority press distribution that also functions as citation data for conversational search.",
+            href: "/services/pr",
           },
           {
             label: "Executive narrative",
             body: "Founder and leadership stories mapped so coverage, profiles, and AI summaries stay on-message.",
+            href: "/services/pr",
           },
           {
             label: "Crisis defense",
             body: "Prepared language, disclosures, and response paths so the public record stays governed.",
+            href: "/services/pr",
           },
           {
             label: "Brand voice compliance",
             body: "Unified values, voice, and guidelines across web indexes, social, and AI prompts.",
+            href: "/services/pr",
           },
         ],
       },
@@ -140,6 +184,7 @@ export const homeContent = {
     eyebrow: "Who we work with",
     headline: "Premium brands that need to be found — online, in AI, and in the room.",
     body: "Same craft, different arenas. We specialize in discovery: search rankings, conversational citations, and unforgettable local presence.",
+    knowMore: { label: "Know more", href: "/contact" },
     items: [
       {
         id: "consumer-retail",
@@ -147,6 +192,10 @@ export const homeContent = {
         body: "Mall activations, popups, and performance media that turn footfall into pipeline — with a brand that still looks considered. We plan the full path from first impression in-store to the ad, the landing page, and the local listing.",
         detail:
           "We connect shelf presence, paid social, and local search so the same customer sees one story from the aisle to the answer engine. Campaign creative, offer architecture, and review strategy are governed under one brief — not three vendors guessing.",
+        secondaryCta: {
+          label: "Explore activations",
+          href: "/services/offline-marketing",
+        },
       },
       {
         id: "local-market",
@@ -154,6 +203,10 @@ export const homeContent = {
         body: "Maps, neighbourhood visibility, residential activations, and search that wins the area you actually serve. For clinics, salons, restaurants, and service businesses, discovery is hyper-local — and the work must reflect that.",
         detail:
           "From review strategy to residential booths, the work is built for how people discover and choose businesses near them. GEO and AEO content, maps optimisation, and on-ground activations route real neighbourhood intent into measurable enquiries.",
+        secondaryCta: {
+          label: "Win local search",
+          href: "/services/digital-marketing/seo",
+        },
       },
       {
         id: "founder-led",
@@ -161,6 +214,10 @@ export const homeContent = {
         body: "Personal branding, executive narrative, and PR so the person and the company show up as one authority. When the founder is the brand, every profile, press line, and AI summary must tell the same story.",
         detail:
           "Profiles, press, and conversational search are aligned so AI summaries and media coverage tell the same founder story. Thought leadership, LinkedIn presence, and citation-ready content compound into one governed public record.",
+        secondaryCta: {
+          label: "Build your narrative",
+          href: "/services/digital-marketing/personal-branding",
+        },
       },
       {
         id: "campus-genz",
@@ -168,6 +225,10 @@ export const homeContent = {
         body: "Festivals, sponsorships, and social that meet Gen-Z where they already gather — then route intent into digital workflows. Youth marketing only works when the on-ground moment and the feed feel like the same brand.",
         detail:
           "On-ground energy becomes measurable pipeline through QR paths, retargeting, and content built for how students actually share. Campus booths, influencer moments, and short-form creative are planned as one system — not a one-off activation.",
+        secondaryCta: {
+          label: "Reach Gen-Z",
+          href: "/services/offline-marketing/campus-activations",
+        },
       },
       {
         id: "corporate",
@@ -175,6 +236,10 @@ export const homeContent = {
         body: "Launches, summits, thought leadership, and GEO so the brand is the answer when buyers ask an AI. B2B discovery now happens in search, in answer engines, and in the room — all three need the same narrative.",
         detail:
           "Executive visibility, event presence, and structured content work together so search, social, and sales enablement stay governed. Launch campaigns, keynote PR, and citation-ready pages are built to compound long after the event ends.",
+        secondaryCta: {
+          label: "Plan your launch",
+          href: "/services/offline-marketing/corporate-events",
+        },
       },
       {
         id: "growing-brands",
@@ -182,6 +247,10 @@ export const homeContent = {
         body: "You've outgrown random acts of marketing. SEO, AEO, GEO, digital, offline, and PR under one execution platform — because the next stage of growth needs one accountable team, not another vendor inbox.",
         detail:
           "One plan replaces the vendor pile — strategy, creative, performance, activations, and the site all accountable to the same brief. We diagnose where discovery leaks, unify the channels that matter, and run the work with one rhythm.",
+        secondaryCta: {
+          label: "Get one team",
+          href: "/contact",
+        },
       },
     ],
   },
@@ -289,22 +358,27 @@ export const homeContent = {
   whyUs: {
     eyebrow: "Why brands choose Digi Carotene",
     headline: "Built for scale. Backed by advanced optimization.",
+    knowMore: { label: "Know more", href: "/contact" },
     points: [
       {
         title: "Conversational citation score",
         body: "Track and raise your citation footprint on Perplexity, Gemini, ChatGPT, and SearchGPT. Make sure your brand is the answer the engine returns.",
+        image: PLACEHOLDER_IMAGES[0],
       },
       {
         title: "Offline experiential pipelines",
         body: "Synchronize mall, theatre, and campus footfall directly into digital workflows. Real-world presence linked to online conversion.",
+        image: PLACEHOLDER_IMAGES[1],
       },
       {
         title: "Enterprise brand voice compliance",
         body: "Unified values, voice, and disclosures across search engines, social networks, and artificial intelligence indexes.",
+        image: PLACEHOLDER_IMAGES[2],
       },
       {
         title: "One execution platform",
         body: "We engineer technical precision and brand craft together — SEO, AEO, GEO, digital, offline, and PR — so marketing strategy becomes execution.",
+        image: PLACEHOLDER_IMAGES[0],
       },
     ],
   },
@@ -314,5 +388,9 @@ export const homeContent = {
     body: "Get a complimentary GEO & AEO diagnostic scan. We'll analyze your conversational citation rates, identify content gaps, and map your offline activation potential.",
     primary: { label: "Get Your Free Scan", href: "/contact" },
     secondary: { label: "Talk with our Founders", href: "/contact" },
+    scoreImage: {
+      light: "/scores/scores-screenshot-light.png",
+      dark: "/scores/scores-screenshot-dark.png",
+    },
   },
 } as const

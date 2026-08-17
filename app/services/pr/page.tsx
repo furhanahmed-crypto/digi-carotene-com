@@ -1,72 +1,89 @@
-"use client"
-
-import * as React from "react"
-import { ArrowLeft, ArrowRight, CheckCircle2, Newspaper, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 import { PageHeader } from "@/components/shared/page-header"
+import { Container } from "@/components/shared/container"
+import { SectionMark } from "@/components/shared/section-mark"
+import { SectionHeading } from "@/components/shared/section-heading"
+import { MediaFrame } from "@/components/shared/media-frame"
+import { PageCta } from "@/components/shared/page-cta"
+import { Reveal } from "@/components/shared/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
 
-export default function PRServicesPage() {
-  const capabilities = [
-    "National news syndication and press release wire coverage.",
-    "Strategic, non-obvious narrative framing for major agency publications.",
-    "Executive profiles, media training, and talking head placement.",
-    "Full event-coverage integration (offline popups sync'd with national PR)."
-  ]
+const capabilities = [
+  "National news syndication and press release wire coverage.",
+  "Narrative framing for publications that actually move the category.",
+  "Executive profiles, media training, and talking-head placement.",
+  "Event coverage that syncs offline activations with PR.",
+]
 
+export default function PRServicesPage() {
   return (
-    <div className="min-h-svh pb-16">
+    <div className="min-h-svh">
       <PageHeader
-        title="Public Relations (PR) Services"
-        description="We secure high-authority placements and shape unforgettable narratives that establish clear, long-term brand equity."
-        accentColor="from-red-500/10"
+        title="Public relations"
+        description="High-authority placements and narratives that build long-term brand equity — not a one-day mention."
         breadcrumbs={[
-          { label: "Services", href: "/services" },
-          { label: "PR Services" },
+          { label: "Services", href: "/services/digital-marketing" },
+          { label: "PR" },
         ]}
+        mark="Services"
+        imageIndex={0}
       />
 
-      <div className="mx-auto max-w-4xl px-6 mt-8 md:mt-10 space-y-8">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors group"
-        >
-          <ArrowLeft className="size-3.5 transition-transform group-hover:-translate-x-1" /> Back to Home
-        </Link>
+      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
+        <Container>
+          <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
+            <Reveal className="lg:col-span-6">
+              <SectionMark>PR</SectionMark>
+              <SectionHeading
+                className="mt-6"
+                eyebrow="Narrative authority"
+                title="Campaign architecture"
+                body="We shape the story, then place it where search engines, journalists, and customers can find it."
+              />
+            </Reveal>
+            <Reveal delayMs={40} className="lg:col-span-6">
+              <MediaFrame index={1} label="PR" />
+            </Reveal>
+          </div>
 
-        {/* Detailed Spec Block */}
-        <div className="rounded-3xl border border-border bg-card/25 p-8 relative overflow-hidden backdrop-blur-sm">
-          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-red-500/5 via-transparent to-transparent opacity-20" />
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:12px_12px]" />
-
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5 mb-4">
-            <Newspaper className="size-3.5" /> NARRATIVE AUTHORITY
-          </span>
-
-          <h2 className="font-lustria text-2xl font-normal mb-6">PR Campaign Architecture</h2>
-
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {capabilities.map((detail, index) => (
-              <li key={index} className="flex gap-3">
-                <CheckCircle2 className="size-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm text-muted-foreground font-sans font-light leading-relaxed">{detail}</span>
-              </li>
+          <ul className="mt-16 border-t border-line">
+            {capabilities.map((item, index) => (
+              <Reveal key={item} delayMs={index * 40}>
+                <li className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10">
+                  <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
+                    <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                      {index + 1}
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-5 md:col-span-8">
+                    <p className="text-base leading-[1.6] text-muted-foreground md:text-lg">
+                      {item}
+                    </p>
+                    <Button
+                      nativeButton={false}
+                      render={<Link href={contactHref} />}
+                      size="sm"
+                      className="w-fit"
+                    >
+                      Know more
+                    </Button>
+                  </div>
+                </li>
+              </Reveal>
             ))}
           </ul>
-        </div>
 
-        {/* CTA */}
-        <div className="text-center pt-8">
-          <Button nativeButton={false} render={<Link href={contactHref} />} size="lg" className="rounded-xl px-6 h-12 text-base font-medium group">
-            <span className="flex items-center gap-1.5">
-              Secure your Placement
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </span>
-          </Button>
-        </div>
-      </div>
+          <Reveal className="mt-16">
+            <PageCta
+              title="Need a narrative, not a press blast?"
+              label="Start a conversation"
+              href={contactHref}
+            />
+          </Reveal>
+        </Container>
+      </section>
     </div>
   )
 }

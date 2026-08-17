@@ -1,4 +1,5 @@
 import { ImagePlaceholder } from "@/components/shared/image-placeholder"
+import { getPlaceholderImage } from "@/lib/placeholder-images"
 
 type CaseStudyCardProps = {
   index: number
@@ -21,7 +22,8 @@ export function CaseStudyCard({
           aria-hidden="true"
         />
         <ImagePlaceholder
-          label={`Case study ${String(index + 1).padStart(2, "0")} — image to confirm`}
+          label={`Case study ${String(index + 1).padStart(2, "0")}`}
+          src={getPlaceholderImage(index)}
           className="aspect-video w-full"
         />
       </div>

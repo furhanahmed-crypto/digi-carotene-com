@@ -1,0 +1,87 @@
+import type { MouseEvent } from "react"
+import Link from "next/link"
+
+import { SectionMark } from "@/components/shared/section-mark"
+import { Button } from "@/components/ui/button"
+
+type CapabilityItem = {
+  label: string
+  body: string
+  href: string
+}
+
+type CapabilityPillarProps = {
+  id: string
+  title: string
+  summary: string
+  image: string
+  items: readonly CapabilityItem[]
+  knowMoreLabel: string
+  onEnter: (src: string, event: MouseEvent) => void
+  onMove: (event: MouseEvent) => void
+  onLeave: () => void
+  articleRef: (node: HTMLElement | null) => void
+}
+
+export function CapabilityPillar({
+  id,
+  title,
+  summary,
+  image,
+  items,
+  knowMoreLabel,
+  onEnter,
+  onMove,
+  onLeave,
+  articleRef,
+}: CapabilityPillarProps) {
+  return (
+    <article
+      id={id}
+      data-pillar-id={id}
+      ref={articleRef}
+      className="relative scroll-mt-[120px]"
+      onMouseEnter={(event) => onEnter(image, event)}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+    >
+      <div className="sticky top-[148px] z-10 -mx-1 bg-background/95 py-3 backdrop-blur-md lg:top-[70px] lg:mx-0">
+        <SectionMark>{title}</SectionMark>
+      </div>
+      <p className="mt-6 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">
+        {summary}
+      </p>
+
+      <ul className="mt-8 border-t border-border">
+        {items.map((item, index) => (
+          <li
+            key={item.label}
+            className="grid gap-5 border-b border-border py-6 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-8"
+          >
+            <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
+              <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                {index + 1}
+              </p>
+              <p className="mt-1 text-[13px] font-medium tracking-[0.03em] text-foreground uppercase md:text-sm">
+                {item.label}
+              </p>
+            </div>
+            <div className="flex flex-col gap-5 md:col-span-8">
+              <p className="text-base leading-[1.6] text-muted-foreground">
+                {item.body}
+              </p>
+              <Button
+                nativeButton={false}
+                render={<Link href={item.href} />}
+                size="sm"
+                className="w-fit"
+              >
+                {knowMoreLabel}
+              </Button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </article>
+  )
+}

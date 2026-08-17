@@ -4,6 +4,7 @@ import { ImagePlaceholder } from "@/components/shared/image-placeholder"
 import { Reveal } from "@/components/shared/reveal"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { SectionMark } from "@/components/shared/section-mark"
+import { getPlaceholderImage } from "@/lib/placeholder-images"
 
 export function Problem() {
   const { problem } = homeContent
@@ -18,7 +19,8 @@ export function Problem() {
               title={problem.headline}
             />
             <ImagePlaceholder
-              label="Discovery visual — image to confirm"
+              label="Discovery visual"
+              src={getPlaceholderImage(0)}
               className="mt-10 aspect-video w-full lg:mt-12"
             />
           </Reveal>

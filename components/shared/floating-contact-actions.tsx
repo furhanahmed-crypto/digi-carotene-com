@@ -5,7 +5,6 @@ import Link from "next/link"
 import { Mail } from "lucide-react"
 
 import { contactHref, whatsappHref } from "@/constants/home/navigation"
-import { cn } from "@/lib/utils"
 
 import { WhatsAppIcon } from "./whatsapp-icon"
 
@@ -13,7 +12,6 @@ type FloatingActionProps = {
   href: string
   label: string
   external?: boolean
-  animationDelay?: string
   children: ReactNode
 }
 
@@ -21,13 +19,10 @@ function FloatingAction({
   href,
   label,
   external,
-  animationDelay,
   children,
 }: FloatingActionProps) {
-  const className = cn(
-    "group relative flex size-11 items-center justify-center bg-card text-foreground shadow-md transition-colors duration-300 hover:bg-secondary animate-contact-float md:size-12",
-    animationDelay
-  )
+  const className =
+    "group relative flex size-14 items-center justify-center transition-all duration-300 md:size-16"
 
   if (external) {
     return (
@@ -53,26 +48,25 @@ function FloatingAction({
 export function FloatingContactActions() {
   return (
     <div
-      className="fixed top-1/2 right-0 z-50 flex -translate-y-1/2 overflow-hidden rounded-l-xl border border-line border-r-0 bg-card shadow-md"
+      className="fixed top-1/2 right-0 z-40 flex flex-col -translate-y-1/2 overflow-hidden rounded-l-2xl border border-line border-r-0 bg-card/92 shadow-lg backdrop-blur-sm"
       aria-label="Quick contact"
     >
       <FloatingAction
         href={whatsappHref}
         label="Chat on WhatsApp"
         external
-        animationDelay="[animation-delay:0ms]"
       >
-        <WhatsAppIcon className="size-5 text-[#25D366]" />
+        <span className="flex size-12 items-center justify-center rounded-l-xl bg-[#25D366]/14 text-[#25D366] transition-colors group-hover:bg-[#25D366]/20 md:size-14">
+          <WhatsAppIcon className="size-6 md:size-7" />
+        </span>
       </FloatingAction>
 
-      <span className="w-px shrink-0 self-stretch bg-line" aria-hidden="true" />
+      <span className="h-px w-full shrink-0 bg-line" aria-hidden="true" />
 
-      <FloatingAction
-        href={contactHref}
-        label="Go to contact form"
-        animationDelay="[animation-delay:300ms]"
-      >
-        <Mail className="size-5 text-carotene" />
+      <FloatingAction href={contactHref} label="Go to contact form">
+        <span className="flex size-12 items-center justify-center rounded-l-xl bg-carotene text-paper transition-colors group-hover:bg-carotene/90 md:size-14">
+          <Mail className="size-6 md:size-7" />
+        </span>
       </FloatingAction>
     </div>
   )

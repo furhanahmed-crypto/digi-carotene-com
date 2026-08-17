@@ -1,0 +1,30 @@
+import Link from "next/link"
+
+import { MediaFrame } from "@/components/shared/media-frame"
+
+type ListingCardProps = {
+  href: string
+  index: number
+  title: string
+  body: string
+}
+
+export function ListingCard({ href, index, title, body }: ListingCardProps) {
+  return (
+    <Link
+      href={href}
+      className="group flex h-full flex-col border border-line bg-background transition-colors hover:border-carotene/40"
+    >
+      <MediaFrame index={index} label={title} className="border-0 border-b" />
+      <div className="flex flex-1 flex-col gap-3 p-5">
+        <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+          {index + 1}
+        </p>
+        <h3 className="font-display text-[21px] leading-[1.2] font-medium group-hover:underline group-hover:decoration-carotene group-hover:underline-offset-4">
+          {title}
+        </h3>
+        <p className="text-base leading-[1.6] text-muted-foreground">{body}</p>
+      </div>
+    </Link>
+  )
+}

@@ -1,10 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { ArrowLeft, ArrowRight, Mail, MapPin, MessageSquare, Send, Sparkles } from "lucide-react"
-import Link from "next/link"
 
 import { PageHeader } from "@/components/shared/page-header"
+import { Container } from "@/components/shared/container"
+import { SectionMark } from "@/components/shared/section-mark"
+import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
@@ -16,157 +17,143 @@ export default function ContactPage() {
   })
   const [isSubmitted, setIsSubmitted] = React.useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulated sleek submission
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
     setIsSubmitted(true)
   }
 
+  const fieldClassName =
+    "h-12 w-full border border-line bg-background px-4 text-base text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-carotene"
+
   return (
-    <div className="min-h-svh pb-16">
+    <div className="min-h-svh">
       <PageHeader
-        title="Start a Conversation"
-        description="Connect with our multi-disciplinary strategists to audit your organic search engine citation authority or plan an offline activation."
-        accentColor="from-orange-500/10"
-        breadcrumbs={[
-          { label: "Contact Us" },
-        ]}
+        title="Start a conversation"
+        description="Tell us what you need ranked, cited, or activated. We work from Hyderabad with brands that want one team — not a stack of vendors."
+        breadcrumbs={[{ label: "Contact" }]}
+        mark="Contact"
+        imageIndex={2}
       />
 
-      <div className="mx-auto max-w-5xl px-6 mt-8 md:mt-10 space-y-8">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors group"
-        >
-          <ArrowLeft className="size-3.5 transition-transform group-hover:-translate-x-1" /> Back to Home
-        </Link>
+      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
+        <Container className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <SectionMark>Studio</SectionMark>
+            <SectionHeading
+              className="mt-6"
+              eyebrow="Hyderabad"
+              title="Let's build together"
+              body="Whether you need a GEO scan, a search program, or a physical activation, start here."
+            />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          {/* Details / Text */}
-          <div className="lg:col-span-5 space-y-8">
-            <div>
-              <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary flex items-center gap-1.5 mb-3">
-                <MessageSquare className="size-3.5" /> AGENCY OFFICE
-              </span>
-              <h2 className="font-lustria text-2xl font-normal tracking-tight mb-4">
-                Let&apos;s Build Together
-              </h2>
-              <p className="text-muted-foreground font-sans font-light text-sm leading-relaxed">
-                Whether you want to optimize your brand for LLMs, deploy experiential popups, or run multi-channel campaigns, our team is ready to deliver.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center gap-3.5">
-                <div className="flex size-9 items-center justify-center rounded-lg bg-primary/5 border border-primary/10 text-primary">
-                  <Mail className="size-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono text-muted-foreground uppercase block">Inquiries</span>
-                  <a href="mailto:hello@digicarotene.com" className="text-sm font-sans font-light text-foreground hover:text-primary transition-colors">
+            <dl className="mt-10 space-y-6">
+              <div>
+                <dt className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                  Inquiries
+                </dt>
+                <dd className="mt-1">
+                  <a
+                    href="mailto:hello@digicarotene.com"
+                    className="text-base text-foreground transition-colors hover:text-carotene"
+                  >
                     hello@digicarotene.com
                   </a>
-                </div>
+                </dd>
               </div>
-
-              <div className="flex items-center gap-3.5">
-                <div className="flex size-9 items-center justify-center rounded-lg bg-primary/5 border border-primary/10 text-primary">
-                  <MapPin className="size-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono text-muted-foreground uppercase block">Location</span>
-                  <span className="text-sm font-sans font-light text-foreground">
-                    Silicon Oasis, Dubai, UAE
-                  </span>
-                </div>
+              <div>
+                <dt className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                  Location
+                </dt>
+                <dd className="mt-1 text-base text-foreground">Hyderabad, India</dd>
               </div>
-            </div>
+            </dl>
           </div>
 
-          {/* Minimal Form */}
-          <div className="lg:col-span-7 rounded-3xl border border-border bg-card/25 p-6 md:p-8 relative overflow-hidden backdrop-blur-sm">
-            <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:16px_16px]" />
-
+          <div className="glass-panel p-6 lg:col-span-7 md:p-8">
             {isSubmitted ? (
-              <div className="text-center py-12 space-y-4">
-                <div className="inline-flex size-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20 text-primary">
-                  <Sparkles className="size-6 animate-pulse" />
-                </div>
-                <h3 className="font-lustria text-xl font-normal text-foreground">Inquiry Received</h3>
-                <p className="text-sm text-muted-foreground max-w-sm mx-auto font-sans font-light">
-                  Thank you. One of our digital strategists will contact you within one business day.
+              <div className="py-12">
+                <SectionMark>Received</SectionMark>
+                <h3 className="font-display mt-6 text-[26px] leading-[1.2] font-medium">
+                  Inquiry received
+                </h3>
+                <p className="mt-4 max-w-sm text-base leading-[1.6] text-muted-foreground">
+                  Thank you. A strategist will get back within one business day.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <div className="space-y-1.5">
-                    <label className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest" htmlFor="name">
-                      Full Name
-                    </label>
+                <div className="grid gap-5 md:grid-cols-2">
+                  <label className="block space-y-2">
+                    <span className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                      Full name
+                    </span>
                     <input
                       type="text"
-                      id="name"
                       required
                       value={formState.name}
-                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      placeholder="Jane Doe"
-                      className="w-full h-11 px-3.5 rounded-xl border border-border bg-background/50 text-sm font-sans font-light text-foreground placeholder:text-muted-foreground/40 outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/40 transition-all"
+                      onChange={(event) =>
+                        setFormState({ ...formState, name: event.target.value })
+                      }
+                      placeholder="Your name"
+                      className={fieldClassName}
                     />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest" htmlFor="email">
-                      Corporate Email
-                    </label>
+                  </label>
+                  <label className="block space-y-2">
+                    <span className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                      Email
+                    </span>
                     <input
                       type="email"
-                      id="email"
                       required
                       value={formState.email}
-                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      placeholder="jane@company.com"
-                      className="w-full h-11 px-3.5 rounded-xl border border-border bg-background/50 text-sm font-sans font-light text-foreground placeholder:text-muted-foreground/40 outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/40 transition-all"
+                      onChange={(event) =>
+                        setFormState({ ...formState, email: event.target.value })
+                      }
+                      placeholder="you@company.com"
+                      className={fieldClassName}
                     />
-                  </div>
+                  </label>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest" htmlFor="company">
-                    Company Name
-                  </label>
+                <label className="block space-y-2">
+                  <span className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                    Company
+                  </span>
                   <input
                     type="text"
-                    id="company"
                     value={formState.company}
-                    onChange={(e) => setFormState({ ...formState, company: e.target.value })}
-                    placeholder="Acme Corp"
-                    className="w-full h-11 px-3.5 rounded-xl border border-border bg-background/50 text-sm font-sans font-light text-foreground placeholder:text-muted-foreground/40 outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/40 transition-all"
+                    onChange={(event) =>
+                      setFormState({ ...formState, company: event.target.value })
+                    }
+                    placeholder="Brand or company"
+                    className={fieldClassName}
                   />
-                </div>
+                </label>
 
-                <div className="space-y-1.5">
-                  <label className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest" htmlFor="message">
-                    Inquiry Details
-                  </label>
+                <label className="block space-y-2">
+                  <span className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                    What do you need?
+                  </span>
                   <textarea
-                    id="message"
                     required
                     value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    placeholder="Briefly describe your goals or audit needs..."
-                    rows={4}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-border bg-background/50 text-sm font-sans font-light text-foreground placeholder:text-muted-foreground/40 outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/40 transition-all resize-none"
+                    onChange={(event) =>
+                      setFormState({ ...formState, message: event.target.value })
+                    }
+                    placeholder="Search, activations, PR, or a full plan..."
+                    rows={5}
+                    className={`${fieldClassName} h-auto resize-none py-3`}
                   />
-                </div>
+                </label>
 
-                <Button type="submit" size="lg" className="w-full rounded-xl h-11 text-sm font-medium group">
-                  Send Inquiry <Send className="size-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
+                <Button type="submit" size="lg">
+                  Send inquiry
                 </Button>
               </form>
             )}
           </div>
-        </div>
-      </div>
+        </Container>
+      </section>
     </div>
   )
 }

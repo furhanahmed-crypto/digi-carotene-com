@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Sparkles, ArrowUpRight } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 import { contactHref, mainNav } from "@/constants/home/navigation"
 import { SiteLogo } from "@/components/shared/site-logo"
@@ -39,7 +39,7 @@ export function Footer() {
               We engineer the intersection of technical precision and artistic brand craft. Bridging AI conversational citations (SEO/AEO/GEO) with sensory real-world offline experiential activations.
             </p>
             <div className="flex items-center gap-2 text-[10px] font-mono text-muted-foreground uppercase tracking-widest">
-              <Sparkles className="size-3.5 text-primary animate-pulse" /> Dubai Silicon Oasis, UAE
+              Hyderabad, India
             </div>
           </div>
 

@@ -16,7 +16,8 @@ export function ImagePlaceholder({
   return (
     <div
       className={cn(
-        "relative overflow-hidden border border-dashed border-line bg-secondary/40",
+        "relative overflow-hidden bg-secondary/40",
+        src ? "border border-line" : "border border-dashed border-line",
         fill && "absolute inset-0 h-full w-full",
         className
       )}

@@ -23,12 +23,12 @@ export function BackToTop() {
   return (
     <Button
       type="button"
-      variant="outline"
+      variant="default"
       size="icon-lg"
       aria-label="Back to top"
       onClick={scrollToTop}
       className={cn(
-        "fixed right-6 bottom-6 z-50 size-11 rounded-full border-carotene bg-card text-carotene shadow-sm transition-opacity duration-300 hover:border-carotene hover:bg-secondary hover:text-carotene",
+        "fixed right-6 bottom-6 z-50 size-11 rounded-full border-transparent bg-carotene text-paper shadow-md transition-opacity duration-300 hover:bg-carotene/90 hover:text-paper",
         isVisible ? "opacity-100" : "pointer-events-none opacity-0"
       )}
     >

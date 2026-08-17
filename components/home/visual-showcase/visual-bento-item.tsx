@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils"
 type VisualBentoItemProps = {
   label: string
   layout: "hero" | "wide" | "square" | "tall" | "banner"
+  src: string
 }
 
 const layoutClasses: Record<VisualBentoItemProps["layout"], string> = {
@@ -14,10 +15,11 @@ const layoutClasses: Record<VisualBentoItemProps["layout"], string> = {
   banner: "col-span-12 md:col-span-8",
 }
 
-export function VisualBentoItem({ label, layout }: VisualBentoItemProps) {
+export function VisualBentoItem({ label, layout, src }: VisualBentoItemProps) {
   return (
     <ImagePlaceholder
       label={label}
+      src={src}
       className={cn("h-full min-h-[140px] w-full", layoutClasses[layout])}
     />
   )
