@@ -91,10 +91,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Offline / Experiential (Lg: 2 Cols) */}
+          {/* Column 4: Offline & PR Services (Lg: 2 Cols) */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
-              Offline Marketing
+              Offline & PR
             </h4>
             <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground">
               {offlineGroup?.items?.map((item) => (
@@ -107,16 +107,7 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Column 5: Resources & Inquiries (Lg: 2 Cols) */}
-          <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
-              Resources
-            </h4>
-            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground">
-              {prGroup?.href ? (
+              {prGroup?.href && (
                 <li>
                   <Link
                     href={prGroup.href}
@@ -125,7 +116,16 @@ export function Footer() {
                     {prGroup.title}
                   </Link>
                 </li>
-              ) : null}
+              )}
+            </ul>
+          </div>
+
+          {/* Column 5: Resources (Lg: 2 Cols) */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
+              Resources
+            </h4>
+            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground">
               <li>
                 <Link href="/blog" className="hover:text-primary transition-colors hover:translate-x-0.5 inline-block">
                   The Journal
