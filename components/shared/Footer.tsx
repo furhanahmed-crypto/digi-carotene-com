@@ -1,6 +1,5 @@
 "use client"
 
-import * as React from "react"
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
@@ -29,7 +28,7 @@ export function Footer() {
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-10">
-          
+
           {/* Column 1: Logo & Agency Bio (Lg: 4 Cols) */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="group inline-flex items-center" aria-label="Digi Carotene home">
