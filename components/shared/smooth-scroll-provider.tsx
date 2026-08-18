@@ -7,16 +7,39 @@ import "lenis/dist/lenis.css"
 import { GsapLenisSync } from "@/components/shared/gsap-lenis-sync"
 
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
+  const [viewportWidth, setViewportWidth] = React.useState(1280)
+
+  React.useEffect(() => {
+    const updateViewportWidth = () => {
+      setViewportWidth(window.innerWidth)
+    }
+
+    updateViewportWidth()
+    window.addEventListener("resize", updateViewportWidth)
+
+    return () => {
+      window.removeEventListener("resize", updateViewportWidth)
+    }
+  }, [])
+
+  const lenisOptions = React.useMemo(() => {
+    const isMobile = viewportWidth < 768
+    const isTablet = viewportWidth >= 768 && viewportWidth < 1024
+
+    return {
+      lerp: isMobile ? 0.12 : isTablet ? 0.1 : 0.08,
+      duration: isMobile ? 0.95 : isTablet ? 1.05 : 1.2,
+      smoothWheel: true,
+      syncTouch: true,
+      touchMultiplier: isMobile ? 1.45 : isTablet ? 1.25 : 1,
+    }
+  }, [viewportWidth])
+
   return (
     <ReactLenis
       root
       autoRaf={false}
-      options={{
-        lerp: 0.08,
-        duration: 1.2,
-        smoothWheel: true,
-        syncTouch: true,
-      }}
+      options={lenisOptions}
     >
       <GsapLenisSync />
       {children}
