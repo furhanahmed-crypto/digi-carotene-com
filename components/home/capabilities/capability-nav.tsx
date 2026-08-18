@@ -20,7 +20,7 @@ export function CapabilityNav({
   return (
     <nav
       aria-label="Service pillars"
-      className="border-border bg-background/90 sticky top-[80px] z-20 -mx-5 mb-8 border-y px-5 backdrop-blur-md md:-mx-8 md:px-8 lg:top-[85px] lg:col-span-4 lg:mx-0 lg:mb-0 lg:border-0 lg:bg-transparent lg:px-0 lg:backdrop-blur-none xl:col-span-3"
+      className="border-border bg-background/90 z-20 -mx-5 mb-8 border-y px-5 backdrop-blur-md md:-mx-8 md:px-8 lg:sticky lg:top-21.25 lg:col-span-4 lg:mx-0 lg:mb-0 lg:border-0 lg:bg-transparent lg:px-0 lg:backdrop-blur-none xl:col-span-3"
     >
       <div className="flex gap-2 overflow-x-auto py-3 lg:flex-col lg:gap-0 lg:overflow-visible lg:py-0">
         {pillars.map((pillar, index) => {

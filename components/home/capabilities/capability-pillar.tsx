@@ -40,12 +40,12 @@ export function CapabilityPillar({
       id={id}
       data-pillar-id={id}
       ref={articleRef}
-      className="relative scroll-mt-[120px]"
+      className="relative scroll-mt-30"
       onMouseEnter={(event) => onEnter(image, event)}
       onMouseMove={onMove}
       onMouseLeave={onLeave}
     >
-      <div className="sticky top-[148px] z-10 -mx-1 bg-background/95 py-3 backdrop-blur-md lg:top-[70px] lg:mx-0">
+      <div className="-mx-1 py-3 lg:sticky lg:top-17.5 lg:z-10 lg:mx-0 lg:bg-background/95 lg:backdrop-blur-md">
         <SectionMark>{title}</SectionMark>
       </div>
       <p className="mt-6 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">
