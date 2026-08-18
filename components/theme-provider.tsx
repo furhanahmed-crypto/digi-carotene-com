@@ -26,6 +26,13 @@ function applyTheme(resolved: "light" | "dark") {
   root.classList.remove("light", "dark")
   root.classList.add(resolved)
   root.style.colorScheme = resolved
+
+  const themeColor = resolved === "dark" ? "#1C1A17" : "#F7F4EE"
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]')
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", themeColor)
+  }
+
   document.cookie = `${COOKIE_KEY}=${resolved}; path=/; max-age=31536000; SameSite=Lax`
 }
 

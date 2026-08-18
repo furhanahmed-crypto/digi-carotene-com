@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { cookies } from "next/headers"
 import { Geist_Mono, Inter, Fraunces } from "next/font/google"
 
@@ -77,6 +77,16 @@ export const metadata: Metadata = {
       },
     ],
   },
+}
+
+export async function generateViewport(): Promise<Viewport> {
+  const themeCookie = (await cookies()).get("theme")?.value
+  const isDark = themeCookie === "dark"
+
+  return {
+    colorScheme: isDark ? "dark" : "light",
+    themeColor: isDark ? "#1C1A17" : "#F7F4EE",
+  }
 }
 
 export default async function RootLayout({
