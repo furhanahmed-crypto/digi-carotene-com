@@ -5,24 +5,48 @@ import Link from "next/link"
 import { Mail } from "lucide-react"
 
 import { contactHref, whatsappHref } from "@/constants/home/navigation"
+import { cn } from "@/lib/utils"
 
 import { WhatsAppIcon } from "./whatsapp-icon"
 
-type FloatingActionProps = {
+type ExpandActionProps = {
   href: string
   label: string
   external?: boolean
-  children: ReactNode
+  icon: ReactNode
+  iconClassName: string
+  expandedClassName: string
 }
 
-function FloatingAction({
+function ExpandAction({
   href,
   label,
   external,
-  children,
-}: FloatingActionProps) {
-  const className =
-    "group relative flex min-h-14 w-full items-center transition-all duration-300"
+  icon,
+  iconClassName,
+  expandedClassName,
+}: ExpandActionProps) {
+  const className = cn(
+    "group flex h-12 items-center overflow-hidden rounded-full shadow-lg transition-[width,box-shadow,transform] duration-300 ease-out",
+    "w-12 hover:w-44 focus-visible:w-44 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+    expandedClassName
+  )
+
+  const content = (
+    <>
+      <span
+        className={cn(
+          "flex size-12 shrink-0 items-center justify-center",
+          iconClassName
+        )}
+      >
+        {icon}
+      </span>
+      <span className="max-w-0 overflow-hidden whitespace-nowrap pr-0 text-[12px] font-semibold tracking-[0.08em] text-white uppercase opacity-0 transition-all duration-300 ease-out group-hover:max-w-28 group-hover:pr-4 group-hover:opacity-100 group-focus-visible:max-w-28 group-focus-visible:pr-4 group-focus-visible:opacity-100">
+        {label}
+      </span>
+    </>
+  )
 
   if (external) {
     return (
@@ -33,14 +57,14 @@ function FloatingAction({
         aria-label={label}
         className={className}
       >
-        {children}
+        {content}
       </a>
     )
   }
 
   return (
     <Link href={href} aria-label={label} className={className}>
-      {children}
+      {content}
     </Link>
   )
 }
@@ -48,46 +72,24 @@ function FloatingAction({
 export function FloatingContactActions() {
   return (
     <div
-      className="fixed right-6 bottom-20 z-40 flex flex-col gap-2 md:w-63"
+      className="fixed right-5 bottom-20 z-40 flex flex-col items-end gap-3 md:right-6"
       aria-label="Quick contact"
     >
-      <FloatingAction
+      <ExpandAction
         href={whatsappHref}
-        label="Chat on WhatsApp"
+        label="WhatsApp"
         external
-      >
-        <span className="relative flex w-14 overflow-hidden border border-line/70 bg-background/92 text-foreground shadow-lg backdrop-blur-md transition-all duration-300 group-hover:bg-background group-hover:shadow-xl md:w-full md:border-0 md:bg-transparent md:shadow-none md:backdrop-blur-none">
-          <span className="hidden md:block absolute inset-0 bg-[#25D366]/35 [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%)]" />
-          <span className="relative hidden md:flex md:min-h-14 md:w-full md:items-center md:justify-between md:bg-background/92 md:[clip-path:polygon(19px_1px,calc(100%-1px)_1px,calc(100%-1px)_calc(100%-1px),1px_calc(100%-1px))]">
-            <span className="flex min-w-0 items-center gap-3 px-8 py-3">
-              <span className="h-5 w-1 shrink-0 bg-[#25D366]" aria-hidden="true" />
-              <span className="font-display text-[13px] leading-none font-medium tracking-[0.06em] uppercase text-foreground/92">
-                WhatsApp
-              </span>
-            </span>
-          </span>
-          <span className="relative flex h-14 w-14 shrink-0 items-center justify-center bg-[#25D366]/12 text-[#25D366] transition-colors group-hover:bg-[#25D366]/18 md:h-15 md:w-15">
-            <WhatsAppIcon className="size-5 md:size-5.5" />
-          </span>
-        </span>
-      </FloatingAction>
-
-      <FloatingAction href={contactHref} label="Go to contact form">
-        <span className="relative flex w-14 overflow-hidden border border-line/70 bg-background/92 text-foreground shadow-lg backdrop-blur-md transition-all duration-300 group-hover:bg-background group-hover:shadow-xl md:w-full md:border-0 md:bg-transparent md:shadow-none md:backdrop-blur-none">
-          <span className="hidden md:block absolute inset-0 bg-carotene/35 [clip-path:polygon(18px_0,100%_0,100%_100%,0_100%)]" />
-          <span className="relative hidden md:flex md:min-h-14 md:w-full md:items-center md:justify-between md:bg-background/92 md:[clip-path:polygon(19px_1px,calc(100%-1px)_1px,calc(100%-1px)_calc(100%-1px),1px_calc(100%-1px))]">
-            <span className="flex min-w-0 items-center gap-3 px-8 py-3">
-              <span className="h-5 w-1 shrink-0 bg-carotene" aria-hidden="true" />
-              <span className="font-display text-[13px] leading-none font-medium tracking-[0.06em] uppercase text-foreground/92">
-                Contact
-              </span>
-            </span>
-          </span>
-          <span className="relative flex h-14 w-14 shrink-0 items-center justify-center bg-carotene text-paper transition-colors group-hover:bg-carotene/90 md:h-15 md:w-15">
-            <Mail className="size-5 md:size-5.5" />
-          </span>
-        </span>
-      </FloatingAction>
+        icon={<WhatsAppIcon className="size-5" />}
+        iconClassName="bg-[#25D366] text-white"
+        expandedClassName="bg-[#25D366] hover:shadow-[#25D366]/35"
+      />
+      <ExpandAction
+        href={contactHref}
+        label="Contact"
+        icon={<Mail className="size-5" />}
+        iconClassName="bg-brand-yellow text-ink"
+        expandedClassName="bg-brand-yellow hover:shadow-brand-yellow/40"
+      />
     </div>
   )
 }

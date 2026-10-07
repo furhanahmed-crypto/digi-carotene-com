@@ -18,7 +18,7 @@ export function SectionMark({
       className={cn(
         "inline-flex max-w-full items-center gap-3 px-5 py-3 pr-8 [clip-path:polygon(0_0,calc(100%-14px)_0,100%_100%,0_100%)]",
         tone === "carotene"
-          ? "bg-carotene text-paper"
+          ? "bg-brand-yellow text-ink"
           : "bg-paper text-ink dark:bg-secondary dark:text-paper",
         className
       )}
@@ -26,7 +26,7 @@ export function SectionMark({
       <span
         className={cn(
           "h-5 w-1 shrink-0",
-          tone === "carotene" ? "bg-paper" : "bg-carotene"
+          tone === "carotene" ? "bg-ink" : "bg-brand-yellow"
         )}
         aria-hidden="true"
       />

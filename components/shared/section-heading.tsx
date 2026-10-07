@@ -22,7 +22,7 @@ export function SectionHeading({
       <p
         className={cn(
           "text-[13px] font-medium tracking-[0.03em] uppercase md:text-sm",
-          inverted ? "text-paper/70" : "text-ink-muted"
+          inverted ? "text-white/70" : "text-muted-foreground"
         )}
       >
         {eyebrow}
@@ -30,7 +30,7 @@ export function SectionHeading({
       <h2
         className={cn(
           "font-display mt-4 text-[30px] leading-[1.1] font-medium md:text-[44px]",
-          inverted ? "text-paper" : "text-foreground"
+          inverted ? "text-white" : "text-foreground"
         )}
       >
         {title}
@@ -39,7 +39,7 @@ export function SectionHeading({
         <p
           className={cn(
             "mt-5 text-base leading-[1.6] md:text-lg",
-            inverted ? "text-paper/75" : "text-muted-foreground"
+            inverted ? "text-white/80" : "text-muted-foreground"
           )}
         >
           {body}

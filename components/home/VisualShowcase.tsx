@@ -10,10 +10,10 @@ export function VisualShowcase() {
   const { visualShowcase } = homeContent
 
   return (
-    <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
+    <section className="border-b border-border bg-brand-yellow py-16 text-ink md:py-24 dark:bg-secondary dark:text-foreground">
       <Container>
         <Reveal>
-          <SectionMark>{visualShowcase.eyebrow}</SectionMark>
+          <SectionMark tone="paper">{visualShowcase.eyebrow}</SectionMark>
           <SectionHeading
             className="mt-6"
             eyebrow="Campaign & activation"

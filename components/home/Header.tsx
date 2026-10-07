@@ -59,7 +59,7 @@ export function Header() {
               variant="default"
               nativeButton={false}
               render={<Link href={contactHref} />}
-              className={cn("hidden", isScrolled && "inline-flex")}
+              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
             >
               Contact Us
             </Button>

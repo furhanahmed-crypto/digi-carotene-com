@@ -1,0 +1,20 @@
+---
+description: Digi Carotene agency site — docs-first, white/yellow light bands, blue accents, honesty
+alwaysApply: true
+---
+
+# Agency revamp
+
+Before edits, read `docs/AGENTS.md` then `docs/DESIGN.md` and `docs/RULES.md`.
+
+- Light-mode section backgrounds: white/near-white and yellow only
+- Blue for CTAs, heading accents, section marks
+- Multi-color service cards OK on white bands; not every section a different fill
+- Dark mode: professional charcoal bands; accents on CTAs/icons
+- No invented clients, logos, metrics, testimonials
+- Floating contact: round icon → expand label on hover
+- Preserve Lenis + Reveal; respect reduced-motion
+- Keep marquee / visual showcase / case studies / FAQ layout; theme consistently
+- Modular `components/home/<section>/`, `constants/`, `types/`
+- Verify with `bun run typecheck` before finishing a batch
+---

@@ -14,7 +14,10 @@ export function FAQ() {
   const { faq } = homeContent
 
   return (
-    <section id="faq" className="border-t border-border bg-background py-[72px] lg:py-[140px]">
+    <section
+      id="faq"
+      className="border-b border-border bg-background py-16 md:py-24"
+    >
       <Container>
         <Reveal>
           <SectionMark>{faq.eyebrow}</SectionMark>
@@ -25,12 +28,12 @@ export function FAQ() {
           />
         </Reveal>
 
-        <Accordion className="mt-10 border border-line">
+        <Accordion className="mt-10 overflow-hidden rounded-2xl border border-border bg-card">
           {faq.items.map((item, index) => (
             <AccordionItem
               key={item.question}
               value={`faq-${index}`}
-              className="border-line not-last:border-b px-4"
+              className="not-last:border-b border-border px-4"
             >
               <AccordionTrigger className="font-display rounded-none py-5 text-left text-[18px] leading-[1.3] font-medium hover:no-underline md:text-[21px]">
                 {item.question}

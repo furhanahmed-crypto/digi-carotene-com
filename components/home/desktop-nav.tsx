@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -13,8 +14,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import {
+  serviceMegaFooter,
+  serviceMegaItems,
+} from "@/constants/home/mega-menu"
+import {
   mainNav,
-  type NavGroup,
   type NavItem,
   type NavLinkItem,
 } from "@/constants/home/navigation"
@@ -54,32 +58,44 @@ function DropdownContent({ items }: { items: NavLinkItem[] }) {
   )
 }
 
-function GroupsContent({ groups }: { groups: NavGroup[] }) {
+function ServicesMegaMenu() {
   return (
-    <ul className="grid w-[600px] grid-cols-3 gap-2">
-      {groups.map((group) => (
-        <li key={group.title} className="p-2">
-          {group.href ? (
-            <NavigationMenuLink render={<Link href={group.href} />}>
-              <span className="font-medium">{group.title}</span>
-            </NavigationMenuLink>
-          ) : (
-            <div className="mb-1 px-2 py-1.5 text-sm font-medium">
-              {group.title}
-            </div>
-          )}
-          {group.items?.map((item) => (
-            <NavigationMenuLink
-              key={item.href}
-              render={<Link href={item.href} />}
-              className="text-muted-foreground"
-            >
-              {item.title}
-            </NavigationMenuLink>
-          ))}
-        </li>
-      ))}
-    </ul>
+    <div className="w-[min(92vw,720px)] p-3">
+      <ul className="grid grid-cols-1 gap-1 sm:grid-cols-2">
+        {serviceMegaItems.map((item) => {
+          const Icon = item.icon
+          return (
+            <li key={item.href + item.title}>
+              <NavigationMenuLink
+                render={<Link href={item.href} />}
+                className="flex items-start gap-3 rounded-xl p-3 hover:bg-secondary"
+              >
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-blue/10 text-brand-blue">
+                  <Icon className="size-4" />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold text-foreground">
+                    {item.title}
+                  </span>
+                  <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">
+                    {item.description}
+                  </span>
+                </span>
+              </NavigationMenuLink>
+            </li>
+          )
+        })}
+      </ul>
+      <div className="mt-2 border-t border-border pt-2">
+        <NavigationMenuLink
+          render={<Link href={serviceMegaFooter.href} />}
+          className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-brand-blue"
+        >
+          {serviceMegaFooter.label}
+          <ArrowRight className="size-3.5" />
+        </NavigationMenuLink>
+      </div>
+    </div>
   )
 }
 
@@ -112,7 +128,7 @@ function NavEntry({ item }: { item: NavItem }) {
     <NavigationMenuItem>
       <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
       <NavigationMenuContent>
-        <GroupsContent groups={item.groups} />
+        <ServicesMegaMenu />
       </NavigationMenuContent>
     </NavigationMenuItem>
   )

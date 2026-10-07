@@ -27,7 +27,7 @@ function applyTheme(resolved: "light" | "dark") {
   root.classList.add(resolved)
   root.style.colorScheme = resolved
 
-  const themeColor = resolved === "dark" ? "#1C1A17" : "#F7F4EE"
+  const themeColor = resolved === "dark" ? "#0F0F10" : "#FAFAF8"
   const themeColorMeta = document.querySelector('meta[name="theme-color"]')
   if (themeColorMeta) {
     themeColorMeta.setAttribute("content", themeColor)

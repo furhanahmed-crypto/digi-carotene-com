@@ -85,7 +85,7 @@ export async function generateViewport(): Promise<Viewport> {
 
   return {
     colorScheme: isDark ? "dark" : "light",
-    themeColor: isDark ? "#1C1A17" : "#F7F4EE",
+    themeColor: isDark ? "#0F0F10" : "#FAFAF8",
   }
 }
 

@@ -12,7 +12,7 @@ export function Work() {
   return (
     <section
       id="work"
-      className="border-t border-border bg-background py-[72px] lg:py-[140px]"
+      className="border-b border-border bg-background py-16 md:py-24"
     >
       <Container>
         <Reveal>
