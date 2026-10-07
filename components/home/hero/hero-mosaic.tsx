@@ -7,17 +7,15 @@ import { useGSAP } from "@gsap/react"
 
 gsap.registerPlugin(useGSAP)
 
-/** Diagonal wave groups (0-based) top-left → bottom-right by row+col. */
-const WAVE_GROUPS = [[0], [1, 3], [2, 4, 6], [5, 7], [8]] as const
+const COLS = 3
+const DIAGONALS = 5 // (rows - 1) + (cols - 1) + 1
 
-const SESSION_DURATION = 0.5
-/** Pause after the 9th image settles, before restarting from image 1. */
+const PULSE = 0.55 // one cell's full up + settle
+const STAGGER = 0.09 // delay between diagonals -> they overlap
 const PAUSE_BETWEEN_SESSIONS = 3
 const PEAK_SCALE = 1.1
 
-type HeroMosaicProps = {
-  images: readonly string[]
-}
+type HeroMosaicProps = { images: readonly string[] }
 
 export function HeroMosaic({ images }: HeroMosaicProps) {
   const gridRef = useRef<HTMLDivElement>(null)
@@ -27,59 +25,50 @@ export function HeroMosaic({ images }: HeroMosaicProps) {
       const grid = gridRef.current
       if (!grid) return
 
-      const cells = gsap.utils.toArray<HTMLElement>(
-        grid.querySelectorAll("[data-mosaic-cell]")
-      )
+      const cells = gsap.utils.toArray<HTMLElement>("[data-mosaic-cell]", grid)
       if (cells.length < 9) return
 
-      const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches
-      if (reducedMotion) return
+      const mm = gsap.matchMedia()
 
-      gsap.set(cells, { scale: 1, transformOrigin: "center center" })
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.set(cells, { scale: 1, force3D: true })
 
-      const step = SESSION_DURATION / WAVE_GROUPS.length
-      const up = step * 0.42
-      const down = step * 0.58
+        const tl = gsap.timeline({
+          repeat: -1,
+          repeatDelay: PAUSE_BETWEEN_SESSIONS,
+          defaults: { overwrite: false },
+        })
 
-      const timeline = gsap.timeline({
-        repeat: -1,
-        repeatDelay: PAUSE_BETWEEN_SESSIONS,
-      })
+        cells.forEach((cell, i) => {
+          const diagonal = Math.floor(i / COLS) + (i % COLS) // 0..4
+          const start = diagonal * STAGGER
 
-      WAVE_GROUPS.forEach((group, waveIndex) => {
-        const targets = group.map((index) => cells[index]).filter(Boolean)
-        const start = waveIndex * step
-
-        timeline
-          .to(
-            targets,
+          tl.to(
+            cell,
             {
               scale: PEAK_SCALE,
-              duration: up,
-              ease: "power2.out",
-              overwrite: "auto",
+              duration: PULSE * 0.4,
+              ease: "sine.out",
+              // lift the active cell above its neighbours so edges don't clip
+              onStart: () => { gsap.set(cell, { zIndex: 1 }) },
             },
             start
-          )
-          .to(
-            targets,
+          ).to(
+            cell,
             {
               scale: 1,
-              duration: down,
-              ease: "bounce.out",
-              overwrite: "auto",
+              duration: PULSE * 0.6,
+              ease: "back.out(2.2)", // soft overshoot below 1, then settle
+              onComplete: () => { gsap.set(cell, { zIndex: 0 }) },
             },
-            start + up
+            start + PULSE * 0.4
           )
+        })
+
+        return () => tl.kill()
       })
 
-      // Kill the infinite timeline on unmount (useGSAP also reverts context).
-      return () => {
-        timeline.kill()
-        gsap.set(cells, { clearProps: "transform" })
-      }
+      return () => mm.revert()
     },
     { scope: gridRef }
   )
