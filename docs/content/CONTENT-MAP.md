@@ -5,20 +5,23 @@ Extracts: `docs/content/pages/*.txt`
 
 ## Homepage section order
 
-| Order | Section | PDF source |
-| --- | --- | --- |
-| 1 | Hero | Eyebrow FOUND. CHOSEN. MEASURED. + H1 + body + CTAs |
-| 2 | Trust strip (marquee) | Trust strip under hero |
-| 3 | Search ranking | “Your customers stopped scrolling…” + live SERP |
-| 4 | Differentiators | What makes Digi Carotene different (4× H3) |
-| 5 | Service panels | Our services (6× H3) |
-| 6 | Who we work with | Who we work with bullets |
-| 7 | Growth framework | Diagnose → Plan → Launch → Measure |
-| 8 | Visual showcase / Reels | Layout preserved; creative proof shells |
-| 9 | Results | Results, not reports (placeholder cards only) |
-| 10 | Case studies carousel | Layout preserved; honest placeholders |
-| 11 | FAQ | Home FAQ H3s |
-| 12 | Closing CTA | Find out how visible… |
+Tone via `SectionLayout` (`white` / `cream` / `yellow`). Every content band uses `SectionMark`.
+
+| Order | Section | Tone | PDF source |
+| --- | --- | --- | --- |
+| 1 | Hero | white | Eyebrow FOUND. CHOSEN. MEASURED. + H1 + body + CTAs |
+| 2 | Clients marquee | yellow | Placeholder client slots |
+| 3 | Search ranking | cream | “Your customers stopped scrolling…” + live SERP |
+| 4 | Differentiators | white | What makes Digi Carotene different (4× H3) |
+| 5 | Service panels | white | Our services |
+| 6 | Who we work with | cream | Who we work with bullets |
+| 7 | Growth framework | white | Diagnose → Plan → Launch → Measure |
+| 8 | Visual showcase | yellow | Creative proof shells |
+| 9 | Reels | white | Creative proof shells |
+| 10 | Results | yellow | Results, not reports (placeholders) |
+| 11 | Case studies carousel | white | Honest placeholders |
+| 12 | FAQ | cream | Home FAQ H3s |
+| 13 | Closing CTA | yellow | Find out how visible… |
 
 ## Facts allowed sitewide (PDF consistency)
 

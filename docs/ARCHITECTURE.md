@@ -47,7 +47,7 @@ components/home/          homepage feature folders
   visual-showcase/
   work/
   cta/
-components/shared/        Footer, floating CTAs, Reveal, Container
+components/shared/        Footer, floating CTAs, Reveal, Container, SectionLayout, SectionMark
 components/ui/            shadcn primitives
 constants/home/           navigation, mega-menu, sections
 types/                    shared types

@@ -1,7 +1,18 @@
+import type { LucideIcon } from "lucide-react"
+import {
+  BookOpen,
+  Building2,
+  FileBarChart,
+  Handshake,
+  Newspaper,
+  Users,
+} from "lucide-react"
+
 export type NavLinkItem = {
   title: string
   href: string
   description?: string
+  icon?: LucideIcon
 }
 
 export type NavGroup = {
@@ -27,21 +38,25 @@ export const mainNav: NavItem[] = [
         title: "About Us",
         href: "/about",
         description: "Who we are and how we grow brands.",
+        icon: Building2,
       },
       {
         title: "Team",
         href: "/about/team",
         description: "The people behind Digi Carotene.",
+        icon: Users,
       },
       {
         title: "Founder's Story",
         href: "/about/founders-story",
         description: "The origin and vision of the agency.",
+        icon: BookOpen,
       },
       {
         title: "Clients",
         href: "/about/clients",
         description: "Brands we've partnered with.",
+        icon: Handshake,
       },
     ],
   },
@@ -145,11 +160,13 @@ export const mainNav: NavItem[] = [
         title: "Blog",
         href: "/blog",
         description: "Insights on SEO, AEO, GEO, and growth.",
+        icon: Newspaper,
       },
       {
         title: "Case Studies",
         href: "/case-studies",
         description: "Results and stories from real campaigns.",
+        icon: FileBarChart,
       },
     ],
   },

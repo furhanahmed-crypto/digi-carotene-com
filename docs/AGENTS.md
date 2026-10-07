@@ -32,15 +32,16 @@ bun run build
 
 ## Verification before finishing a batch
 
-1. Homepage light mode: white / yellow / cream bands only
-2. Yellow used for CTAs / marks (ink text on yellow fills)
+1. Homepage light mode: white / yellow / cream via `SectionLayout` only
+2. Yellow used for CTAs / marks (ink text on yellow fills; paper marks on yellow bands)
 3. Hero + SERP typing animations run (type → 3s hold → erase → next)
 4. Service panels: multi-color cards on a white band
-5. Inner pages share PageHeader / PageCta / SectionMark language
-6. Dark mode readable and professional
-7. Floating CTAs: round icons that expand on hover
-8. `bun run typecheck`
-9. Update `docs/TASKS.md` checkboxes
+5. SectionMark present on every homepage content section
+6. Inner pages share PageHeader / PageCta / SectionMark language
+7. Dark mode readable and professional
+8. Floating CTAs: round icons that expand on hover
+9. `bun run typecheck`
+10. Update `docs/TASKS.md` checkboxes
 
 ## Working style
 

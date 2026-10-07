@@ -1,3 +1,5 @@
+import { SectionLayout } from "@/components/shared/section-layout"
+
 const placeholders = [
   "Client 01",
   "Client 02",
@@ -38,14 +40,17 @@ function MarqueeRow() {
 
 export function ClientsMarquee() {
   return (
-    <section
-      className="relative overflow-hidden border-y border-border bg-brand-yellow py-7 dark:bg-secondary"
+    <SectionLayout
+      tone="yellow"
+      size="compact"
+      contained={false}
+      bordered
+      className="border-y"
       aria-label="Client logos to confirm"
     >
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-brand-yellow to-transparent md:w-28 dark:from-secondary" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-brand-yellow to-transparent md:w-28 dark:from-secondary" />
-
       <MarqueeRow />
-    </section>
+    </SectionLayout>
   )
 }

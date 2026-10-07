@@ -20,7 +20,7 @@ export const homeSections = {
     headlineBefore: "They search.",
     headlineAccents: [
       "You show up first.",
-      "You top the SEO ranks.",
+      "You rank first.",
       "You get cited by AI.",
     ] as const,
     body: "For 7+ years and 300+ clients across the globe, we have done one thing well: turn marketing spend into results you can count. We get you found on Google, recommended by AI, and chosen in the real world, and we show you the numbers every step of the way.",

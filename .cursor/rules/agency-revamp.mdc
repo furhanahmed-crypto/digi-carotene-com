@@ -7,14 +7,14 @@ alwaysApply: true
 
 Before edits, read `docs/AGENTS.md` then `docs/DESIGN.md` and `docs/RULES.md`.
 
-- Light-mode section backgrounds: white, yellow, cream (`#f3efe6`) only
-- Yellow for CTAs, section marks, underlines (ink text on yellow fills)
+- Light-mode section backgrounds: white, yellow, cream (`#f3efe6`) only via `SectionLayout`
+- Yellow for CTAs, section marks, underlines (ink text on yellow fills; paper marks on yellow bands)
 - Multi-color service cards OK on white bands; not every section a different fill
 - Dark mode: professional charcoal bands; accents on CTAs/icons
 - No invented clients, logos, metrics, testimonials
 - Floating contact: round icon → expand label on hover
 - Preserve Lenis + Reveal; respect reduced-motion
-- Keep marquee / visual showcase / case studies / FAQ layout; theme consistently
+- Keep marquee / visual showcase / case studies / FAQ layout; theme via `SectionLayout`
 - Inner pages use shared PageHeader / PageCta / SectionMark patterns
 - Modular `components/home/<section>/`, `constants/`, `types/`
 - Verify with `bun run typecheck` before finishing a batch

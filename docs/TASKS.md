@@ -5,28 +5,27 @@ Concrete work derived from PRD + DESIGN + ARCHITECTURE.
 ## Done
 
 - [x] Initial homepage revamp (hero, ratings, panels, framework, reels, results, CTA)
-- [x] Services 2-column mega-menu
+- [x] Services 2-column mega-menu + About/Resources dropdown icons
 - [x] Free accent palette + theme-color sync
-- [x] Docs pack created (first draft)
-- [x] Rewrite docs to canonical set: PRD, ARCHITECTURE, DESIGN, MEMORY, RULES, TASKS, SECURITY, AGENTS
+- [x] Docs pack (PRD, ARCHITECTURE, DESIGN, MEMORY, RULES, TASKS, SECURITY, AGENTS)
 - [x] Dark-mode professional section bands
 - [x] Floating CTAs: round icon → expand label on hover
-- [x] Remove obsolete docs (`PLAN.md`, `CONTRIBUTING.md`); sync root `AGENTS.md` / `RULES.md`
-- [x] Footer light-mode alignment (white; dark footer in dark theme)
-- [x] Restore multi-color Full-stack discovery service cards
-- [x] Theme swap: blue accents/CTAs + yellow section bands (white/yellow rhythm)
-- [x] Theme preserved sections (marquee, visuals, work, FAQ) without changing layout
-- [x] Search ranking SERP extracted to centered section (hero → SERP → marquee)
-- [x] Hero multi-color accents (not blue-only)
+- [x] Multi-color service cards on white bands
+- [x] White / cream / yellow section rhythm
+- [x] Search ranking SERP (cream, premium stage, one-direction border)
+- [x] Hero typing accents + SERP query typing (type → hold 3s → erase)
+- [x] PDF content synced sitewide (`docs/content/`) with honest placeholders
+- [x] Shared `SectionLayout` atmosphere + padding + tones across homepage
+- [x] SectionMark on all homepage content sections
+- [x] Equal-height growth framework cards
 - [x] `bun run typecheck`
 
-## Remaining
+## Remaining (ops / assets)
 
 - [ ] Visual QA light/dark mobile/desktop
-- [ ] Lint clean for touched files
-- [ ] Fill real assets from `PLACEHOLDERS.md` when available
+- [ ] Fill real assets from `PLACEHOLDERS.md` when available (NAP, logos, case metrics, reels)
 
-## Later (out of this batch)
+## Later
 
-- [ ] Inner pages restyle to same design system
+- [ ] Inner pages migrate onto `SectionLayout` where useful
 - [ ] Real ratings / results / reels assets

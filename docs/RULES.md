@@ -12,12 +12,14 @@ Mandatory conventions for humans and agents.
 ## Design rules
 
 1. Light-mode **section backgrounds**: white/near-white, yellow, and cream (`#f3efe6`) only.
-2. **Yellow** for CTAs, section marks, underlines, floating contact (`text-ink` on yellow fills).
-3. Dark mode: professional charcoal system; no random full-bleed rainbow sections.
-4. Multi-color service **cards** OK on white bands; do not paint every section a different full-bleed color.
-5. Floating contact: round icon default; expand horizontally on hover with transition.
-6. Preserve Lenis and purposeful Reveal motion; respect reduced motion.
-7. Keep layout/structure of Clients marquee, Visual showcase, Case studies, FAQ — theme them consistently.
+2. Homepage sections use **`SectionLayout`** (`tone` + shared atmosphere + padding). Do not invent per-section background washes.
+3. Every content section uses **`SectionMark`** (paper tone on yellow bands).
+4. **Yellow** for CTAs, section marks, underlines, floating contact (`text-ink` on yellow fills).
+5. Dark mode: professional charcoal system; no random full-bleed rainbow sections.
+6. Multi-color service **cards** OK on white bands; do not paint every section a different full-bleed color.
+7. Floating contact: round icon default; expand horizontally on hover with transition.
+8. Preserve Lenis and purposeful Reveal motion; respect reduced motion.
+9. Keep layout/structure of Clients marquee, Visual showcase, Case studies, FAQ — theme via `SectionLayout`.
 
 ## Code rules
 

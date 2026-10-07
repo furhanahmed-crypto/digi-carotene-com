@@ -23,37 +23,36 @@ import {
   type NavLinkItem,
 } from "@/constants/home/navigation"
 
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & {
-  href: string
-  title: string
-}) {
-  return (
-    <li {...props}>
-      <NavigationMenuLink render={<Link href={href} />}>
-        <div className="flex flex-col gap-1 text-sm">
-          <div className="leading-none font-medium">{title}</div>
-          {children ? (
-            <div className="line-clamp-2 text-muted-foreground">{children}</div>
-          ) : null}
-        </div>
-      </NavigationMenuLink>
-    </li>
-  )
-}
-
 function DropdownContent({ items }: { items: NavLinkItem[] }) {
   return (
-    <ul className="w-80">
-      {items.map((item) => (
-        <ListItem key={item.href} title={item.title} href={item.href}>
-          {item.description}
-        </ListItem>
-      ))}
+    <ul className="w-80 p-2">
+      {items.map((item) => {
+        const Icon = item.icon
+        return (
+          <li key={item.href}>
+            <NavigationMenuLink
+              render={<Link href={item.href} />}
+              className="flex items-start gap-3 rounded-xl p-3 hover:bg-secondary"
+            >
+              {Icon ? (
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-yellow/20 text-ink">
+                  <Icon className="size-4" aria-hidden="true" />
+                </span>
+              ) : null}
+              <span className="min-w-0">
+                <span className="block text-sm font-semibold text-foreground">
+                  {item.title}
+                </span>
+                {item.description ? (
+                  <span className="mt-0.5 block text-xs leading-snug text-muted-foreground">
+                    {item.description}
+                  </span>
+                ) : null}
+              </span>
+            </NavigationMenuLink>
+          </li>
+        )
+      })}
     </ul>
   )
 }

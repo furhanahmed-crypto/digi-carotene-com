@@ -127,16 +127,24 @@ function MobileEntry({
             open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
           )}
         >
-          {item.items.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={onNavigate}
-              className="block py-1.5 text-base text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.title}
-            </Link>
-          ))}
+          {item.items.map((link) => {
+            const Icon = link.icon
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={onNavigate}
+                className="flex items-center gap-2.5 py-1.5 text-base text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {Icon ? (
+                  <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-brand-yellow/20 text-ink">
+                    <Icon className="size-3.5" aria-hidden="true" />
+                  </span>
+                ) : null}
+                {link.title}
+              </Link>
+            )
+          })}
         </div>
       </div>
     )
