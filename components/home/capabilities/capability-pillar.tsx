@@ -59,7 +59,7 @@ export function CapabilityPillar({
             className="grid gap-5 border-b border-border py-6 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-8"
           >
             <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-              <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+              <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                 {index + 1}
               </p>
               <p className="mt-1 text-[13px] font-medium tracking-[0.03em] text-foreground uppercase md:text-sm">

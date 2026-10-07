@@ -32,7 +32,7 @@ export function Approach() {
             >
               <li className="relative h-full p-6 md:p-8">
                 <span className="bg-carotene absolute top-0 left-0 h-full w-1" />
-                <p className="text-carotene text-[12px] font-medium tracking-[0.12em] uppercase">
+                <p className="text-[12px] font-medium tracking-[0.12em] text-muted-foreground uppercase">
                   {step.number}
                 </p>
                 <h3 className="font-display mt-4 text-[21px] leading-[1.2] font-medium md:text-[26px]">

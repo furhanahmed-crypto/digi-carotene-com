@@ -26,29 +26,29 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://digicarotene.com"),
   title: {
-    default: "Digi Carotene | Digital Marketing Agency",
+    default: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
     template: "%s | Digi Carotene",
   },
   description:
-    "Digi Carotene is a digital marketing agency specializing in SEO, AEO, and GEO — plus digital, offline, and PR services that grow brands with clarity and performance.",
+    "Data-led digital marketing agency with 7+ years and 300+ clients. SEO, AEO, performance ads, social, web and offline activations in Hyderabad and Bangalore.",
   applicationName: "Digi Carotene",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: "https://digicarotene.com",
     siteName: "Digi Carotene",
-    title: "Digi Carotene | Digital Marketing Agency",
+    title: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
     description:
-      "SEO, AEO, and GEO specialists. Digital, offline, and PR marketing that helps brands get found and chosen.",
+      "Found. Chosen. Measured. Digi Carotene helps brands get found on Google, recommended by AI, and chosen in the real world.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digi Carotene | Digital Marketing Agency",
+    title: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
     description:
-      "SEO, AEO, and GEO specialists. Digital, offline, and PR marketing that helps brands get found and chosen.",
+      "Found. Chosen. Measured. SEO, AEO, ads, social, web and offline activations — reported in leads and revenue.",
   },
   robots: {
     index: true,

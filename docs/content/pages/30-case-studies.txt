@@ -1,0 +1,109 @@
+Case Studies
+URL slug
+/case-studies
+Meta title
+Marketing Case Studies & Results | Digi Carotene (48/60)
+Meta description
+Real results from Digi Carotene clients: lower cost per lead, higher rankings, more footfall and more
+revenue. See how data-led marketing performs. (147/160)
+Primary keyword
+digital marketing case studies India
+Secondary keywords
+SEO case study Hyderabad, performance marketing results, BTL activation case study
+Schema (JSON-LD)
+CollectionPage; each case study as Article with author and datePublished
+PAGE COPY
+EYEBROW LABEL (<p>, not a heading): CASE STUDIES
+ H1
+ Proof, Not Promises: Real Results From Real
+Clients
+Every agency says it delivers results. We would rather show you. These case studies share what our clients were
+facing, what we did and what changed, in numbers.
+NOTE (do not publish)
+Publish only verified results with client permission. Anonymise if needed (e.g., "A multi-speciality clinic in Hyderabad"). Aim for 6
+to 9 case studies across digital, offline and PR. Each case study should be its own page (/case-studies/[slug]) so it can rank and be
+cited by AI engines.
+H2
+ Case study page template (for each client story)
+H3
+Title format
+[Result] for [Client or industry] in [City]. Example structure: "How a Hyderabad clinic cut cost per patient enquiry
+by [X]% in [Y] months".
+H3
+Snapshot box
+ Client: [Name or anonymised description]
+ Industry: [Industry]
+ City: [Hyderabad / Bangalore / Other]
+ Services: [e.g., Performance Marketing, SEO, Insta Shoot]
+ Duration: [Time frame]
+ Headline result: [One number]
+H3
+The challenge
+[2 to 4 sentences: what the business needed and what was not working before.]
+H3
+What we found
+[2 to 3 sentences: the key insight from data, such as broken tracking, wrong audience or slow site.]
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+99
+H3
+What we did
+[3 to 5 bullets of specific actions.]
+H3
+The results
+[3 to 4 metrics with before and after numbers and time frame.]
+H3
+Client quote
+["Quote" Name, Designation]
+H2
+ Filter categories for the case studies grid
+ Search and AI Discovery
+ Performance and Growth
+ Social, Content and Creative
+ Websites
+ Offline and Activations
+ PR and Reputation
+CLOSING CTA SECTION (H2 + text + buttons)
+ H2
+ Want to be our next case study?
+Get a free audit and see where your marketing can deliver measurable gains.
+  Get My Free Audit   [ Talk to Us ]
+Paid Media Kit
+#
+Google Ads RSA headline
+Chars
+1
+Marketing Case Studies
+22/30
+2
+Real Results, Real Clients
+26/30
+3
+See Our Client Results
+22/30
+4
+Proof, Not Promises
+19/30
+#
+Google Ads RSA description
+Chars
+1
+See how data-led marketing lowered costs and grew leads for real businesses.
+76/90
+2
+SEO, ads, social, web and activation results from 300+ clients. View case studies.
+82/90
+Meta primary text
+Every agency promises results. We show them. See how Digi Carotene helped real businesses lower cost
+per lead, rank higher and grow revenue.
+Meta headline
+See Real Client Results (23/40)
+Landing page
+/case-studies (H1 matches ad promise)
+Internal links
+Clients, Services, Contact
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+100

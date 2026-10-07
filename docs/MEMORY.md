@@ -6,7 +6,7 @@
 2. **Honesty first** — Never invent clients, logos, metrics, awards, or testimonials. Use `[[… — to confirm]]` and track in `PLACEHOLDERS.md`.
 3. **White + yellow bands, blue accents** — Light-mode section backgrounds are white/near-white and brand yellow. Blue is the primary accent for headings, CTAs, marks. Multi-color service cards stay on the white “Full-stack discovery” band.
 4. **Keep four sections** across revamps: Clients marquee, Visual showcase, Case studies, FAQ (layout/structure preserved; theme must stay consistent).
-5. **Search ranking is its own section** — Google-style SERP card sits centered between Hero and Clients marquee (not buried inside the hero).
+5. **Search ranking is its own section** — Google-style SERP card sits centered below Clients marquee (Hero → Marquee → SERP), with a rotating yellow/blue featured border on the result card.
 6. **Preserve Lenis + purposeful motion** — Do not remove smooth scroll for “simpler” native scroll without explicit approval.
 7. **Docs pack** — Product truth lives in `docs/PRD.md`, `docs/DESIGN.md`, `docs/ARCHITECTURE.md`, `docs/TASKS.md`, `docs/RULES.md`, `docs/SECURITY.md`, `docs/AGENTS.md`, `docs/MEMORY.md`.
 

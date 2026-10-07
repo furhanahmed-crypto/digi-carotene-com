@@ -1,96 +1,176 @@
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+
 import { PageHeader } from "@/components/shared/page-header"
 import { Container } from "@/components/shared/container"
 import { ListingCard } from "@/components/shared/listing-card"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/shared/reveal"
+import { SectionMark } from "@/components/shared/section-mark"
+import { SectionHeading } from "@/components/shared/section-heading"
+import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
 
 const digitalServices = [
   {
     slug: "performance-marketing",
     title: "Performance Marketing",
-    desc: "Highly targeted, high-intent paid search and social campaigns that convert impressions into pipeline and profit.",
+    desc: "Google, Meta, LinkedIn and YouTube ads engineered around cost per lead and return on ad spend.",
   },
   {
     slug: "growth-marketing",
     title: "Growth Marketing",
-    desc: "Data-driven, full-funnel experimentation and customer acquisition strategies that scale brand presence and revenue.",
+    desc: "Full-funnel experiments, CRO and retention loops that compound growth month after month.",
   },
   {
     slug: "seo",
     title: "Search Engine Optimization",
-    desc: "Traditional and conversational organic search positioning that keeps your brand authority first on Google.",
+    desc: "Rank on Google, win Google Maps, and get recommended by ChatGPT, Gemini and Perplexity.",
   },
   {
     slug: "content",
     title: "Content Marketing",
-    desc: "On-brand copy and storytelling assets designed to answer audience queries and fuel SEO and AEO pipelines.",
+    desc: "Blogs, guides, videos and answer-ready content that builds trust and search visibility.",
   },
   {
     slug: "social",
     title: "Social Media Marketing",
-    desc: "Community building, brand narrative distribution, and platform-specific content that drives engagement.",
+    desc: "Platform-native content, community management and paid social that turns followers into customers.",
   },
   {
     slug: "graphic-design",
     title: "Graphic Designing",
-    desc: "Visual identities, brand graphics, and presentation assets that share one language.",
+    desc: "Brand identities, campaign creatives, packaging and ad designs built to be noticed and remembered.",
   },
   {
     slug: "web",
-    title: "Web Design & Development",
-    desc: "Bespoke, fast websites with architectures built for SEO and AEO.",
+    title: "Web Design and Development",
+    desc: "Fast, mobile-first, SEO-ready websites and landing pages built to convert.",
   },
   {
     slug: "personal-branding",
     title: "Personal Branding",
-    desc: "Positioning founders and leaders as industry authorities through guided storytelling.",
+    desc: "LinkedIn and Instagram presence for founders and leaders who want to become the name people trust.",
   },
   {
     slug: "email",
-    title: "Email Marketing",
-    desc: "Direct communications that stay on-brand and useful — not filler newsletters.",
+    title: "Email and WhatsApp Marketing",
+    desc: "Automated journeys that bring customers back, using the channels Indians actually open.",
   },
   {
     slug: "insta-shoot",
     title: "Insta Shoot",
-    desc: "Brand and content shoots made for campaigns, reels, and immediate marketing use.",
+    desc: "On-location photo and reel production made for the Instagram feed, not the billboard.",
   },
+] as const
+
+const differences = [
+  "One strategy, many channels. SEO, ads and social share keywords, audiences and creative learning, so each makes the others cheaper.",
+  "Tracking before spending. We set up GA4, conversion tracking, Meta Pixel and CAPI, call tracking and CRM integration before the first rupee goes live.",
+  "Weekly optimisation, monthly clarity. We adjust budgets and creative every week and send one plain-English monthly report.",
+  "AI-era ready. Every content asset is written to rank on Google and to be quoted by AI answer engines.",
 ]
 
 export default function DigitalMarketingLandingPage() {
   return (
     <div className="min-h-svh">
       <PageHeader
-        title="Digital Marketing"
-        description="Every capability needed to make a brand visible, indexable, and cited — from performance to the site itself."
+        title="Digital Marketing Services That Report in Revenue, Not Reach"
+        description="Search, ads, social, content and your website are not separate jobs. They are one machine for winning customers. We build and run that machine for brands in Hyderabad, Bangalore and around the world, and we report it in the numbers your business runs on."
         breadcrumbs={[
           { label: "Services", href: "/services/digital-marketing" },
           { label: "Digital Marketing" },
         ]}
-        mark="Services"
+        mark="Digital Marketing Services"
         imageIndex={1}
       />
 
       <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
-        <Container>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {digitalServices.map((service, index) => (
-              <Reveal key={service.slug} delayMs={index * 40}>
-                <ListingCard
-                  href={`/services/digital-marketing/${service.slug}`}
-                  index={index}
-                  title={service.title}
-                  body={service.desc}
-                />
-              </Reveal>
-            ))}
+        <Container className="space-y-16 lg:space-y-24">
+          <div className="flex flex-wrap gap-3">
+            <Button
+              nativeButton={false}
+              render={<Link href={contactHref} />}
+              size="lg"
+              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+            >
+              Get a Free Digital Audit
+              <ArrowRight className="size-4" />
+            </Button>
+            <Button
+              nativeButton={false}
+              render={<Link href={contactHref} />}
+              size="lg"
+              variant="outline"
+            >
+              Talk to a Strategist
+            </Button>
           </div>
 
-          <Reveal className="mt-16">
+          <Reveal>
+            <SectionMark>The shift</SectionMark>
+            <SectionHeading
+              className="mt-6"
+              eyebrow="More channels. Less patience."
+              title="More channels than ever. Less patience than ever."
+              body="Digital now takes the biggest share of advertising money in India. That means more competition for the same eyeballs, higher costs per click, and buyers who decide faster. Doing a bit of everything no longer works. You need the right channels, connected, and measured against one goal."
+            />
+          </Reveal>
+
+          <div>
+            <Reveal>
+              <SectionMark>Services</SectionMark>
+              <SectionHeading
+                className="mt-6"
+                eyebrow="Full-service digital"
+                title="Our digital marketing services"
+              />
+            </Reveal>
+            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {digitalServices.map((service, index) => (
+                <Reveal key={service.slug} delayMs={index * 40}>
+                  <ListingCard
+                    href={`/services/digital-marketing/${service.slug}`}
+                    index={index}
+                    title={service.title}
+                    body={service.desc}
+                  />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <Reveal>
+              <SectionMark>How we work</SectionMark>
+              <SectionHeading
+                className="mt-6"
+                eyebrow="Difference"
+                title="How our digital work is different"
+              />
+            </Reveal>
+            <ul className="mt-10 border-t border-line">
+              {differences.map((item, index) => (
+                <Reveal key={item} delayMs={index * 30}>
+                  <li className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10">
+                    <div className="border-carotene md:col-span-2 md:border-l-2 md:pl-6">
+                      <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                    </div>
+                    <p className="text-base leading-[1.6] text-muted-foreground md:col-span-10 md:text-lg">
+                      {item}
+                    </p>
+                  </li>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+
+          <Reveal>
             <PageCta
               title="Need a plan, not a channel menu?"
-              label="Start a conversation"
+              label="Get a Free Digital Audit"
               href={contactHref}
             />
           </Reveal>

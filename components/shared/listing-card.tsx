@@ -17,10 +17,10 @@ export function ListingCard({ href, index, title, body }: ListingCardProps) {
     >
       <MediaFrame index={index} label={title} className="border-0 border-b" />
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+        <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
           {index + 1}
         </p>
-        <h3 className="font-display text-[21px] leading-[1.2] font-medium group-hover:underline group-hover:decoration-carotene group-hover:underline-offset-4">
+        <h3 className="font-display text-[21px] leading-[1.2] font-medium group-hover:underline group-hover:decoration-brand-yellow group-hover:underline-offset-4">
           {title}
         </h3>
         <p className="text-base leading-[1.6] text-muted-foreground">{body}</p>

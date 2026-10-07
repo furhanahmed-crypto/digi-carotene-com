@@ -56,7 +56,7 @@ export const IndustryStackCard = React.forwardRef<
         aria-hidden="true"
       />
       <div className="flex min-h-0 flex-1 flex-col gap-4 md:gap-5">
-        <p className="text-carotene shrink-0 text-[12px] font-medium tracking-[0.08em] uppercase">
+        <p className="shrink-0 text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
           {String(index + 1).padStart(2, "0")} · Vertical
         </p>
         <div className="min-h-0 space-y-3 overflow-hidden md:space-y-4">

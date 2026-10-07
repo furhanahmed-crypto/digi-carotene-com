@@ -1,8 +1,9 @@
 import { AgencyHero } from "@/components/home/hero/agency-hero"
-import { SearchRanking } from "@/components/home/search-ranking/search-ranking"
 import { ClientsMarquee } from "@/components/home/ClientsMarquee"
-import { RatedByClients } from "@/components/home/ratings/rated-by-clients"
+import { SearchRanking } from "@/components/home/search-ranking/search-ranking"
+import { Differentiators } from "@/components/home/ratings/differentiators"
 import { ColorServicePanels } from "@/components/home/services-panels/color-service-panels"
+import { WhoWeWorkWith } from "@/components/home/audiences/who-we-work-with"
 import { GrowthFramework } from "@/components/home/growth-framework/growth-framework"
 import { VisualShowcase } from "@/components/home/VisualShowcase"
 import { CreativeReels } from "@/components/home/reels/creative-reels"
@@ -15,10 +16,11 @@ export default function Page() {
   return (
     <main className="relative flex min-h-svh flex-col">
       <AgencyHero />
-      <SearchRanking />
       <ClientsMarquee />
-      <RatedByClients />
+      <SearchRanking />
+      <Differentiators />
       <ColorServicePanels />
+      <WhoWeWorkWith />
       <GrowthFramework />
       <VisualShowcase />
       <CreativeReels />

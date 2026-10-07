@@ -1,19 +1,20 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Bot, Search, Sparkles } from "lucide-react"
 
 import { homeSections } from "@/constants/home/sections"
 import { Container } from "@/components/shared/container"
 import { Reveal } from "@/components/shared/reveal"
 import { Button } from "@/components/ui/button"
+import { HeroHeadlineAccent } from "./hero-headline-accent"
 
-const capabilityLabels = ["SEO", "AEO", "GEO", "Performance", "PR"] as const
+const capabilityIcons = [Search, Bot, Sparkles] as const
 
 export function AgencyHero() {
   const { hero } = homeSections
 
   return (
-    <section className="relative overflow-visible border-b border-transparent bg-background pt-28 pb-36 md:pt-36 md:pb-44">
+    <section className="relative overflow-hidden border-b border-border bg-background pt-28 pb-16 md:pt-36 md:pb-20">
       <div
         className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(245,196,0,0.16),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(245,196,0,0.08),transparent_36%)]"
         aria-hidden="true"
@@ -22,15 +23,23 @@ export function AgencyHero() {
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-7">
-            <p className="text-[13px] font-medium tracking-[0.14em] text-muted-foreground uppercase">
-              {hero.eyebrow}
-            </p>
-
-            <h1 className="mt-4 font-display text-[40px] leading-[1.05] font-medium tracking-[-0.02em] md:text-[64px] lg:text-[72px]">
-              <span className="text-foreground">{hero.headlineBefore}</span>{" "}
-              <span className="text-foreground underline decoration-brand-yellow decoration-[0.12em] underline-offset-[0.12em]">
-                {hero.headlineAccent}
+            <div className="inline-flex max-w-full items-center gap-3 rounded-full border border-border bg-card/90 py-1.5 pr-4 pl-2 shadow-sm backdrop-blur-sm">
+              <span className="relative flex size-2.5 shrink-0">
+                <span className="absolute inset-0 animate-ping rounded-full bg-brand-yellow/70 motion-reduce:animate-none" />
+                <span className="relative size-2.5 rounded-full bg-brand-yellow" />
               </span>
+              <p className="truncate text-[12px] font-semibold tracking-[0.14em] text-foreground uppercase md:text-[13px]">
+                {hero.eyebrow}
+              </p>
+              <span className="hidden h-4 w-px bg-border sm:block" />
+              <p className="hidden text-[11px] font-medium tracking-[0.08em] text-muted-foreground uppercase sm:block">
+                Hyderabad · Bangalore · Global
+              </p>
+            </div>
+
+            <h1 className="mt-5 font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] md:text-[56px] lg:text-[64px]">
+              <span className="block text-foreground">{hero.headlineBefore}</span>
+              <HeroHeadlineAccent accents={hero.headlineAccents} />
             </h1>
 
             <p className="mt-5 max-w-xl text-base text-muted-foreground md:text-lg">
@@ -57,18 +66,28 @@ export function AgencyHero() {
               </Button>
             </div>
 
-            <p className="mt-8 text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase md:text-[13px]">
-              {capabilityLabels.map((label, index) => (
-                <span key={label}>
-                  {index > 0 ? (
-                    <span className="mx-2.5 text-border" aria-hidden="true">
-                      ·
-                    </span>
-                  ) : null}
-                  {label}
-                </span>
-              ))}
-            </p>
+            <ul className="mt-8 grid grid-cols-1 gap-2 sm:grid-cols-3">
+              {hero.capabilities.map(({ label, detail }, index) => {
+                const Icon = capabilityIcons[index] ?? Search
+                return (
+                  <li key={label}>
+                    <div className="group rounded-xl border border-brand-yellow/25 bg-brand-yellow/[0.06] px-3 py-2.5 transition-colors hover:border-brand-yellow/45 hover:bg-brand-yellow/10">
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-brand-yellow/20 text-ink transition-colors group-hover:bg-brand-yellow">
+                          <Icon className="size-3.5" aria-hidden="true" />
+                        </span>
+                        <p className="text-[13px] font-semibold tracking-[0.08em] text-foreground uppercase">
+                          {label}
+                        </p>
+                      </div>
+                      <p className="mt-1.5 pl-9 text-[12px] leading-none text-muted-foreground">
+                        {detail}
+                      </p>
+                    </div>
+                  </li>
+                )
+              })}
+            </ul>
           </Reveal>
 
           <Reveal className="lg:col-span-5" delayMs={80}>

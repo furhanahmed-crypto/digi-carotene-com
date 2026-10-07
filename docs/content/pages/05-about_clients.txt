@@ -1,0 +1,103 @@
+Clients
+URL slug
+/about/clients
+Meta title
+Our Clients | 300+ Brands Across Industries | Digi Carotene (59/60)
+Meta description
+300+ clients in hospitality, healthcare, retail, education, real estate and tech trust Digi Carotene for
+measurable marketing in Hyderabad and Bangalore. (153/160)
+Primary keyword
+digital marketing agency clients Hyderabad
+Secondary keywords
+marketing agency for restaurants Hyderabad, healthcare marketing agency, real estate marketing agency
+Bangalore
+Schema (JSON-LD)
+CollectionPage + Organization; Review / AggregateRating only if reviews are genuine and visible on page
+PAGE COPY
+EYEBROW LABEL (<p>, not a heading): OUR CLIENTS
+ H1
+ 300+ Clients. One Thing in Common: They
+Wanted Proof.
+From neighbourhood favourites to fast-growing startups and international brands, our clients came to us for the
+same reason. They wanted marketing they could measure.
+H2
+ Brands we have worked with
+NOTE (do not publish)
+Add client logos (with written permission) in a grid. Use descriptive alt text, e.g., "[Brand name] logo, restaurant client in
+Hyderabad". Remove the "Client 01 to Client 08" placeholders currently live on the homepage.
+H2
+ Industries we know inside out
+H3
+Restaurants, Cafes and QSR
+Zomato and Swiggy visibility, Google Maps rankings, reels that make people hungry and offers that fill tables on
+slow weekdays.
+H3
+Healthcare and Wellness
+Patient-first content, compliant ads and local SEO for clinics, hospitals, dermatology, dental and nutrition brands.
+H3
+Salons, Beauty and Fashion
+Instagram-led growth, bridal season campaigns, influencer collaborations and booking funnels.
+H3
+Education
+Admission campaigns, counselling-lead funnels, campus activations and parent-trust content for schools,
+colleges and edtech.
+H3
+Real Estate, Furniture and Home
+High-ticket lead generation, site-visit campaigns, residential activations and showroom footfall.
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+23
+H3
+Technology and B2B
+LinkedIn, founder branding, account-based campaigns, PR and AI search visibility for SaaS and service companies.
+H2
+ What our clients say
+NOTE (do not publish)
+Add 4 to 6 genuine testimonials with name, designation, company and city. Video testimonials are best. Only mark up with Review
+schema if the review is genuine and shown on the page.
+ "[Testimonial]" [Name, Designation, Company, City]
+ "[Testimonial]" [Name, Designation, Company, City]
+CLOSING CTA SECTION (H2 + text + buttons)
+ H2
+ Become client number 301.
+Get a free audit and see exactly where your marketing can grow.
+  Get My Free Audit   [ View Case Studies ]
+Paid Media Kit
+#
+Google Ads RSA headline
+Chars
+1
+Trusted by 300+ Clients
+23/30
+2
+Marketing for Every Industry
+28/30
+3
+Restaurants to SaaS Brands
+26/30
+4
+See Who We Work With
+20/30
+#
+Google Ads RSA description
+Chars
+1
+Hospitality, healthcare, retail, education, real estate and tech brands trust us.
+81/90
+2
+300+ clients over 7+ years. Join them with a free marketing audit today.
+72/90
+Meta primary text
+Restaurants, clinics, salons, colleges, real estate firms and tech startups. 300+ clients have trusted Digi
+Carotene to make their marketing measurable. See who we work with.
+Meta headline
+300+ Brands. Measurable Growth. (31/40)
+Landing page
+/about/clients (H1 matches ad promise)
+Internal links
+Case Studies, Services, About Us, Contact
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+24

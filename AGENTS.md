@@ -21,6 +21,6 @@ Canonical docs live in **`docs/`**. Read in this order:
 ## Hard reminders
 
 - No fabricated proof
-- Light-mode section backgrounds: **white + yellow only**; blue for CTAs/heading accents
+- Light-mode section backgrounds: **white + yellow + cream**; yellow for CTAs/marks
 - Keep Lenis + purposeful motion
 - Prefer modular `components/home/<section>/` structure

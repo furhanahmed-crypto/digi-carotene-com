@@ -11,8 +11,8 @@ Mandatory conventions for humans and agents.
 
 ## Design rules
 
-1. Light-mode **section backgrounds**: white/near-white and yellow only.
-2. **Blue** for headings accents, primary buttons/CTAs, section marks, floating contact.
+1. Light-mode **section backgrounds**: white/near-white, yellow, and cream (`#f3efe6`) only.
+2. **Yellow** for CTAs, section marks, underlines, floating contact (`text-ink` on yellow fills).
 3. Dark mode: professional charcoal system; no random full-bleed rainbow sections.
 4. Multi-color service **cards** OK on white bands; do not paint every section a different full-bleed color.
 5. Floating contact: round icon default; expand horizontally on hover with transition.
@@ -35,7 +35,7 @@ Mandatory conventions for humans and agents.
 2. Committing secrets (`.env`, keys, tokens)
 3. Adding admin/auth/SaaS dashboard patterns without request
 4. Removing Lenis without explicit approval
-5. Light-mode blue/black/purple/green full section backgrounds
+5. Light-mode blue/black/purple/green full section backgrounds; rainbow hero chips
 
 ## Naming
 

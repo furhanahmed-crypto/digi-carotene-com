@@ -31,7 +31,7 @@ export function WhyUsList() {
               onMouseLeave={cursor.hide}
             >
               <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-                <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">

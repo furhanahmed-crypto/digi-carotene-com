@@ -68,7 +68,7 @@
   --paper-2: #f0efeb;
   --ink: #111111;
   --ink-muted: #5c5c5c;
-  --carotene: #2563eb;
+  --carotene: #f5c400;
   --line: #e5e5e5;
   --brand-yellow: #f5c400;
   --brand-green: #1f7a4d;
@@ -88,13 +88,13 @@
   --secondary-foreground: #111111;
   --muted: #f0efeb;
   --muted-foreground: #5c5c5c;
-  --accent: #2563eb;
-  --accent-foreground: #ffffff;
+  --accent: #f5c400;
+  --accent-foreground: #111111;
   --destructive: #b42318;
   --border: #e5e5e5;
   --input: #e5e5e5;
-  --ring: #2563eb;
-  --chart-1: #2563eb;
+  --ring: #f5c400;
+  --chart-1: #f5c400;
   --chart-2: #2563eb;
   --chart-3: #1f7a4d;
   --chart-4: #f5c400;
@@ -107,7 +107,7 @@
   --sidebar-accent: #f0efeb;
   --sidebar-accent-foreground: #111111;
   --sidebar-border: #e5e5e5;
-  --sidebar-ring: #2563eb;
+  --sidebar-ring: #f5c400;
 }
 
 .dark {
@@ -115,7 +115,7 @@
   --paper-2: #f0efeb;
   --ink: #111111;
   --ink-muted: #a3a3a3;
-  --carotene: #3b82f6;
+  --carotene: #f5c400;
   --line: #2a2a2a;
   --brand-yellow: #f5c400;
   --brand-green: #2f9d66;
@@ -135,25 +135,25 @@
   --secondary-foreground: #f5f5f5;
   --muted: #1f1f1f;
   --muted-foreground: #a3a3a3;
-  --accent: #3b82f6;
-  --accent-foreground: #ffffff;
+  --accent: #f5c400;
+  --accent-foreground: #111111;
   --destructive: #f97066;
   --border: #2a2a2a;
   --input: #2a2a2a;
-  --ring: #3b82f6;
-  --chart-1: #3b82f6;
+  --ring: #f5c400;
+  --chart-1: #f5c400;
   --chart-2: #3b82f6;
   --chart-3: #2f9d66;
   --chart-4: #f5c400;
   --chart-5: #8b5cf6;
   --sidebar: #171717;
   --sidebar-foreground: #f5f5f5;
-  --sidebar-primary: #3b82f6;
-  --sidebar-primary-foreground: #ffffff;
+  --sidebar-primary: #f5c400;
+  --sidebar-primary-foreground: #111111;
   --sidebar-accent: #1f1f1f;
   --sidebar-accent-foreground: #f5f5f5;
   --sidebar-border: #2a2a2a;
-  --sidebar-ring: #3b82f6;
+  --sidebar-ring: #f5c400;
 }
 
 @layer base {
@@ -175,8 +175,8 @@
   }
 
   ::selection {
-    background: var(--brand-blue);
-    color: #ffffff;
+    background: var(--brand-yellow);
+    color: #111111;
   }
 }
 
@@ -186,6 +186,16 @@
 
 @utility section-dark {
   @apply bg-section-dark text-white;
+}
+
+@keyframes featured-border-spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@utility animate-featured-border-spin {
+  animation: featured-border-spin 4s linear infinite;
 }
 
 @utility link-underline {

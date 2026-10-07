@@ -7,24 +7,60 @@ import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { contactHref } from "@/constants/home/navigation"
 
-const team = [
+const leadership = [
   {
-    name: "Strategy",
-    role: "Campaign architecture",
+    name: "[[Founder name — to confirm]]",
+    role: "Founder",
     description:
-      "Connecting search, AI citation, and physical activations into one plan.",
+      "[[One line on expertise — e.g. has led campaigns for 300+ brands across hospitality, healthcare and tech.]]",
   },
   {
-    name: "Search & GEO",
-    role: "Citation and ranking",
-    description:
-      "SEO, AEO, and GEO work so people and answer engines can find the brand.",
+    name: "[[Leader name — to confirm]]",
+    role: "[[Title — to confirm]]",
+    description: "[[One-line specialism — to confirm]]",
   },
   {
-    name: "Experiential",
-    role: "Activations and events",
+    name: "[[Leader name — to confirm]]",
+    role: "[[Title — to confirm]]",
+    description: "[[One-line specialism — to confirm]]",
+  },
+]
+
+const departments = [
+  {
+    name: "Strategy and Account Management",
     description:
-      "Mall, campus, festival, and popup work that turns local attention into demand.",
+      "Your single point of contact. They own your targets, run reviews and make sure every team is working to the same plan.",
+  },
+  {
+    name: "Performance Marketing and Analytics",
+    description:
+      "Google Ads, Meta Ads and tracking specialists who watch cost per lead and return on ad spend daily, not monthly.",
+  },
+  {
+    name: "Search, AEO and Content",
+    description:
+      "SEO specialists and writers who make your brand rank on Google and get quoted by AI answer engines.",
+  },
+  {
+    name: "Creative and Design",
+    description:
+      "Designers, video editors and copywriters who turn strategy into scroll-stopping work.",
+  },
+  {
+    name: "Web and Technology",
+    description:
+      "Developers who build fast, SEO-ready websites, landing pages, WhatsApp and CRM automations.",
+  },
+  {
+    name: "Production",
+    description:
+      "Photographers and videographers who handle Instagram shoots, brand films and event coverage.",
+  },
+  {
+    name: "On-Ground Activations and PR",
+    description:
+      "The crew that runs mall, campus, residential and festival activations across Hyderabad and Bangalore, plus media relations.",
   },
 ]
 
@@ -32,30 +68,31 @@ export default function TeamPage() {
   return (
     <div className="min-h-svh">
       <PageHeader
-        title="Team"
-        description="Strategists, search specialists, and experiential producers working as one studio."
+        title="The People Behind the Numbers"
+        description="Great marketing is part science and part craft. Our team brings both: analysts who live in spreadsheets, creatives who live in Figma and on set, and an on-ground crew that knows how to make a crowd stop and look."
         breadcrumbs={[
           { label: "About", href: "/about" },
           { label: "Team" },
         ]}
-        mark="Studio"
+        mark="Our Team"
         imageIndex={1}
       />
 
       <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
         <Container>
           <Reveal>
-            <SectionMark>People</SectionMark>
+            <SectionMark>Leadership</SectionMark>
             <SectionHeading
               className="mt-6"
-              eyebrow="The studio"
-              title="Physical work and conversational marketing, same table"
+              eyebrow="Names to confirm"
+              title="Leaders with real credentials"
+              body="Photos, full names, titles, years of experience and LinkedIn links strengthen trust for Google and AI engines. Slots stay explicit until confirmed."
             />
           </Reveal>
 
           <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {team.map((member, index) => (
-              <Reveal key={member.name} delayMs={index * 40}>
+            {leadership.map((member, index) => (
+              <Reveal key={`${member.name}-${index}`} delayMs={index * 40}>
                 <div className="border border-line bg-background">
                   <MediaFrame
                     index={index}
@@ -64,7 +101,7 @@ export default function TeamPage() {
                     className="border-0 border-b"
                   />
                   <div className="p-5">
-                    <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                    <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {index + 1} · {member.role}
                     </p>
                     <h3 className="font-display mt-3 text-[21px] leading-[1.2] font-medium">
@@ -79,10 +116,40 @@ export default function TeamPage() {
             ))}
           </div>
 
+          <div className="mt-16 border-t border-border pt-16 lg:mt-24 lg:pt-24">
+            <Reveal>
+              <SectionMark>How we organise</SectionMark>
+              <SectionHeading
+                className="mt-6"
+                eyebrow="Departments"
+                title="One plan, specialised crews"
+              />
+            </Reveal>
+            <ul className="mt-10 border-t border-line">
+              {departments.map((dept, index) => (
+                <Reveal key={dept.name} delayMs={index * 30}>
+                  <li className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10">
+                    <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
+                      <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                        {dept.name}
+                      </h3>
+                    </div>
+                    <p className="text-base leading-[1.6] text-muted-foreground md:col-span-8 md:text-lg">
+                      {dept.description}
+                    </p>
+                  </li>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+
           <Reveal className="mt-16">
             <PageCta
-              title="Want to work with the people behind the work?"
-              label="Start a conversation"
+              title="Meet the team on a call."
+              label="Book a Discovery Call"
               href={contactHref}
             />
           </Reveal>

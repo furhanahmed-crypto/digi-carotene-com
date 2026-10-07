@@ -1,0 +1,216 @@
+Contact Us
+URL slug
+/contact
+Meta title
+Contact Digi Carotene | Digital Marketing Agency, Hyderabad (59/60)
+Meta description
+Talk to Digi Carotene about SEO, ads, social, web, activations or PR. Free audit for businesses in
+Hyderabad and Bangalore. Call, WhatsApp or email us. (151/160)
+Primary keyword
+contact digital marketing agency Hyderabad
+Secondary keywords
+digital marketing agency near me, marketing consultation Hyderabad, free marketing audit
+Schema (JSON-LD)
+ContactPage + LocalBusiness (full NAP, geo, openingHours, contactPoint)
+PAGE COPY
+NOTE (do not publish)
+Replace the UAE WhatsApp placeholder (+971...) with the real Indian business number. Name, address and phone must match the
+footer and Google Business Profile exactly, character for character.
+EYEBROW LABEL (<p>, not a heading): CONTACT US
+ H1
+ Let's Talk About Where You Want Your
+Business to Be
+Tell us a little about your business and goals. A strategist (not a salesperson) will get back to you within [one
+working day] with honest thoughts on what we would do and whether we are the right fit.
+H2
+ Get your free audit
+Fill in the form and we will review your Google rankings, AI search visibility, ads, social presence and website, and
+send you a prioritised action plan.
+FORM FIELDS
+• Name
+• Business name
+• Phone (WhatsApp)
+• Email
+• City (Hyderabad / Bangalore / Other)
+• What do you need help with? (multi-select: SEO and AI Search, Ads, Social Media, Website, Offline Activations, PR, Not sure)
+• Monthly marketing budget (ranges)
+• Message
+H2
+ Reach us directly
+ Phone and WhatsApp: [+91 XXXXX XXXXX]
+ Email: [hello@digicarotene.com]
+ Hyderabad office: [Full address, landmark, PIN]
+ [Bangalore: address only if a real office exists]
+ Hours: [Monday to Saturday, 10 am to 7 pm]
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+103
+H2
+ What happens next
+H3
+1. We review your details
+A strategist studies your business, website and competitors.
+H3
+2. A 30-minute call
+We discuss your goals, challenges and what we found.
+H3
+3. Your plan
+You receive a clear proposal with scope, timelines and the targets we will report against.
+H2
+ Frequently asked questions
+H3
+Is the audit really free?
+Yes. The audit and the first consultation are free and come with no obligation. You keep the findings and
+the action plan whether or not you work with us.
+H3
+Do you work with small businesses?
+Yes. We work with businesses of all sizes, from single-location restaurants and clinics to multi-city brands.
+We recommend a scope that fits your budget and goals.
+H3
+Can we meet in person?
+Yes. You are welcome to visit our Hyderabad office by appointment. For Bangalore clients, we arrange
+video calls and in-person meetings as needed.
+Paid Media Kit
+#
+Google Ads RSA headline
+Chars
+1
+Contact Digi Carotene
+21/30
+2
+Get a Free Marketing Audit
+26/30
+3
+Talk to a Strategist Today
+26/30
+4
+Hyderabad Marketing Agency
+26/30
+#
+Google Ads RSA description
+Chars
+1
+Free audit of your SEO, AI visibility, ads, social and website. No obligation.
+78/90
+2
+Talk to a strategist, not a salesperson. Call, WhatsApp or email us today.
+74/90
+Meta primary text
+Not sure where your marketing is leaking money? Get a free audit of your Google rankings, ads, social
+and website, with a clear plan. No obligation.
+Meta headline
+Get Your Free Marketing Audit (29/40)
+Landing page
+/contact (H1 matches ad promise)
+Internal links
+Services, Case Studies, About Us
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+104
+HANDOVER
+Developer Handover: Technical SEO and
+AEO Checklist
+ H2
+ Critical fixes before launch
+ Unique meta tags: Every page currently outputs the homepage title, description and Open Graph tags.
+Implement per-page title, meta description, og:title, og:description, og:url and og:image using the values in
+this document.
+ Canonical tags: Every page currently canonicalises to https://digicarotene.com. Each page must have a
+self-referencing canonical (e.g., https://digicarotene.com/services/digital-marketing/seo). This is the single
+most damaging issue on the current build.
+ Location consistency: Remove "Dubai Silicon Oasis, UAE" from any footer variant. Use one NAP (name,
+address, phone) site-wide that matches Google Business Profile.
+ WhatsApp link: Replace wa.me/971501234567 with the real Indian number.
+ Navigation: Use one label and URL for paid advertising ("Performance Marketing",
+/services/digital-marketing/performance-marketing). 301-redirect /ppc to it.
+ Placeholder content: Remove "[to confirm]" case study cards, "Client 01 to 08" logos, repeated phase
+descriptions and the "+280%" KPI until real data replaces them.
+ /services: The "Explore Our Services" button links to /services. Make sure this URL resolves (redirect to
+/services/digital-marketing or create a combined services hub).
+H2
+ Heading and HTML rules
+ One H1 per page, matching the [H1] in this document.
+ Eyebrow labels (e.g., "Performance Marketing" above the H1) should be <p> or <span>, not headings.
+ FAQ questions should be H3 elements under an H2 "Frequently asked questions", with answers in <p>. Do not
+hide answers behind JavaScript that loads only on click; render them in the HTML (an accordion with content
+in the DOM is fine).
+ Use descriptive alt text on all images; replace "image to confirm" alt text.
+H2
+ Structured data (JSON-LD)
+ Site-wide: Organization (name, url, logo, sameAs: LinkedIn, Instagram, Facebook, YouTube, Clutch), with
+description "Digi Carotene is a data-led digital marketing agency based in Hyderabad, India, with 7+ years of
+experience and 300+ clients."
+ Homepage and Contact: ProfessionalService / LocalBusiness with address, geo, telephone, openingHours and
+areaServed: ["Hyderabad", "Bengaluru"].
+ Service pages: Service (name, serviceType, provider, areaServed) + FAQPage + BreadcrumbList.
+ Blog posts: BlogPosting with author (Person) and dateModified.
+ Validate everything in Google's Rich Results Test before launch.
+H2
+ Performance
+ Target LCP under 2.5s, INP under 200ms and CLS under 0.1 on mobile.
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+105
+ The homepage hero loads full-width 3840px images; serve responsive sizes and AVIF/WebP, and lazy-load
+below-the-fold images.
+ Keep motion effects from blocking rendering of text content.
+H2
+ AI crawler access and llms.txt
+ Allow GPTBot, OAI-SearchBot, PerplexityBot, Google-Extended and ClaudeBot in robots.txt unless there is a
+business reason not to.
+ Publish /llms.txt with a short brand summary and links to key pages. Suggested starting text:
+# Digi Carotene
+> Digi Carotene is a data-led digital marketing agency based in Hyderabad, India, serving Hyderabad,
+Bangalore and clients worldwide. 7+ years of experience, 300+ clients. Services: SEO, AEO and GEO;
+performance and growth marketing; social media; content; web design; personal branding; email and
+WhatsApp marketing; Instagram content shoots; BTL and offline activations (mall, residential, campus,
+festival, theatre, metro, pop-up, corporate events, influencer campaigns); PR.
+## Key pages
+- Services: https://digicarotene.com/services/digital-marketing
+- SEO, AEO and GEO: https://digicarotene.com/services/digital-marketing/seo
+- Offline marketing: https://digicarotene.com/services/offline-marketing
+- Hyderabad: https://digicarotene.com/digital-marketing-agency-hyderabad
+- Bangalore: https://digicarotene.com/digital-marketing-agency-bangalore
+- Contact: https://digicarotene.com/contact
+H2
+ Internal linking
+ Every service page links to 3 to 5 related services (listed under "Internal links" for each page) and to Contact.
+ Both city pages link to all main service pages, and every service page links back to the relevant city pages from
+its "In Hyderabad and Bengaluru" section.
+ Blog posts link to the service page in their cluster with descriptive anchor text (e.g., "our local SEO services in
+Hyderabad"), never "click here".
+H2
+ Paid campaign landing page notes
+ For Google Ads, send each ad group to the matching service page (or a stripped-down landing page variant
+with the same H1, no main navigation, form above the fold and click-to-call).
+ Install GA4, Google Tag Manager, Google Ads conversion tracking, Meta Pixel and Conversions API before
+launch. Track form submits, WhatsApp clicks and phone clicks as separate conversions.
+ Add UTM parameters to every ad and QR code so offline activations are attributable.
+ Never use competitor brand names or mall, metro or cinema operator trademarks in ad text without
+permission.
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+106
+HANDOVER
+Sources for Market Figures Used in the
+Copy
+ NOTE (do not publish)
+Figures were checked in October 2026. Re-verify before publishing and update annually.
+ AI Overviews reduce organic clicks by about 40%: randomized field experiment by Agarwal and Sen (SSRN,
+April 2026), as reported by getairefs.com and ecorpit.com.
+ India has about 100 million weekly ChatGPT users, ChatGPT's second-largest market: Sam Altman, February
+2026, reported by TechCrunch.
+ Digital was 59% of India's ad spend in 2025 (Rs 71,621 crore), projected to near 70% by 2027: dentsu-e4m
+Digital Advertising Report 2026, via exchange4media.
+ OOH was the only traditional medium to grow in 2025: Pitch Madison Advertising Report 2026, via
+exchange4media.
+ Hyderabad Metro carries about 4.5 lakh passengers a day on 69 km; busiest stations include Ameerpet,
+Miyapur, Raidurg and HITEC City: Siasat.com, August 2026.
+ Namma Metro is India's second-largest network (about 96 km, 83 stations), averaged about 9.16 lakh daily
+riders in April 2026, record 10.48 lakh (11 August 2025): Wikipedia (citing BMRCL) and WRI India.
+ India's influencer marketing industry is worth Rs 3,000 to 3,500 crore (2025) growing about 22% a year; 93%
+of brands prioritise Instagram: Kofluence Decoding Influence Report, May 2026.

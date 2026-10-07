@@ -70,7 +70,7 @@ function ServicesMegaMenu() {
                 render={<Link href={item.href} />}
                 className="flex items-start gap-3 rounded-xl p-3 hover:bg-secondary"
               >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-blue/10 text-brand-blue">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-yellow/20 text-ink">
                   <Icon className="size-4" />
                 </span>
                 <span className="min-w-0">
@@ -89,7 +89,7 @@ function ServicesMegaMenu() {
       <div className="mt-2 border-t border-border pt-2">
         <NavigationMenuLink
           render={<Link href={serviceMegaFooter.href} />}
-          className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-brand-blue"
+          className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-foreground hover:text-brand-yellow"
         >
           {serviceMegaFooter.label}
           <ArrowRight className="size-3.5" />

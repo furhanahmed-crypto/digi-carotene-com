@@ -1,0 +1,108 @@
+Blog (The Journal)
+URL slug
+/blog
+Meta title
+SEO, AI Search & Growth Insights | Digi Carotene Journal (56/60)
+Meta description
+Practical guides on SEO, AI search, ads, social and offline marketing for businesses in Hyderabad,
+Bangalore and beyond. Written by the Digi Carotene team. (155/160)
+Primary keyword
+digital marketing blog India
+Secondary keywords
+AEO guide, how to rank on ChatGPT, local SEO Hyderabad guide, marketing tips for small business India
+Schema (JSON-LD)
+Blog + BlogPosting per article (author as Person with credentials, datePublished, dateModified)
+PAGE COPY
+EYEBROW LABEL (<p>, not a heading): THE JOURNAL
+ H1
+ Marketing Insights You Can Actually Use
+No fluff, no recycled listicles. Practical guides on search, AI, ads, social and on-ground marketing, written by the
+people running campaigns every day in Hyderabad and Bangalore.
+H2
+ Recommended first 24 articles (topic clusters)
+NOTE (do not publish)
+Each article should answer the question in the first 50 words, include an author box with a real name and credentials, link to the
+relevant service page, and be updated at least once a year. These topics target real search and AI-prompt demand in both cities.
+H3
+Cluster 1: AI search (supports SEO page)
+ What is AEO and GEO? A plain-English guide for business owners
+ How to get your business recommended by ChatGPT in 2026
+ Google AI Overviews: what they mean for your website traffic
+ llms.txt explained: should your business have one?
+H3
+Cluster 2: Local SEO (supports SEO and city pages)
+ How to rank on Google Maps in Hyderabad: a step-by-step guide
+ Local SEO for Bangalore businesses: the 2026 checklist
+ How to get more Google reviews without breaking the rules
+ Google Business Profile mistakes that cost you customers
+H3
+Cluster 3: Paid ads (supports Performance and Growth)
+ How much should a small business spend on Google Ads in India?
+ Meta Ads vs Google Ads: which is right for your business?
+ What is a good cost per lead for clinics, restaurants and real estate in Hyderabad?
+ Click-to-WhatsApp ads: the complete guide for Indian businesses
+H3
+Cluster 4: Social and content (supports Social, Content, Insta Shoot)
+ How to write reel hooks that stop the scroll
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+101
+ Instagram marketing for restaurants in Hyderabad
+ LinkedIn personal branding for Bangalore founders
+ Telugu vs English content: which performs better in Hyderabad?
+H3
+Cluster 5: Offline and experiential (supports Offline pages)
+ Mall activations: how to measure ROI
+ Society activations in Hyderabad and Bangalore: a brand's guide
+ Hyderabad Metro vs Namma Metro advertising: formats and costs explained
+ Festival marketing calendar for Telangana and Karnataka
+H3
+Cluster 6: Websites and growth (supports Web and Growth)
+ Why your website gets traffic but no enquiries
+ Landing page checklist for Google and Meta ads
+ WhatsApp Business API: setup, costs and use cases
+ How to choose a digital marketing agency in Hyderabad or Bangalore
+CLOSING CTA SECTION (H2 + text + buttons)
+ H2
+ Get insights like these in your inbox.
+One useful email a month. No spam, unsubscribe anytime.
+  Subscribe   [ Read the Latest ]
+Paid Media Kit
+#
+Google Ads RSA headline
+Chars
+1
+Digital Marketing Insights
+26/30
+2
+SEO & AI Search Guides
+22/30
+3
+Marketing Tips for Business
+27/30
+4
+Read the Digi Carotene Journal
+30/30
+#
+Google Ads RSA description
+Chars
+1
+Practical guides on SEO, AI search, ads, social and offline marketing in India.
+79/90
+2
+Written by the team running campaigns in Hyderabad and Bangalore. Read now.
+75/90
+Meta primary text
+Want to know how to get recommended by ChatGPT, rank on Google Maps or lower your cost per lead?
+Our Journal shares practical, tested advice.
+Meta headline
+Practical Marketing Guides (26/40)
+Landing page
+/blog (H1 matches ad promise)
+Internal links
+SEO, Performance Marketing, Social Media Marketing, Contact
+
+
+Digi Carotene  ·  Website Content, SEO, AEO & Paid Media Copy  ·  October 2026
+102

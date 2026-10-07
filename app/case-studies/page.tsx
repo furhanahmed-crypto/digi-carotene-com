@@ -14,13 +14,13 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-svh">
       <PageHeader
-        title="Case studies"
-        description={work.body}
+        title="Proof, Not Promises: Real Results From Real Clients"
+        description="Every agency says it delivers results. We would rather show you. These case studies share what our clients were facing, what we did and what changed, in numbers. Until confirmed, cards stay explicitly marked as to-confirm."
         breadcrumbs={[
           { label: "Resources" },
           { label: "Case Studies" },
         ]}
-        mark="Resources"
+        mark="Case Studies"
         imageIndex={2}
       />
 
@@ -30,8 +30,9 @@ export default function CaseStudiesPage() {
             <SectionMark>{work.eyebrow}</SectionMark>
             <SectionHeading
               className="mt-6"
-              eyebrow="To confirm"
+              eyebrow="Results, not reports"
               title={work.headline}
+              body={work.body}
             />
           </Reveal>
 
@@ -50,8 +51,8 @@ export default function CaseStudiesPage() {
 
           <Reveal className="mt-16">
             <PageCta
-              title="Have a brief that belongs here?"
-              label="Start a conversation"
+              title="Want results like these for your brand?"
+              label="Get a Free Growth Audit"
               href={contactHref}
             />
           </Reveal>

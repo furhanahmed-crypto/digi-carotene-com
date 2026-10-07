@@ -29,7 +29,7 @@ export function PageHeader({
   const sectionMark = mark ?? breadcrumbs[0]?.label ?? "Overview"
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28">
+    <section className="relative overflow-hidden border-b border-border pt-28 pb-20 md:pt-36 md:pb-28">
       <Image
         src={getPlaceholderImage(imageIndex)}
         alt=""
@@ -38,23 +38,26 @@ export function PageHeader({
         sizes="100vw"
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-background/40" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(226,87,31,0.14),transparent_38%)]" />
+      <div className="absolute inset-0 bg-background/55" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,196,0,0.22),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(243,239,230,0.55),transparent_40%)]" />
 
       <Container className="relative z-10">
         <Reveal className="max-w-4xl">
-          <div className="glass-panel p-5 md:p-8">
+          <div className="rounded-2xl border border-border bg-card/90 p-5 shadow-sm backdrop-blur-md md:p-8">
             {breadcrumbs.length > 0 && (
               <nav
                 className="mb-8 flex flex-wrap items-center gap-2 text-[13px] tracking-[0.03em] text-muted-foreground uppercase"
                 aria-label="Breadcrumb"
               >
-                <Link href="/" className="transition-colors hover:text-foreground">
+                <Link
+                  href="/"
+                  className="transition-colors hover:text-foreground"
+                >
                   Home
                 </Link>
                 {breadcrumbs.map((item) => (
                   <span key={item.label} className="flex items-center gap-2">
-                    <span className="text-carotene" aria-hidden="true">
+                    <span className="text-brand-yellow" aria-hidden="true">
                       /
                     </span>
                     {item.href ? (
@@ -72,7 +75,7 @@ export function PageHeader({
               </nav>
             )}
             <SectionMark>{sectionMark}</SectionMark>
-            <h1 className="font-display mt-6 text-[40px] leading-[1.05] font-medium tracking-[-0.01em] md:text-[72px]">
+            <h1 className="font-display mt-6 text-[40px] leading-[1.05] font-medium tracking-[-0.01em] md:text-[64px] lg:text-[72px]">
               {title}
             </h1>
             {description ? (

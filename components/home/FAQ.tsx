@@ -1,4 +1,4 @@
-import { homeContent } from "@/lib/home-content"
+import { homeSections } from "@/constants/home/sections"
 import { Container } from "@/components/shared/container"
 import { Reveal } from "@/components/shared/reveal"
 import { SectionHeading } from "@/components/shared/section-heading"
@@ -11,12 +11,12 @@ import {
 } from "@/components/ui/accordion"
 
 export function FAQ() {
-  const { faq } = homeContent
+  const { faq } = homeSections
 
   return (
     <section
       id="faq"
-      className="border-b border-border bg-background py-16 md:py-24"
+      className="border-b border-border bg-[#f3efe6] py-16 text-ink md:py-24 dark:bg-secondary dark:text-foreground"
     >
       <Container>
         <Reveal>
@@ -28,7 +28,7 @@ export function FAQ() {
           />
         </Reveal>
 
-        <Accordion className="mt-10 overflow-hidden rounded-2xl border border-border bg-card">
+        <Accordion className="mt-10 overflow-hidden rounded-2xl border border-border bg-white dark:border-border dark:bg-card">
           {faq.items.map((item, index) => (
             <AccordionItem
               key={item.question}

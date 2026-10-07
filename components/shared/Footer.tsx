@@ -15,7 +15,7 @@ const offlineGroup = serviceGroups.find((g) => g.title === "Offline Marketing")
 const prGroup = serviceGroups.find((g) => g.title === "PR Services")
 
 const linkClass =
-  "inline-block transition-colors hover:translate-x-0.5 hover:text-brand-blue"
+  "inline-block transition-colors hover:translate-x-0.5 hover:text-brand-yellow"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -23,7 +23,7 @@ export function Footer() {
   return (
     <footer className="relative z-10 overflow-hidden border-t border-border bg-background pt-14 pb-10 text-foreground dark:bg-section-dark dark:text-white">
       <div className="pointer-events-none absolute top-0 left-1/4 -z-10 h-96 w-96 rounded-full bg-brand-yellow/15 blur-3xl dark:bg-brand-yellow/10" />
-      <div className="pointer-events-none absolute top-0 right-1/4 -z-10 h-96 w-96 rounded-full bg-brand-blue/15 blur-3xl" />
+      <div className="pointer-events-none absolute top-0 right-1/4 -z-10 h-96 w-96 rounded-full bg-brand-yellow/10 blur-3xl" />
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 gap-10 pb-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
@@ -36,12 +36,12 @@ export function Footer() {
               <SiteLogo heightClassName="h-16" />
             </Link>
             <p className="max-w-sm text-sm leading-[1.6] text-muted-foreground md:text-base dark:text-white/70">
-              We engineer the intersection of technical precision and artistic
-              brand craft. Bridging AI conversational citations (SEO/AEO/GEO)
-              with sensory real-world offline experiential activations.
+              Found. Chosen. Measured. Data-led digital, offline and PR for
+              brands in Hyderabad, Bangalore and beyond — 7+ years, 300+
+              clients.
             </p>
             <div className="text-[13px] font-medium tracking-[0.03em] text-muted-foreground uppercase dark:text-white/55">
-              Hyderabad, India
+              Hyderabad · Bangalore
             </div>
           </div>
 
@@ -52,7 +52,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground dark:text-white/65">
               <li>
                 <Link href="/about" className={linkClass}>
-                  Mission Overview
+                  About Us
                 </Link>
               </li>
               <li>
@@ -116,6 +116,22 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground dark:text-white/65">
               <li>
+                <Link
+                  href="/digital-marketing-agency-hyderabad"
+                  className={linkClass}
+                >
+                  Hyderabad
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/digital-marketing-agency-bangalore"
+                  className={linkClass}
+                >
+                  Bangalore
+                </Link>
+              </li>
+              <li>
                 <Link href="/blog" className={linkClass}>
                   The Journal
                 </Link>
@@ -128,7 +144,7 @@ export function Footer() {
               <li>
                 <Link
                   href={contactHref}
-                  className="inline-flex items-center gap-0.5 transition-colors hover:translate-x-0.5 hover:text-brand-blue"
+                  className="inline-flex items-center gap-0.5 transition-colors hover:translate-x-0.5 hover:text-brand-yellow"
                 >
                   Contact Us <ArrowUpRight className="size-3.5 opacity-60" />
                 </Link>
@@ -142,13 +158,13 @@ export function Footer() {
           <div className="flex gap-6">
             <Link
               href="/privacy"
-              className="transition-colors hover:text-brand-blue"
+              className="transition-colors hover:text-brand-yellow"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="transition-colors hover:text-brand-blue"
+              className="transition-colors hover:text-brand-yellow"
             >
               Terms of Delivery
             </Link>

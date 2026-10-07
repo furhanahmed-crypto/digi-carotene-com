@@ -20,12 +20,16 @@ export type FrameworkStep = {
   tags: string[]
 }
 
-export type RatingCard = {
+export type DifferentiatorCard = {
   id: string
-  platform: string
-  score: string
-  detail: string
-  href: string
+  title: string
+  body: string
+}
+
+export type AudienceItem = {
+  id: string
+  label: string
+  body: string
 }
 
 export type ResultCard = {
@@ -47,4 +51,9 @@ export type ReelItem = {
 export type SearchRankingTag = {
   label: string
   href: string
+}
+
+export type FaqItem = {
+  question: string
+  answer: string
 }

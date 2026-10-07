@@ -28,7 +28,7 @@ export function CaseStudyCard({
         />
       </div>
       <div className="flex flex-1 flex-col gap-3 border-t border-line p-5">
-        <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+        <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
           {meta}
         </p>
         <h3 className="font-display text-[21px] leading-[1.2] font-medium">

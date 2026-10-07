@@ -30,13 +30,13 @@ export default function BlogPage() {
   return (
     <div className="min-h-svh">
       <PageHeader
-        title="Journal"
-        description="Notes on generative search, activations, and brand discovery. Articles publish here when they are ready."
+        title="Marketing Insights You Can Actually Use"
+        description="No fluff, no recycled listicles. Practical guides on search, AI, ads, social and on-ground marketing, written by the people running campaigns every day in Hyderabad and Bangalore."
         breadcrumbs={[
           { label: "Resources" },
           { label: "Blog" },
         ]}
-        mark="Resources"
+        mark="The Journal"
         imageIndex={1}
       />
 
@@ -46,7 +46,7 @@ export default function BlogPage() {
             <SectionMark>Writing</SectionMark>
             <SectionHeading
               className="mt-6"
-              eyebrow="To confirm"
+              eyebrow="Insights"
               title="Thought pieces on discovery"
               body="Each card is a placeholder until the full article, date, and image are locked."
             />
@@ -55,14 +55,14 @@ export default function BlogPage() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {posts.map((post, index) => (
               <Reveal key={post.title} delayMs={index * 40}>
-                <article className="flex h-full flex-col border border-line bg-background">
+                <article className="flex h-full flex-col rounded-2xl border border-border bg-card">
                   <MediaFrame
                     index={index}
                     label={post.title}
-                    className="border-0 border-b"
+                    className="rounded-t-2xl border-0 border-b"
                   />
                   <div className="p-5">
-                    <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                    <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {index + 1} · {post.tag}
                     </p>
                     <h3 className="font-display mt-3 text-[21px] leading-[1.2] font-medium">

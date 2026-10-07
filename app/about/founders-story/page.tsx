@@ -7,35 +7,23 @@ import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { contactHref } from "@/constants/home/navigation"
 
-const values = [
-  {
-    title: "Radical transparency",
-    description:
-      "No hidden algorithms and no black-box reporting. Process and metrics stay visible.",
-  },
-  {
-    title: "Performance first",
-    description:
-      "We optimize for rankings, citations, and real-world footprints — not vanity clicks.",
-  },
-  {
-    title: "Craft and detail",
-    description:
-      "Every site, campaign, and popup should feel like one brand in the room.",
-  },
+const promises = [
+  "I will never sell you a metric that does not matter to your business.",
+  "If something is not working, you will hear it from us before you notice it.",
+  "Your growth is the only scoreboard we care about.",
 ]
 
 export default function FoundersStoryPage() {
   return (
     <div className="min-h-svh">
       <PageHeader
-        title="Founder's story"
-        description="Why Digi Carotene exists: one studio for search, AI citation, and work that happens in public."
+        title='It Started With a Simple Question: "Where Did the Money Go?"'
+        description="How a Hyderabad founder built a data-led marketing agency trusted by 300+ clients over 7+ years — and why every campaign still starts with a number."
         breadcrumbs={[
           { label: "About", href: "/about" },
           { label: "Founder's Story" },
         ]}
-        mark="Studio"
+        mark="Founder's Story"
         imageIndex={0}
       />
 
@@ -43,56 +31,75 @@ export default function FoundersStoryPage() {
         <Container>
           <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-6">
-              <SectionMark>Origin</SectionMark>
+              <SectionMark>The problem I kept seeing</SectionMark>
               <SectionHeading
                 className="mt-6"
-                eyebrow="A different kind of agency"
-                title="Built to close the gap between clicks and rooms"
-                body="The market had split. Digital shops chased keywords. Experiential shops built events with no search spine. Digi Carotene sits in between — SEO, AEO, and GEO on one side, activations on the other, one plan."
+                eyebrow="Origin"
+                title="Spend without a clear return"
+                body="Before Digi Carotene, [[founder's background — to confirm]]. Again and again I met business owners who had spent real money on marketing and could not answer one basic question: what did it bring back? They had beautiful posts. They had reports full of impressions. What they did not have was a clear line from spend to customers."
               />
-              <p className="mt-6 max-w-xl border-l-2 border-carotene pl-5 text-base leading-[1.6] text-muted-foreground">
-                We don&apos;t just build campaigns. We build systems that search engines index and people remember.
-              </p>
             </Reveal>
             <Reveal delayMs={40} className="lg:col-span-6">
-              <MediaFrame index={2} label="Founders" />
+              <MediaFrame index={2} label="Founder" />
             </Reveal>
           </div>
 
-          <div className="mt-16 border-t border-border pt-16 lg:mt-24 lg:pt-24">
+          <div className="mt-16 space-y-16 lg:mt-24 lg:space-y-24">
             <Reveal>
-              <SectionMark>Principles</SectionMark>
+              <SectionMark>The first client</SectionMark>
               <SectionHeading
                 className="mt-6"
-                eyebrow="How we decide"
-                title="Guiding philosophies"
+                eyebrow="Turning point"
+                title="Start with the number that matters"
+                body="[[First client story — industry, struggle, what we did differently, and the result — to confirm. Keep to 4–6 sentences.]] That project taught me the rule we still run on: start with the number that matters to the business, and work backwards."
               />
             </Reveal>
-            <ul className="mt-10 border-t border-line">
-              {values.map((value, index) => (
-                <Reveal key={value.title} delayMs={index * 40}>
-                  <li className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10">
-                    <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-                      <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
-                        {index + 1}
+
+            <Reveal>
+              <SectionMark>Building Digi Carotene</SectionMark>
+              <SectionHeading
+                className="mt-6"
+                eyebrow="Seven years on"
+                title="One channel was never enough"
+                body="Over the next seven years, that rule turned into an agency. We added SEO, then performance marketing, then production, web development and on-ground activations, because our clients' customers were not living in one channel, so neither could we. Today we have worked with 300+ clients, from neighbourhood restaurants in Hyderabad to [[larger or international client type — to confirm]]. The tools have changed. AI search did not exist when we started. The question has not changed: where did the money go, and what did it bring back?"
+              />
+            </Reveal>
+
+            <div>
+              <Reveal>
+                <SectionMark>What I promise every client</SectionMark>
+                <SectionHeading
+                  className="mt-6"
+                  eyebrow="Commitment"
+                  title="Three promises, no theatre"
+                />
+              </Reveal>
+              <ul className="mt-10 border-t border-line">
+                {promises.map((promise, index) => (
+                  <Reveal key={promise} delayMs={index * 40}>
+                    <li className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10">
+                      <div className="border-carotene md:col-span-2 md:border-l-2 md:pl-6">
+                        <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                          {String(index + 1).padStart(2, "0")}
+                        </p>
+                      </div>
+                      <p className="text-base leading-[1.6] text-foreground md:col-span-10 md:text-lg">
+                        {promise}
                       </p>
-                      <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
-                        {value.title}
-                      </h3>
-                    </div>
-                    <p className="text-base leading-[1.6] text-muted-foreground md:col-span-8 md:text-lg">
-                      {value.description}
-                    </p>
-                  </li>
-                </Reveal>
-              ))}
-            </ul>
+                    </li>
+                  </Reveal>
+                ))}
+              </ul>
+              <p className="mt-8 text-sm text-muted-foreground">
+                [[Founder name — to confirm]], Founder, Digi Carotene
+              </p>
+            </div>
           </div>
 
           <Reveal className="mt-16">
             <PageCta
-              title="Want the story in person?"
-              label="Start a conversation"
+              title="Talk to the founders."
+              label="Talk With Our Founders"
               href={contactHref}
             />
           </Reveal>

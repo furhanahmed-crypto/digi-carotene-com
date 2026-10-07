@@ -12,22 +12,18 @@ export function GrowthFramework() {
           <p className="text-[13px] font-medium tracking-[0.12em] text-muted-foreground uppercase">
             {framework.eyebrow}
           </p>
-          <h2 className="mt-3 font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]">
-            The{" "}
-            <span className="underline decoration-brand-yellow decoration-[0.12em] underline-offset-[0.12em]">
-              Growth
-            </span>{" "}
-            Framework
+          <h2 className="mt-3 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]">
+            {framework.headline}
           </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">{framework.body}</p>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {framework.steps.map((step) => (
             <Reveal key={step.number}>
               <article className="relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm md:p-7 dark:bg-secondary">
                 <span
-                  className="pointer-events-none absolute -top-4 -right-2 font-display text-[120px] leading-none font-medium text-foreground/5"
+                  className="pointer-events-none absolute -top-4 -right-2 font-display text-[100px] leading-none font-medium text-foreground/5"
                   aria-hidden="true"
                 >
                   {step.number}

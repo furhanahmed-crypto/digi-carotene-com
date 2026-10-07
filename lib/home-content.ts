@@ -257,7 +257,7 @@ export const homeContent = {
   visualShowcase: {
     eyebrow: "In the market",
     headline: "Campaign visuals, activations, and the work in frame.",
-    body: "A curated glimpse of creative and experiential output — placeholders until campaign assets are confirmed.",
+    body: "Online and offline touchpoints planned as one system — placeholders until campaign assets are confirmed.",
     items: [
       {
         id: "visual-1",
@@ -288,8 +288,8 @@ export const homeContent = {
   },
   work: {
     eyebrow: "Selected work",
-    headline: "Case studies that prove discovery — not invented dashboards.",
-    body: "Until names, outcomes, and assets are confirmed, this section stays honest. Real GEO, AEO, and activation work will live here.",
+    headline: "Proof, not promises.",
+    body: "Replace with real case studies (client or anonymised industry, challenge, one headline metric, time frame). Do not publish invented numbers.",
     placeholders: [
       {
         id: "case-1",

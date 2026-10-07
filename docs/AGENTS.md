@@ -5,7 +5,7 @@ Read this before modifying the codebase.
 ## Required reading order
 
 1. `docs/PRD.md` — what/why
-2. `docs/DESIGN.md` — visual rules (white/yellow light bands, blue accents)
+2. `docs/DESIGN.md` — visual rules (white/yellow/cream bands, yellow accents)
 3. `docs/RULES.md` — hard constraints
 4. `docs/ARCHITECTURE.md` — structure
 5. `docs/MEMORY.md` — past decisions / pitfalls
@@ -32,14 +32,15 @@ bun run build
 
 ## Verification before finishing a batch
 
-1. Homepage light mode: section backgrounds are only white/yellow
-2. Blue used for CTAs / heading accents
-3. Service panels: multi-color cards on a white band
-4. Dark mode readable and professional
-5. Floating CTAs: round icons that expand on hover
-6. Mega-menu still works
-7. `bun run typecheck`
-8. Update `docs/TASKS.md` checkboxes
+1. Homepage light mode: white / yellow / cream bands only
+2. Yellow used for CTAs / marks (ink text on yellow fills)
+3. Hero + SERP typing animations run (type → 3s hold → erase → next)
+4. Service panels: multi-color cards on a white band
+5. Inner pages share PageHeader / PageCta / SectionMark language
+6. Dark mode readable and professional
+7. Floating CTAs: round icons that expand on hover
+8. `bun run typecheck`
+9. Update `docs/TASKS.md` checkboxes
 
 ## Working style
 

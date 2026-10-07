@@ -1,43 +1,52 @@
 # PLACEHOLDERS — Unconfirmed proof gaps
 
-Explicit list of content that must not be invented. Replace when real assets arrive.
+Source PDF: `docs/content/Digi_Carotene_Website_Content.pdf`  
+Do not invent values. Replace when confirmed.
 
-## Ratings strip
+## NAP / contact (must match Google Business Profile)
 
-- `[[Google rating — to confirm]]`
-- `[[Google review count — to confirm]]`
-- `[[Clutch / other platform rating — to confirm]]`
-- Platform profile URLs — to confirm
+- Phone / WhatsApp: `[[+91 XXXXX XXXXX — to confirm]]` (replace UAE `wa.me/971…` in `constants/home/navigation.ts`)
+- Hyderabad office address + PIN — to confirm
+- Bangalore office — only if a real office exists
+- Hours currently shown as Mon–Sat 10am–7pm (confirm)
 
-## Search ranking SERP card
+## About / proof counts
 
-- `[[rating — to confirm]]` in the star meta line
-- `[[clients — to confirm]]` client-count claim
-- Do not invent Clutch/Google scores for the mock SERP
+- `[[Campaigns / activations / websites count — to confirm]]`
+- Countries list for remote clients — to confirm
 
-## Results cards
+## Results cards (home)
 
-- Client / industry labels — to confirm
-- Metric values (e.g. traffic, CPL, leads) — to confirm
-- Supporting one-line outcome copy — to confirm
-- Service tags per card — to confirm
+- Industry, city, metric, time frame — to confirm (PDF forbids invented numbers)
 
 ## Creative reels
 
 - Reel video files / posters — to confirm
 - Client handles — to confirm
-- Mute/autoplay policy — to confirm
 
 ## Case studies
 
-- Already marked in content as `[[Client / project name — to confirm]]` etc.
-- Imagery — to confirm
+- Client / project names, outcomes, imagery — to confirm
 
-## Clients marquee
+## Client logos
 
-- Real client logos — to confirm (do not use invented brand marks)
+- Real client logos for marquees/clients page — to confirm (do not invent marks)
 
-## Testimonials / video reviews
+## Testimonials
 
-- Omit attributed quotes until real ones exist.
-- Video testimonial URLs — to confirm
+- Omit attributed quotes until real ones exist
+
+## Team / founders
+
+- Leadership names, titles, photos, LinkedIn — to confirm
+- Founder first-client story details — to confirm
+- Careers email — to confirm
+
+## City pages
+
+- Hyderabad office NAP (address, phone, hours) — must match GBP
+- Bangalore staffed office — publish address only if real
+
+## Production
+
+- Insta shoot edit turnaround days — to confirm

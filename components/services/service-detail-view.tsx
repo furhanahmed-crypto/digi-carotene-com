@@ -116,7 +116,7 @@ export function ServiceDetailView({
                   className="border-b border-line py-8 transition-colors hover:bg-secondary/40 md:py-10"
                 >
                   <div className="border-carotene md:border-l-2 md:pl-6">
-                    <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                    <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {index + 1}
                     </p>
                     <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
@@ -146,7 +146,7 @@ export function ServiceDetailView({
                   className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10"
                 >
                   <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-                    <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                    <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {index + 1}
                     </p>
                     <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
@@ -190,7 +190,7 @@ export function ServiceDetailView({
                 >
                   <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-8">
                     <div className="border-carotene md:border-l-2 md:pl-6">
-                      <p className="text-carotene text-[12px] font-medium tracking-[0.08em] uppercase">
+                      <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                         {index + 1}
                       </p>
                       <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
@@ -211,7 +211,7 @@ export function ServiceDetailView({
             </ul>
           </div>
 
-          <div className="border-t border-border pt-16 lg:pt-24">
+          <div className="-mx-5 rounded-2xl border border-border bg-[#f3efe6] px-5 py-12 md:-mx-8 md:px-8 lg:mx-0 lg:px-10 lg:py-16 dark:bg-secondary">
             <Reveal>
               <SectionMark>FAQ</SectionMark>
               <SectionHeading
@@ -220,12 +220,12 @@ export function ServiceDetailView({
                 title="Frequently asked questions"
               />
             </Reveal>
-            <Accordion className="mt-10 border border-line">
+            <Accordion className="mt-10 overflow-hidden rounded-2xl border border-border bg-white dark:bg-card">
               {data.faqs.map((faq, index) => (
                 <AccordionItem
                   key={faq.question}
                   value={`faq-${index}`}
-                  className="border-line not-last:border-b px-4"
+                  className="not-last:border-b border-border px-4"
                 >
                   <AccordionTrigger className="font-display rounded-none py-5 text-left text-[18px] leading-[1.3] font-medium hover:no-underline md:text-[21px]">
                     {faq.question}
