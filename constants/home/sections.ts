@@ -1,4 +1,3 @@
-import { getPlaceholderImage } from "@/lib/placeholder-images"
 import type {
   AudienceItem,
   DifferentiatorCard,
@@ -10,9 +9,18 @@ import type {
   ServicePanel,
 } from "@/types/home"
 
-const heroMosaic = Array.from({ length: 9 }, (_, index) =>
-  getPlaceholderImage(index)
-)
+/** Nine distinct tiles — never cycle a shorter set or the pulse animation reads as a repeat. */
+const heroMosaic = [
+  "/assets/hero/mosaic/01.webp",
+  "/assets/hero/mosaic/02.webp",
+  "/assets/hero/mosaic/03.webp",
+  "/assets/hero/mosaic/04.webp",
+  "/assets/hero/mosaic/05.webp",
+  "/assets/hero/mosaic/06.webp",
+  "/assets/hero/mosaic/07.webp",
+  "/assets/hero/mosaic/08.webp",
+  "/assets/hero/mosaic/09.webp",
+] as const
 
 export const homeSections = {
   hero: {
@@ -207,13 +215,43 @@ export const homeSections = {
   reels: {
     eyebrow: "Creative proof",
     headline: "Content people actually stop to watch.",
-    body: "Short-form and campaign creative shells — replace with real client reels when assets are confirmed.",
+    body: "Short-form stock shells for layout reference — swap for real client reels when assets are confirmed.",
     items: [
-      { id: "reel-1", label: "[[Reel — to confirm]]", handle: "@[[handle]]" },
-      { id: "reel-2", label: "[[Reel — to confirm]]", handle: "@[[handle]]" },
-      { id: "reel-3", label: "[[Reel — to confirm]]", handle: "@[[handle]]" },
-      { id: "reel-4", label: "[[Reel — to confirm]]", handle: "@[[handle]]" },
-      { id: "reel-5", label: "[[Reel — to confirm]]", handle: "@[[handle]]" },
+      {
+        id: "reel-1",
+        label: "Food & hospitality",
+        handle: "@northplate",
+        videoSrc: "/assets/reels/food.mp4",
+        posterSrc: "/assets/reels/food-poster.webp",
+      },
+      {
+        id: "reel-2",
+        label: "Social & creator",
+        handle: "@loomlather",
+        videoSrc: "/assets/reels/social.mp4",
+        posterSrc: "/assets/reels/social-poster.webp",
+      },
+      {
+        id: "reel-3",
+        label: "Retail & lifestyle",
+        handle: "@peakstone",
+        videoSrc: "/assets/reels/retail.mp4",
+        posterSrc: "/assets/reels/retail-poster.webp",
+      },
+      {
+        id: "reel-4",
+        label: "Beauty & wellness",
+        handle: "@willowwell",
+        videoSrc: "/assets/reels/beauty.mp4",
+        posterSrc: "/assets/reels/beauty-poster.webp",
+      },
+      {
+        id: "reel-5",
+        label: "Founders & B2B",
+        handle: "@orbithq",
+        videoSrc: "/assets/reels/workspace.mp4",
+        posterSrc: "/assets/reels/workspace-poster.webp",
+      },
     ] satisfies ReelItem[],
   },
   results: {

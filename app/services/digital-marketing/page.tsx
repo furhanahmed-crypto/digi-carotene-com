@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/shared/page-header"
 import { Container } from "@/components/shared/container"
 import { ListingCard } from "@/components/shared/listing-card"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
@@ -108,8 +108,11 @@ export default function DigitalMarketingLandingPage() {
           </div>
 
           <Reveal>
-            <SectionMark>The shift</SectionMark>
+            <SectionMark data-reveal="eyebrow">The shift</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="More channels. Less patience."
               title="More channels than ever. Less patience than ever."
@@ -119,40 +122,53 @@ export default function DigitalMarketingLandingPage() {
 
           <div>
             <Reveal>
-              <SectionMark>Services</SectionMark>
+              <SectionMark data-reveal="eyebrow">Services</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Full-service digital"
                 title="Our digital marketing services"
               />
+
+              <div
+                data-reveal-group
+                className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+              >
+                {digitalServices.map((service, index) => (
+                  <div key={service.slug} data-reveal="card">
+                    <ListingCard
+                      href={`/services/digital-marketing/${service.slug}`}
+                      index={index}
+                      title={service.title}
+                      body={service.desc}
+                    />
+                  </div>
+                ))}
+              </div>
             </Reveal>
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {digitalServices.map((service, index) => (
-                <Reveal key={service.slug} delayMs={index * 40}>
-                  <ListingCard
-                    href={`/services/digital-marketing/${service.slug}`}
-                    index={index}
-                    title={service.title}
-                    body={service.desc}
-                  />
-                </Reveal>
-              ))}
-            </div>
           </div>
 
           <div>
             <Reveal>
-              <SectionMark>How we work</SectionMark>
+              <SectionMark data-reveal="eyebrow">How we work</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Difference"
                 title="How our digital work is different"
               />
-            </Reveal>
-            <ul className="mt-10 border-t border-line">
-              {differences.map((item, index) => (
-                <Reveal key={item} delayMs={index * 30}>
-                  <li className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10">
+
+              <ul data-reveal-group className="mt-10 border-t border-line">
+                {differences.map((item, index) => (
+                  <li
+                    key={item}
+                    data-reveal="card"
+                    className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10"
+                  >
                     <div className="border-carotene md:col-span-2 md:border-l-2 md:pl-6">
                       <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                         {String(index + 1).padStart(2, "0")}
@@ -162,17 +178,19 @@ export default function DigitalMarketingLandingPage() {
                       {item}
                     </p>
                   </li>
-                </Reveal>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </Reveal>
           </div>
 
           <Reveal>
-            <PageCta
-              title="Need a plan, not a channel menu?"
-              label="Get a Free Digital Audit"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Need a plan, not a channel menu?"
+                label="Get a Free Digital Audit"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

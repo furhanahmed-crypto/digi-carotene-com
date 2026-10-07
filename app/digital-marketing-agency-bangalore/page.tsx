@@ -6,7 +6,7 @@ import { Container } from "@/components/shared/container"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
 
@@ -43,10 +43,7 @@ export default function BangaloreAgencyPage() {
       <PageHeader
         title="Bengaluru Tests Everything. Your Marketing Should Too."
         description="Bangalore buyers read reviews, compare prices, ask AI and try the free trial before they commit. Investors ask about CAC and retention before revenue. Digi Carotene brings a data-led, test-and-learn approach to Bangalore brands, with 7+ years and 300+ clients of experience behind every recommendation."
-        breadcrumbs={[
-          { label: "Locations" },
-          { label: "Bangalore" },
-        ]}
+        breadcrumbs={[{ label: "Locations" }, { label: "Bangalore" }]}
         mark="Digital Marketing Agency in Bangalore"
         imageIndex={1}
       />
@@ -74,8 +71,11 @@ export default function BangaloreAgencyPage() {
           </div>
 
           <Reveal>
-            <SectionMark>The market</SectionMark>
+            <SectionMark data-reveal="eyebrow">The market</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="Compete on measurement"
               title="The most competitive digital market in India"
@@ -85,17 +85,26 @@ export default function BangaloreAgencyPage() {
 
           <div>
             <Reveal>
-              <SectionMark>What we do</SectionMark>
+              <SectionMark data-reveal="eyebrow">What we do</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Serving Bangalore"
                 title="What we do for Bangalore brands"
               />
-            </Reveal>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((item, index) => (
-                <Reveal key={item.title} delayMs={index * 30}>
-                  <article className="rounded-2xl border border-border bg-card p-6">
+
+              <div
+                data-reveal-group
+                className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                {services.map((item, index) => (
+                  <article
+                    key={item.title}
+                    data-reveal="card"
+                    className="rounded-2xl border border-border bg-card p-6"
+                  >
                     <h3 className="font-display text-xl font-medium">
                       {item.title}
                     </h3>
@@ -103,15 +112,20 @@ export default function BangaloreAgencyPage() {
                       {item.body}
                     </p>
                   </article>
-                </Reveal>
-              ))}
-            </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
 
           <div className="rounded-2xl border border-border bg-[#f3efe6] p-6 md:p-8 dark:bg-secondary">
             <Reveal>
-              <SectionMark tone="paper">Presence</SectionMark>
+              <SectionMark data-reveal="eyebrow" tone="paper">
+                Presence
+              </SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="No invented address"
                 title="Serving Bangalore with on-ground teams"
@@ -121,11 +135,13 @@ export default function BangaloreAgencyPage() {
           </div>
 
           <Reveal>
-            <PageCta
-              title="Ready to grow in Bangalore?"
-              label="Get a Free Audit"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Ready to grow in Bangalore?"
+                label="Get a Free Audit"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

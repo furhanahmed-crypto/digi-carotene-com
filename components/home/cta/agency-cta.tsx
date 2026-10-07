@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { ctaDecor } from "@/components/home/section-decors"
 import { whatsappHref } from "@/constants/home/navigation"
 import { homeSections } from "@/constants/home/sections"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { Button } from "@/components/ui/button"
@@ -12,16 +13,24 @@ export function AgencyCta() {
   const { cta } = homeSections
 
   return (
-    <SectionLayout tone="yellow">
+    <SectionLayout tone="yellow" decor={ctaDecor}>
       <Reveal>
-        <SectionMark tone="paper">{cta.eyebrow}</SectionMark>
-        <h2 className="mt-6 max-w-3xl font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] md:text-[52px]">
+        <SectionMark data-reveal="eyebrow" tone="paper">
+          {cta.eyebrow}
+        </SectionMark>
+        <h2
+          data-reveal="heading"
+          className="mt-6 max-w-3xl font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] md:text-[52px]"
+        >
           {cta.headline}
         </h2>
-        <p className="mt-4 max-w-2xl text-base text-ink/70 md:text-lg dark:text-muted-foreground">
+        <p
+          data-reveal="text"
+          className="mt-4 max-w-2xl text-base text-ink/70 md:text-lg dark:text-muted-foreground"
+        >
           {cta.body}
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div data-reveal="cta" className="mt-8 flex flex-wrap gap-3">
           <Button
             nativeButton={false}
             render={<Link href={cta.primary.href} />}

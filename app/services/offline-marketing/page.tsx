@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/shared/page-header"
 import { Container } from "@/components/shared/container"
 import { ListingCard } from "@/components/shared/listing-card"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
@@ -96,8 +96,11 @@ export default function OfflineMarketingLandingPage() {
           </div>
 
           <Reveal>
-            <SectionMark>Measured offline</SectionMark>
+            <SectionMark data-reveal="eyebrow">Measured offline</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="Proof, not guesses"
               title="Offline is not old-school. Unmeasured offline is."
@@ -107,33 +110,42 @@ export default function OfflineMarketingLandingPage() {
 
           <div>
             <Reveal>
-              <SectionMark>Services</SectionMark>
+              <SectionMark data-reveal="eyebrow">Services</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="BTL & experiential"
                 title="Our offline marketing services"
               />
+
+              <div
+                data-reveal-group
+                className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+              >
+                {offlineServices.map((service, index) => (
+                  <div key={service.slug} data-reveal="card">
+                    <ListingCard
+                      href={`/services/offline-marketing/${service.slug}`}
+                      index={index}
+                      title={service.title}
+                      body={service.desc}
+                    />
+                  </div>
+                ))}
+              </div>
             </Reveal>
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {offlineServices.map((service, index) => (
-                <Reveal key={service.slug} delayMs={index * 40}>
-                  <ListingCard
-                    href={`/services/offline-marketing/${service.slug}`}
-                    index={index}
-                    title={service.title}
-                    body={service.desc}
-                  />
-                </Reveal>
-              ))}
-            </div>
           </div>
 
           <Reveal>
-            <PageCta
-              title="Want the work in the room, not just the feed?"
-              label="Plan an Activation"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Want the work in the room, not just the feed?"
+                label="Plan an Activation"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

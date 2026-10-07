@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, type RefObject } from "react"
-import gsap from "gsap"
+import { gsap } from "@/lib/gsap"
 
 type UseCyclingTypewriterOptions = {
   items: readonly string[]

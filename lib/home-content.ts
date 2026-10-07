@@ -421,8 +421,8 @@ export const homeContent = {
     primary: { label: "Get Your Free Scan", href: "/contact" },
     secondary: { label: "Talk with our Founders", href: "/contact" },
     scoreImage: {
-      light: "/scores/scores-screenshot-light.png",
-      dark: "/scores/scores-screenshot-dark.png",
+      light: "/assets/scores/light.webp",
+      dark: "/assets/scores/dark.webp",
     },
   },
 } as const

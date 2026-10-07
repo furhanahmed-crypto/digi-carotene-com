@@ -7,7 +7,7 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
 
@@ -63,24 +63,30 @@ export default function AboutPage() {
             </Button>
           </div>
 
-          <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
-            <Reveal className="lg:col-span-6">
-              <SectionMark>Why we exist</SectionMark>
+          <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-6">
+              <SectionMark data-reveal="eyebrow">Why we exist</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Results you can count"
                 title="Most businesses we meet have been burned before."
                 body="They have paid for posts that nobody saw, ads that brought clicks but no customers, and reports full of words like reach and impressions that never explained where the money went. We started Digi Carotene to fix that. Our rule is simple: if we cannot measure it, we do not sell it as a result."
               />
-            </Reveal>
-            <Reveal delayMs={40} className="lg:col-span-6">
+            </div>
+            <div data-reveal="image" className="lg:col-span-6">
               <MediaFrame index={1} label="Studio" />
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
           <Reveal>
-            <SectionMark>Why the name</SectionMark>
+            <SectionMark data-reveal="eyebrow">Why the name</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="Carotene"
               title="Warm, concentrated, never just decoration."
@@ -90,17 +96,26 @@ export default function AboutPage() {
 
           <div>
             <Reveal>
-              <SectionMark>What we believe</SectionMark>
+              <SectionMark data-reveal="eyebrow">What we believe</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Principles"
                 title="How we partner with brands"
               />
-            </Reveal>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {beliefs.map((item) => (
-                <Reveal key={item.title}>
-                  <article className="rounded-2xl border border-border bg-card p-6">
+
+              <div
+                data-reveal-group
+                className="mt-10 grid gap-4 sm:grid-cols-2"
+              >
+                {beliefs.map((item) => (
+                  <article
+                    key={item.title}
+                    data-reveal="card"
+                    className="rounded-2xl border border-border bg-card p-6"
+                  >
                     <h3 className="font-display text-2xl font-medium">
                       {item.title}
                     </h3>
@@ -108,15 +123,20 @@ export default function AboutPage() {
                       {item.body}
                     </p>
                   </article>
-                </Reveal>
-              ))}
-            </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
 
           <div className="rounded-2xl border border-border bg-[#f3efe6] p-6 md:p-8 dark:bg-secondary">
             <Reveal>
-              <SectionMark tone="paper">In numbers</SectionMark>
-              <ul className="mt-6 space-y-3 text-base text-foreground">
+              <SectionMark data-reveal="eyebrow" tone="paper">
+                In numbers
+              </SectionMark>
+              <ul
+                data-reveal="text"
+                className="mt-6 space-y-3 text-base text-foreground"
+              >
                 <li>7+ years of building brands and campaigns.</li>
                 <li>300+ clients served across industries and countries.</li>
                 <li>
@@ -133,8 +153,11 @@ export default function AboutPage() {
           </div>
 
           <Reveal>
-            <SectionMark>Where we work</SectionMark>
+            <SectionMark data-reveal="eyebrow">Where we work</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="Hyderabad · Bangalore · Global"
               title="Home in Hyderabad. Reach across Bangalore."
@@ -143,11 +166,13 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal>
-            <PageCta
-              title="Want to see if this fits your brand?"
-              label="Start a conversation"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Want to see if this fits your brand?"
+                label="Start a conversation"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

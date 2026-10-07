@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { Container } from "@/components/shared/container"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { SectionMark } from "@/components/shared/section-mark"
 import { getPlaceholderImage } from "@/lib/placeholder-images"
 
@@ -46,6 +46,7 @@ export function PageHeader({
           <div className="rounded-2xl border border-border bg-card/90 p-5 shadow-sm backdrop-blur-md md:p-8">
             {breadcrumbs.length > 0 && (
               <nav
+                data-reveal="eyebrow"
                 className="mb-8 flex flex-wrap items-center gap-2 text-[13px] tracking-[0.03em] text-muted-foreground uppercase"
                 aria-label="Breadcrumb"
               >
@@ -74,12 +75,18 @@ export function PageHeader({
                 ))}
               </nav>
             )}
-            <SectionMark>{sectionMark}</SectionMark>
-            <h1 className="font-display mt-6 text-[40px] leading-[1.05] font-medium tracking-[-0.01em] md:text-[64px] lg:text-[72px]">
+            <SectionMark data-reveal="eyebrow">{sectionMark}</SectionMark>
+            <h1
+              data-reveal="heading"
+              className="mt-6 font-display text-[40px] leading-[1.05] font-medium tracking-[-0.01em] md:text-[64px] lg:text-[72px]"
+            >
               {title}
             </h1>
             {description ? (
-              <p className="mt-6 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">
+              <p
+                data-reveal="text"
+                className="mt-6 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg"
+              >
                 {description}
               </p>
             ) : null}

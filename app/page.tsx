@@ -11,6 +11,13 @@ import { ResultsSpeak } from "@/components/home/results/results-speak"
 import { Work } from "@/components/home/Work"
 import { FAQ } from "@/components/home/FAQ"
 import { AgencyCta } from "@/components/home/cta/agency-cta"
+import {
+  BarChartMotif,
+  CameraMotif,
+  CampusCapMotif,
+  CarrotSprigMotif,
+  ChatCitationMotif,
+} from "@/components/decor/motifs"
 
 export default function Page() {
   return (

@@ -8,7 +8,7 @@ import { homeContent } from "@/lib/home-content"
 import { useActivePillar } from "@/hooks/use-active-pillar"
 import { useCursorFollow } from "@/hooks/use-cursor-follow"
 import { Container } from "@/components/shared/container"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { SectionHeading } from "@/components/shared/section-heading"
 
 import { CapabilityNav } from "./capabilities/capability-nav"
@@ -44,7 +44,10 @@ export function Capabilities() {
   }
 
   return (
-    <section id="services" className="border-t border-border py-[72px] lg:py-[140px]">
+    <section
+      id="services"
+      className="border-t border-border py-[72px] lg:py-[140px]"
+    >
       <CursorFollowImage
         src={cursor.state.src}
         visible={cursor.state.visible}
@@ -58,6 +61,9 @@ export function Capabilities() {
             eyebrow={capabilities.eyebrow}
             title={capabilities.headline}
             body={capabilities.body}
+            eyebrowProps={{ "data-reveal": "eyebrow" }}
+            titleProps={{ "data-reveal": "heading" }}
+            bodyProps={{ "data-reveal": "text" }}
           />
         </Reveal>
 
@@ -92,6 +98,7 @@ export function Capabilities() {
         <Reveal className="mt-12 lg:mt-16">
           <Link
             href="/services/digital-marketing"
+            data-reveal="cta"
             className="link-underline text-[13px] font-medium tracking-[0.03em] uppercase"
           >
             All services

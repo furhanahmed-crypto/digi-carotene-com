@@ -1,10 +1,8 @@
 "use client"
 
 import * as React from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-gsap.registerPlugin(ScrollTrigger)
+import { gsap, ScrollTrigger } from "@/lib/gsap"
 
 const CARD_OFFSET_Y = 25
 const SCALE_STEP = 0.05
@@ -105,7 +103,11 @@ export function useIndustryCardStack(
                 -220,
                 segmentProgress
               ),
-              rotationX: gsap.utils.interpolate(0, PEEL_ROTATION, segmentProgress),
+              rotationX: gsap.utils.interpolate(
+                0,
+                PEEL_ROTATION,
+                segmentProgress
+              ),
               scale: 1,
               opacity: 1,
             })

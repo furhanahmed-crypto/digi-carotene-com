@@ -4,7 +4,7 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { contactHref } from "@/constants/home/navigation"
 
 const leadership = [
@@ -70,10 +70,7 @@ export default function TeamPage() {
       <PageHeader
         title="The People Behind the Numbers"
         description="Great marketing is part science and part craft. Our team brings both: analysts who live in spreadsheets, creatives who live in Figma and on set, and an on-ground crew that knows how to make a crowd stop and look."
-        breadcrumbs={[
-          { label: "About", href: "/about" },
-          { label: "Team" },
-        ]}
+        breadcrumbs={[{ label: "About", href: "/about" }, { label: "Team" }]}
         mark="Our Team"
         imageIndex={1}
       />
@@ -81,19 +78,24 @@ export default function TeamPage() {
       <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
         <Container>
           <Reveal>
-            <SectionMark>Leadership</SectionMark>
+            <SectionMark data-reveal="eyebrow">Leadership</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="Names to confirm"
               title="Leaders with real credentials"
               body="Photos, full names, titles, years of experience and LinkedIn links strengthen trust for Google and AI engines. Slots stay explicit until confirmed."
             />
-          </Reveal>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {leadership.map((member, index) => (
-              <Reveal key={`${member.name}-${index}`} delayMs={index * 40}>
-                <div className="border border-line bg-background">
+            <div data-reveal-group className="mt-12 grid gap-5 md:grid-cols-3">
+              {leadership.map((member, index) => (
+                <div
+                  key={`${member.name}-${index}`}
+                  data-reveal="card"
+                  className="border border-line bg-background"
+                >
                   <MediaFrame
                     index={index}
                     label={member.name}
@@ -104,7 +106,7 @@ export default function TeamPage() {
                     <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {index + 1} · {member.role}
                     </p>
-                    <h3 className="font-display mt-3 text-[21px] leading-[1.2] font-medium">
+                    <h3 className="mt-3 font-display text-[21px] leading-[1.2] font-medium">
                       {member.name}
                     </h3>
                     <p className="mt-3 text-base leading-[1.6] text-muted-foreground">
@@ -112,28 +114,34 @@ export default function TeamPage() {
                     </p>
                   </div>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Reveal>
 
           <div className="mt-16 border-t border-border pt-16 lg:mt-24 lg:pt-24">
             <Reveal>
-              <SectionMark>How we organise</SectionMark>
+              <SectionMark data-reveal="eyebrow">How we organise</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Departments"
                 title="One plan, specialised crews"
               />
-            </Reveal>
-            <ul className="mt-10 border-t border-line">
-              {departments.map((dept, index) => (
-                <Reveal key={dept.name} delayMs={index * 30}>
-                  <li className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10">
+
+              <ul data-reveal-group className="mt-10 border-t border-line">
+                {departments.map((dept, index) => (
+                  <li
+                    key={dept.name}
+                    data-reveal="card"
+                    className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10"
+                  >
                     <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
                       <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                         {String(index + 1).padStart(2, "0")}
                       </p>
-                      <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                      <h3 className="mt-2 font-display text-[21px] leading-[1.2] font-medium md:text-[26px]">
                         {dept.name}
                       </h3>
                     </div>
@@ -141,17 +149,19 @@ export default function TeamPage() {
                       {dept.description}
                     </p>
                   </li>
-                </Reveal>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </Reveal>
           </div>
 
           <Reveal className="mt-16">
-            <PageCta
-              title="Meet the team on a call."
-              label="Book a Discovery Call"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Meet the team on a call."
+                label="Book a Discovery Call"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

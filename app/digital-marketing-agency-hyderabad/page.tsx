@@ -6,7 +6,7 @@ import { Container } from "@/components/shared/container"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
 
@@ -43,10 +43,7 @@ export default function HyderabadAgencyPage() {
       <PageHeader
         title="The Data-Led Digital Marketing Agency Hyderabad Businesses Trust"
         description="Hyderabad doesn't buy on hype. It buys on trust, then tells everyone. For 7+ years, Digi Carotene has helped Hyderabad restaurants, clinics, salons, colleges, real estate firms and tech companies earn that trust online and on the ground, with results measured in enquiries, footfall and revenue."
-        breadcrumbs={[
-          { label: "Locations" },
-          { label: "Hyderabad" },
-        ]}
+        breadcrumbs={[{ label: "Locations" }, { label: "Hyderabad" }]}
         mark="Digital Marketing Agency in Hyderabad"
         imageIndex={0}
       />
@@ -66,8 +63,11 @@ export default function HyderabadAgencyPage() {
           </div>
 
           <Reveal>
-            <SectionMark>Why Hyderabad</SectionMark>
+            <SectionMark data-reveal="eyebrow">Why Hyderabad</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="Two cities in one"
               title="Why Hyderabad needs a different marketing playbook"
@@ -77,17 +77,26 @@ export default function HyderabadAgencyPage() {
 
           <div>
             <Reveal>
-              <SectionMark>What we do</SectionMark>
+              <SectionMark data-reveal="eyebrow">What we do</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Local + digital"
                 title="What we do for Hyderabad businesses"
               />
-            </Reveal>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {services.map((item, index) => (
-                <Reveal key={item.title} delayMs={index * 30}>
-                  <article className="rounded-2xl border border-border bg-card p-6">
+
+              <div
+                data-reveal-group
+                className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                {services.map((item, index) => (
+                  <article
+                    key={item.title}
+                    data-reveal="card"
+                    className="rounded-2xl border border-border bg-card p-6"
+                  >
                     <h3 className="font-display text-xl font-medium">
                       {item.title}
                     </h3>
@@ -95,15 +104,20 @@ export default function HyderabadAgencyPage() {
                       {item.body}
                     </p>
                   </article>
-                </Reveal>
-              ))}
-            </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
 
           <div className="rounded-2xl border border-border bg-[#f3efe6] p-6 md:p-8 dark:bg-secondary">
             <Reveal>
-              <SectionMark tone="paper">Visit us</SectionMark>
+              <SectionMark data-reveal="eyebrow" tone="paper">
+                Visit us
+              </SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="NAP to confirm"
                 title="Hyderabad office"
@@ -113,11 +127,13 @@ export default function HyderabadAgencyPage() {
           </div>
 
           <Reveal>
-            <PageCta
-              title="Ready to grow in Hyderabad?"
-              label="Get a Free Audit"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Ready to grow in Hyderabad?"
+                label="Get a Free Audit"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

@@ -2,22 +2,23 @@
 
 import { useRef } from "react"
 import Image from "next/image"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
 
-gsap.registerPlugin(useGSAP)
+import { gsap, useGSAP } from "@/lib/gsap"
 
 const COLS = 3
-const DIAGONALS = 5 // (rows - 1) + (cols - 1) + 1
 
-const PULSE = 0.55 // one cell's full up + settle
-const STAGGER = 0.09 // delay between diagonals -> they overlap
+const PULSE = 0.55
+const STAGGER = 0.09
 const PAUSE_BETWEEN_SESSIONS = 3
 const PEAK_SCALE = 1.1
 
-type HeroMosaicProps = { images: readonly string[] }
+type HeroMosaicProps = {
+  images: readonly string[]
+  /** Delay before the wave starts (after hero reveal choreography). */
+  startDelay?: number
+}
 
-export function HeroMosaic({ images }: HeroMosaicProps) {
+export function HeroMosaic({ images, startDelay = 0 }: HeroMosaicProps) {
   const gridRef = useRef<HTMLDivElement>(null)
 
   useGSAP(
@@ -34,13 +35,14 @@ export function HeroMosaic({ images }: HeroMosaicProps) {
         gsap.set(cells, { scale: 1, force3D: true })
 
         const tl = gsap.timeline({
+          delay: startDelay,
           repeat: -1,
           repeatDelay: PAUSE_BETWEEN_SESSIONS,
           defaults: { overwrite: false },
         })
 
         cells.forEach((cell, i) => {
-          const diagonal = Math.floor(i / COLS) + (i % COLS) // 0..4
+          const diagonal = Math.floor(i / COLS) + (i % COLS)
           const start = diagonal * STAGGER
 
           tl.to(
@@ -49,8 +51,9 @@ export function HeroMosaic({ images }: HeroMosaicProps) {
               scale: PEAK_SCALE,
               duration: PULSE * 0.4,
               ease: "sine.out",
-              // lift the active cell above its neighbours so edges don't clip
-              onStart: () => { gsap.set(cell, { zIndex: 1 }) },
+              onStart: () => {
+                gsap.set(cell, { zIndex: 1 })
+              },
             },
             start
           ).to(
@@ -58,19 +61,23 @@ export function HeroMosaic({ images }: HeroMosaicProps) {
             {
               scale: 1,
               duration: PULSE * 0.6,
-              ease: "back.out(2.2)", // soft overshoot below 1, then settle
-              onComplete: () => { gsap.set(cell, { zIndex: 0 }) },
+              ease: "back.out(2.2)",
+              onComplete: () => {
+                gsap.set(cell, { zIndex: 0 })
+              },
             },
             start + PULSE * 0.4
           )
         })
 
-        return () => tl.kill()
+        return () => {
+          tl.kill()
+        }
       })
 
       return () => mm.revert()
     },
-    { scope: gridRef }
+    { scope: gridRef, dependencies: [startDelay] }
   )
 
   return (
@@ -79,14 +86,14 @@ export function HeroMosaic({ images }: HeroMosaicProps) {
         <div
           key={`${src}-${index}`}
           data-mosaic-cell
-          className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-secondary shadow-sm will-change-transform"
+          className="group relative aspect-square overflow-hidden rounded-2xl border border-border bg-secondary shadow-sm will-change-transform"
         >
           <Image
             src={src}
             alt=""
             fill
             sizes="(max-width: 768px) 30vw, 140px"
-            className="object-cover"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
             priority={index < 3}
           />
         </div>

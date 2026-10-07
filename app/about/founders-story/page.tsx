@@ -4,7 +4,7 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { contactHref } from "@/constants/home/navigation"
 
 const promises = [
@@ -29,25 +29,33 @@ export default function FoundersStoryPage() {
 
       <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
         <Container>
-          <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
-            <Reveal className="lg:col-span-6">
-              <SectionMark>The problem I kept seeing</SectionMark>
+          <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-6">
+              <SectionMark data-reveal="eyebrow">
+                The problem I kept seeing
+              </SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Origin"
                 title="Spend without a clear return"
                 body="Before Digi Carotene, [[founder's background — to confirm]]. Again and again I met business owners who had spent real money on marketing and could not answer one basic question: what did it bring back? They had beautiful posts. They had reports full of impressions. What they did not have was a clear line from spend to customers."
               />
-            </Reveal>
-            <Reveal delayMs={40} className="lg:col-span-6">
+            </div>
+            <div data-reveal="image" className="lg:col-span-6">
               <MediaFrame index={2} label="Founder" />
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
           <div className="mt-16 space-y-16 lg:mt-24 lg:space-y-24">
             <Reveal>
-              <SectionMark>The first client</SectionMark>
+              <SectionMark data-reveal="eyebrow">The first client</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Turning point"
                 title="Start with the number that matters"
@@ -56,8 +64,13 @@ export default function FoundersStoryPage() {
             </Reveal>
 
             <Reveal>
-              <SectionMark>Building Digi Carotene</SectionMark>
+              <SectionMark data-reveal="eyebrow">
+                Building Digi Carotene
+              </SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Seven years on"
                 title="One channel was never enough"
@@ -67,17 +80,25 @@ export default function FoundersStoryPage() {
 
             <div>
               <Reveal>
-                <SectionMark>What I promise every client</SectionMark>
+                <SectionMark data-reveal="eyebrow">
+                  What I promise every client
+                </SectionMark>
                 <SectionHeading
+                  eyebrowProps={{ "data-reveal": "eyebrow" }}
+                  titleProps={{ "data-reveal": "heading" }}
+                  bodyProps={{ "data-reveal": "text" }}
                   className="mt-6"
                   eyebrow="Commitment"
                   title="Three promises, no theatre"
                 />
-              </Reveal>
-              <ul className="mt-10 border-t border-line">
-                {promises.map((promise, index) => (
-                  <Reveal key={promise} delayMs={index * 40}>
-                    <li className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10">
+
+                <ul data-reveal-group className="mt-10 border-t border-line">
+                  {promises.map((promise, index) => (
+                    <li
+                      key={promise}
+                      data-reveal="card"
+                      className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10"
+                    >
                       <div className="border-carotene md:col-span-2 md:border-l-2 md:pl-6">
                         <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                           {String(index + 1).padStart(2, "0")}
@@ -87,9 +108,9 @@ export default function FoundersStoryPage() {
                         {promise}
                       </p>
                     </li>
-                  </Reveal>
-                ))}
-              </ul>
+                  ))}
+                </ul>
+              </Reveal>
               <p className="mt-8 text-sm text-muted-foreground">
                 [[Founder name — to confirm]], Founder, Digi Carotene
               </p>
@@ -97,11 +118,13 @@ export default function FoundersStoryPage() {
           </div>
 
           <Reveal className="mt-16">
-            <PageCta
-              title="Talk to the founders."
-              label="Talk With Our Founders"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Talk to the founders."
+                label="Talk With Our Founders"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

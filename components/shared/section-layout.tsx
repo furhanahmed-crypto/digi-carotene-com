@@ -7,6 +7,8 @@ export type SectionTone = "white" | "cream" | "yellow"
 
 type SectionLayoutProps = {
   children: ReactNode
+  /** Line-art motifs — rendered outside the container so they can bleed at edges. */
+  decor?: ReactNode
   tone?: SectionTone
   id?: string
   className?: string
@@ -18,11 +20,14 @@ type SectionLayoutProps = {
   bordered?: boolean
 } & Omit<ComponentPropsWithoutRef<"section">, "children" | "id" | "className">
 
+/** Motif ink: warm gold per band (matches Motif text-[#…] recipes). Dark: softer gold on charcoal. */
 const toneSurface: Record<SectionTone, string> = {
-  white: "bg-background text-foreground",
-  cream: "bg-[#f3efe6] text-foreground dark:bg-secondary",
+  white:
+    "bg-background text-foreground [--decor-ink:#E6C55C] [--decor-opacity:0.7] dark:[--decor-ink:#E8C96A] dark:[--decor-opacity:0.38]",
+  cream:
+    "bg-[#f3efe6] text-foreground [--decor-ink:#D9B040] [--decor-opacity:0.65] dark:bg-secondary dark:[--decor-ink:#E8C96A] dark:[--decor-opacity:0.36]",
   yellow:
-    "bg-brand-yellow text-ink dark:bg-secondary dark:text-foreground",
+    "bg-brand-yellow text-ink [--decor-ink:#C99A12] [--decor-opacity:0.7] dark:bg-secondary dark:text-foreground dark:[--decor-ink:#E8C96A] dark:[--decor-opacity:0.34]",
 }
 
 function SectionAtmosphere({ tone }: { tone: SectionTone }) {
@@ -94,6 +99,7 @@ function SectionAtmosphere({ tone }: { tone: SectionTone }) {
 
 export function SectionLayout({
   children,
+  decor,
   tone = "white",
   id,
   className,
@@ -104,11 +110,11 @@ export function SectionLayout({
   ...sectionProps
 }: SectionLayoutProps) {
   const content = contained ? (
-    <Container className={cn("relative", containerClassName)}>
+    <Container className={cn("relative z-[1]", containerClassName)}>
       {children}
     </Container>
   ) : (
-    <div className={cn("relative", containerClassName)}>{children}</div>
+    <div className={cn("relative z-[1]", containerClassName)}>{children}</div>
   )
 
   return (
@@ -126,6 +132,7 @@ export function SectionLayout({
       {...sectionProps}
     >
       <SectionAtmosphere tone={tone} />
+      {decor}
       {content}
     </section>
   )

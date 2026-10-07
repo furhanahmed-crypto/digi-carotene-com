@@ -46,6 +46,8 @@ export type ReelItem = {
   id: string
   label: string
   handle: string
+  videoSrc: string
+  posterSrc: string
 }
 
 export type SearchRankingTag = {

@@ -4,7 +4,7 @@ import { Container } from "@/components/shared/container"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { CaseStudyCard } from "@/components/home/work/case-study-card"
 import { contactHref } from "@/constants/home/navigation"
 
@@ -16,10 +16,7 @@ export default function CaseStudiesPage() {
       <PageHeader
         title="Proof, Not Promises: Real Results From Real Clients"
         description="Every agency says it delivers results. We would rather show you. These case studies share what our clients were facing, what we did and what changed, in numbers. Until confirmed, cards stay explicitly marked as to-confirm."
-        breadcrumbs={[
-          { label: "Resources" },
-          { label: "Case Studies" },
-        ]}
+        breadcrumbs={[{ label: "Resources" }, { label: "Case Studies" }]}
         mark="Case Studies"
         imageIndex={2}
       />
@@ -27,34 +24,42 @@ export default function CaseStudiesPage() {
       <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
         <Container>
           <Reveal>
-            <SectionMark>{work.eyebrow}</SectionMark>
+            <SectionMark data-reveal="eyebrow">{work.eyebrow}</SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
               eyebrow="Results, not reports"
               title={work.headline}
               body={work.body}
             />
+
+            <div
+              data-reveal-group
+              className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+            >
+              {work.placeholders.map((study, index) => (
+                <div key={study.id} data-reveal="card">
+                  <CaseStudyCard
+                    index={index}
+                    meta={study.meta}
+                    label={study.label}
+                    summary={study.summary}
+                  />
+                </div>
+              ))}
+            </div>
           </Reveal>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {work.placeholders.map((study, index) => (
-              <Reveal key={study.id} delayMs={index * 40}>
-                <CaseStudyCard
-                  index={index}
-                  meta={study.meta}
-                  label={study.label}
-                  summary={study.summary}
-                />
-              </Reveal>
-            ))}
-          </div>
-
           <Reveal className="mt-16">
-            <PageCta
-              title="Want results like these for your brand?"
-              label="Get a Free Growth Audit"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Want results like these for your brand?"
+                label="Get a Free Growth Audit"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

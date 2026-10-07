@@ -7,7 +7,7 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
 
@@ -85,39 +85,50 @@ export default function PRServicesPage() {
             </Button>
           </div>
 
-          <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
-            <Reveal className="lg:col-span-6">
-              <SectionMark>PR is now part of search</SectionMark>
+          <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-6">
+              <SectionMark data-reveal="eyebrow">
+                PR is now part of search
+              </SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="AEO & GEO"
                 title="Coverage that becomes the record"
                 body="AI engines like ChatGPT, Gemini and Perplexity build their answers from sources they consider trustworthy. A well-placed article does more than impress readers on the day it runs. It becomes part of the record that shapes how your brand is described for years."
               />
-            </Reveal>
-            <Reveal delayMs={40} className="lg:col-span-6">
+            </div>
+            <div data-reveal="image" className="lg:col-span-6">
               <MediaFrame index={1} label="PR" />
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
 
           <div>
             <Reveal>
-              <SectionMark>What we do</SectionMark>
+              <SectionMark data-reveal="eyebrow">What we do</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Capabilities"
                 title="Reputation work that compounds"
               />
-            </Reveal>
-            <ul className="mt-10 border-t border-line">
-              {capabilities.map((item, index) => (
-                <Reveal key={item.title} delayMs={index * 30}>
-                  <li className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10">
+
+              <ul data-reveal-group className="mt-10 border-t border-line">
+                {capabilities.map((item, index) => (
+                  <li
+                    key={item.title}
+                    data-reveal="card"
+                    className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10"
+                  >
                     <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
                       <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                         {String(index + 1).padStart(2, "0")}
                       </p>
-                      <h3 className="font-display mt-2 text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                      <h3 className="mt-2 font-display text-[21px] leading-[1.2] font-medium md:text-[26px]">
                         {item.title}
                       </h3>
                     </div>
@@ -125,45 +136,56 @@ export default function PRServicesPage() {
                       {item.body}
                     </p>
                   </li>
-                </Reveal>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </Reveal>
           </div>
 
           <div>
             <Reveal>
-              <SectionMark>Process</SectionMark>
+              <SectionMark data-reveal="eyebrow">Process</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="How we work"
                 title="Our process"
               />
-            </Reveal>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {process.map((item, index) => (
-                <Reveal key={item.title} delayMs={index * 30}>
-                  <article className="rounded-2xl border border-border bg-card p-6">
+
+              <div
+                data-reveal-group
+                className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+              >
+                {process.map((item, index) => (
+                  <article
+                    key={item.title}
+                    data-reveal="card"
+                    className="rounded-2xl border border-border bg-card p-6"
+                  >
                     <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </p>
-                    <h3 className="font-display mt-3 text-xl font-medium">
+                    <h3 className="mt-3 font-display text-xl font-medium">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                       {item.body}
                     </p>
                   </article>
-                </Reveal>
-              ))}
-            </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
 
           <Reveal>
-            <PageCta
-              title="Need a narrative, not a press blast?"
-              label="Talk to Our PR Team"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Need a narrative, not a press blast?"
+                label="Talk to Our PR Team"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

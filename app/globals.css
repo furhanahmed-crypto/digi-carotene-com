@@ -108,6 +108,8 @@
   --sidebar-accent-foreground: #111111;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #f5c400;
+  /* Line-art section motifs — warm ink on light bands */
+  --decor-ink: #3a2a1c;
 }
 
 .dark {
@@ -154,6 +156,8 @@
   --sidebar-accent-foreground: #f5f5f5;
   --sidebar-border: #2a2a2a;
   --sidebar-ring: #f5c400;
+  /* Line-art section motifs — cream/white on dark */
+  --decor-ink: #f3efe6;
 }
 
 @layer base {
@@ -195,8 +199,12 @@
 }
 
 @utility animate-featured-border-spin {
-  /* One travelling highlight — clockwise only */
-  animation: featured-border-spin 3.5s linear infinite;
+  /* One travelling highlight — clockwise only; slightly slower in light for focus */
+  animation: featured-border-spin 3.2s linear infinite;
+}
+
+.dark .animate-featured-border-spin {
+  animation-duration: 3.5s;
 }
 
 @utility link-underline {
@@ -275,6 +283,12 @@
 
 @utility animate-contact-float {
   animation: contact-float 3s ease-in-out infinite;
+}
+
+/* Anti-flash: hide reveal targets until GSAP runs (only when motion is enabled). */
+[data-motion="on"] [data-reveal] {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {

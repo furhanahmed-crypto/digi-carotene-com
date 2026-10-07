@@ -1,17 +1,11 @@
+import { clientLogos } from "@/constants/home/clients"
 import { PageHeader } from "@/components/shared/page-header"
 import { Container } from "@/components/shared/container"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
-import { MediaFrame } from "@/components/shared/media-frame"
 import { PageCta } from "@/components/shared/page-cta"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { contactHref } from "@/constants/home/navigation"
-
-const clientSlots = Array.from({ length: 8 }, (_, index) => ({
-  id: `client-${index + 1}`,
-  label: `Client ${String(index + 1).padStart(2, "0")}`,
-  note: "[[Client logo / name — to confirm with written permission]]",
-}))
 
 const industries = [
   {
@@ -46,10 +40,7 @@ export default function ClientsPage() {
       <PageHeader
         title="300+ Clients. One Thing in Common: They Wanted Proof."
         description="From neighbourhood favourites to fast-growing startups and international brands, our clients came to us for the same reason. They wanted marketing they could measure."
-        breadcrumbs={[
-          { label: "About", href: "/about" },
-          { label: "Clients" },
-        ]}
+        breadcrumbs={[{ label: "About", href: "/about" }, { label: "Clients" }]}
         mark="Our Clients"
         imageIndex={2}
       />
@@ -57,51 +48,76 @@ export default function ClientsPage() {
       <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
         <Container>
           <Reveal>
-            <SectionMark>Brands we have worked with</SectionMark>
+            <SectionMark data-reveal="eyebrow">
+              Brands we have worked with
+            </SectionMark>
             <SectionHeading
+              eyebrowProps={{ "data-reveal": "eyebrow" }}
+              titleProps={{ "data-reveal": "heading" }}
+              bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
-              eyebrow="Logos with permission"
-              title="Client marks go here when they are cleared to publish"
-              body="Each slot is a placeholder for a confirmed brand with written permission. No borrowed logos."
+              eyebrow="Layout reference"
+              title="Familiar brand marks for spacing — not our client roster"
+              body="These logos are layout references only so the grid reads like a real clients band. They are not Digi Carotene clients. Swap in permissioned marks before launch."
             />
-          </Reveal>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {clientSlots.map((client, index) => (
-              <Reveal key={client.id} delayMs={index * 40}>
-                <div className="border border-line bg-background">
-                  <MediaFrame
-                    index={index}
-                    label={client.label}
-                    aspect="square"
-                    className="border-0 border-b"
-                  />
+            <div
+              data-reveal-group
+              className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+            >
+              {clientLogos.map((client, index) => (
+                <div
+                  key={client.id}
+                  data-reveal="card"
+                  className="border border-line bg-background"
+                >
+                  <div className="flex aspect-square items-center justify-center border-b border-line bg-secondary/30 p-8">
+                    {/* eslint-disable-next-line @next/next/no-img-element -- local brand SVGs */}
+                    <img
+                      src={client.src}
+                      alt=""
+                      width={184}
+                      height={48}
+                      className="h-12 w-auto max-w-full object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
                   <div className="p-5">
                     <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </p>
                     <p className="mt-2 text-base leading-[1.6] text-muted-foreground">
-                      {client.note}
+                      {client.name} — layout reference only
                     </p>
                   </div>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Reveal>
 
           <div className="mt-16 border-t border-border pt-16 lg:mt-24 lg:pt-24">
             <Reveal>
-              <SectionMark>Industries</SectionMark>
+              <SectionMark data-reveal="eyebrow">Industries</SectionMark>
               <SectionHeading
+                eyebrowProps={{ "data-reveal": "eyebrow" }}
+                titleProps={{ "data-reveal": "heading" }}
+                bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Verticals"
                 title="Industries we know inside out"
               />
-            </Reveal>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {industries.map((item, index) => (
-                <Reveal key={item.title} delayMs={index * 30}>
-                  <article className="rounded-2xl border border-border bg-card p-6">
+
+              <div
+                data-reveal-group
+                className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                {industries.map((item, index) => (
+                  <article
+                    key={item.title}
+                    data-reveal="card"
+                    className="rounded-2xl border border-border bg-card p-6"
+                  >
                     <h3 className="font-display text-xl font-medium md:text-2xl">
                       {item.title}
                     </h3>
@@ -109,17 +125,19 @@ export default function ClientsPage() {
                       {item.body}
                     </p>
                   </article>
-                </Reveal>
-              ))}
-            </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
 
           <Reveal className="mt-16">
-            <PageCta
-              title="Become client number 301."
-              label="Get My Free Audit"
-              href={contactHref}
-            />
+            <div data-reveal="cta">
+              <PageCta
+                title="Become client number 301."
+                label="Get My Free Audit"
+                href={contactHref}
+              />
+            </div>
           </Reveal>
         </Container>
       </section>

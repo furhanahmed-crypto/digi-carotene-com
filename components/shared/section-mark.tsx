@@ -1,4 +1,4 @@
-import type { ReactNode } from "react"
+import type { ComponentPropsWithoutRef, ReactNode } from "react"
 
 import { cn } from "@/lib/utils"
 
@@ -6,12 +6,13 @@ type SectionMarkProps = {
   children: ReactNode
   className?: string
   tone?: "carotene" | "paper"
-}
+} & Omit<ComponentPropsWithoutRef<"div">, "children" | "className">
 
 export function SectionMark({
   children,
   className,
   tone = "carotene",
+  ...rest
 }: SectionMarkProps) {
   return (
     <div
@@ -22,6 +23,7 @@ export function SectionMark({
           : "bg-paper text-ink dark:bg-secondary dark:text-paper",
         className
       )}
+      {...rest}
     >
       <span
         className={cn(

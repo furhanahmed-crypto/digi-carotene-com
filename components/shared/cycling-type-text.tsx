@@ -1,13 +1,10 @@
 "use client"
 
 import { useRef } from "react"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
 
 import { useCyclingTypewriter } from "@/hooks/use-cycling-typewriter"
+import { gsap, useGSAP } from "@/lib/gsap"
 import { cn } from "@/lib/utils"
-
-gsap.registerPlugin(useGSAP)
 
 type CyclingTypeTextProps = {
   items: readonly string[]

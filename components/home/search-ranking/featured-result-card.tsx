@@ -18,13 +18,19 @@ export function FeaturedResultCard({ className }: FeaturedResultCardProps) {
         #1 Result
       </span>
 
-      <div className="relative overflow-hidden rounded-2xl p-[2px] shadow-[0_8px_30px_rgba(32,33,36,0.12)]">
+      <div className="relative overflow-hidden rounded-2xl p-[2.5px] shadow-[0_8px_30px_rgba(32,33,36,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+        {/* Light: tighter, hotter arc so the shine reads on cream/white */}
         <div
-          className="pointer-events-none absolute top-1/2 left-1/2 size-[220%] -translate-x-1/2 -translate-y-1/2 animate-featured-border-spin bg-[conic-gradient(from_0deg,transparent_0%,transparent_72%,#f5c400_82%,#2563eb_92%,transparent_100%)] motion-reduce:animate-none motion-reduce:bg-brand-yellow"
+          className="pointer-events-none absolute top-1/2 left-1/2 size-[220%] -translate-x-1/2 -translate-y-1/2 animate-featured-border-spin bg-[conic-gradient(from_0deg,#e5e5e5_0%,#e5e5e5_68%,#f5c400_78%,#f59e0b_84%,#2563eb_92%,#e5e5e5_100%)] motion-reduce:animate-none motion-reduce:bg-brand-yellow dark:hidden"
+          aria-hidden="true"
+        />
+        {/* Dark: soft travelling highlight (existing look) */}
+        <div
+          className="pointer-events-none absolute top-1/2 left-1/2 hidden size-[220%] -translate-x-1/2 -translate-y-1/2 animate-featured-border-spin bg-[conic-gradient(from_0deg,transparent_0%,transparent_72%,#f5c400_82%,#2563eb_92%,transparent_100%)] motion-reduce:animate-none motion-reduce:bg-brand-yellow dark:block"
           aria-hidden="true"
         />
 
-        <div className="relative z-10 rounded-[14px] bg-white p-5 md:p-7 dark:bg-card">
+        <div className="relative z-10 rounded-[13px] bg-white p-5 md:p-7 dark:bg-card">
           <div className="flex items-center gap-3">
             <span className="relative flex size-8 shrink-0 items-center justify-center overflow-hidden rounded-full border border-black/8 bg-[#f1f3f4]">
               <Image

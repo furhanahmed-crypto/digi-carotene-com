@@ -40,10 +40,11 @@ export function CaseStudiesCarousel({ items }: CaseStudiesCarouselProps) {
   return (
     <div className="relative mt-14">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y items-stretch">
+        <div data-reveal-group className="flex touch-pan-y items-stretch">
           {items.map((item, index) => (
             <div
               key={item.id}
+              data-reveal="card"
               className="flex min-w-full shrink-0 basis-full px-0 md:min-w-0 md:basis-1/3 md:px-2"
             >
               <CaseStudyCard

@@ -66,6 +66,7 @@ Hero (white) → Marquee (yellow) → Search ranking (cream) → Differentiators
 - Page header: image + cream/yellow wash + card panel
 - Page CTA: cream panel + yellow button
 - Next-step (home CTA): yellow `SectionLayout`
+- Section line-art: gold ink per band (`#E6C55C` white / `#D9B040` cream / `#C99A12` yellow); softer gold in dark; varied edge placements
 - Floating contact: yellow expand; WhatsApp green
 - Typing cycles (hero accent + SERP query): GSAP type → hold 3s → erase → next
 

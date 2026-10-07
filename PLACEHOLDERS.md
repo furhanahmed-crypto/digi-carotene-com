@@ -21,8 +21,8 @@ Do not invent values. Replace when confirmed.
 
 ## Creative reels
 
-- Reel video files / posters — to confirm
-- Client handles — to confirm
+- Stock Mixkit shells live in `public/assets/reels/` (layout reference only)
+- Real client reel files / posters / handles — to confirm
 
 ## Case studies
 
@@ -30,7 +30,8 @@ Do not invent values. Replace when confirmed.
 
 ## Client logos
 
-- Real client logos for marquees/clients page — to confirm (do not invent marks)
+- Well-known brand SVGs in `public/assets/clients/` (Flipkart, Google, IBM, etc.) for marquee layout reference only — **not Digi Carotene clients**
+- Permissioned real client logos — to confirm before launch (replace reference marks)
 
 ## Testimonials
 

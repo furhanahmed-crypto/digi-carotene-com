@@ -23,9 +23,10 @@ Concrete work derived from PRD + DESIGN + ARCHITECTURE.
 ## Remaining (ops / assets)
 
 - [ ] Visual QA light/dark mobile/desktop
+- [x] Reference media pack under `public/assets/` (mosaic, showcase, reels, fictional client marks) — compressed
 - [ ] Fill real assets from `PLACEHOLDERS.md` when available (NAP, logos, case metrics, reels)
 
 ## Later
 
 - [ ] Inner pages migrate onto `SectionLayout` where useful
-- [ ] Real ratings / results / reels assets
+- [ ] Replace reference reels / client marks with permissioned real assets

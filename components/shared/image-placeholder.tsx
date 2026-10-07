@@ -1,3 +1,5 @@
+import type { ComponentPropsWithoutRef } from "react"
+
 import { cn } from "@/lib/utils"
 
 type ImagePlaceholderProps = {
@@ -5,13 +7,14 @@ type ImagePlaceholderProps = {
   className?: string
   fill?: boolean
   src?: string
-}
+} & Omit<ComponentPropsWithoutRef<"div">, "className" | "children">
 
 export function ImagePlaceholder({
   label = "Image to confirm",
   className,
   fill = false,
   src,
+  ...rest
 }: ImagePlaceholderProps) {
   return (
     <div
@@ -23,6 +26,7 @@ export function ImagePlaceholder({
       )}
       role={src ? undefined : "img"}
       aria-label={src ? undefined : label}
+      {...rest}
     >
       {src ? (
         <img

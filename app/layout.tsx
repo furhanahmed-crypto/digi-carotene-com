@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import { cookies } from "next/headers"
 import { Geist_Mono, Inter, Fraunces } from "next/font/google"
+import Script from "next/script"
 
 import "./globals.css"
 import { Header } from "@/components/home/Header"
@@ -112,6 +113,16 @@ export default async function RootLayout({
       style={{ colorScheme: themeClass }}
     >
       <body>
+        <Script
+          id="motion-boot"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.setAttribute("data-motion","on")}}catch(e){}})();`,
+          }}
+        />
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;visibility:visible!important}`}</style>
+        </noscript>
         <ThemeProvider
           defaultTheme="light"
           initialTheme={themeClass}

@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
+import { servicePanelsDecor } from "@/components/home/section-decors"
 import { homeSections } from "@/constants/home/sections"
-import { Reveal } from "@/components/shared/reveal"
+import { Reveal } from "@/components/motion/reveal"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { cn } from "@/lib/utils"
@@ -20,22 +21,28 @@ export function ColorServicePanels() {
   const { servicePanels } = homeSections
 
   return (
-    <SectionLayout tone="white">
+    <SectionLayout tone="white" decor={servicePanelsDecor}>
       <Reveal>
-        <SectionMark>{servicePanels.eyebrow}</SectionMark>
-        <h2 className="mt-6 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]">
+        <SectionMark data-reveal="eyebrow">{servicePanels.eyebrow}</SectionMark>
+        <h2
+          data-reveal="heading"
+          className="mt-6 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+        >
           {servicePanels.headline}
         </h2>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
+        <p data-reveal="text" className="mt-4 max-w-2xl text-muted-foreground">
           {servicePanels.body}
         </p>
-      </Reveal>
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
-        {servicePanels.panels.map((panel) => (
-          <Reveal key={panel.id} className="h-full">
+        <div
+          data-reveal-group
+          className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-5"
+        >
+          {servicePanels.panels.map((panel) => (
             <Link
+              key={panel.id}
               href={panel.href}
+              data-reveal="card"
               className={cn(
                 "group flex h-full min-h-64 flex-col justify-between rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1",
                 toneClass[panel.tone]
@@ -54,9 +61,9 @@ export function ColorServicePanels() {
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </Link>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Reveal>
     </SectionLayout>
   )
 }

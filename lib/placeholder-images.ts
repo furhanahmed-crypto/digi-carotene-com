@@ -1,7 +1,14 @@
+/** Compressed reference stills under public/assets/showcase — not client proof. */
 export const PLACEHOLDER_IMAGES = [
-  "/banner/banner-img-1.jpg",
-  "/banner/banner-img-2.avif",
-  "/banner/banner-img-3.jpg",
+  "/assets/showcase/01.webp",
+  "/assets/showcase/02.webp",
+  "/assets/showcase/03.webp",
+  "/assets/showcase/04.webp",
+  "/assets/showcase/05.webp",
+  "/assets/showcase/06.webp",
+  "/assets/showcase/07.webp",
+  "/assets/showcase/08.webp",
+  "/assets/showcase/09.webp",
 ] as const
 
 export function getPlaceholderImage(index: number) {

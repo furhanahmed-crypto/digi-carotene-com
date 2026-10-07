@@ -1,3 +1,5 @@
+import type { ComponentPropsWithoutRef } from "react"
+
 import { ImagePlaceholder } from "@/components/shared/image-placeholder"
 import { cn } from "@/lib/utils"
 
@@ -5,7 +7,7 @@ type VisualBentoItemProps = {
   label: string
   layout: "hero" | "wide" | "square" | "tall" | "banner"
   src: string
-}
+} & Omit<ComponentPropsWithoutRef<"div">, "children">
 
 const layoutClasses: Record<VisualBentoItemProps["layout"], string> = {
   hero: "col-span-12 row-span-2 md:col-span-7",
@@ -15,12 +17,23 @@ const layoutClasses: Record<VisualBentoItemProps["layout"], string> = {
   banner: "col-span-12 md:col-span-8",
 }
 
-export function VisualBentoItem({ label, layout, src }: VisualBentoItemProps) {
+export function VisualBentoItem({
+  label,
+  layout,
+  src,
+  className,
+  ...rest
+}: VisualBentoItemProps) {
   return (
     <ImagePlaceholder
       label={label}
       src={src}
-      className={cn("h-full min-h-[140px] w-full", layoutClasses[layout])}
+      className={cn(
+        "h-full min-h-[140px] w-full",
+        layoutClasses[layout],
+        className
+      )}
+      {...rest}
     />
   )
 }
