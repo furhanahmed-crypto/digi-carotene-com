@@ -2,7 +2,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
-import { Container } from "@/components/shared/container"
+import { SectionLayout } from "@/components/shared/section-layout"
 import { ListingCard } from "@/components/shared/listing-card"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
@@ -10,6 +10,11 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import type { Metadata } from "next"
+import { metadataFor } from "@/lib/seo/page-meta"
+
+export const metadata: Metadata = metadataFor("/services/digital-marketing")
+
 
 const digitalServices = [
   {
@@ -82,11 +87,10 @@ export default function DigitalMarketingLandingPage() {
           { label: "Digital Marketing" },
         ]}
         mark="Digital Marketing Services"
-        imageIndex={1}
       />
 
-      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
-        <Container className="space-y-16 lg:space-y-24">
+      <SectionLayout tone="white">
+        <div className="space-y-16 lg:space-y-24">
           <div className="flex flex-wrap gap-3">
             <Button
               nativeButton={false}
@@ -192,8 +196,8 @@ export default function DigitalMarketingLandingPage() {
               />
             </div>
           </Reveal>
-        </Container>
-      </section>
+        </div>
+      </SectionLayout>
     </div>
   )
 }

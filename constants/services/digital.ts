@@ -1,6 +1,9 @@
 import type { ServiceDetailData } from "@/components/services/service-detail-view"
 
-export const digitalServiceCopy: Record<string, ServiceDetailData & { shortTitle: string }> = {
+export const digitalServiceCopy: Record<
+  string,
+  Omit<ServiceDetailData, "name"> & { shortTitle: string }
+> = {
   "performance-marketing": {
     shortTitle: "Performance Marketing",
     title: "You Don't Have an Ad Problem. You Have a Math Problem.",

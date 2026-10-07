@@ -11,6 +11,11 @@ import { ResultsSpeak } from "@/components/home/results/results-speak"
 import { Work } from "@/components/home/Work"
 import { FAQ } from "@/components/home/FAQ"
 import { AgencyCta } from "@/components/home/cta/agency-cta"
+import type { Metadata } from "next"
+import { metadataFor } from "@/lib/seo/page-meta"
+
+export const metadata: Metadata = metadataFor("/")
+
 
 export default function Page() {
   return (

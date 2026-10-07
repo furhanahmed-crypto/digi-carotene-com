@@ -1,18 +1,30 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { SectionLayout } from "@/components/shared/section-layout"
+import { SectionMark } from "@/components/shared/section-mark"
 import { Button } from "@/components/ui/button"
 
 type PageCtaProps = {
   title: string
   label: string
   href: string
+  /** When true, renders as a yellow full-bleed band (closing CTA). */
+  band?: boolean
+  mark?: string
 }
 
-export function PageCta({ title, label, href }: PageCtaProps) {
-  return (
-    <div className="rounded-2xl border border-border bg-[#f3efe6] p-6 md:p-8 dark:bg-secondary">
-      <h3 className="font-display text-[26px] leading-[1.2] font-medium md:text-[32px]">
+export function PageCta({
+  title,
+  label,
+  href,
+  band = false,
+  mark = "Next step",
+}: PageCtaProps) {
+  const body = (
+    <>
+      <SectionMark tone={band ? "paper" : "carotene"}>{mark}</SectionMark>
+      <h3 className="mt-5 max-w-3xl font-display text-[28px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[36px]">
         {title}
       </h3>
       <div className="mt-6">
@@ -20,12 +32,30 @@ export function PageCta({ title, label, href }: PageCtaProps) {
           nativeButton={false}
           render={<Link href={href} />}
           size="lg"
-          className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+          className={
+            band
+              ? "bg-ink text-paper hover:bg-ink/90 dark:bg-brand-yellow dark:text-ink dark:hover:bg-brand-yellow/90"
+              : "bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+          }
         >
           {label}
           <ArrowRight className="size-4" />
         </Button>
       </div>
+    </>
+  )
+
+  if (band) {
+    return (
+      <SectionLayout tone="yellow" size="default">
+        {body}
+      </SectionLayout>
+    )
+  }
+
+  return (
+    <div className="rounded-2xl border border-border bg-[#f3efe6] p-6 md:p-8 dark:bg-secondary">
+      {body}
     </div>
   )
 }

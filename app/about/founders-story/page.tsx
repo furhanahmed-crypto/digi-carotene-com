@@ -1,11 +1,16 @@
 import { PageHeader } from "@/components/shared/page-header"
-import { Container } from "@/components/shared/container"
+import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { contactHref } from "@/constants/home/navigation"
+import type { Metadata } from "next"
+import { metadataFor } from "@/lib/seo/page-meta"
+
+export const metadata: Metadata = metadataFor("/about/founders-story")
+
 
 const promises = [
   "I will never sell you a metric that does not matter to your business.",
@@ -24,11 +29,10 @@ export default function FoundersStoryPage() {
           { label: "Founder's Story" },
         ]}
         mark="Founder's Story"
-        imageIndex={0}
       />
 
-      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
-        <Container>
+      <SectionLayout tone="white">
+        <div>
           <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <SectionMark data-reveal="eyebrow">
@@ -126,8 +130,8 @@ export default function FoundersStoryPage() {
               />
             </div>
           </Reveal>
-        </Container>
-      </section>
+        </div>
+      </SectionLayout>
     </div>
   )
 }

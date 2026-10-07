@@ -2,13 +2,18 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
-import { Container } from "@/components/shared/container"
+import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import type { Metadata } from "next"
+import { metadataFor } from "@/lib/seo/page-meta"
+
+export const metadata: Metadata = metadataFor("/digital-marketing-agency-bangalore")
+
 
 const services = [
   {
@@ -45,11 +50,10 @@ export default function BangaloreAgencyPage() {
         description="Bangalore buyers read reviews, compare prices, ask AI and try the free trial before they commit. Investors ask about CAC and retention before revenue. Digi Carotene brings a data-led, test-and-learn approach to Bangalore brands, with 7+ years and 300+ clients of experience behind every recommendation."
         breadcrumbs={[{ label: "Locations" }, { label: "Bangalore" }]}
         mark="Digital Marketing Agency in Bangalore"
-        imageIndex={1}
       />
 
-      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
-        <Container className="space-y-16 lg:space-y-24">
+      <SectionLayout tone="white">
+        <div className="space-y-16 lg:space-y-24">
           <div className="flex flex-wrap gap-3">
             <Button
               nativeButton={false}
@@ -143,8 +147,8 @@ export default function BangaloreAgencyPage() {
               />
             </div>
           </Reveal>
-        </Container>
-      </section>
+        </div>
+      </SectionLayout>
     </div>
   )
 }

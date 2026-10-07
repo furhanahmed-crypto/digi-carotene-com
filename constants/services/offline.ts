@@ -1,6 +1,9 @@
 import type { ServiceDetailData } from "@/components/services/service-detail-view"
 
-export const offlineServiceCopy: Record<string, ServiceDetailData & { shortTitle: string }> = {
+export const offlineServiceCopy: Record<
+  string,
+  Omit<ServiceDetailData, "name"> & { shortTitle: string }
+> = {
   "mall-activations": {
     shortTitle: "Mall Activations",
     title: "Weekend Mall Crowds Aren't Just Browsing. They're in a Buying Mood.",

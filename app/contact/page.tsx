@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { PageHeader } from "@/components/shared/page-header"
-import { Container } from "@/components/shared/container"
+import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
@@ -37,11 +37,10 @@ export default function ContactPage() {
         description="Tell us a little about your business and goals. A strategist (not a salesperson) will get back to you within one working day with honest thoughts on what we would do and whether we are the right fit."
         breadcrumbs={[{ label: "Contact" }]}
         mark="Contact Us"
-        imageIndex={2}
       />
 
-      <section className="border-t border-border bg-[#f3efe6] py-[72px] lg:py-[140px] dark:bg-background">
-        <Container className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+      <SectionLayout tone="cream">
+        <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <SectionMark>Get your free audit</SectionMark>
             <SectionHeading
@@ -226,8 +225,8 @@ export default function ContactPage() {
               </form>
             )}
           </div>
-        </Container>
-      </section>
+        </div>
+      </SectionLayout>
     </div>
   )
 }

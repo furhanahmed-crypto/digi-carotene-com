@@ -22,6 +22,7 @@ export function OfflineServiceDetail({ service }: { service: string }) {
   return (
     <ServiceDetailView
       data={{
+        name: data.shortTitle,
         title: data.title,
         description: data.description,
         whatIs: data.whatIs,

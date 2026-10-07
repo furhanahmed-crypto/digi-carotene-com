@@ -1,9 +1,14 @@
 import { PageHeader } from "@/components/shared/page-header"
-import { Container } from "@/components/shared/container"
+import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
 import { Reveal } from "@/components/motion/reveal"
+import type { Metadata } from "next"
+import { metadataFor } from "@/lib/seo/page-meta"
+
+export const metadata: Metadata = metadataFor("/blog")
+
 
 const posts = [
   {
@@ -34,11 +39,10 @@ export default function BlogPage() {
         description="No fluff, no recycled listicles. Practical guides on search, AI, ads, social and on-ground marketing, written by the people running campaigns every day in Hyderabad and Bangalore."
         breadcrumbs={[{ label: "Resources" }, { label: "Blog" }]}
         mark="The Journal"
-        imageIndex={1}
       />
 
-      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
-        <Container>
+      <SectionLayout tone="white">
+        <div>
           <Reveal>
             <SectionMark data-reveal="eyebrow">Writing</SectionMark>
             <SectionHeading
@@ -78,8 +82,8 @@ export default function BlogPage() {
               ))}
             </div>
           </Reveal>
-        </Container>
-      </section>
+        </div>
+      </SectionLayout>
     </div>
   )
 }

@@ -1,12 +1,17 @@
 import { homeContent } from "@/lib/home-content"
 import { PageHeader } from "@/components/shared/page-header"
-import { Container } from "@/components/shared/container"
+import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { CaseStudyCard } from "@/components/home/work/case-study-card"
 import { contactHref } from "@/constants/home/navigation"
+import type { Metadata } from "next"
+import { metadataFor } from "@/lib/seo/page-meta"
+
+export const metadata: Metadata = metadataFor("/case-studies")
+
 
 export default function CaseStudiesPage() {
   const { work } = homeContent
@@ -18,11 +23,10 @@ export default function CaseStudiesPage() {
         description="Every agency says it delivers results. We would rather show you. These case studies share what our clients were facing, what we did and what changed, in numbers. Until confirmed, cards stay explicitly marked as to-confirm."
         breadcrumbs={[{ label: "Resources" }, { label: "Case Studies" }]}
         mark="Case Studies"
-        imageIndex={2}
       />
 
-      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
-        <Container>
+      <SectionLayout tone="white">
+        <div>
           <Reveal>
             <SectionMark data-reveal="eyebrow">{work.eyebrow}</SectionMark>
             <SectionHeading
@@ -61,8 +65,8 @@ export default function CaseStudiesPage() {
               />
             </div>
           </Reveal>
-        </Container>
-      </section>
+        </div>
+      </SectionLayout>
     </div>
   )
 }

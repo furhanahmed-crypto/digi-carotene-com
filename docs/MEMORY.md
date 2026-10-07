@@ -29,6 +29,7 @@
 - Plain cream SERP with no atmosphere looked empty — cream tone + yellow bloom + stage frame fixes it sitewide via `SectionLayout`.
 - Hero mosaic must use **9 distinct** images (`public/assets/hero/mosaic/`). Cycling 3 placeholders makes the pulse animation feel broken.
 - Section line-art: `SectionDecor` + motifs; placements in `section-decors.tsx`. Ink from SectionLayout tone — white `#E6C55C`/70, cream `#D9B040`/65, yellow `#C99A12`/70; dark softer `#E8C96A` ~0.34–0.38. Vary L/R + vertical anchors per section (not always TL+BR). Preview `/decor-preview`.
+- Inner pages: never use photo/blur page banners — yellow `PageHeader` (`SectionLayout` + breadcrumbs + paper `SectionMark`). Body bands use white/cream `SectionLayout`. SEO from `lib/seo/page-meta.ts` (PDF `pages.json`).
 - Reference media lives under `public/assets/` (`hero/mosaic`, `reels`, `showcase`, `clients`, `scores`). Keep only wired files; compress webp/mp4 before commit. Mixkit reels are layout shells. Client marquee may use familiar brand marks (Google, Shopify, etc.) as **spacing references only** — never claim them as Digi Carotene clients; replace with permissioned logos before launch.
 
 ## Constraints that keep biting us

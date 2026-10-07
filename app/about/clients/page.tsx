@@ -1,12 +1,17 @@
 import { ClientLogo } from "@/components/home/clients/client-logo"
 import { clientLogos } from "@/constants/home/clients"
 import { PageHeader } from "@/components/shared/page-header"
-import { Container } from "@/components/shared/container"
+import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { contactHref } from "@/constants/home/navigation"
+import type { Metadata } from "next"
+import { metadataFor } from "@/lib/seo/page-meta"
+
+export const metadata: Metadata = metadataFor("/about/clients")
+
 
 const industries = [
   {
@@ -43,11 +48,10 @@ export default function ClientsPage() {
         description="From neighbourhood favourites to fast-growing startups and international brands, our clients came to us for the same reason. They wanted marketing they could measure."
         breadcrumbs={[{ label: "About", href: "/about" }, { label: "Clients" }]}
         mark="Our Clients"
-        imageIndex={2}
       />
 
-      <section className="border-t border-border bg-background py-[72px] lg:py-[140px]">
-        <Container>
+      <SectionLayout tone="white">
+        <div>
           <Reveal>
             <SectionMark data-reveal="eyebrow">
               Brands we have worked with
@@ -131,8 +135,8 @@ export default function ClientsPage() {
               />
             </div>
           </Reveal>
-        </Container>
-      </section>
+        </div>
+      </SectionLayout>
     </div>
   )
 }
