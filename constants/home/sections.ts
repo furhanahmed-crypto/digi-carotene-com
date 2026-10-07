@@ -17,11 +17,11 @@ const heroMosaic = Array.from({ length: 9 }, (_, index) =>
 export const homeSections = {
   hero: {
     eyebrow: "Found. Chosen. Measured.",
-    headlineBefore: "The Data-Led Digital Marketing Agency for",
+    headlineBefore: "They search.",
     headlineAccents: [
-      "Hyderabad and Bangalore",
-      "Search, AI and the street",
-      "Results you can count",
+      "You show up first.",
+      "You top the SEO ranks.",
+      "You get cited by AI.",
     ] as const,
     body: "For 7+ years and 300+ clients across the globe, we have done one thing well: turn marketing spend into results you can count. We get you found on Google, recommended by AI, and chosen in the real world, and we show you the numbers every step of the way.",
     primaryCta: { label: "Get a Free Growth Audit", href: "/contact" },

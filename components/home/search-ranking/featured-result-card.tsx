@@ -20,7 +20,7 @@ export function FeaturedResultCard({ className }: FeaturedResultCardProps) {
 
       <div className="relative overflow-hidden rounded-2xl p-[2px] shadow-[0_8px_30px_rgba(32,33,36,0.12)]">
         <div
-          className="pointer-events-none absolute top-1/2 left-1/2 size-[220%] -translate-x-1/2 -translate-y-1/2 animate-featured-border-spin bg-[conic-gradient(from_0deg,#f5c400_0%,#2563eb_35%,#f5c400_55%,#2563eb_85%,#f5c400_100%)] motion-reduce:animate-none motion-reduce:bg-brand-yellow"
+          className="pointer-events-none absolute top-1/2 left-1/2 size-[220%] -translate-x-1/2 -translate-y-1/2 animate-featured-border-spin bg-[conic-gradient(from_0deg,transparent_0%,transparent_72%,#f5c400_82%,#2563eb_92%,transparent_100%)] motion-reduce:animate-none motion-reduce:bg-brand-yellow"
           aria-hidden="true"
         />
 

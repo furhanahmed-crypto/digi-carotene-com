@@ -195,7 +195,8 @@
 }
 
 @utility animate-featured-border-spin {
-  animation: featured-border-spin 4s linear infinite;
+  /* One travelling highlight — clockwise only */
+  animation: featured-border-spin 3.5s linear infinite;
 }
 
 @utility link-underline {
