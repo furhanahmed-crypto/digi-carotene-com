@@ -4,6 +4,11 @@ import * as React from "react"
 
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
+import {
+  pageCreamDecor,
+  pageServicesDecor,
+  pageWhiteDecor,
+} from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
@@ -39,7 +44,7 @@ export default function ContactPage() {
         mark="Contact Us"
       />
 
-      <SectionLayout tone="cream">
+      <SectionLayout tone="cream" decor={pageCreamDecor}>
         <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <SectionMark>Get your free audit</SectionMark>

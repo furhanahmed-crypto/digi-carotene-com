@@ -1,5 +1,10 @@
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
+import {
+  pageCreamDecor,
+  pageServicesDecor,
+  pageWhiteDecor,
+} from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
@@ -41,7 +46,7 @@ export default function BlogPage() {
         mark="The Journal"
       />
 
-      <SectionLayout tone="white">
+      <SectionLayout tone="white" decor={pageWhiteDecor}>
         <div>
           <Reveal>
             <SectionMark data-reveal="eyebrow">Writing</SectionMark>

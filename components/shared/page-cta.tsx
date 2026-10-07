@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { pageCtaDecor } from "@/components/shared/page-decors"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { Button } from "@/components/ui/button"
@@ -47,7 +48,7 @@ export function PageCta({
 
   if (band) {
     return (
-      <SectionLayout tone="yellow" size="default">
+      <SectionLayout tone="yellow" size="default" decor={pageCtaDecor}>
         {body}
       </SectionLayout>
     )

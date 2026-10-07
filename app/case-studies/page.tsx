@@ -1,6 +1,11 @@
 import { homeContent } from "@/lib/home-content"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
+import {
+  pageCreamDecor,
+  pageServicesDecor,
+  pageWhiteDecor,
+} from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
@@ -25,7 +30,7 @@ export default function CaseStudiesPage() {
         mark="Case Studies"
       />
 
-      <SectionLayout tone="white">
+      <SectionLayout tone="white" decor={pageWhiteDecor}>
         <div>
           <Reveal>
             <SectionMark data-reveal="eyebrow">{work.eyebrow}</SectionMark>

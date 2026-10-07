@@ -2,6 +2,7 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 
 import { Reveal } from "@/components/motion/reveal"
+import { pageHeaderDecor } from "@/components/shared/page-decors"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { cn } from "@/lib/utils"
@@ -19,6 +20,10 @@ type PageHeaderProps = {
   mark?: string
   /** Optional motif to the right of the SectionMark. */
   adornment?: ReactNode
+  /** CTA row under the description (homepage hero language). */
+  actions?: ReactNode
+  /** Background line-art — defaults to pageHeaderDecor. */
+  decor?: ReactNode
   className?: string
   /** @deprecated Image backdrops removed — ignored. */
   imageIndex?: number
@@ -34,6 +39,8 @@ export function PageHeader({
   breadcrumbs = [],
   mark,
   adornment,
+  actions,
+  decor = pageHeaderDecor,
   className,
 }: PageHeaderProps) {
   const sectionMark = mark ?? breadcrumbs.at(-1)?.label ?? "Overview"
@@ -42,6 +49,7 @@ export function PageHeader({
     <SectionLayout
       tone="yellow"
       size="hero"
+      decor={decor}
       className={cn(className)}
       aria-label="Page header"
     >
@@ -98,6 +106,12 @@ export function PageHeader({
           >
             {description}
           </p>
+        ) : null}
+
+        {actions ? (
+          <div data-reveal="cta" className="mt-8">
+            {actions}
+          </div>
         ) : null}
       </Reveal>
     </SectionLayout>

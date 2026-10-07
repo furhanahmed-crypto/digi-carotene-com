@@ -63,8 +63,9 @@ Hero (white) → Marquee (yellow) → Search ranking (cream) → Differentiators
 
 - Header: glass on scroll; **yellow** Contact CTA (`text-ink`)
 - Section marks: yellow fill, ink text (paper tone on yellow bands)
-- Page header: yellow `SectionLayout` band + breadcrumbs + paper `SectionMark` + H1 (no photo backdrop / glass card)
+- Page header: yellow `SectionLayout` band + breadcrumbs + paper `SectionMark` + H1 (+ optional CTAs); no photo backdrop / glass card
 - Page CTA: cream panel + yellow button, or `band` for full yellow closing CTA
+- Service detail pages: homepage section patterns — sticky overview, multi-color deliverable cards, framework step cards, audience grid, sticky FAQ, color related panels, yellow `ServiceCta`
 - Inner page content: white / cream `SectionLayout` bands (same language as homepage)
 - Next-step (home CTA): yellow `SectionLayout`
 - Section line-art: gold ink per band (`#E6C55C` white / `#D9B040` cream / `#C99A12` yellow); softer gold in dark; varied edge placements

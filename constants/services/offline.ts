@@ -1,4 +1,4 @@
-import type { ServiceDetailData } from "@/components/services/service-detail-view"
+import type { ServiceDetailData } from "@/types/services"
 
 export const offlineServiceCopy: Record<
   string,

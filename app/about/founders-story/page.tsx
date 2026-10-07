@@ -1,5 +1,10 @@
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
+import {
+  pageCreamDecor,
+  pageServicesDecor,
+  pageWhiteDecor,
+} from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
@@ -31,7 +36,7 @@ export default function FoundersStoryPage() {
         mark="Founder's Story"
       />
 
-      <SectionLayout tone="white">
+      <SectionLayout tone="white" decor={pageWhiteDecor}>
         <div>
           <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">

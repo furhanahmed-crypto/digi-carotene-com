@@ -3,6 +3,11 @@ import { ArrowRight } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
+import {
+  pageCreamDecor,
+  pageServicesDecor,
+  pageWhiteDecor,
+} from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { MediaFrame } from "@/components/shared/media-frame"
@@ -75,7 +80,7 @@ export default function PRServicesPage() {
         mark="PR and Reputation"
       />
 
-      <SectionLayout tone="white">
+      <SectionLayout tone="white" decor={pageServicesDecor}>
         <div className="space-y-16 lg:space-y-24">
           <div className="flex flex-wrap gap-3">
             <Button

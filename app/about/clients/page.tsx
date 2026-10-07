@@ -2,6 +2,11 @@ import { ClientLogo } from "@/components/home/clients/client-logo"
 import { clientLogos } from "@/constants/home/clients"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
+import {
+  pageCreamDecor,
+  pageServicesDecor,
+  pageWhiteDecor,
+} from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
@@ -50,7 +55,7 @@ export default function ClientsPage() {
         mark="Our Clients"
       />
 
-      <SectionLayout tone="white">
+      <SectionLayout tone="white" decor={pageWhiteDecor}>
         <div>
           <Reveal>
             <SectionMark data-reveal="eyebrow">

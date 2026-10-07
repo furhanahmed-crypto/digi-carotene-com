@@ -124,9 +124,9 @@ type SectionDecorProps = {
   opacity?: number
   /** Slow idle drift after draw — pass an axis for variety across a section */
   float?: boolean | FloatAxis
-  /** Peak drift distance in px (default 13) */
+  /** Peak drift distance in px before travel scale (default 16 → ~26px) */
   floatDistance?: number
-  /** Drift cycle length in seconds (default ~4–5.5 by axis) */
+  /** Drift cycle length in seconds before duration scale (defaults ~4–6s) */
   floatDuration?: number
   /** Subtle scroll parallax */
   parallax?: boolean
@@ -188,7 +188,7 @@ export function SectionDecor({
   className,
   opacity,
   float = false,
-  floatDistance = 13,
+  floatDistance = 16,
   floatDuration,
   parallax = false,
   immediate = false,
@@ -228,10 +228,13 @@ export function SectionDecor({
         if (floatAxis) {
           const baseDuration =
             floatDuration ??
-            (floatAxis === "x" ? 4.6 : floatAxis === "xy" ? 5.4 : 4)
-          // Slightly snappier + farther than authored values.
-          const duration = baseDuration * (floatDuration ? 0.78 : 1)
-          const distance = floatDistance * 1.15
+            (floatAxis === "x" ? 4.2 : floatAxis === "xy" ? 4.8 : 3.6)
+          // +20% travel vs prior scale; cycle stretches with distance so speed stays natural.
+          const travelScale = 1.62
+          const durationScale = 1.2
+          const duration =
+            baseDuration * (floatDuration ? 0.85 : 1) * durationScale
+          const distance = floatDistance * travelScale
           draw.to(
             root,
             floatVars(floatAxis, distance, duration),
@@ -253,7 +256,7 @@ export function SectionDecor({
         let parallaxTween: gsap.core.Tween | undefined
         if (parallax) {
           parallaxTween = gsap.to(root, {
-            yPercent: -6,
+            yPercent: -12,
             ease: "none",
             scrollTrigger: {
               trigger: root.parentElement ?? root,
