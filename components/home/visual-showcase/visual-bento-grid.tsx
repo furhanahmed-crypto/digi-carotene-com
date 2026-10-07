@@ -9,7 +9,7 @@ export function VisualBentoGrid() {
   return (
     <div
       data-reveal-group
-      className="mt-14 grid auto-rows-[minmax(140px,1fr)] grid-cols-12 gap-2 md:auto-rows-[160px]"
+      className="mt-14 grid auto-rows-[minmax(140px,auto)] grid-cols-12 gap-2 md:auto-rows-[minmax(160px,auto)]"
     >
       {items.map((item, index) => (
         <VisualBentoItem

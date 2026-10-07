@@ -282,7 +282,12 @@ export const homeContent = {
       {
         id: "visual-5",
         label: "Digital creative — image to confirm",
-        layout: "banner" as const,
+        layout: "tall" as const,
+      },
+      {
+        id: "visual-6",
+        label: "Workspace / production — image to confirm",
+        layout: "tall" as const,
       },
     ],
   },

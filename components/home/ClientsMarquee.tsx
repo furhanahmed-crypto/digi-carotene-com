@@ -1,4 +1,5 @@
 import { clientLogos } from "@/constants/home/clients"
+import { ClientLogo } from "@/components/home/clients/client-logo"
 import { marqueeDecor } from "@/components/home/section-decors"
 import { SectionLayout } from "@/components/shared/section-layout"
 
@@ -10,24 +11,15 @@ function MarqueeRow() {
       {[0, 1].map((copy) => (
         <div
           key={copy}
-          className="flex shrink-0 items-center gap-6 px-6 animate-marquee [animation-duration:28s]"
+          className="flex shrink-0 items-center gap-5 px-5 animate-marquee [animation-duration:32s] md:gap-6 md:px-6"
           aria-hidden={copy === 1}
         >
           {loop.map((logo, i) => (
             <div
               key={`${logo.id}-${copy}-${i}`}
-              className="flex h-16 w-[168px] shrink-0 items-center justify-center border border-ink/15 bg-white/80 px-4"
+              className="flex h-[3.75rem] w-[10.5rem] shrink-0 items-center justify-center border border-ink/15 bg-white/90 px-5"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element -- local brand SVGs */}
-              <img
-                src={logo.src}
-                alt=""
-                width={140}
-                height={40}
-                className="h-8 w-auto max-w-[128px] object-contain"
-                loading="lazy"
-                decoding="async"
-              />
+              <ClientLogo logo={logo} size="marquee" />
             </div>
           ))}
         </div>

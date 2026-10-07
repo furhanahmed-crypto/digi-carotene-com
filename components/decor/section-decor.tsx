@@ -112,6 +112,8 @@ const MOTIFS: Record<DecorVariant, ComponentType<MotifProps>> = {
 
 export const DECOR_VARIANTS = Object.keys(MOTIFS) as DecorVariant[]
 
+type FloatAxis = "y" | "x" | "xy"
+
 type SectionDecorProps = {
   variant: DecorVariant
   className?: string
@@ -120,14 +122,44 @@ type SectionDecorProps = {
    * Prefer inheriting tone defaults (white/cream/yellow) from SectionLayout.
    */
   opacity?: number
-  /** Slow idle float after draw */
-  float?: boolean
+  /** Slow idle drift after draw — pass an axis for variety across a section */
+  float?: boolean | FloatAxis
+  /** Peak drift distance in px (default 13) */
+  floatDistance?: number
+  /** Drift cycle length in seconds (default ~4–5.5 by axis) */
+  floatDuration?: number
   /** Subtle scroll parallax */
   parallax?: boolean
   /** When true, draw immediately (preview / above-fold) */
   immediate?: boolean
   /** hide = desktop only (default); show = keep a faint motif on mobile */
   mobile?: "hide" | "show"
+}
+
+function floatVars(
+  axis: FloatAxis,
+  distance: number,
+  duration: number
+): gsap.TweenVars {
+  const base = {
+    duration,
+    ease: "sine.inOut",
+    yoyo: true,
+    repeat: -1,
+  } as const
+
+  if (axis === "x") {
+    return { ...base, x: distance, rotate: distance > 0 ? 2 : -2 }
+  }
+  if (axis === "xy") {
+    return {
+      ...base,
+      x: distance * 0.7,
+      y: -Math.abs(distance),
+      rotate: 2.5,
+    }
+  }
+  return { ...base, y: -Math.abs(distance), rotate: 2 }
 }
 
 function prepareStrokeDraw(root: HTMLElement) {
@@ -156,12 +188,16 @@ export function SectionDecor({
   className,
   opacity,
   float = false,
+  floatDistance = 13,
+  floatDuration,
   parallax = false,
   immediate = false,
   mobile = "hide",
 }: SectionDecorProps) {
   const rootRef = useRef<HTMLDivElement>(null)
   const Motif = MOTIFS[variant]
+  const floatAxis: FloatAxis | false =
+    float === true ? "y" : float === false ? false : float
 
   useGSAP(
     () => {
@@ -189,17 +225,16 @@ export function SectionDecor({
           stagger: 0.08,
         })
 
-        if (float) {
+        if (floatAxis) {
+          const baseDuration =
+            floatDuration ??
+            (floatAxis === "x" ? 4.6 : floatAxis === "xy" ? 5.4 : 4)
+          // Slightly snappier + farther than authored values.
+          const duration = baseDuration * (floatDuration ? 0.78 : 1)
+          const distance = floatDistance * 1.15
           draw.to(
             root,
-            {
-              y: -10,
-              rotate: 2,
-              duration: 5,
-              ease: "sine.inOut",
-              yoyo: true,
-              repeat: -1,
-            },
+            floatVars(floatAxis, distance, duration),
             ">-0.2"
           )
         }
@@ -238,7 +273,17 @@ export function SectionDecor({
 
       return () => mm.revert()
     },
-    { dependencies: [variant, float, parallax, immediate], scope: rootRef }
+    {
+      dependencies: [
+        variant,
+        floatAxis,
+        floatDistance,
+        floatDuration,
+        parallax,
+        immediate,
+      ],
+      scope: rootRef,
+    }
   )
 
   return (

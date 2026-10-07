@@ -1,3 +1,4 @@
+import { ClientLogo } from "@/components/home/clients/client-logo"
 import { clientLogos } from "@/constants/home/clients"
 import { PageHeader } from "@/components/shared/page-header"
 import { Container } from "@/components/shared/container"
@@ -72,16 +73,7 @@ export default function ClientsPage() {
                   className="border border-line bg-background"
                 >
                   <div className="flex aspect-square items-center justify-center border-b border-line bg-secondary/30 p-8">
-                    {/* eslint-disable-next-line @next/next/no-img-element -- local brand SVGs */}
-                    <img
-                      src={client.src}
-                      alt=""
-                      width={184}
-                      height={48}
-                      className="h-12 w-auto max-w-full object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <ClientLogo logo={client} size="card" />
                   </div>
                   <div className="p-5">
                     <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">

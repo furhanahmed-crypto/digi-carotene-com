@@ -1,5 +1,6 @@
 import { Bot, MapPin, Mic, Search, Sparkles } from "lucide-react"
 
+import { ChatCitationMotif } from "@/components/decor/motifs"
 import { homeSections } from "@/constants/home/sections"
 import { searchRankingDecor } from "@/components/home/section-decors"
 import { Reveal } from "@/components/motion/reveal"
@@ -45,7 +46,12 @@ export function SearchRanking() {
     <SectionLayout tone="cream" decor={searchRankingDecor}>
       <Reveal>
         <div className="mx-auto mb-12 max-w-3xl text-center">
-          <SectionMark data-reveal="eyebrow">{searchRanking.eyebrow}</SectionMark>
+          <SectionMark
+            data-reveal="eyebrow"
+            adornment={<ChatCitationMotif />}
+          >
+            {searchRanking.eyebrow}
+          </SectionMark>
           <h2
             data-reveal="heading"
             className="mt-5 font-display text-[28px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[40px]"
