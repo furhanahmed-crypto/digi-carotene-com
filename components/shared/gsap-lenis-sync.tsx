@@ -72,10 +72,21 @@ export function GsapLenisSync() {
     }
   }, [])
 
-  React.useEffect(() => {
+  // Root-layout Lenis survives App Router navigations, so its scroll offset
+  // survives too. Next may set html.scrollTop = 0, but Lenis still owns the
+  // animated value — reset it here (Lenis's recommended layout-level fix).
+  React.useLayoutEffect(() => {
+    if (!lenis) return
+
+    if (window.location.hash) {
+      const id = window.requestAnimationFrame(() => ScrollTrigger.refresh())
+      return () => window.cancelAnimationFrame(id)
+    }
+
+    lenis.scrollTo(0, { immediate: true, force: true })
     const id = window.requestAnimationFrame(() => ScrollTrigger.refresh())
     return () => window.cancelAnimationFrame(id)
-  }, [pathname])
+  }, [pathname, lenis])
 
   return null
 }

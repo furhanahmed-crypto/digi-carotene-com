@@ -33,8 +33,8 @@ type OutlinePageProps = {
 }
 
 /**
- * Shell for v2 outline pages (industries, WhatsApp, ORM): H1 header, one band
- * per H2 with a placeholder body, visible FAQs, related links and a closing CTA.
+ * Shell for v2 outline pages (industries, WhatsApp, ORM).
+ * Topic H2s share one band as cards — not one full SectionLayout each.
  */
 export function OutlinePage({
   title,
@@ -52,6 +52,11 @@ export function OutlinePage({
   let bandIndex = 0
   const nextTone = () =>
     (bandIndex++ % 2 === 0 ? "white" : "cream") as "white" | "cream"
+
+  /** Topics with only a title/body — one grid, not N full-page bands. */
+  const topicSections = sections.filter((s) => !s.items?.length)
+  /** Sections that already bring their own list (e.g. Use Cases). */
+  const listSections = sections.filter((s) => (s.items?.length ?? 0) > 0)
 
   return (
     <div className="min-h-svh">
@@ -86,24 +91,36 @@ export function OutlinePage({
         </OutlineSection>
       ) : null}
 
-      {sections.map((section) => (
+      {topicSections.length > 0 ? (
+        <OutlineSection
+          tone={nextTone()}
+          mark={mark}
+          eyebrow="Capabilities"
+          title="How we help in this vertical"
+        >
+          <InfoCardGrid
+            colorful
+            columns="3"
+            items={topicSections.map((section) => ({
+              title: section.title,
+              body: section.body ?? `[[${section.title} — copy to confirm]]`,
+            }))}
+          />
+        </OutlineSection>
+      ) : null}
+
+      {listSections.map((section) => (
         <OutlineSection
           key={section.title}
           tone={nextTone()}
-          mark={section.mark ?? "Overview"}
+          mark={section.mark ?? mark}
           title={section.title}
         >
-          {section.items?.length ? (
-            <InfoCardGrid
-              items={section.items.map((item) => ({ title: item }))}
-              columns="3"
-              headingLevel="h3"
-            />
-          ) : (
-            <PlaceholderBlock data-reveal="card">
-              {section.body ?? "[[Section copy — to confirm]]"}
-            </PlaceholderBlock>
-          )}
+          <InfoCardGrid
+            items={section.items!.map((item) => ({ title: item }))}
+            columns="4"
+            headingLevel="h3"
+          />
         </OutlineSection>
       ))}
 
@@ -112,7 +129,7 @@ export function OutlinePage({
         mark="FAQs"
         eyebrow="Questions"
         title="FAQs"
-        body="Answers are written into the page HTML (not click-only) and paired with FAQPage schema at launch."
+        body="Answers stay visible in the HTML and pair with FAQPage schema at launch."
       >
         {faqs.length ? (
           <div data-reveal-group className="grid gap-4 md:grid-cols-2">

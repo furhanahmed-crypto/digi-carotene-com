@@ -102,6 +102,7 @@ export default async function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={cn(
         "antialiased",
         "font-sans",
@@ -125,7 +126,7 @@ export default async function RootLayout({
         </noscript>
         <ThemeProvider
           defaultTheme="light"
-          initialTheme={themeClass}
+          initialTheme={themeClass === "dark" ? "dark" : "light"}
         >
           <SmoothScrollProvider>
             <Header />

@@ -32,6 +32,8 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       smoothWheel: true,
       syncTouch: true,
       touchMultiplier: isMobile ? 1.45 : isTablet ? 1.25 : 1,
+      // Lets Next.js App Router scroll-to-top win; without this Lenis keeps the prior scroll.
+      stopInertiaOnNavigate: true,
     }
   }, [viewportWidth])
 

@@ -19,6 +19,8 @@
 - Sticky left nav + sticky pillar titles stacked badly on mobile; normalize sticky below `lg`.
 - CSS `border` + `clip-path` drops diagonal borders — use layered shells if a slanted edge needs a stroke.
 - Lenis felt sluggish on touch until `touchMultiplier` / lerp were tuned per breakpoint.
+- Root Lenis in `layout` survives navigations, so scroll offset survives too. Keep `stopInertiaOnNavigate: true`, and on pathname change call `lenis.scrollTo(0, { immediate: true, force: true })` in `GsapLenisSync` (skip when `location.hash` is set). The option alone is not enough once scroll has settled. Also keep `html { scroll-behavior: auto }` — native CSS smooth fights App Router resets (Next warns via `data-scroll-behavior`).
+- Theme defaults to **light** only; never follow `prefers-color-scheme`. Dark only after an explicit toggle (cookie/localStorage).
 - Browser top bar stays wrong unless `theme-color` is set in viewport metadata **and** updated on theme toggle.
 - Full rainbow section fills felt inconsistent; white/cream/yellow + multi-color **cards** sells range without chaos.
 - Blue full-bleed section bands felt heavy — yellow/cream tested better.

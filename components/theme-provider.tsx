@@ -2,11 +2,11 @@
 
 import * as React from "react"
 
-type Theme = "light" | "dark" | "system"
+type Theme = "light" | "dark"
 
 type ThemeContextValue = {
   theme: Theme
-  resolvedTheme: "light" | "dark"
+  resolvedTheme: Theme
   setTheme: (theme: Theme) => void
 }
 
@@ -14,14 +14,7 @@ const ThemeContext = React.createContext<ThemeContextValue | null>(null)
 const STORAGE_KEY = "theme"
 const COOKIE_KEY = "theme"
 
-function getSystemTheme(): "light" | "dark" {
-  if (typeof window === "undefined") return "light"
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light"
-}
-
-function applyTheme(resolved: "light" | "dark") {
+function applyTheme(resolved: Theme) {
   const root = document.documentElement
   root.classList.remove("light", "dark")
   root.classList.add(resolved)
@@ -36,11 +29,23 @@ function applyTheme(resolved: "light" | "dark") {
   document.cookie = `${COOKIE_KEY}=${resolved}; path=/; max-age=31536000; SameSite=Lax`
 }
 
+function readStoredTheme(): Theme | null {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY)
+    if (stored === "dark" || stored === "light") return stored
+    // Legacy "system" (or anything else) → light; dark only after an explicit toggle.
+    if (stored) localStorage.setItem(STORAGE_KEY, "light")
+  } catch {
+    /* private mode / blocked storage */
+  }
+  return null
+}
+
 type ThemeProviderProps = {
   children: React.ReactNode
   attribute?: string
   defaultTheme?: Theme
-  initialTheme?: "light" | "dark"
+  initialTheme?: Theme
   enableSystem?: boolean
   disableTransitionOnChange?: boolean
 }
@@ -53,33 +58,23 @@ function ThemeProvider({
   const [theme, setThemeState] = React.useState<Theme>(
     initialTheme ?? defaultTheme
   )
-  const [resolvedTheme, setResolvedTheme] = React.useState<"light" | "dark">(
-    initialTheme ?? (defaultTheme === "dark" ? "dark" : "light")
-  )
 
   const setTheme = React.useCallback((next: Theme) => {
-    const resolved = next === "system" ? getSystemTheme() : next
     localStorage.setItem(STORAGE_KEY, next)
     setThemeState(next)
-    setResolvedTheme(resolved)
-    applyTheme(resolved)
+    applyTheme(next)
   }, [])
 
   React.useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)")
-    const onChange = () => {
-      if (theme !== "system") return
-      const resolved = getSystemTheme()
-      setResolvedTheme(resolved)
-      applyTheme(resolved)
-    }
-
-    media.addEventListener("change", onChange)
-    return () => media.removeEventListener("change", onChange)
-  }, [theme])
+    const stored = readStoredTheme()
+    // Prefer an explicit toggle; otherwise stay on SSR/default light — never OS dark.
+    const next = stored ?? (initialTheme === "dark" ? "dark" : "light")
+    setThemeState(next)
+    applyTheme(next)
+  }, [initialTheme])
 
   return (
-    <ThemeContext.Provider value={{ theme, resolvedTheme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, resolvedTheme: theme, setTheme }}>
       <ThemeHotkey />
       {children}
     </ThemeContext.Provider>
@@ -100,7 +95,7 @@ function isTypingTarget(target: EventTarget | null) {
 }
 
 function ThemeHotkey() {
-  const { resolvedTheme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
 
   React.useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -120,7 +115,7 @@ function ThemeHotkey() {
         return
       }
 
-      setTheme(resolvedTheme === "dark" ? "light" : "dark")
+      setTheme(theme === "dark" ? "light" : "dark")
     }
 
     window.addEventListener("keydown", onKeyDown)
@@ -128,7 +123,7 @@ function ThemeHotkey() {
     return () => {
       window.removeEventListener("keydown", onKeyDown)
     }
-  }, [resolvedTheme, setTheme])
+  }, [theme, setTheme])
 
   return null
 }
