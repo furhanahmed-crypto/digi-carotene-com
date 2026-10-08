@@ -2,12 +2,12 @@ import type { IndustryData, IndustrySlug } from "@/types/inner-pages"
 
 const s = (title: string) => ({
   title,
-  body: `[[${title} — copy to confirm]]`,
+  body: `${title} planned, executed and reported as part of one growth system for this sector.`,
 })
 
 const caseStudy = {
   title: "Case Study",
-  body: "[[Mini case study: client, sector, area, result and time frame — to confirm]]",
+  body: "Named sector case studies with approved metrics publish here once clients sign off.",
 }
 
 const dm = "/services/digital-marketing"

@@ -15,7 +15,8 @@ const offline = "/services/offline-marketing"
 export const hubGroups: readonly HubGroup[] = [
   {
     title: "Search & AI Discovery",
-    summary: "[[Group summary — to confirm]]",
+    summary:
+      "Rank on Google, win Maps and get recommended in AI answers — SEO, AEO and GEO as one system.",
     href: `${dm}/seo`,
     cta: "Explore SEO, AEO & GEO",
     items: [
@@ -27,7 +28,8 @@ export const hubGroups: readonly HubGroup[] = [
   },
   {
     title: "Digital Marketing",
-    summary: "[[Group summary — to confirm]]",
+    summary:
+      "Performance, growth, social, content, web and automation — planned as one funnel, reported in leads.",
     href: dm,
     cta: "Explore Digital Marketing",
     items: [
@@ -45,7 +47,8 @@ export const hubGroups: readonly HubGroup[] = [
   },
   {
     title: "Offline & Experiential Marketing",
-    summary: "[[Group summary — to confirm]]",
+    summary:
+      "Mall, society, campus, theatre and festival activations — tracked with QR, WhatsApp and offers.",
     href: offline,
     cta: "Explore Offline Marketing",
     items: [
@@ -62,7 +65,8 @@ export const hubGroups: readonly HubGroup[] = [
   },
   {
     title: "PR & Brand Communications",
-    summary: "[[Group summary — to confirm]]",
+    summary:
+      "Media placements, founder narrative, reputation management and crisis support.",
     href: "/services/pr",
     cta: "Explore PR Services",
     items: [
@@ -78,12 +82,12 @@ export const hubPackages = [
   {
     title: "Starter",
     audience: "Local businesses",
-    price: "From [[₹ X — to confirm]]/month",
+    price: "Custom quote after audit",
   },
   {
     title: "Growth",
     audience: "Multi-channel",
-    price: "From [[₹ X — to confirm]]/month",
+    price: "Custom quote after audit",
   },
   {
     title: "Enterprise / Global",

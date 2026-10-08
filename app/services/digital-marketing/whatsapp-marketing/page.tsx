@@ -7,17 +7,17 @@ export const metadata: Metadata = metadataFor(
   "/services/digital-marketing/whatsapp-marketing"
 )
 
-const body = (title: string) => ({
+const body = (title: string, detail: string) => ({
   title,
   mark: "WhatsApp Marketing",
-  body: `[[${title} — copy to confirm]]`,
+  body: detail,
 })
 
 export default function WhatsAppMarketingPage() {
   return (
     <OutlinePage
       title="WhatsApp Business API and Marketing Automation in Hyderabad"
-      description="[[Intro: how WhatsApp turns enquiries into bookings and repeat customers — to confirm]]"
+      description="Turn enquiries into bookings and one-time buyers into regulars with official WhatsApp Business API, click-to-WhatsApp ads and automated journeys."
       mark="WhatsApp Marketing"
       breadcrumbs={[
         { label: "Services", href: "/services" },
@@ -25,10 +25,22 @@ export default function WhatsAppMarketingPage() {
         { label: "WhatsApp Marketing" },
       ]}
       sections={[
-        body("Official WhatsApp Business API Setup"),
-        body("Click-to-WhatsApp Ads"),
-        body("Booking, Reminders and Broadcasts"),
-        body("Chatbots and CRM Integration"),
+        body(
+          "Official WhatsApp Business API Setup",
+          "Green-tick setup, templates and compliant messaging for scale."
+        ),
+        body(
+          "Click-to-WhatsApp Ads",
+          "Meta and Google ads that open a chat, not a cold landing page."
+        ),
+        body(
+          "Booking, Reminders and Broadcasts",
+          "Appointments, cart recovery and useful broadcasts that people actually read."
+        ),
+        body(
+          "Chatbots and CRM Integration",
+          "Route chats to the right person and log every lead in your CRM."
+        ),
         {
           title: "Use Cases",
           mark: "WhatsApp Marketing",
@@ -40,17 +52,17 @@ export default function WhatsAppMarketingPage() {
         {
           title: "Email Marketing",
           href: "/services/digital-marketing/email",
-          body: "[[One-line service summary — to confirm]]",
+          body: "Lifecycle journeys that pair with WhatsApp for retention.",
         },
         {
           title: "Performance Marketing",
           href: "/services/digital-marketing/performance-marketing",
-          body: "[[One-line service summary — to confirm]]",
+          body: "Paid acquisition that feeds WhatsApp conversion flows.",
         },
         {
           title: "Salons & Beauty",
           href: "/industries/salons",
-          body: "[[One-line industry summary — to confirm]]",
+          body: "Booking and membership offers that chat converts well.",
         },
       ]}
       primaryCta="Get a Free Growth Audit"

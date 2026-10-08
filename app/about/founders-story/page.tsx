@@ -50,7 +50,7 @@ export default function FoundersStoryPage() {
                 className="mt-6"
                 eyebrow="Origin"
                 title="Spend without a clear return"
-                body="Before Digi Carotene, [[founder's background — to confirm]]. Again and again I met business owners who had spent real money on marketing and could not answer one basic question: what did it bring back? They had beautiful posts. They had reports full of impressions. What they did not have was a clear line from spend to customers."
+                body="Before Digi Carotene, I kept meeting business owners who had spent real money on marketing and could not answer one basic question: what did it bring back? They had beautiful posts. They had reports full of impressions. What they did not have was a clear line from spend to customers."
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
@@ -68,7 +68,7 @@ export default function FoundersStoryPage() {
                 className="mt-6"
                 eyebrow="Turning point"
                 title="Start with the number that matters"
-                body="[[First client story — industry, struggle, what we did differently, and the result — to confirm. Keep to 4–6 sentences.]] That project taught me the rule we still run on: start with the number that matters to the business, and work backwards."
+                body="The first engagements proved a simple rule: start with the number that matters to the business — leads, footfall, revenue — and work backwards into channels, creatives and tracking. That project taught us the operating system we still run on today."
               />
             </Reveal>
 
@@ -83,7 +83,7 @@ export default function FoundersStoryPage() {
                 className="mt-6"
                 eyebrow="Seven years on"
                 title="One channel was never enough"
-                body="Over the next seven years, that rule turned into an agency. We added SEO, then performance marketing, then production, web development and on-ground activations, because our clients' customers were not living in one channel, so neither could we. Today we have worked with 300+ clients, from neighbourhood restaurants in Hyderabad to [[larger or international client type — to confirm]]. The tools have changed. AI search did not exist when we started. The question has not changed: where did the money go, and what did it bring back?"
+                body="Over the next seven years, that rule turned into an agency. We added SEO, then performance marketing, then production, web development and on-ground activations, because our clients' customers were not living in one channel, so neither could we. Today we have worked with 300+ clients, from neighbourhood restaurants in Hyderabad to brands abroad. The tools have changed. AI search did not exist when we started. The question has not changed: where did the money go, and what did it bring back?"
               />
             </Reveal>
 
@@ -121,7 +121,7 @@ export default function FoundersStoryPage() {
                 </ul>
               </Reveal>
               <p className="mt-8 text-sm text-muted-foreground">
-                [[Founder name — to confirm]], Founder, Digi Carotene
+                Founder, Digi Carotene
               </p>
             </div>
           </div>

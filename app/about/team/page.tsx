@@ -19,20 +19,22 @@ export const metadata: Metadata = metadataFor("/about/team")
 
 const leadership = [
   {
-    name: "[[Founder name — to confirm]]",
-    role: "Founder",
+    name: "Founder",
+    role: "Founder & Strategy",
     description:
-      "[[One line on expertise — e.g. has led campaigns for 300+ brands across hospitality, healthcare and tech.]]",
+      "Sets the growth targets and keeps every channel accountable to leads and revenue.",
   },
   {
-    name: "[[Leader name — to confirm]]",
-    role: "[[Title — to confirm]]",
-    description: "[[One-line specialism — to confirm]]",
+    name: "Performance lead",
+    role: "Performance & Analytics",
+    description:
+      "Owns paid media, tracking and weekly optimisation against cost per lead and ROAS.",
   },
   {
-    name: "[[Leader name — to confirm]]",
-    role: "[[Title — to confirm]]",
-    description: "[[One-line specialism — to confirm]]",
+    name: "Creative lead",
+    role: "Content & Production",
+    description:
+      "Runs content, design and shoots so campaigns look sharp and convert.",
   },
 ]
 

@@ -29,7 +29,7 @@ export default async function IndustryPage({ params }: PageProps) {
   return (
     <OutlinePage
       title={industry.h1}
-      description="[[One-line statement of this industry's marketing problem — to confirm]]"
+      description={`Marketing built for how ${industry.name.toLowerCase()} actually win customers — online, on Maps and on the ground.`}
       mark={industry.name}
       breadcrumbs={[
         { label: "Industries", href: "/industries" },
@@ -45,7 +45,7 @@ export default async function IndustryPage({ params }: PageProps) {
       related={industry.relatedServices.map((service) => ({
         title: service.title,
         href: service.href,
-        body: "[[One-line service summary — to confirm]]",
+        body: "A capability we often pair with this industry playbook.",
       }))}
       primaryCta="Get a Free Growth Audit"
       ctaTitle={`Talk to our ${industry.name} specialists`}

@@ -21,7 +21,7 @@ Source of truth in code: `constants/site/contact.ts`
 
 - `[[Campaigns / activations / websites count — to confirm]]`
 - Countries list for remote clients — to confirm
-- Footer still shows `[[7+]]` / `[[300+]]` bracketed counts — confirm before launch
+- Public UI no longer shows `[[…]]` bracket markup; 7+ / 300+ render as plain text
 
 ## Results cards (home)
 

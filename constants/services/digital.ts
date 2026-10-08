@@ -278,7 +278,7 @@ export const digitalServiceCopy: Record<
     approach: [
       { title: "Pre-production call", description: "We agree on goals, concepts, scripts, location, talent and props." },
       { title: "Shoot day", description: "A focused half-day or full-day session to capture a month's worth of content in one go." },
-      { title: "Edit and review", description: "First cuts within [[turnaround days — to confirm]], with one round of revisions included." },
+      { title: "Edit and review", description: "First cuts delivered quickly, with one round of revisions included." },
       { title: "Publish and learn", description: "Content goes into your calendar, and performance data shapes the next shoot." },
     ],
     deliverables: [

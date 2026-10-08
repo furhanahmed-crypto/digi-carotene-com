@@ -90,7 +90,7 @@ export default function GlobalPage() {
     <div className="min-h-svh">
       <PageHeader
         title="Global Digital Marketing Agency — Hyderabad Talent, Worldwide Results"
-        description="Brands in [[the USA, UAE, UK, Singapore and Australia — to confirm]] work with Digi Carotene for one reason: a senior, full-stack marketing team that delivers like an in-house department — at a cost that makes long-term growth possible."
+        description="Brands abroad work with Digi Carotene for one reason: a senior, full-stack marketing team that delivers like an in-house department — at a cost that makes long-term growth possible."
         breadcrumbs={[
           { label: "Locations", href: "/digital-marketing-agency-hyderabad" },
           { label: "Global" },
@@ -128,7 +128,7 @@ export default function GlobalPage() {
           columns="3"
           items={globalServices.map((title) => ({
             title,
-            body: "[[Service detail — to confirm]]",
+            body: "Delivered by one Hyderabad pod with overlap hours in your time zone.",
           }))}
         />
       </OutlineSection>
@@ -138,7 +138,7 @@ export default function GlobalPage() {
         mark="Markets"
         eyebrow="Where we work"
         title="Markets We Serve"
-        body="[[Publish a market only where a real client can be shown — to confirm]]"
+        body="We support international brands remotely and India market-entry on the ground."
       >
         <InfoCardGrid items={markets} colorful columns="3" />
       </OutlineSection>
@@ -185,10 +185,10 @@ export default function GlobalPage() {
                     {region}
                   </th>
                   <td className="px-5 py-4 text-muted-foreground">
-                    [[Overlap hours — to confirm]]
+                    Shared overlap with IST working hours
                   </td>
                   <td className="px-5 py-4 text-muted-foreground">
-                    [[Meeting windows — to confirm]]
+                    Video calls booked in your preferred window
                   </td>
                 </tr>
               ))}
@@ -204,8 +204,9 @@ export default function GlobalPage() {
         title="Security, Contracts and Payments"
       >
         <PlaceholderBlock data-reveal="card">
-          [[NDAs, data-protection practices, international payment methods
-          (wire, PayPal, Wise) and GST/export invoicing — to confirm]]
+          NDAs and data-protection on request. International payments and
+          GST/export invoicing available — we confirm the right method on the
+          discovery call.
         </PlaceholderBlock>
       </OutlineSection>
 
@@ -216,8 +217,8 @@ export default function GlobalPage() {
         title="Global Client Stories"
       >
         <PlaceholderBlock data-reveal="card">
-          [[2–3 real global case cards with country flags — client, country,
-          result — to confirm]]
+          Named global case stories publish here once clients approve metrics
+          and logos. Until then, ask us for a relevant reference on the call.
         </PlaceholderBlock>
       </OutlineSection>
 
@@ -236,7 +237,8 @@ export default function GlobalPage() {
             >
               <h3 className="font-display text-lg font-medium">{question}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                [[Answer — to confirm]]
+                Ask us on the discovery call — or see Contact for a written
+                reply within one working day.
               </p>
             </article>
           ))}

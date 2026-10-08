@@ -21,7 +21,7 @@ export default function IndustriesPage() {
     <div className="min-h-svh">
       <PageHeader
         title="Digital Marketing by Industry — Strategies Built for Your Business"
-        description="[[Intro: industry-specific marketing for Hyderabad and global brands — to confirm]]"
+        description="Industry-specific marketing for Hyderabad businesses and global brands — playbooks shaped by how each sector buys."
         breadcrumbs={[{ label: "Industries" }]}
         mark="Industries"
         actions={
@@ -48,7 +48,7 @@ export default function IndustriesPage() {
           columns="4"
           items={industries.map((industry) => ({
             title: industry.name,
-            body: "[[Proof line — to confirm]]",
+            body: "Sector playbook with services, proof frames and FAQs.",
             href: `/industries/${industry.slug}`,
           }))}
         />
@@ -61,7 +61,10 @@ export default function IndustriesPage() {
         title="Why Industry Experience Matters"
       >
         <PlaceholderBlock data-reveal="card">
-          [[Why Industry Experience Matters — copy to confirm]]
+          Generic campaigns miss how each sector buys. Clinics need compliant
+          content and Maps. Restaurants need food creatives and footfall offers.
+          Education needs admission seasons. We plan channels around those
+          realities — not a one-size template.
         </PlaceholderBlock>
       </OutlineSection>
 

@@ -128,7 +128,7 @@ export function InfoCardGrid({
               {item.title}
             </Heading>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {item.body ?? "[[Copy — to confirm]]"}
+              {item.body ?? "Explore how this fits your growth plan."}
             </p>
             {item.href ? (
               <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-brand-yellow decoration-2 underline-offset-4">

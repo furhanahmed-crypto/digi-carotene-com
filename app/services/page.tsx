@@ -123,7 +123,8 @@ export default function ServicesHubPage() {
           ))}
         </div>
         <PlaceholderBlock data-reveal="text" className="mt-6">
-          [[Interactive quiz and package recommendation logic — to confirm]]
+          Answer the three questions above, then use Get a Proposal — we will
+          recommend a starting package on the discovery call.
         </PlaceholderBlock>
       </OutlineSection>
 
@@ -151,7 +152,8 @@ export default function ServicesHubPage() {
                 {pkg.price}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                [[Package inclusions — to confirm]]
+                Scope is fixed after a free audit so you know exactly what is
+                included before work starts.
               </p>
               <Button
                 nativeButton={false}

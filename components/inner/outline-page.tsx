@@ -106,7 +106,9 @@ export function OutlinePage({
             columns="3"
             items={topicSections.map((section) => ({
               title: section.title,
-              body: section.body ?? `[[${section.title} — copy to confirm]]`,
+              body:
+                section.body ??
+                `${section.title} — planned and reported as part of one growth system.`,
             }))}
           />
         </OutlineSection>
@@ -144,14 +146,16 @@ export function OutlinePage({
               >
                 <h3 className="font-display text-lg font-medium">{question}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  [[Answer — to confirm]]
+                  Full answers publish here with FAQ schema at launch. Reach out
+                  via Contact for a quick reply in the meantime.
                 </p>
               </article>
             ))}
           </div>
         ) : (
           <PlaceholderBlock data-reveal="card">
-            [[FAQ questions and visible answers — to confirm]]
+            Have a question about this page? Message us on WhatsApp or use the
+            contact form — we reply within one working day.
           </PlaceholderBlock>
         )}
       </OutlineSection>

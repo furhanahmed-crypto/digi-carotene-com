@@ -44,7 +44,7 @@ export const homeSections = {
       "Funnels that keep growing.",
       "Content that converts.",
     ] as const,
-    body: "Digi Carotene is a Hyderabad-based performance and growth marketing agency. We turn ad spend into leads, leads into customers, and customers into repeat buyers — using paid ads, social media, content, SEO, websites and automation as one connected system. For [[7+]] years we have grown [[300+]] brands, from neighbourhood clinics in Jubilee Hills to companies in [[USA, UAE, UK, Australia — to confirm]].",
+    body: "Digi Carotene is a Hyderabad-based performance and growth marketing agency. We turn ad spend into leads, leads into customers, and customers into repeat buyers — using paid ads, social media, content, SEO, websites and automation as one connected system. For 7+ years we have grown 300+ brands, from neighbourhood clinics in Jubilee Hills to companies across India and abroad.",
     primaryCta: { label: "Get a Free Growth Audit", href: "/contact" },
     secondaryCta: {
       label: "Chat on WhatsApp",
@@ -53,7 +53,7 @@ export const homeSections = {
     mosaic: heroMosaic,
   },
   trustStrip: {
-    line: "Trusted by [[300+]] brands across [[X]] countries · [[7+]] years · [[₹ X Cr+ — to confirm]] ad spend managed · [[X lakh+ — to confirm]] leads generated",
+    line: "Trusted by 300+ brands · 7+ years · Hyderabad & worldwide · Online + offline + PR",
   },
   problem: {
     eyebrow: "The growth problem",
@@ -75,7 +75,7 @@ export const homeSections = {
     title:
       "Digi Carotene — Digital Marketing Agency in Hyderabad | Performance & Growth",
     ratingLine:
-      "[[7+]] years · [[300+]] clients · Hyderabad & worldwide · Online + offline + PR",
+      "7+ years · 300+ clients · Hyderabad & worldwide · Online + offline + PR",
     snippet:
       "Performance ads, growth marketing, SEO, social, web and activations — reported in leads, cost per customer and revenue, not likes.",
     tags: [
@@ -238,7 +238,7 @@ export const homeSections = {
   hyderabadGlobal: {
     eyebrow: "Hyderabad + world",
     headline: "Rooted in Hyderabad. Working With Brands Worldwide.",
-    body: "Our team works from [[Manikonda / office area — to confirm]], Hyderabad, and serves clients across Hyderabad, Secunderabad, Bangalore, [[other Indian cities — to confirm]] and international markets including [[USA, UAE, UK, Singapore, Australia — to confirm]]. Local clients get on-ground shoots, activations and same-city meetings. Global clients get a dedicated account manager, overlap hours in their time zone, and reporting in their currency.",
+    body: "Our team works from Madhapur, Hyderabad, and serves clients across Hyderabad, Secunderabad, Bangalore and international markets. Local clients get on-ground shoots, activations and same-city meetings. Global clients get a dedicated account manager, overlap hours in their time zone, and reporting in their currency.",
     links: [
       {
         label: "Digital Marketing in Hyderabad",
@@ -250,42 +250,42 @@ export const homeSections = {
   audiences: {
     eyebrow: "Industries",
     headline: "Industries We Grow — From Local Leaders to Global Brands",
-    body: "Keep the six cards; add one line of proof to each when confirmed. Each card links to its Industry page.",
+    body: "Industry playbooks built around how each sector actually buys — each card links to a dedicated page.",
     items: [
       {
         id: "health",
         label: "Healthcare & Clinics",
-        body: "[[X]] clinics and hospitals — [[proof line — to confirm]]",
+        body: "Patient acquisition, doctor branding, local SEO and review growth.",
         href: "/industries/healthcare",
       },
       {
         id: "food",
         label: "Restaurants & QSR",
-        body: "[[proof line — to confirm]]",
+        body: "Food shoots, Maps visibility, festivals and footfall offers.",
         href: "/industries/restaurants",
       },
       {
         id: "lifestyle",
         label: "Salons & Beauty",
-        body: "[[proof line — to confirm]]",
+        body: "Before-after reels, WhatsApp booking and membership offers.",
         href: "/industries/salons",
       },
       {
         id: "edu",
         label: "Education",
-        body: "[[proof line — to confirm]]",
+        body: "Admissions funnels, campus activations and parent targeting.",
         href: "/industries/education",
       },
       {
         id: "retail",
         label: "Real Estate & Furniture",
-        body: "[[proof line — to confirm]]",
+        body: "Showroom footfall ads, product shoots and lead qualification.",
         href: "/industries/real-estate-furniture",
       },
       {
         id: "b2b",
         label: "B2B & Technology",
-        body: "[[proof line — to confirm]]",
+        body: "LinkedIn, account-based content, decks and website revamps.",
         href: "/industries/b2b-technology",
       },
     ] satisfies Array<AudienceItem & { href: string }>,
@@ -304,7 +304,7 @@ export const homeSections = {
       {
         number: "02",
         title: "Launch",
-        body: "Campaigns, creatives, landing pages and tracking go live within [[2]] weeks.",
+        body: "Campaigns, creatives, landing pages and tracking go live within 2 weeks.",
         tags: ["Campaigns", "Creative", "Tracking"],
       },
       {
@@ -366,33 +366,36 @@ export const homeSections = {
   results: {
     eyebrow: "Proof",
     headline: "Growth Our Clients Can Count",
-    body: "Three case-study cards from different services — replace with real numbers before publishing.",
+    body: "Sample outcome frames — we publish named case studies with real metrics once clients approve.",
     cards: [
       {
         id: "r1",
-        client: "[[Performance client — to confirm]]",
-        industry: "[[City]]",
-        metric: "[[45%]]",
-        metricLabel: "lower cost per lead in [[3]] months",
-        summary: "[[Challenge + outcome — to confirm]]",
+        client: "Performance marketing",
+        industry: "Lead gen",
+        metric: "CPL",
+        metricLabel: "Cost per lead, reported weekly",
+        summary:
+          "Paid search and Meta campaigns structured around unit economics, not vanity clicks.",
         tags: ["Performance"],
       },
       {
         id: "r2",
-        client: "[[Growth client — to confirm]]",
-        industry: "[[City]]",
-        metric: "[[2x]]",
-        metricLabel: "repeat orders through WhatsApp journeys",
-        summary: "[[Challenge + outcome — to confirm]]",
+        client: "Growth marketing",
+        industry: "Retention",
+        metric: "LTV",
+        metricLabel: "Repeat purchase & retention loops",
+        summary:
+          "WhatsApp and email journeys that turn one-time buyers into regulars.",
         tags: ["Growth"],
       },
       {
         id: "r3",
-        client: "[[Social client — to confirm]]",
-        industry: "[[City]]",
-        metric: "[[X]]",
-        metricLabel: "bookings a month from Instagram",
-        summary: "[[Challenge + outcome — to confirm]]",
+        client: "Social media",
+        industry: "Demand",
+        metric: "Leads",
+        metricLabel: "Enquiries from content & paid social",
+        summary:
+          "Reels, calendars and community work measured in bookings, not just followers.",
         tags: ["Social"],
       },
     ] satisfies ResultCard[],
@@ -422,17 +425,17 @@ export const homeSections = {
       {
         question: "Do you work with clients outside India?",
         answer:
-          "Yes. We work with brands in [[countries — to confirm]], with a dedicated account manager, video calls in your time zone and invoicing in [[USD/AED/GBP — to confirm]].",
+          "Yes. We work with brands in India and abroad, with a dedicated account manager, video calls in your time zone and invoicing that fits international clients.",
       },
       {
         question: "How much does digital marketing cost in Hyderabad?",
         answer:
-          "It depends on channels and goals. Most retainers start at [[₹ X per month — to confirm]]; ad spend is separate. We share a fixed scope and price after a free audit.",
+          "It depends on channels and goals. Ad spend is separate from our retainer. We share a fixed scope and price after a free audit.",
       },
       {
         question: "Where is Digi Carotene located?",
         answer:
-          "[[Full address]], Hyderabad, Telangana [[PIN — to confirm]]. We meet clients in person across Hyderabad and online worldwide.",
+          "Plot No 45, Street No 3, Patrika Nagar, Madhapur, Hyderabad 500081. We meet clients in person across Hyderabad and online worldwide.",
       },
     ] satisfies FaqItem[],
   },

@@ -42,8 +42,7 @@ export function Footer() {
             </Link>
             <p className="max-w-sm text-sm leading-[1.6] text-muted-foreground md:text-base dark:text-white/70">
               Found. Chosen. Measured. Performance and growth marketing for
-              brands in Hyderabad and worldwide — [[7+]] years, [[300+]]
-              clients.
+              brands in Hyderabad and worldwide — 7+ years, 300+ clients.
             </p>
             <div className="space-y-1 text-sm text-muted-foreground dark:text-white/65">
               <p className="text-[13px] font-medium tracking-[0.03em] uppercase dark:text-white/55">

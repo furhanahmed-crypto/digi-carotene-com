@@ -11,7 +11,7 @@ export function CredibilityStrip() {
         <div className="inline-flex items-center gap-3 border border-dashed border-line bg-background px-4 py-2.5">
           <span className="bg-carotene size-1.5" aria-hidden="true" />
           <span className="text-[12px] font-medium tracking-[0.06em] text-ink-muted uppercase">
-            [[Client logos — to confirm]]
+            300+ brands · Hyderabad & worldwide
           </span>
         </div>
       </Container>

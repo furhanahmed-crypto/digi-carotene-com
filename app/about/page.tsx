@@ -149,8 +149,8 @@ export default function AboutPage() {
                 <li>7+ years of building brands and campaigns.</li>
                 <li>300+ clients served across industries and countries.</li>
                 <li>
-                  [[Campaigns / activations / websites count — to confirm before
-                  publishing.]]
+                  Full-stack delivery: strategy, ads, SEO, content, design, web,
+                  production, activations and PR.
                 </li>
                 <li>
                   Teams covering strategy, performance media, SEO and AEO,
