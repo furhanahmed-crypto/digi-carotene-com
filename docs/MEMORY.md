@@ -35,7 +35,7 @@
 - Inner pages: never use photo/blur page banners — yellow `PageHeader` (`SectionLayout` + breadcrumbs + paper `SectionMark`). Body bands use white/cream `SectionLayout`. SEO from `lib/seo/page-meta.ts` (see `docs/content/CONTENT-USAGE.md`).
 - Line-art on inner pages via `page-decors.tsx` (header + white/cream/services/CTA). Float amp ~1.35× / parallax ~12% so motion reads without feeling floaty.
 - Service detail pages compose homepage section patterns (`components/services/*`): sticky overview, multi-color deliverables, framework steps, audience cards, sticky FAQ, related color panels, yellow `ServiceCta`. No old numbered border-list layout.
-- Public NAP/socials live in `constants/site/contact.ts` (from digicarotene.com). Voice `+91 99598 20874` vs WhatsApp `93986 82206` — confirm both still valid vs GBP before launch.
+- Public NAP/socials live in `constants/site/contact.ts`. Office: Dwaraka Pride, HITEC City (maps embed `mapsEmbedSrc`). Voice `+91 99598 20874` vs WhatsApp `93986 82206` — confirm vs GBP.
 - Reference media lives under `public/assets/` (`hero/mosaic`, `reels`, `showcase`, `clients`, `scores`). Keep only wired files; compress webp/mp4 before commit. Mixkit reels are layout shells. Client marquee may use familiar brand marks (Google, Shopify, etc.) as **spacing references only** — never claim them as Digi Carotene clients; replace with permissioned logos before launch.
 
 ## Constraints that keep biting us
@@ -43,7 +43,7 @@
 - `promt.txt` still forbids fabricated proof; its single-accent color rule is **superseded** by the revamp, but honesty is not.
 - Placeholder images are limited (`PLACEHOLDER_IMAGES` length 3) — mosaic tiles should cycle via `getPlaceholderImage`.
 - Old unused homepage files (`WhyChooseUs`, etc.) may still fail lint if left with unescaped quotes — clean when touched.
-- WhatsApp / NAP still placeholders until Indian number + GBP address confirmed.
+- NAP address set to Dwaraka Pride; still match Google Business Profile before launch.
 
 ## Reference sites (patterns only)
 

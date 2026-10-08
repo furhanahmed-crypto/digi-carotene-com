@@ -12,7 +12,7 @@ Source of truth in code: `constants/site/contact.ts`
 - Email: `info@digicarotene.com`
 - Phone: `+91 99598 20874`
 - WhatsApp: `+91 93986 82206` (`wa.me/919398682206`) — **different from voice line on old site; confirm both still correct**
-- Address: Plot No 45, Street No 3, Patrika Nagar, Madhapur, Hyderabad 500081
+- Address: Dwaraka Pride - Plot No. 4/1, Survey No. 64, Huda Techno Enclave, HITEC City, Madhapur, Hyderabad, Telangana 500081 (maps embed in `siteContact.mapsEmbedSrc`)
 - Hours shown: Mon–Sat 10am–7pm — **confirm against GBP**
 - Socials: Instagram / Facebook / LinkedIn `@digicarotene` company pages
 - Bangalore office — only if a real office exists

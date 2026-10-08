@@ -238,7 +238,7 @@ export const homeSections = {
   hyderabadGlobal: {
     eyebrow: "Hyderabad + world",
     headline: "Rooted in Hyderabad. Working With Brands Worldwide.",
-    body: "Our team works from Madhapur, Hyderabad, and serves clients across Hyderabad, Secunderabad, Bangalore and international markets. Local clients get on-ground shoots, activations and same-city meetings. Global clients get a dedicated account manager, overlap hours in their time zone, and reporting in their currency.",
+    body: "Our team works from Dwaraka Pride, HITEC City, Madhapur, Hyderabad, and serves clients across Hyderabad, Secunderabad, Bangalore and international markets. Local clients get on-ground shoots, activations and same-city meetings. Global clients get a dedicated account manager, overlap hours in their time zone, and reporting in their currency.",
     links: [
       {
         label: "Digital Marketing in Hyderabad",
@@ -435,7 +435,7 @@ export const homeSections = {
       {
         question: "Where is Digi Carotene located?",
         answer:
-          "Plot No 45, Street No 3, Patrika Nagar, Madhapur, Hyderabad 500081. We meet clients in person across Hyderabad and online worldwide.",
+          "Dwaraka Pride - Plot No. 4/1, Survey No. 64, Huda Techno Enclave, HITEC City, Madhapur, Hyderabad, Telangana 500081. We meet clients in person across Hyderabad and online worldwide.",
       },
     ] satisfies FaqItem[],
   },

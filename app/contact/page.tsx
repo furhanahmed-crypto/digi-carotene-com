@@ -6,7 +6,10 @@ import { ArrowRight, Clock3, Mail, MapPin, Phone } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
-import { pageCreamDecor } from "@/components/shared/page-decors"
+import {
+  pageCreamDecor,
+  pageWhiteDecor,
+} from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { Button } from "@/components/ui/button"
 import { siteContact, whatsappHref } from "@/constants/home/navigation"
@@ -304,6 +307,33 @@ export default function ContactPage() {
               ))}
             </div>
           </aside>
+        </div>
+      </SectionLayout>
+
+      <SectionLayout tone="white" decor={pageWhiteDecor}>
+        <SectionMark>Visit us</SectionMark>
+        <h2 className="mt-6 max-w-2xl font-display text-[28px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[36px]">
+          {siteContact.building}, HITEC City
+        </h2>
+        <p className="mt-3 max-w-2xl text-sm text-muted-foreground md:text-base">
+          <a
+            href={siteContact.mapsHref}
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-brand-yellow underline-offset-4 transition-colors hover:text-foreground"
+          >
+            {siteContact.addressOneLine}
+          </a>
+        </p>
+        <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-secondary/30 shadow-sm">
+          <iframe
+            title="Digi Carotene office — Dwaraka Pride, HITEC City"
+            src={siteContact.mapsEmbedSrc}
+            className="aspect-[16/10] w-full border-0 md:aspect-[21/9]"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </SectionLayout>
     </div>
