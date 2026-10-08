@@ -2,10 +2,21 @@ import type { LucideIcon } from "lucide-react"
 import {
   BookOpen,
   Building2,
+  Cpu,
   FileBarChart,
+  Globe2,
+  GraduationCap,
   Handshake,
+  Home,
+  Hospital,
+  LayoutGrid,
+  MapPin,
   Newspaper,
+  ScanSearch,
+  Scissors,
+  ShoppingBag,
   Users,
+  UtensilsCrossed,
 } from "lucide-react"
 
 export type NavLinkItem = {
@@ -53,10 +64,64 @@ export const mainNav: NavItem[] = [
         icon: BookOpen,
       },
       {
-        title: "Clients",
+        title: "Clients & Global Presence",
         href: "/about/clients",
-        description: "Brands we've partnered with.",
+        description: "Brands in Hyderabad, India and worldwide.",
         icon: Handshake,
+      },
+    ],
+  },
+  {
+    type: "dropdown",
+    title: "Industries",
+    items: [
+      {
+        title: "Healthcare & Clinics",
+        href: "/industries/healthcare",
+        description: "Patient acquisition and clinic growth.",
+        icon: Hospital,
+      },
+      {
+        title: "Restaurants & QSR",
+        href: "/industries/restaurants",
+        description: "Footfall, delivery and food content.",
+        icon: UtensilsCrossed,
+      },
+      {
+        title: "Salons & Beauty",
+        href: "/industries/salons",
+        description: "Reels, bookings and reviews.",
+        icon: Scissors,
+      },
+      {
+        title: "Education",
+        href: "/industries/education",
+        description: "Admissions funnels and campus.",
+        icon: GraduationCap,
+      },
+      {
+        title: "Real Estate & Furniture",
+        href: "/industries/real-estate-furniture",
+        description: "Showroom leads and shoots.",
+        icon: Home,
+      },
+      {
+        title: "D2C & Retail",
+        href: "/industries/d2c-retail",
+        description: "E-commerce ads and brand systems.",
+        icon: ShoppingBag,
+      },
+      {
+        title: "B2B & Technology",
+        href: "/industries/b2b-technology",
+        description: "LinkedIn, ABM and GEO for B2B.",
+        icon: Cpu,
+      },
+      {
+        title: "All Industries",
+        href: "/industries",
+        description: "Browse every industry practice.",
+        icon: LayoutGrid,
       },
     ],
   },
@@ -101,6 +166,14 @@ export const mainNav: NavItem[] = [
           {
             title: "Insta Shoot",
             href: "/services/digital-marketing/insta-shoot",
+          },
+          {
+            title: "WhatsApp Marketing",
+            href: "/services/digital-marketing/whatsapp-marketing",
+          },
+          {
+            title: "Online Reputation Management",
+            href: "/services/digital-marketing/orm",
           },
         ],
       },
@@ -154,10 +227,34 @@ export const mainNav: NavItem[] = [
   },
   {
     type: "dropdown",
+    title: "Locations",
+    items: [
+      {
+        title: "Hyderabad",
+        href: "/digital-marketing-agency-hyderabad",
+        description: "Local SEO, ads, social and activations.",
+        icon: MapPin,
+      },
+      {
+        title: "Bangalore",
+        href: "/digital-marketing-agency-bangalore",
+        description: "Serving Bangalore brands from Hyderabad.",
+        icon: MapPin,
+      },
+      {
+        title: "Global",
+        href: "/global",
+        description: "USA, UAE, UK, APAC and diaspora brands.",
+        icon: Globe2,
+      },
+    ],
+  },
+  {
+    type: "dropdown",
     title: "Resources",
     items: [
       {
-        title: "Blog",
+        title: "The Journal",
         href: "/blog",
         description: "Insights on SEO, AEO, GEO, and growth.",
         icon: Newspaper,
@@ -167,6 +264,12 @@ export const mainNav: NavItem[] = [
         href: "/case-studies",
         description: "Results and stories from real campaigns.",
         icon: FileBarChart,
+      },
+      {
+        title: "Free GEO & AEO Scan",
+        href: "/contact",
+        description: "Request a free discovery audit.",
+        icon: ScanSearch,
       },
     ],
   },
@@ -179,5 +282,8 @@ export const mainNav: NavItem[] = [
 
 export const contactHref = "/contact"
 
-export const whatsappHref =
-  "https://wa.me/971501234567?text=Hi%20Digi%20Carotene%2C%20I%27d%20like%20to%20discuss%20a%20project."
+/**
+ * WhatsApp — UAE placeholder removed per v2 audit.
+ * Until [[+91 XXXXX XXXXX — to confirm]] is set, route to contact.
+ */
+export const whatsappHref = `${contactHref}?via=whatsapp`

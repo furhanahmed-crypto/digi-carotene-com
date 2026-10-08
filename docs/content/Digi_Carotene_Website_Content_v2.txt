@@ -1,0 +1,1146 @@
+
+
+===== PAGE 1 =====
+
+Digi Carotene Website Content — SEO
+Rewrite
+Oct 8, 2026  ·  @Sai Narasimhan Palakolanu
+Audit: what to fix before the content goes live
+The design and service architecture are strong; the site loses rankings mainly because
+the home page never says "digital marketing agency in Hyderabad", proof sections are still
+placeholders, and the global story is missing. Fix the ten items below first, then drop in the
+page content that follows.
+# Issue on the current build Where Fix Priority
+1 Three rotating H1s on the
+home page
+Home hero Keep ONE H1 with
+"Digital Marketing
+Agency in Hyderabad";
+rotate the other lines
+as styled spans, not
+H1s
+High
+2 No Hyderabad keyword in the
+home H1, title or meta
+Home Use the title/meta in
+the checklist at the
+end
+High
+3 WhatsApp button points to a
+placeholder UAE number
+(+971 50 123 4567)
+Every page Replace with the real
+Digi Carotene
+business number
+High
+4 Client logos show "Client 01–
+08"
+Home
+marquee,
+Clients page
+Upload real logos (with
+permission)
+High
+5 Case studies are all "[[to
+confirm]]"
+Home + Case
+Studies
+Publish 3–6 real stories
+(template below)
+High
+Digi Carotene Website Content — SEO Rewrite
+Page 1 of 29
+
+===== PAGE 2 =====
+
+Also check: the home CTA "Explore Our Services" links to /services — confirm that page
+exists (the menu uses /services/digital-marketing). Image alt text currently reads "image
+to confirm"; replace with descriptive alts (e.g., "Mall activation by Digi Carotene at a
+Hyderabad mall").
+Placeholders in [square brackets] throughout this doc need real numbers, names or
+addresses before publishing — never publish an invented figure.
+Sitemap, navigation and scroll depth
+Every page follows one nine-block scroll pattern and ends with links to the next logical
+page, so a visitor never hits a dead end. Keep the current mega menu and add two items:
+Locations and Industries.
+# Issue on the current build Where Fix Priority
+6 Footers disagree: home says
+"Hyderabad, India"; inner
+pages say "Hyderabad ·
+Bangalore, 7+ years, 300+
+clients"
+Footer One footer
+everywhere, with full
+address and the global
+line
+High
+7 No address, phone, map or
+office hours anywhere
+Contact, footer Add full NAP matching
+Google Business
+Profile exactly
+High
+8 About page is one section
+(very thin)
+/about Use the long-form
+About content below
+Medium
+9 FAQ answers don't appear in
+the page text
+Home, service
+pages
+Render answers in the
+HTML (not only on
+click) + FAQ schema,
+so Google and AI
+engines can read them
+Medium
+10 Hyderabad/Bangalore
+location pages are linked only
+from inner-page footers; no
+global page
+Navigation Add a "Locations"
+menu and the new
+pages below
+Medium
+Digi Carotene Website Content — SEO Rewrite
+Page 2 of 29
+
+===== PAGE 3 =====
+
+Main menu (new items marked NEW)
+Home
+About → About Us · Founder's Story · Team · Clients & Global Presence (renamed)
+Services → Digital Marketing (10 pages) · Offline Marketing (9 pages) · PR Services
+Industries (NEW) → Healthcare & Clinics · Restaurants & QSR · Salons & Beauty ·
+Education · Real Estate & Furniture · D2C & Retail · B2B & Technology
+Locations (NEW) → Hyderabad · Bangalore · Global (USA, UAE, UK, Australia, Singapore
+— only markets where you have real clients)
+Resources → The Journal · Case Studies · Free GEO & AEO Scan
+Contact Us (button)
+The scroll-depth pattern used on every page
+1. Hero (0–10%) — H1 with the main keyword, one-line promise, two CTAs (primary: Free
+GEO Scan / Get a Proposal; secondary: WhatsApp).
+2. Trust strip (10–15%) — client logos marquee + 3 stats (years, clients, countries).
+3. Problem (15–25%) — name the visitor's pain in their words.
+4. Solution / services (25–45%) — tabbed or accordion cards, each linking deeper.
+5. Proof (45–60%) — one case-study card or testimonial with a real number.
+6. Process (60–70%) — 4 numbered steps (Diagnose · Unify · Activate · Govern).
+7. Mid-page CTA band (70%) — short offer, not a form.
+8. FAQ (75–90%) — 5–6 questions, answers visible in HTML, FAQ schema.
+9. "Keep exploring" + final CTA (90–100%) — 3 related-page cards, then the contact
+block.
+Navigation rules that keep people moving
+Breadcrumbs on every inner page (already on service pages — add to About,
+Industries, Locations).
+Every service page links to: 2 related services, 1 industry page, 1 case study, the
+Hyderabad page.
+Every industry and location page links to the 3–4 services most relevant to it.
+Sticky header CTA + floating WhatsApp button on mobile; a "Back to top" button after
+50% scroll.
+A thin reading-progress bar on blog posts and case studies.
+Digi Carotene Website Content — SEO Rewrite
+Page 3 of 29
+
+===== PAGE 4 =====
+
+Track scroll depth in GA4 at 25 / 50 / 75 / 90% and CTA clicks per section, so you can
+see which blocks lose people.
+Home page
+The home page now leads with performance and growth marketing, and gives all ten
+digital services equal weight. Primary keyword: digital marketing agency in Hyderabad.
+Secondary: performance marketing agency Hyderabad, growth marketing agency India,
+lead generation agency Hyderabad, global digital marketing agency. URL: /
+Hero
+Eyebrow: Performance & Growth Marketing Agency
+H1: Digital Marketing Agency in Hyderabad, Growing Brands Across the Globe
+Rotating sub-lines (styled text, not H1): Ads that pay back. · Funnels that keep growing. ·
+Content that converts.
+Body: Digi Carotene is a Hyderabad-based performance and growth marketing agency.
+We turn ad spend into leads, leads into customers, and customers into repeat buyers —
+using paid ads, social media, content, SEO, websites and automation as one connected
+system. For [7+] years we have grown [300+] brands, from neighbourhood clinics in
+Jubilee Hills to companies in [USA, UAE, UK, Australia].
+CTAs: Get a Free Growth Audit · Chat on WhatsApp
+Trust strip
+Trusted by [300+] brands across [X] countries · [7+] years · [ ₹ X Cr+] ad spend managed ·
+[X lakh+] leads generated
+Logo marquee: real client logos (with permission). Group by sector: Salons & beauty,
+Restaurants, Healthcare, Education, Retail, Global/B2B.
+The name (keep)
+Carotene is a pigment. Warm, concentrated, used with intent — not as decoration. That is
+also how our marketing should feel.
+Problem block
+H2: Spending on Ads but Not Seeing Growth?
+Digi Carotene Website Content — SEO Rewrite
+Page 4 of 29
+
+===== PAGE 5 =====
+
+Most businesses don't have a traffic problem — they have a growth problem. Ads bring
+clicks that never call. Followers grow but sales don't. Leads go cold because nobody
+follows up. And three different vendors run ads, social and the website without talking to
+each other. The result: rising cost per lead and a competitor who keeps winning your
+customers.
+Solution block
+H2: Performance and Growth Marketing, Powered by Every Digital Channel
+We plan every channel around one goal: profitable growth. Performance marketing brings
+in customers today, growth marketing makes each one cheaper to win and more likely to
+return, and every other service feeds that engine.
+H3: Our Digital Marketing Services — show as a 10-card grid with equal card size, icon, a
+2-line benefit and an Explore link. No card is larger or placed above the others.
+Service Card copy (benefit) Link
+Performance
+Marketing
+Google, Meta, YouTube and
+LinkedIn ads managed for cost
+per lead and ROAS.
+/services/digital-
+marketing/performance-marketing
+Growth Marketing Funnel experiments, retention
+and referral programs that
+lower acquisition cost.
+/services/digital-marketing/growth-
+marketing
+Social Media
+Marketing
+Reels, content calendars and
+community management that
+bring customers.
+/services/digital-marketing/social
+Search Engine
+Optimization
+Rank on Google, win Maps and
+get recommended by AI
+search.
+/services/digital-marketing/seo
+Content Marketing Website copy, blogs and
+scripts that answer questions
+and convert.
+/services/digital-marketing/content
+Web Design &
+Development
+Fast, conversion-ready
+websites and landing pages.
+/services/digital-marketing/web
+Digi Carotene Website Content — SEO Rewrite
+Page 5 of 29
+
+===== PAGE 6 =====
+
+Below the grid, two secondary cards: Offline & Experiential → /services/offline-marketing
+· PR & Brand Communications → /services/pr
+Growth engine block (replaces the AI search block)
+H2: How Our Growth Engine Works
+Four stages, one team, one report:
+1. Attract — performance ads, social media, SEO and content bring the right people in.
+2. Convert — landing pages, websites and WhatsApp follow-up turn visitors into
+enquiries.
+3. Retain — email, WhatsApp and loyalty journeys turn first-time buyers into regulars.
+4. Scale — we test, read the numbers weekly and move budget to what works.
+One line under it: Customers now also ask ChatGPT, Gemini and Google AI Overviews for
+recommendations — our SEO and content work makes sure you're named there too.
+Hyderabad + global block (keep)
+H2: Rooted in Hyderabad. Working With Brands Worldwide.
+Our team works from [Manikonda / office area], Hyderabad, and serves clients across
+Hyderabad, Secunderabad, Bangalore, [other Indian cities] and international markets
+including [USA, UAE, UK, Singapore, Australia]. Local clients get on-ground shoots,
+activations and same-city meetings. Global clients get a dedicated account manager,
+overlap hours in their time zone, and reporting in their currency.
+Service Card copy (benefit) Link
+Graphic Designing Brand identity, ad creatives
+and social designs that stop
+the scroll.
+/services/digital-marketing/graphic-
+design
+Personal Branding Founders and doctors
+positioned as the trusted
+name in their field.
+/services/digital-
+marketing/personal-branding
+Email Marketing Automated journeys that
+bring customers back.
+/services/digital-marketing/email
+Insta Shoot In-house photo and reel
+production across Hyderabad.
+/services/digital-marketing/insta-
+shoot
+Digi Carotene Website Content — SEO Rewrite
+Page 6 of 29
+
+===== PAGE 7 =====
+
+Two cards: Digital Marketing in Hyderabad → /digital-marketing-agency-hyderabad ·
+Global Clients → /global
+Verticals (keep the six; rename H2)
+H2: Industries We Grow — From Local Leaders to Global Brands
+Keep the six cards; add one line of proof to each, e.g. "Healthcare: [X] clinics and
+hospitals, [X]% lower cost per appointment." Each card links to its Industry page.
+Proof
+H2: Growth Our Clients Can Count
+Three case-study cards, each from a different service, each with one number — e.g.
+Performance: "[45]% lower cost per lead in [3] months"; Growth: "[2x] repeat orders
+through WhatsApp journeys"; Social: "[X] bookings a month from Instagram". Link to
+/case-studies.
+Testimonial slider: 3–5 real quotes with name, role, business, city/country, and a Google
+review link.
+Process (rewrite)
+H2: How We Work: Diagnose, Launch, Scale, Compound
+1. Diagnose — audit your ads, funnel, website, social and search presence; set targets for
+cost per lead and revenue.
+2. Launch — campaigns, creatives, landing pages and tracking go live within [2] weeks.
+3. Scale — weekly testing of audiences, offers and creatives; budget moves to winners.
+4. Compound — retention journeys, content and SEO keep lowering acquisition cost
+month after month.
+Why us (rewrite)
+H2: Why Brands in Hyderabad and Abroad Choose Digi Carotene
+Reported in leads and revenue, not likes — monthly reports on enquiries, cost per
+lead, ROAS and repeat customers.
+Every digital channel, one team — ads, growth, social, content, SEO, web, design and
+shoots under one roof, including our in-house studio (#DCProductions).
+Digi Carotene Website Content — SEO Rewrite
+Page 7 of 29
+
+===== PAGE 8 =====
+
+Built to test and scale — weekly optimisation, clear experiments, no lock-in to what
+isn't working.
+Local muscle, global standards — on-ground in Hyderabad; time-zone-friendly service
+for international clients.
+FAQ (answers visible in HTML)
+H2: Frequently Asked Questions
+Which is the best digital marketing agency in Hyderabad for small businesses? —
+The right agency reports in enquiries and revenue, not just reach. Digi Carotene works
+with clinics, salons, restaurants, schools and retailers across Hyderabad, with plans
+that start small and scale with results.
+What is the difference between performance marketing and growth marketing? —
+Performance marketing buys customers through paid ads and is measured on cost per
+lead and ROAS. Growth marketing improves the whole funnel — conversion, retention
+and referrals — so each customer costs less and buys more often. We run both
+together.
+Which digital marketing services do you offer? — Performance marketing, growth
+marketing, social media, SEO, content, web design, graphic design, personal branding,
+email marketing and Instagram shoots, plus offline activations and PR.
+Do you work with clients outside India? — Yes. We work with brands in [countries],
+with a dedicated account manager, video calls in your time zone and invoicing in
+[USD/AED/GBP].
+How much does digital marketing cost in Hyderabad? — It depends on channels and
+goals. Most retainers start at [ ₹ X per month]; ad spend is separate. We share a fixed
+scope and price after a free audit.
+Where is Digi Carotene located? — [Full address], Hyderabad, Telangana [PIN]. We
+meet clients in person across Hyderabad and online worldwide.
+Final CTA (rewrite)
+H2: Where Is Your Growth Leaking?
+Get a free growth audit. We'll review your ads, funnel, website and social presence, then
+show you the three fastest wins to lower cost per lead and grow revenue. Buttons: Get
+Your Free Growth Audit · Talk to Our Founders
+Digi Carotene Website Content — SEO Rewrite
+Page 8 of 29
+
+===== PAGE 9 =====
+
+About, Founder's Story and Team
+The About page is currently one section; it needs 7–8 blocks so Google sees depth and
+visitors see the people behind the work. Keyword: digital marketing company in
+Hyderabad.
+About Us — /about
+H1: About Digi Carotene — A Hyderabad Digital Marketing Company Built for the AI Era
+We are a full-service digital marketing and technology agency headquartered in
+Hyderabad. Since [year founded], we have helped [300+] brands get found on Google, get
+cited by AI, and get remembered in the real world — across India and [countries].
+H2: Our Mission: Make Brands Findable and Memorable
+Modern marketing needs technical precision and real-world craft. SEO ranks you on
+Google. Answer Engine Optimization and Generative Engine Optimization get AI systems
+to cite you. Offline activations and PR turn that visibility into footfall, trust and recall. We
+run all of it as one system.
+H2: Our Story in Numbers
+Stat row: [Year] founded · [300+] brands served · [X] countries · [X] team members · [X]
+campaigns shipped · [X]+ shoots by our in-house studio
+H2: What Makes Us Different
+Strategy and execution in one place — the people who plan your campaign also build
+it, shoot it and report on it.
+An in-house production studio — photo and video shoots for reels, ads and websites,
+without outsourcing (#DCProductions).
+Technology, not just marketing — WordPress and custom web builds, WhatsApp
+Business API automation, booking flows and CRM integrations.
+Local depth, global reach — we know Hyderabad's neighbourhoods and festivals, and
+we work in your time zone abroad.
+H2: Our Values
+Clarity over jargon · Results over vanity metrics · Honest reporting · Craft in every pixel ·
+Long-term partnerships
+H2: Where We Work
+Digi Carotene Website Content — SEO Rewrite
+Page 9 of 29
+
+===== PAGE 10 =====
+
+Headquarters: [Full address], Hyderabad. Serving Hyderabad, Secunderabad, Cyberabad,
+Bangalore and clients in [countries]. Embed the Google Map of the office.
+H2: Meet the People Behind the Work — 4 team photos → link to /about/team
+Keep exploring: Founder's Story · Our Clients · Case Studies
+Founder's Story — /about/founders-story
+H1: Founder's Story — Why We Started Digi Carotene
+H2: The Problem We Kept Seeing — [Founder name] watched local businesses pay three
+or four vendors who never spoke to each other. [1–2 lines in the founder's own voice.]
+H2: From [First Office/Year] to [300+] Brands — a short timeline: founding → first big
+client → studio launched → offline activations → first international client → AI search
+practice.
+H2: What We Believe About Marketing — 3 beliefs, in the founder's voice.
+H2: Where We Are Going — the global vision: helping Indian and international brands win
+discovery in the AI era.
+Add a Person schema for the founder with LinkedIn link — it helps AI engines connect
+founder and company.
+Team — /about/team
+H1: Our Team — Strategists, Creators and Engineers in Hyderabad
+H2: Leadership · H2: Strategy & Account Management · H2: Content & Social · H2:
+Performance & SEO · H2: Design, Web & Tech · H2: Production Studio
+Each card: photo, name, role, one line on what they own, LinkedIn icon. End with H2: Join
+Our Team → careers email or form.
+Clients & Global Presence — /about/clients
+This page carries the "clients across the globe" positioning, so it must show a map, logos
+by region and real quotes. Keywords: digital marketing agency for international clients,
+offshore digital marketing agency India.
+H1: Our Clients — 300+ Brands in Hyderabad, Across India and Around the World
+Digi Carotene Website Content — SEO Rewrite
+Page 10 of 29
+
+===== PAGE 11 =====
+
+From a teakwood furniture showroom in Lingampally to [a software company in Texas],
+our clients range from neighbourhood favourites to global businesses. What they share:
+they want marketing that shows up in revenue.
+H2: Where Our Clients Are
+Interactive world map with pins for each market and a client count per country. Below it, a
+row: India · [USA] · [UAE] · [UK] · [Singapore] · [Australia] — list only countries with at least
+one real client.
+H2: Brands We Work With in Hyderabad
+Logo grid grouped by sector: Salons & Beauty · Restaurants & Cafes · Healthcare &
+Hospitals · Education · Furniture & Home · Food & D2C · Events & Lifestyle. For franchise
+outlets, label them as the outlet (e.g., "[Brand], Attapur") so you don't imply a national
+contract.
+H2: Brands We Work With Across India — clients outside Telangana (e.g., [Dehradun],
+[Bangalore], [Rajahmundry]).
+H2: Our International Clients — logo grid + one line each: country, industry, service.
+H2: What Our Clients Say
+Video testimonials first (shot by our studio), then text quotes. Each: name, role, business,
+city/country, star rating. Link to the Google Business Profile reviews.
+H2: Why Global Brands Work With a Hyderabad Agency
+Senior talent at sustainable cost — strategists, designers, developers and writers in
+one team, priced for long-term retainers.
+Time-zone coverage — overlap hours for US, UK, Middle East and APAC clients; a
+named account manager.
+Global platforms, local fluency — Google, Meta, LinkedIn and AI search for
+international markets; on-ground execution for India launches.
+Clear process — weekly updates, monthly reports, shared dashboards, NDA and data-
+protection on request.
+H2: Industries We Serve — 7 icon cards linking to each Industry page.
+H2: Become Our Next Success Story — CTA: Book a Call (with time-zone picker) ·
+WhatsApp
+Digi Carotene Website Content — SEO Rewrite
+Page 11 of 29
+
+===== PAGE 12 =====
+
+Services hub and Digital Marketing overview
+Create /services as a true hub (the home CTA already points there) and make
+/services/digital-marketing the category page. Both target "digital marketing services in
+Hyderabad".
+Services hub — /services
+H1: Digital Marketing, Offline Activation and PR Services in Hyderabad
+Everything a brand needs to be found, chosen and remembered — planned by one team,
+executed in-house, reported in leads.
+H2: Search & AI Discovery — SEO · Local SEO & Google Business Profile · AEO · GEO
+H2: Digital Marketing — Performance · Growth · Content · Social · Graphic Design · Web ·
+Personal Branding · Email · Insta Shoot
+H2: Offline & Experiential Marketing — Mall · Residential · Theatre · Campus · Corporate
+Events · Festival · Pop-up Stores · Influencer · Metro
+H2: PR & Brand Communications — Media placements · Founder narrative · Online
+reputation management (ORM) · Crisis communication
+H2: Not Sure Where to Start? — 3-question quiz (Goal? Budget? Timeline?) that
+recommends a package and opens the contact form pre-filled.
+H2: Packages — Starter (local businesses) · Growth (multi-channel) · Enterprise / Global
+(custom). Show "from [ ₹ X]/month" or "custom quote".
+Digital Marketing overview — /services/digital-marketing
+H1: Digital Marketing Services in Hyderabad That Report in Leads, Not Likes
+We plan, create, run and measure your entire digital presence — Google, Meta, YouTube,
+LinkedIn, your website and AI search — as one connected system.
+H2: Our Digital Marketing Services — 10 cards (one per sub-service), each: icon, 2-line
+benefit, "Explore" link.
+H2: How Our Channels Work Together — a simple flow graphic: Content & Social build
+demand → SEO, AEO & ads capture it → the website and WhatsApp convert it → reporting
+shows what to scale.
+Digi Carotene Website Content — SEO Rewrite
+Page 12 of 29
+
+===== PAGE 13 =====
+
+H2: Tools and Platforms We Use — Google Ads, Meta Ads Manager, GA4, Search Console,
+Google Business Profile, LinkedIn Ads, WhatsApp Business API, WordPress, Shopify, Zoho,
+Canva, Adobe Suite.
+H2: Digital Marketing for Hyderabad Businesses and Global Brands — 2 short
+paragraphs: local (Maps, Telugu + English content, festival calendar) vs global
+(international targeting, multi-currency campaigns, time-zone reporting).
+H2: FAQs on Digital Marketing in Hyderabad — 5 questions: cost, timeline to results,
+contracts, reporting, Telugu content.
+Keep exploring: SEO · Performance Marketing · Case Studies
+SEO, AEO & GEO service page — /services/digital-marketing/seo
+This is the page most likely to win money keywords, so it gets the longest content (1,800–
+2,200 words). Keywords: SEO company in Hyderabad, SEO services Hyderabad, local SEO
+Hyderabad, GEO agency India, AEO services. The current statistics ("~40% click drop",
+"100 million weekly ChatGPT users in India") need a linked source or should be removed —
+AI engines and Google both reward cited claims.
+H1: SEO Company in Hyderabad — Rank on Google, Win Maps, Get Recommended by AI
+Sub-line (keep the current hook): Ranking #1 isn't the finish line anymore. Being the
+answer is.
+H2: SEO Built for How People Search in 2026
+Your customers still Google. They also ask ChatGPT, Gemini, Perplexity and Google's AI
+Overviews — and often get one answer back. We make sure that answer is you, with clear,
+trusted, well-structured content and a technically sound website.
+H2: Our SEO Services
+Technical SEO — site speed, Core Web Vitals, crawlability, schema markup, mobile UX,
+indexing fixes.
+Local SEO & Google Business Profile — Maps ranking, review strategy, NAP
+consistency, local landing pages for Hyderabad areas.
+On-page SEO & content — keyword-mapped service pages, blogs and FAQs that
+answer real questions.
+Link building & digital PR — authoritative mentions from Indian and international
+publications.
+Digi Carotene Website Content — SEO Rewrite
+Page 13 of 29
+
+===== PAGE 14 =====
+
+AEO (Answer Engine Optimization) — question-led content, FAQ and HowTo schema,
+featured-snippet targeting.
+GEO (Generative Engine Optimization) — entity building, brand mentions and
+citation-ready pages so AI tools name you.
+International SEO — hreflang, country-targeted pages and global link building for
+brands selling abroad.
+E-commerce SEO — category and product optimisation for Shopify and
+WooCommerce stores.
+H2: What You Get Every Month (replaces the four generic deliverables)
+A 90-day SEO roadmap, prioritised by impact
+Optimisation of [X] existing pages and [X] new articles per month
+Google Business Profile posts, photos and review replies
+A monthly report: rankings, organic leads, Maps calls and direction requests, AI
+citation share
+A monthly strategy call
+H2: How We Implement It — keep: Strategy & roadmap → Fix & build → Measure & expand.
+H2: Local SEO for Hyderabad Businesses
+We rank clinics, salons, restaurants, schools and showrooms in the neighbourhoods they
+serve — Gachibowli, Kondapur, Madhapur, Jubilee Hills, Banjara Hills, Kukatpally,
+Manikonda, Miyapur, Secunderabad and beyond. Link to /digital-marketing-agency-
+hyderabad.
+H2: SEO and AI Search for Global Brands
+For clients in [USA, UAE, UK, Australia], we build country-specific pages, international
+links and B2B content that gets cited when buyers ask AI for vendors. Link to /global.
+H2: Particularly Effective For — keep the six industries; link each to its Industry page.
+H2: SEO Results — one case card: "[Dermatology clinic, Hyderabad]: [X] keywords on
+page one, [X]% more appointment calls in [X] months."
+H2: Questions We Hear Most (write the answers in the HTML)
+How do I get my business recommended by ChatGPT? — Publish clear answers to the
+questions customers ask, earn mentions on trusted sites, keep your business details
+identical everywhere, and add structured data. AI tools recommend brands they can
+verify across many sources.
+Digi Carotene Website Content — SEO Rewrite
+Page 14 of 29
+
+===== PAGE 15 =====
+
+Do I still need SEO if people use AI search? — Yes. AI answers draw heavily from pages
+that already rank and are well structured. SEO is the foundation; AEO and GEO build
+on it.
+How much do SEO services cost in Hyderabad? — Local SEO typically starts at
+[ ₹ X]/month; multi-location or national SEO at [ ₹ X]/month; international SEO is quoted
+per market. We share a fixed scope after a free audit.
+How long does SEO take? — Technical fixes show in weeks; competitive rankings
+usually take 3–6 months. Google Maps visibility often moves faster.
+What is local SEO? — Optimising your Google Business Profile, reviews, local pages
+and citations so you appear in "near me" and Maps results in the areas you serve.
+Related: Performance Marketing · Content Marketing · Web Design · Free GEO Scan
+Other digital service pages
+Each page uses the nine-block scroll pattern; below are the H1, the H2 set and the key
+copy. Replace the shared generic deliverables ("Strategy and campaign plan / Creative
+and production / Tracking and reporting / Weekly optimisation") with service-specific
+ones — identical blocks across 20 pages read as thin content to Google. Add two NEW
+pages: WhatsApp Marketing & Automation and Online Reputation Management (both
+services you already deliver).
+Performance Marketing
+H1: Performance Marketing Agency in Hyderabad — Google, Meta and LinkedIn Ads
+That Pay Back
+Intro (keep the current hook): Clicks are cheap. Customers are not. We run ads around
+cost per lead, cost per customer and return on ad spend.
+H2s: What We Run (Google Search & Performance Max · Meta & Instagram · YouTube ·
+LinkedIn · Click-to-WhatsApp) · Landing Pages and Tracking That Actually Convert · Lead
+Generation for Local Businesses · Paid Campaigns for Global Markets · Our Reporting
+(CPL, CPA, ROAS, lead quality) · FAQs (minimum budget, how fast results come, who owns
+the ad account)
+Growth Marketing
+H1: Growth Marketing Services — Lower Acquisition Costs, More Repeat Customers
+Digi Carotene Website Content — SEO Rewrite
+Page 15 of 29
+
+===== PAGE 16 =====
+
+H2s: Full-Funnel Experiments · Retention, WhatsApp and Email Journeys · Referral and
+Loyalty Programs · Conversion Rate Optimisation · Growth Sprints: Our 6-Week Cycle ·
+FAQs
+Content Marketing
+H1: Content Marketing Agency in Hyderabad — Content That Ranks, Gets Cited and
+Sells
+H2s: Website and SEO Content · Blogs and Thought Leadership · Telugu and English
+Content for Local Audiences · Content for International B2B Buyers · Video Scripts and
+Reels Hooks · Our Editorial Process · FAQs
+Social Media Marketing
+H1: Social Media Marketing Agency in Hyderabad — Reels, Content and Community
+That Bring Customers
+Intro: We plan, shoot, edit, post and manage Instagram, Facebook, YouTube and LinkedIn
+for [X]+ active brands — salons, restaurants, hospitals, colleges and global companies.
+H2s: Monthly Content Calendars · Reels and Short Video (shot by our in-house studio) ·
+Captions, Hashtags and Local SEO in Every Post · Community Management and DMs ·
+Influencer Collaborations · Social Media for Restaurants, Salons and Clinics · FAQs (posts
+per month, who shoots, pricing)
+Graphic Designing
+H1: Graphic Design Services in Hyderabad — Brand Identity, Social Creatives and Print
+H2s: Logo and Brand Identity · Social Media Creatives · Ad Creatives · Packaging and Print ·
+Brand Guidelines · Portfolio · FAQs
+Web Design & Development
+H1: Website Design and Development Company in Hyderabad — Fast, SEO-Ready
+Websites
+H2s: Business Websites · E-commerce (Shopify, WooCommerce) · Learning Platforms
+(LearnDash) · Custom Builds and Product Configurators · Integrations (WhatsApp API,
+Razorpay, Zoho, booking systems) · Built for SEO, AEO and Speed · Our Process (Discover
+→ Design → Build → Launch → Grow) · Recent Websites · FAQs (cost, timeline, hosting,
+maintenance)
+Digi Carotene Website Content — SEO Rewrite
+Page 16 of 29
+
+===== PAGE 17 =====
+
+Personal Branding
+H1: Personal Branding Agency for Founders, Doctors and Creators in Hyderabad
+H2s: LinkedIn and Instagram Profile Strategy · Content and Ghostwriting · Video and
+Podcast Presence · Speaking and Media · Making AI Summaries Tell Your Story · FAQs
+Email Marketing
+H1: Email Marketing Services — Automated Journeys That Keep Customers Coming
+Back
+H2s: Welcome, Nurture and Win-Back Flows · Newsletters · E-commerce Automations ·
+Deliverability and List Health · Reporting · FAQs
+Insta Shoot
+H1: Instagram Shoots and Reels Production in Hyderabad
+H2s: Our In-House Studio (#DCProductions) · Restaurant and Food Shoots · Salon, Fashion
+and Bridal Shoots · Product and E-commerce Shoots · Corporate Event Coverage ·
+Locations We Shoot In · Packages · FAQs
+NEW — WhatsApp Marketing & Automation
+H1: WhatsApp Business API and Marketing Automation in Hyderabad
+H2s: Official WhatsApp Business API Setup · Click-to-WhatsApp Ads · Booking,
+Reminders and Broadcasts · Chatbots and CRM Integration · Use Cases (clinics, salons,
+restaurants, coaching) · FAQs
+NEW — Online Reputation Management
+H1: Online Reputation Management (ORM) Services in Hyderabad
+H2s: Google Review Growth and Response · Review Monitoring Across Platforms ·
+Handling Negative Reviews · Reputation for Doctors and Hospitals · Crisis Response ·
+FAQs
+Digi Carotene Website Content — SEO Rewrite
+Page 17 of 29
+
+===== PAGE 18 =====
+
+Offline marketing and PR pages
+Offline is where Hyderabad-specific keywords are easiest to win — name real venues and
+areas on every sub-page (only venues where you hold or can get permissions). Keyword:
+BTL activation agency in Hyderabad.
+Offline Marketing overview — /services/offline-marketing
+H1: Offline Marketing and BTL Activation Agency in Hyderabad
+Digital doesn't live in a vacuum. We put your brand in front of people in malls, gated
+communities, campuses, cinemas, metro stations and events — then route that attention
+into leads with QR codes, WhatsApp and retargeting.
+H2: Our Offline Marketing Services — 9 cards.
+H2: From Footfall to Follow-Up: How We Measure Offline — QR scans, WhatsApp opt-ins,
+coupon redemptions, lead forms, retargeting audiences.
+H2: Where We Activate in Hyderabad — malls, IT corridors (HITEC City, Gachibowli,
+Financial District), gated communities, colleges, metro stations, cinemas.
+H2: Activations Gallery — real photos with descriptive alt text.
+H2: FAQs — permissions, lead time, cost, cities covered outside Hyderabad.
+Sub-page H1s (same scroll pattern)
+Page H1 Must-have H2s
+Mall Activations Mall Activations in Hyderabad —
+Kiosks, Sampling and Pop-up
+Experiences
+Malls We Activate In · Formats ·
+Permissions & Logistics ·
+Measuring Results
+Residential
+Activations
+Residential Society Activations in
+Hyderabad's Gated Communities
+Communities We Reach · Stall &
+Sampling Formats · Weekend
+Calendars · Lead Capture
+Theatre
+Marketing
+Cinema and Theatre Advertising
+in Hyderabad
+On-Screen Ads · Foyer Branding ·
+Ticket & Popcorn Tie-Ins · Big-
+Release Timing
+Digi Carotene Website Content — SEO Rewrite
+Page 18 of 29
+
+===== PAGE 19 =====
+
+PR Services — /services/pr
+H1: PR Agency in Hyderabad — Media Coverage, Founder Narrative and Reputation
+Press coverage builds trust with people — and it is now one of the strongest sources AI
+answer engines quote. We make sure the public record tells your story accurately.
+H2: Our PR Services — Media placements (Telugu, English, national, international trade
+press) · Founder and executive narrative · Press releases and launches · Online reputation
+management · Crisis communication · Brand voice guidelines
+H2: PR That Feeds AI Search — how coverage becomes citation data for ChatGPT, Gemini
+and Perplexity.
+H2: Publications Our Clients Have Featured In — logo row (real placements only).
+H2: Our PR Process — Story mining → Media list → Pitch → Coverage → Amplification on
+social and search.
+H2: FAQs — guaranteed coverage?, cost, timelines, regional vs national.
+Page H1 Must-have H2s
+Campus
+Activations
+Campus Marketing and College
+Activations in Hyderabad
+Fest Sponsorships · Ambassador
+Programs · Workshops ·
+Admissions Campaigns
+Corporate Events Corporate Event Management
+and Launches in Hyderabad
+Product Launches · Summits &
+Conferences · Employee
+Engagement · Event Video
+Coverage
+Festival
+Marketing
+Festival Marketing in Hyderabad
+— Bonalu, Bathukamma, Diwali,
+Sankranti and More
+Festival Calendar · Themed
+Campaigns · Online + Offline Tie-
+Ins
+Pop-up Stores Pop-up Store Design and Setup in
+Hyderabad
+Concept & Design · Locations ·
+Staffing · Sales Tracking
+Influencer
+Campaigns
+Influencer Marketing Agency in
+Hyderabad — Telugu and Pan-
+India Creators
+Creator Discovery · Event
+Appearances · UGC · Reporting
+Metro Branding Hyderabad Metro Advertising and
+Transit Branding
+Station Branding · Train Wraps ·
+Digital Screens · Route Planning
+Digi Carotene Website Content — SEO Rewrite
+Page 19 of 29
+
+===== PAGE 20 =====
+
+Hyderabad location page and area pages
+The /digital-marketing-agency-hyderabad page exists but is hidden in inner footers; move
+it into the Locations menu and the home page, and give it 1,500+ words of genuinely local
+content. Keywords: digital marketing agency in Hyderabad, digital marketing company
+Hyderabad, best digital marketing agency Hyderabad, social media agency Hyderabad.
+/digital-marketing-agency-hyderabad
+H1: Digital Marketing Agency in Hyderabad — SEO, Ads, Social Media and Activations
+Under One Roof
+Digi Carotene is a Hyderabad-born agency working from [area]. We help local businesses
+get found on Google Maps, fill appointment books through ads and Instagram, and draw
+crowds with on-ground activations — with a team that can be at your outlet the same day.
+H2: Why Hyderabad Businesses Choose Us
+We know the city — from Gachibowli's IT crowd to Old City shoppers, and from Bonalu
+to Hyderabad Restaurant Week.
+Telugu and English content, written by people who live here.
+Our own studio for reels and shoots anywhere in the city.
+Face-to-face strategy meetings, not just Zoom.
+H2: Digital Marketing Services in Hyderabad — 8 service cards linking to each service
+page.
+H2: Areas We Serve in Hyderabad
+Gachibowli · HITEC City · Madhapur · Kondapur · Jubilee Hills · Banjara Hills · Manikonda ·
+Financial District · Kukatpally · Miyapur · Nizampet · Lingampally · Ameerpet · Begumpet ·
+Secunderabad · Somajiguda · Attapur · Kompally · Uppal · LB Nagar · Dilsukhnagar ·
+Shamshabad
+H2: Industries We Grow in Hyderabad — Restaurants & QSR · Salons · Clinics & Hospitals ·
+Colleges & Coaching · Furniture & Real Estate · Home Foods & D2C
+H2: Hyderabad Success Stories — 2–3 local case cards (sector + area + one number).
+H2: What Hyderabad Clients Say — Google reviews widget.
+H2: Visit Our Hyderabad Office — full address, phone, hours, Google Map embed, "Get
+Directions" link. NAP must match the Google Business Profile character for character.
+Digi Carotene Website Content — SEO Rewrite
+Page 20 of 29
+
+===== PAGE 21 =====
+
+H2: FAQs About Digital Marketing in Hyderabad — cost; best agency for small
+businesses; Telugu content; how fast Google Maps rankings improve; do you meet in
+person.
+Area landing pages (phase 2)
+Create 5–6 area pages only where you have real clients or an office nearby — e.g., /digital-
+marketing-agency-gachibowli, -kondapur, -kukatpally, -jubilee-hills, -secunderabad. Each
+needs ~600 words unique to that area (local clients, landmarks, local business mix).
+Templated pages that only swap the area name get ignored or penalised.
+H1 pattern: Digital Marketing Agency in [Area], Hyderabad
+H2s: Marketing for [Area] Businesses · Services · [Area] Clients We Work With · How to
+Reach Us from [Area] · FAQs
+Bangalore page
+Keep /digital-marketing-agency-bangalore, but only if you have Bangalore clients or a
+team there; if not, make it "Serving Bangalore from Hyderabad" and say so honestly.
+Global markets page — /global (NEW)
+This page is the core of the "clients across the globe" positioning and targets buyers
+searching for an offshore or outsourced agency in India. Keywords: offshore digital
+marketing agency India, outsource digital marketing to India, white-label digital
+marketing India. Add country sections only for markets where you can show a client.
+H1: Global Digital Marketing Agency — Hyderabad Talent, Worldwide Results
+Brands in [the USA, UAE, UK, Singapore and Australia] work with Digi Carotene for one
+reason: a senior, full-stack marketing team that delivers like an in-house department — at
+a cost that makes long-term growth possible.
+H2: How We Work With International Clients
+1. Discovery call in your time zone — goals, markets, budgets.
+2. Market audit — your search, AI-citation and competitor landscape in each country.
+3. 90-day plan and fixed scope — signed off before work starts.
+4. Dedicated pod — account manager, strategist, designer, writer, ads specialist,
+developer.
+Digi Carotene Website Content — SEO Rewrite
+Page 21 of 29
+
+===== PAGE 22 =====
+
+5. Weekly updates, monthly reviews — shared dashboards, Slack or Teams, invoices in
+your currency.
+H2: Services for Global Brands
+International and multi-country SEO, AEO and GEO
+Google, Meta and LinkedIn ads for US, UK, GCC and APAC audiences
+LinkedIn marketing and B2B thought leadership
+Websites, landing pages and sales decks
+White-label services for agencies abroad
+India market-entry: launches, activations and PR for global brands entering India
+H2: Markets We Serve
+United States — B2B SaaS and enterprise tech: LinkedIn, account-based content,
+website revamps.
+UAE & GCC — retail, real estate, hospitality: bilingual campaigns, Meta and Google ads.
+United Kingdom & Europe — e-commerce and services: SEO, content, paid social.
+Singapore & Australia — D2C and professional services.
+Indian diaspora brands — businesses serving NRI audiences worldwide.
+H2: Why Choose an Indian Agency — and Why Hyderabad
+Hyderabad is one of India's largest technology hubs, home to global capability centres of
+major tech companies. That talent pool — strong in tech, data and English-first
+communication — is what our team is built from.
+H2: Time-Zone Coverage — a simple table: client region · overlap hours (IST) · meeting
+windows.
+H2: Security, Contracts and Payments — NDAs, data-protection practices, international
+payments (wire, PayPal, Wise), GST/export invoicing.
+H2: Global Client Stories — 2–3 case cards with country flags.
+H2: FAQs for International Clients — Do you work in our time zone? How do we pay? Who
+owns the ad accounts and content? Can you work white-label? Minimum engagement?
+CTA: Book a call in your time zone (Calendly with time-zone detection).
+Digi Carotene Website Content — SEO Rewrite
+Page 22 of 29
+
+===== PAGE 23 =====
+
+Industries pages (NEW)
+Industry pages capture high-intent searches like "digital marketing for doctors in
+Hyderabad" and show depth from your real client base. Build a hub at /industries plus
+seven pages, each 900–1,200 words.
+Industries hub — /industries
+H1: Digital Marketing by Industry — Strategies Built for Your Business
+H2: Industries We Specialise In — 7 cards · H2: Why Industry Experience Matters · H2:
+Talk to an Industry Specialist (CTA)
+Industry pages
+URL H1 H2 set
+/industries/healthcare Healthcare and Hospital
+Marketing Agency in
+Hyderabad
+Patient Acquisition Ads ·
+Doctor Personal Branding ·
+Local SEO for Clinics · Reviews
+and ORM · Compliant Medical
+Content · Case Study · FAQs
+/industries/restaurants Restaurant and QSR
+Marketing Agency in
+Hyderabad
+Food Shoots and Reels ·
+Zomato/Swiggy and Maps
+Visibility · Festival and Event
+Campaigns · Influencer Visits ·
+Footfall Offers · Case Study ·
+FAQs
+/industries/salons Salon and Beauty Marketing
+Agency in Hyderabad
+Before-After Reels · Booking
+via WhatsApp · Offers and
+Memberships · Franchise
+Outlet Marketing · Reviews ·
+FAQs
+/industries/education Education Marketing
+Agency — Admissions
+Campaigns for Colleges and
+Institutes
+Admissions Funnels · Campus
+Activations · Program Pages
+that Rank · Student
+Testimonials · Parent Targeting
+· FAQs
+Digi Carotene Website Content — SEO Rewrite
+Page 23 of 29
+
+===== PAGE 24 =====
+
+Each page: open with the industry's problem in one line, show 2–3 client logos from that
+sector, one mini case study, and link to the 3–4 most relevant service pages.
+Case studies, Contact and Blog
+These three pages turn readers into enquiries and keep fresh content flowing; the blog
+plan below gives 12 posts targeting Hyderabad and global searches.
+Case Studies — /case-studies
+H1: Digital Marketing Case Studies — Real Results for Hyderabad and Global Brands
+H2: Filter by Industry, Service or Country — filter chips.
+Each case study page uses this template:
+H1: How [Client/Sector] in [City/Country] Got [Result] with [Service]
+H2: The Challenge · H2: Our Approach · H2: What We Did (bullets) · H2: The Results (3
+big numbers) · H2: In the Client's Words (quote) · H2: Services Used (links) · H2: Want
+Results Like These? (CTA)
+Publish 6 to start: one each for SEO, performance ads, social media, offline activation, web
+build and an international client.
+URL H1 H2 set
+/industries/real-estate-
+furniture
+Real Estate and Furniture
+Marketing in Hyderabad
+Showroom Footfall Ads ·
+Product Shoots · Lead
+Qualification · Site Visits ·
+FAQs
+/industries/d2c-retail D2C, Food and Retail Brand
+Marketing
+Brand Positioning · E-
+commerce Ads · Content and
+Shoots · Pop-ups ·
+Marketplaces · FAQs
+/industries/b2b-
+technology
+B2B and Technology
+Marketing for Indian and
+Global Companies
+LinkedIn Marketing · Account-
+Based Content · Sales Decks ·
+Website Revamps · GEO for
+B2B · FAQs
+Digi Carotene Website Content — SEO Rewrite
+Page 24 of 29
+
+===== PAGE 25 =====
+
+Contact — /contact
+H1: Contact Digi Carotene — Digital Marketing Agency in Hyderabad
+Tell us where growth is stuck. We reply within [one working day] with next steps — or
+WhatsApp us for a faster chat.
+H2: Get a Free Proposal — short form: name, business, website, country, service (multi-
+select), monthly budget range, message. Keep it to 6 fields.
+H2: Visit or Call Us — full address, Google Map, phone (click-to-call), WhatsApp, email,
+office hours (IST).
+H2: For International Clients — book a call in your time zone; email for RFPs.
+H2: What Happens Next — 1. We review your brand · 2. 30-minute discovery call · 3. Free
+audit + proposal in [5] days.
+H2: Careers and Partnerships — separate emails so sales enquiries stay clean.
+The Journal — blog plan (first 12 posts)
+# Title (H1) Target keyword Links to
+1 How Much Does Digital Marketing
+Cost in Hyderabad in 2026?
+digital marketing cost
+Hyderabad
+Services hub,
+Contact
+2 How to Get Your Business
+Recommended by ChatGPT and
+Gemini
+how to rank in ChatGPT SEO/GEO
+3 Google Business Profile Checklist
+for Hyderabad Businesses
+Google My Business
+Hyderabad
+SEO, Hyderabad
+page
+4 Restaurant Marketing Ideas in
+Hyderabad That Fill Tables
+restaurant marketing
+Hyderabad
+Restaurants
+industry
+5 Salon Marketing: Reels, Reviews and
+WhatsApp Bookings
+salon marketing ideas Salons industry
+6 Hospital and Clinic Marketing: What
+Works and What's Compliant
+healthcare marketing
+India
+Healthcare
+industry
+7 Festival Marketing Calendar for
+Hyderabad Brands
+festival marketing
+Hyderabad
+Festival
+Marketing
+Digi Carotene Website Content — SEO Rewrite
+Page 25 of 29
+
+===== PAGE 26 =====
+
+Post rules: author bio with photo (E-E-A-T), a 2–3 line direct answer under the H1 (AI
+engines lift this), FAQ block, table of contents, reading-progress bar, and 3 related-post
+cards at the end.
+Technical SEO, schema and meta checklist
+Hand this section to the developer: meta titles under 60 characters, descriptions under
+155, one H1 per page, and the schema types listed.
+Meta titles and descriptions
+# Title (H1) Target keyword Links to
+8 Mall vs Residential Activations:
+Which Brings Better Leads?
+BTL activation
+Hyderabad
+Offline overview
+9 SEO vs AEO vs GEO: What's the
+Difference?
+GEO vs SEO SEO/GEO
+10 Why US and UAE Companies
+Outsource Marketing to India
+outsource digital
+marketing India
+Global page
+11 WhatsApp Business API for Small
+Businesses: A Practical Guide
+WhatsApp Business API
+India
+WhatsApp page
+12 College Admissions Marketing: A
+Season Playbook
+admissions marketing Education
+industry
+Page Meta title Meta description
+Home Digital Marketing Agency in
+Hyderabad | Digi Carotene
+SEO, AI search (GEO/AEO), ads,
+social media, websites and BTL
+activations for 300+ brands in
+Hyderabad and worldwide. Get a
+free audit.
+About About Digi Carotene | Digital
+Marketing Company, Hyderabad
+Meet the Hyderabad team behind
+300+ brands — strategists, creators
+and engineers growing businesses in
+India and abroad.
+Digi Carotene Website Content — SEO Rewrite
+Page 26 of 29
+
+===== PAGE 27 =====
+
+Page Meta title Meta description
+Clients Our Clients in Hyderabad, India &
+Worldwide | Digi Carotene
+Salons, restaurants, hospitals,
+colleges and global companies trust
+Digi Carotene. See logos, stories and
+reviews.
+SEO SEO Company in Hyderabad | SEO,
+AEO & GEO | Digi Carotene
+Rank on Google, win Maps and get
+recommended by ChatGPT and
+Gemini. Local, national and
+international SEO from Hyderabad.
+Performance Performance Marketing Agency
+Hyderabad | Google & Meta Ads
+Ads built around cost per lead and
+ROAS. Google, Meta, YouTube and
+LinkedIn campaigns for local and
+global brands.
+Social Social Media Marketing Agency in
+Hyderabad | Digi Carotene
+Reels, content calendars and
+community management with our in-
+house studio. Instagram, Facebook,
+YouTube, LinkedIn.
+Web Website Design Company in
+Hyderabad | Digi Carotene
+Fast, SEO-ready websites, e-
+commerce stores and custom builds
+with WhatsApp, payment and CRM
+integrations.
+Offline BTL Activation Agency in
+Hyderabad | Mall, Campus & Metro
+Mall, residential, campus, theatre
+and metro activations that turn
+footfall into trackable leads.
+PR PR Agency in Hyderabad | Media,
+Founder PR & ORM
+Media coverage, founder narrative
+and reputation management that
+builds trust and AI-search citations.
+Hyderabad Best Digital Marketing Agency in
+Hyderabad | Digi Carotene
+SEO, ads, social and activations for
+Hyderabad businesses, from
+Gachibowli to Secunderabad. Visit
+our office or WhatsApp us.
+Global Offshore Digital Marketing Agency
+in India | Digi Carotene
+A senior marketing team in
+Hyderabad for brands in the USA,
+UAE, UK and APAC. Time-zone
+friendly, fixed scope.
+Digi Carotene Website Content — SEO Rewrite
+Page 27 of 29
+
+===== PAGE 28 =====
+
+Schema markup
+Organization + LocalBusiness (ProfessionalService) on every page: name, logo,
+address, geo coordinates, phone, hours, sameAs (Instagram, LinkedIn, Facebook,
+YouTube, Google Business Profile), areaServed (Hyderabad + countries).
+Service schema on each service page; FAQPage wherever FAQs appear;
+BreadcrumbList on inner pages.
+Person for founder and team leads; Article with author on blog posts;
+Review/AggregateRating only for genuine, verifiable reviews.
+Technical
+Exactly one H1 per page (fix the home hero first).
+Self-referencing canonicals; the current build points canonicals to digicarotene.com —
+correct for launch, but keep the Vercel preview set to noindex so it doesn't compete.
+XML sitemap + robots.txt; submit to Google Search Console and Bing Webmaster Tools
+(Bing feeds ChatGPT search).
+Descriptive image alt text and file names; compress the hero banners (serve
+AVIF/WebP, lazy-load below the fold).
+Core Web Vitals: LCP under 2.5s on mobile — the three full-width hero images are the
+main risk.
+Add an llms.txt file summarising services, locations and key pages for AI crawlers.
+Identical NAP on the site, Google Business Profile, Justdial, Sulekha, Clutch,
+GoodFirms, LinkedIn and Facebook. Clutch and GoodFirms profiles also help win
+international clients.
+Before launch: facts to confirm
+Page Meta title Meta description
+Contact Contact Digi Carotene | Digital
+Marketing Agency Hyderabad
+Get a free proposal, call, WhatsApp
+or visit our Hyderabad office.
+International clients can book a call
+in their time zone.
+Real WhatsApp number and office address
+Founding year, client count, team size, countries served
+Digi Carotene Website Content — SEO Rewrite
+Page 28 of 29
+
+===== PAGE 29 =====
+
+Client logos with permission
+At least 3 case studies with numbers
+Starting prices (or "custom quote")
+Sources for any statistic quoted on the site
+Digi Carotene Website Content — SEO Rewrite
+Page 29 of 29

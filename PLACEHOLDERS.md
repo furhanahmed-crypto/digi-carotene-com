@@ -1,6 +1,8 @@
 # PLACEHOLDERS — Unconfirmed proof gaps
 
-Source PDF: `docs/content/Digi_Carotene_Website_Content.pdf`  
+Canonical: `docs/content/Digi_Carotene_Website_Content_v2.pdf` (+ `.txt` extract)  
+Archive: `docs/content/Digi_Carotene_Website_Content.pdf` (v1)  
+What used what: `docs/content/CONTENT-USAGE.md`
 Do not invent values. Replace when confirmed.
 
 ## NAP / contact (must match Google Business Profile)
@@ -51,3 +53,10 @@ Do not invent values. Replace when confirmed.
 ## Production
 
 - Insta shoot edit turnaround days — to confirm
+
+## v2 pages (shells)
+
+- `/services` — group summaries, quiz logic, package inclusions and "from ₹ X/month" prices — to confirm
+- `/global` — markets with real clients, time-zone overlap/meeting windows, payment + security details, global case stories, FAQ answers — to confirm
+- `/industries` + `/industries/*` — one-line proof per industry, one-line industry problem, permissioned sector logos, mini case studies, FAQ answers — to confirm
+- `/services/digital-marketing/whatsapp-marketing` and `/orm` — all section copy, FAQ answers — to confirm

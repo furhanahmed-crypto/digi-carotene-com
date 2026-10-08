@@ -1,14 +1,16 @@
 import type { Metadata } from "next"
 
-/** Meta titles/descriptions from Digi_Carotene_Website_Content.pdf (pages.json). */
+/** Meta titles/descriptions — canonical: Digi_Carotene_Website_Content_v2.pdf */
 export const pageMetaBySlug = {
   "/": {
-    title: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
-    description: "Data-led digital marketing agency with 7+ years and 300+ clients. SEO, AEO, performance ads, social, web and offline activations in Hyderabad and Bangalore.",
+    title: "Digital Marketing Agency in Hyderabad | Digi Carotene",
+    description:
+      "SEO, AI search (GEO/AEO), ads, social media, websites and BTL activations for 300+ brands in Hyderabad and worldwide. Get a free audit.",
   },
   "/about": {
-    title: "About Digi Carotene | Data-Led Marketing Agency, Hyderabad",
-    description: "7+ years, 300+ clients, one belief: marketing should be measured. Meet the Hyderabad agency helping brands in Hyderabad, Bangalore and beyond grow.",
+    title: "About Digi Carotene | Digital Marketing Company, Hyderabad",
+    description:
+      "Meet the Hyderabad team behind 300+ brands — strategists, creators and engineers growing businesses in India and abroad.",
   },
   "/about/team": {
     title: "Our Team | Strategists, Creators & Analysts",
@@ -19,8 +21,14 @@ export const pageMetaBySlug = {
     description: "How a Hyderabad founder built a data-led marketing agency trusted by 300+ clients over 7+ years, and why every campaign still starts with a number.",
   },
   "/about/clients": {
-    title: "Our Clients | 300+ Brands Across Industries",
-    description: "300+ clients in hospitality, healthcare, retail, education, real estate and tech trust Digi Carotene for measurable marketing in Hyderabad and Bangalore.",
+    title: "Our Clients in Hyderabad, India & Worldwide | Digi Carotene",
+    description:
+      "Salons, restaurants, hospitals, colleges and global companies trust Digi Carotene. See logos, stories and reviews.",
+  },
+  "/contact": {
+    title: "Contact Digi Carotene | Digital Marketing Agency Hyderabad",
+    description:
+      "Get a free proposal, call, WhatsApp or visit our Hyderabad office. International clients can book a call in their time zone.",
   },
   "/services/digital-marketing": {
     title: "Digital Marketing Services Hyderabad & Bangalore",
@@ -126,9 +134,54 @@ export const pageMetaBySlug = {
     title: "SEO, AI Search & Growth Insights | Digi Carotene Journal",
     description: "Practical guides on SEO, AI search, ads, social and offline marketing for businesses in Hyderabad, Bangalore and beyond. Written by the Digi Carotene team.",
   },
-  "/contact": {
-    title: "Contact Digi Carotene | Digital Marketing Agency, Hyderabad",
-    description: "Talk to Digi Carotene about SEO, ads, social, web, activations or PR. Free audit for businesses in Hyderabad and Bangalore. Call, WhatsApp or email us.",
+  // --- v2 additions (Digi_Carotene_Website_Content_v2) ---
+  "/services": {
+    title: "Digital Marketing Services in Hyderabad | Digi Carotene",
+    description: "Digital marketing, SEO and AI search, offline activations and PR from one Hyderabad team. Compare packages and get a free growth audit.",
+  },
+  "/global": {
+    title: "Offshore Digital Marketing Agency in India | Digi Carotene",
+    description: "A senior marketing team in Hyderabad for brands in the USA, UAE, UK and APAC. Time-zone friendly, fixed scope.",
+  },
+  "/industries": {
+    title: "Digital Marketing by Industry | Digi Carotene",
+    description: "Strategies built for healthcare, restaurants, salons, education, real estate, D2C and B2B brands. Talk to an industry specialist.",
+  },
+  "/industries/healthcare": {
+    title: "Healthcare Marketing Agency in Hyderabad | Digi Carotene",
+    description: "Patient acquisition ads, local SEO, reviews and doctor branding for clinics and hospitals in Hyderabad. Get a free growth audit.",
+  },
+  "/industries/restaurants": {
+    title: "Restaurant & QSR Marketing Agency Hyderabad",
+    description: "Food shoots, reels, Maps visibility and footfall campaigns for restaurants and QSR brands in Hyderabad. Get a free growth audit.",
+  },
+  "/industries/salons": {
+    title: "Salon & Beauty Marketing Agency in Hyderabad",
+    description: "Before-after reels, WhatsApp bookings, offers and reviews for salons and beauty brands in Hyderabad. Get a free growth audit.",
+  },
+  "/industries/education": {
+    title: "Education Marketing Agency | Admissions Campaigns",
+    description: "Admissions funnels, campus activations and program pages that rank, for colleges and institutes. Get a free growth audit.",
+  },
+  "/industries/real-estate-furniture": {
+    title: "Real Estate & Furniture Marketing in Hyderabad",
+    description: "Showroom footfall ads, product shoots and lead qualification for real estate and furniture brands in Hyderabad.",
+  },
+  "/industries/d2c-retail": {
+    title: "D2C, Food & Retail Brand Marketing | Digi Carotene",
+    description: "Brand positioning, e-commerce ads, shoots, pop-ups and marketplaces for D2C, food and retail brands. Get a free growth audit.",
+  },
+  "/industries/b2b-technology": {
+    title: "B2B & Technology Marketing Agency | Digi Carotene",
+    description: "LinkedIn marketing, account-based content, sales decks and GEO for Indian and global B2B and technology companies.",
+  },
+  "/services/digital-marketing/whatsapp-marketing": {
+    title: "WhatsApp Business API & Marketing in Hyderabad",
+    description: "Official WhatsApp Business API setup, click-to-WhatsApp ads, bookings, reminders and CRM integrations. Free growth audit.",
+  },
+  "/services/digital-marketing/orm": {
+    title: "Online Reputation Management in Hyderabad | ORM",
+    description: "Google review growth, monitoring, negative review handling and crisis response for brands, doctors and hospitals in Hyderabad.",
   },
 } as const
 

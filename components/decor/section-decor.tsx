@@ -124,7 +124,7 @@ type SectionDecorProps = {
   opacity?: number
   /** Slow idle drift after draw — pass an axis for variety across a section */
   float?: boolean | FloatAxis
-  /** Peak drift distance in px before travel scale (default 16 → ~26px) */
+  /** Peak drift distance in px before travel scale (default 16 → ~31px) */
   floatDistance?: number
   /** Drift cycle length in seconds before duration scale (defaults ~4–6s) */
   floatDuration?: number
@@ -229,8 +229,8 @@ export function SectionDecor({
           const baseDuration =
             floatDuration ??
             (floatAxis === "x" ? 4.2 : floatAxis === "xy" ? 4.8 : 3.6)
-          // +20% travel vs prior scale; cycle stretches with distance so speed stays natural.
-          const travelScale = 1.62
+          // Travel +20% again; cycle length unchanged → covers more ground a bit quicker.
+          const travelScale = 1.944
           const durationScale = 1.2
           const duration =
             baseDuration * (floatDuration ? 0.85 : 1) * durationScale

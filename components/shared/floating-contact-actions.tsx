@@ -78,7 +78,6 @@ export function FloatingContactActions() {
       <ExpandAction
         href={whatsappHref}
         label="WhatsApp"
-        external
         icon={<WhatsAppIcon className="size-5" />}
         iconClassName="bg-[#25D366] text-white"
         expandedClassName="bg-[#25D366] hover:shadow-[#25D366]/35"

@@ -27,11 +27,11 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://digicarotene.com"),
   title: {
-    default: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
+    default: "Digital Marketing Agency in Hyderabad | Digi Carotene",
     template: "%s | Digi Carotene",
   },
   description:
-    "Data-led digital marketing agency with 7+ years and 300+ clients. SEO, AEO, performance ads, social, web and offline activations in Hyderabad and Bangalore.",
+    "SEO, AI search (GEO/AEO), ads, social media, websites and BTL activations for 300+ brands in Hyderabad and worldwide. Get a free audit.",
   applicationName: "Digi Carotene",
   alternates: {
     canonical: "/",
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://digicarotene.com",
     siteName: "Digi Carotene",
-    title: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
+    title: "Digital Marketing Agency in Hyderabad | Digi Carotene",
     description:
-      "Found. Chosen. Measured. Digi Carotene helps brands get found on Google, recommended by AI, and chosen in the real world.",
+      "SEO, AI search (GEO/AEO), ads, social media, websites and BTL activations for 300+ brands in Hyderabad and worldwide.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
+    title: "Digital Marketing Agency in Hyderabad | Digi Carotene",
     description:
-      "Found. Chosen. Measured. SEO, AEO, ads, social, web and offline activations — reported in leads and revenue.",
+      "Performance and growth marketing for Hyderabad and global brands — reported in leads and revenue.",
   },
   robots: {
     index: true,

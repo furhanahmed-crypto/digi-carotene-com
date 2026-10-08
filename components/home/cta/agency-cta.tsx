@@ -2,7 +2,6 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { ctaDecor } from "@/components/home/section-decors"
-import { whatsappHref } from "@/constants/home/navigation"
 import { homeSections } from "@/constants/home/sections"
 import { Reveal } from "@/components/motion/reveal"
 import { SectionLayout } from "@/components/shared/section-layout"
@@ -42,9 +41,7 @@ export function AgencyCta() {
           </Button>
           <Button
             nativeButton={false}
-            render={
-              <a href={whatsappHref} target="_blank" rel="noreferrer" />
-            }
+            render={<Link href={cta.secondary.href} />}
             size="lg"
             variant="outline"
             className="border-ink/25 bg-white/50 text-ink hover:border-ink hover:bg-white dark:border-border dark:bg-transparent dark:text-foreground"

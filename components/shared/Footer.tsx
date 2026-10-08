@@ -36,13 +36,45 @@ export function Footer() {
               <SiteLogo heightClassName="h-16" />
             </Link>
             <p className="max-w-sm text-sm leading-[1.6] text-muted-foreground md:text-base dark:text-white/70">
-              Found. Chosen. Measured. Data-led digital, offline and PR for
-              brands in Hyderabad, Bangalore and beyond — 7+ years, 300+
+              Found. Chosen. Measured. Performance and growth marketing for
+              brands in Hyderabad and worldwide — [[7+]] years, [[300+]]
               clients.
             </p>
-            <div className="text-[13px] font-medium tracking-[0.03em] text-muted-foreground uppercase dark:text-white/55">
-              Hyderabad · Bangalore
+            <div className="space-y-1 text-sm text-muted-foreground dark:text-white/65">
+              <p className="text-[13px] font-medium tracking-[0.03em] uppercase dark:text-white/55">
+                Hyderabad · Bangalore · Global
+              </p>
+              <p>[[Full office address + PIN — match GBP]]</p>
+              <p>[[+91 XXXXX XXXXX — to confirm]]</p>
+              <p>[[Office hours IST — to confirm]]</p>
             </div>
+            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground dark:text-white/65">
+              <li>
+                <Link href="/digital-marketing-agency-hyderabad" className={linkClass}>
+                  Hyderabad
+                </Link>
+              </li>
+              <li>
+                <Link href="/digital-marketing-agency-bangalore" className={linkClass}>
+                  Bangalore
+                </Link>
+              </li>
+              <li>
+                <Link href="/global" className={linkClass}>
+                  Global
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries" className={linkClass}>
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className={linkClass}>
+                  Services
+                </Link>
+              </li>
+            </ul>
           </div>
 
           <div className="space-y-4 lg:col-span-2">

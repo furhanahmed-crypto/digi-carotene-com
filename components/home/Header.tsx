@@ -34,7 +34,7 @@ export function Header() {
         className={cn(
           "mx-auto w-full max-w-6xl rounded-2xl transition-all duration-300",
           isScrolled
-            ? "max-w-5xl border border-border bg-card/80 shadow-sm backdrop-blur-md"
+            ? "max-w-[calc(64rem+50px)] border border-border bg-card/80 shadow-sm backdrop-blur-md"
             : isMenuOpen
               ? "border border-border bg-card/90 shadow-sm backdrop-blur-md"
               : ""

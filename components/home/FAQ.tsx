@@ -16,8 +16,25 @@ import { FaqQuestionMark } from "./faq/faq-question-mark"
 export function FAQ() {
   const { faq } = homeSections
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  }
+
   return (
     <SectionLayout id="faq" tone="cream" decor={faqDecor}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Reveal>
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
           <aside className="lg:sticky lg:top-28 lg:col-span-5">
@@ -48,8 +65,11 @@ export function FAQ() {
           </aside>
 
           <div className="lg:col-span-7">
+            {/* Answers stay in the HTML for crawlers (v2). Accordion is progressive enhancement. */}
             <Accordion
               data-reveal-group
+              multiple
+              defaultValue={faq.items.map((_, index) => `faq-${index}`)}
               className="overflow-hidden rounded-2xl border border-ink/10 bg-background shadow-[0_18px_50px_rgba(17,17,17,0.08)] dark:border-border dark:bg-card dark:shadow-none"
             >
               {faq.items.map((item, index) => (
@@ -60,10 +80,12 @@ export function FAQ() {
                   className="border-ink/10 px-2 transition-colors not-last:border-b hover:bg-brand-yellow/12 data-open:bg-brand-yellow/18 dark:border-border dark:hover:bg-brand-yellow/10 dark:data-open:bg-brand-yellow/14 sm:px-5"
                 >
                   <AccordionTrigger className="rounded-none py-5 text-left font-display text-[17px] leading-[1.3] font-medium hover:no-underline data-panel-open:text-ink md:text-[20px] **:data-[slot=accordion-trigger-icon]:text-ink/45 data-panel-open:**:data-[slot=accordion-trigger-icon]:text-ink">
-                    {item.question}
+                    <h3 className="pr-4 font-display text-[17px] leading-[1.3] font-medium md:text-[20px]">
+                      {item.question}
+                    </h3>
                   </AccordionTrigger>
                   <AccordionContent className="pb-5 text-base leading-[1.6] text-muted-foreground md:text-lg">
-                    {item.answer}
+                    <p>{item.answer}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}

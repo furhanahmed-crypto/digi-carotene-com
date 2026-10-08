@@ -14,7 +14,7 @@ Concrete work derived from PRD + DESIGN + ARCHITECTURE.
 - [x] White / cream / yellow section rhythm
 - [x] Search ranking SERP (cream, premium stage, one-direction border)
 - [x] Hero typing accents + SERP query typing (type → hold 3s → erase)
-- [x] PDF content synced sitewide (`docs/content/`) with honest placeholders
+- [x] PDF content synced sitewide (`docs/content/` — see `CONTENT-USAGE.md`) with honest placeholders
 - [x] Shared `SectionLayout` atmosphere + padding + tones across homepage
 - [x] SectionMark on all homepage content sections
 - [x] Equal-height growth framework cards

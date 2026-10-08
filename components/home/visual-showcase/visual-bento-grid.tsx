@@ -14,7 +14,8 @@ export function VisualBentoGrid() {
       {items.map((item, index) => (
         <VisualBentoItem
           key={item.id}
-          label={item.label}
+          title={item.title}
+          body={item.body}
           layout={item.layout}
           src={getPlaceholderImage(index)}
           data-reveal="image"

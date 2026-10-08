@@ -30,6 +30,7 @@ export type AudienceItem = {
   id: string
   label: string
   body: string
+  href?: string
 }
 
 export type ResultCard = {

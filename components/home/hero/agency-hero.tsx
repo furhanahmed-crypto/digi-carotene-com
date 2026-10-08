@@ -1,15 +1,14 @@
 import Link from "next/link"
-import { ArrowRight, Bot, Search, Sparkles } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 import { homeSections } from "@/constants/home/sections"
+import { contactHref, whatsappHref } from "@/constants/home/navigation"
 import { Reveal } from "@/components/motion/reveal"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { Button } from "@/components/ui/button"
 import { heroDecor } from "@/components/home/section-decors"
 import { HeroHeadlineAccent } from "./hero-headline-accent"
 import { HeroMosaic } from "./hero-mosaic"
-
-const capabilityIcons = [Search, Bot, Sparkles] as const
 
 export function AgencyHero() {
   const { hero } = homeSections
@@ -30,19 +29,23 @@ export function AgencyHero() {
               <p className="truncate text-[12px] font-semibold tracking-[0.14em] text-foreground uppercase md:text-[13px]">
                 {hero.eyebrow}
               </p>
-              <span className="hidden h-4 w-px bg-border sm:block" />
-              <p className="hidden text-[11px] font-medium tracking-[0.08em] text-muted-foreground uppercase sm:block">
-                Hyderabad · Bangalore · Global
-              </p>
             </div>
 
+            {/* Exactly one H1 — keyword from v2 SEO rewrite. Rotating lines are spans below. */}
             <h1
               data-reveal="heading"
-              className="mt-5 font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] md:text-[56px] lg:text-[64px]"
+              className="mt-5 font-display text-[32px] leading-[1.08] font-medium tracking-[-0.02em] md:text-[48px] lg:text-[56px]"
             >
-              <span className="block text-foreground">{hero.headlineBefore}</span>
-              <HeroHeadlineAccent accents={hero.headlineAccents} />
+              {hero.headline}
             </h1>
+
+            <p
+              data-reveal="text"
+              className="mt-4 font-display text-[22px] leading-snug text-foreground md:text-[28px]"
+              aria-live="polite"
+            >
+              <HeroHeadlineAccent accents={hero.rotatingLines} />
+            </p>
 
             <p
               data-reveal="text"
@@ -54,7 +57,7 @@ export function AgencyHero() {
             <div data-reveal="cta" className="mt-8 flex flex-wrap gap-3">
               <Button
                 nativeButton={false}
-                render={<Link href={hero.primaryCta.href} />}
+                render={<Link href={hero.primaryCta.href || contactHref} />}
                 size="lg"
               >
                 {hero.primaryCta.label}
@@ -62,46 +65,13 @@ export function AgencyHero() {
               </Button>
               <Button
                 nativeButton={false}
-                render={<Link href={hero.secondaryCta.href} />}
+                render={<Link href={whatsappHref} />}
                 size="lg"
                 variant="outline"
               >
                 {hero.secondaryCta.label}
               </Button>
             </div>
-
-            <ul
-              data-reveal-group
-              className="mt-10 grid grid-cols-1 divide-y divide-border border-y border-border sm:grid-cols-3 sm:divide-x sm:divide-y-0"
-            >
-              {hero.capabilities.map(({ label, detail }, index) => {
-                const Icon = capabilityIcons[index] ?? Search
-                return (
-                  <li
-                    key={label}
-                    data-reveal="card"
-                    className="py-3.5 sm:px-5 sm:first:pl-0 sm:last:pr-0"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <Icon
-                        className="size-4 shrink-0 text-foreground"
-                        aria-hidden="true"
-                      />
-                      <p className="text-[13px] font-semibold tracking-[0.1em] text-foreground uppercase">
-                        {label}
-                      </p>
-                      <span
-                        className="h-px flex-1 bg-brand-yellow/70"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <p className="mt-1.5 text-[13px] text-muted-foreground">
-                      {detail}
-                    </p>
-                  </li>
-                )
-              })}
-            </ul>
           </div>
 
           <div data-reveal="image" className="lg:col-span-5">

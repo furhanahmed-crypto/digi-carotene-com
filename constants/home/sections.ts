@@ -22,27 +22,43 @@ const heroMosaic = [
   "/assets/hero/mosaic/09.webp",
 ] as const
 
+const serviceTones = [
+  "yellow",
+  "green",
+  "blue",
+  "purple",
+  "red",
+] as const satisfies readonly ServicePanel["tone"][]
+
+function toneAt(index: number): ServicePanel["tone"] {
+  return serviceTones[index % serviceTones.length]
+}
+
 export const homeSections = {
   hero: {
-    eyebrow: "Found. Chosen. Measured.",
-    headlineBefore: "They search.",
-    headlineAccents: [
-      "You show up first.",
-      "You rank first.",
-      "You get cited by AI.",
+    eyebrow: "Performance & Growth Marketing Agency",
+    headline:
+      "Digital Marketing Agency in Hyderabad, Growing Brands Across the Globe",
+    rotatingLines: [
+      "Ads that pay back.",
+      "Funnels that keep growing.",
+      "Content that converts.",
     ] as const,
-    body: "For 7+ years and 300+ clients across the globe, we have done one thing well: turn marketing spend into results you can count. We get you found on Google, recommended by AI, and chosen in the real world, and we show you the numbers every step of the way.",
+    body: "Digi Carotene is a Hyderabad-based performance and growth marketing agency. We turn ad spend into leads, leads into customers, and customers into repeat buyers — using paid ads, social media, content, SEO, websites and automation as one connected system. For [[7+]] years we have grown [[300+]] brands, from neighbourhood clinics in Jubilee Hills to companies in [[USA, UAE, UK, Australia — to confirm]].",
     primaryCta: { label: "Get a Free Growth Audit", href: "/contact" },
     secondaryCta: {
-      label: "See What We Do",
-      href: "/services/digital-marketing",
+      label: "Chat on WhatsApp",
+      href: "/contact",
     },
     mosaic: heroMosaic,
-    capabilities: [
-      { label: "SEO", detail: "Rank on Google" },
-      { label: "AEO", detail: "Win answer engines" },
-      { label: "GEO", detail: "Earn AI citations" },
-    ] as const,
+  },
+  trustStrip: {
+    line: "Trusted by [[300+]] brands across [[X]] countries · [[7+]] years · [[₹ X Cr+ — to confirm]] ad spend managed · [[X lakh+ — to confirm]] leads generated",
+  },
+  problem: {
+    eyebrow: "The growth problem",
+    headline: "Spending on Ads but Not Seeing Growth?",
+    body: "Most businesses don't have a traffic problem — they have a growth problem. Ads bring clicks that never call. Followers grow but sales don't. Leads go cold because nobody follows up. And three different vendors run ads, social and the website without talking to each other. The result: rising cost per lead and a competitor who keeps winning your customers.",
   },
   searchRanking: {
     eyebrow: "Discovery has changed",
@@ -50,165 +66,258 @@ export const homeSections = {
     body: "People now ask ChatGPT, Gemini and Google's AI Overviews for answers. The brands winning today are named in the answer, show up in the feed at the right moment, and stand in front of customers where they shop, commute and celebrate.",
     queries: [
       "digital marketing agency in Hyderabad",
-      "SEO AEO GEO agency Bangalore",
       "performance marketing agency Hyderabad",
-      "BTL activation agency Bangalore",
+      "growth marketing agency India",
+      "lead generation agency Hyderabad",
     ] as const,
     siteName: "Digi Carotene",
     urlPath: "www.digicarotene.com › digital-marketing",
     title:
-      "Digi Carotene — Data-Led Digital Marketing Agency in Hyderabad & Bangalore",
+      "Digi Carotene — Digital Marketing Agency in Hyderabad | Performance & Growth",
     ratingLine:
-      "7+ years · 300+ clients · Hyderabad & Bangalore · Online + offline + PR",
+      "[[7+]] years · [[300+]] clients · Hyderabad & worldwide · Online + offline + PR",
     snippet:
-      "SEO, AEO, GEO, performance ads, social, web and offline activations — reported in leads, cost per customer and revenue, not likes.",
+      "Performance ads, growth marketing, SEO, social, web and activations — reported in leads, cost per customer and revenue, not likes.",
     tags: [
+      { label: "Performance", href: "/services/digital-marketing/performance-marketing" },
+      { label: "Growth", href: "/services/digital-marketing/growth-marketing" },
       { label: "SEO", href: "/services/digital-marketing/seo" },
-      {
-        label: "Performance Ads",
-        href: "/services/digital-marketing/performance-marketing",
-      },
-      { label: "Social Media", href: "/services/digital-marketing/social" },
-      { label: "Offline", href: "/services/offline-marketing" },
+      { label: "Social", href: "/services/digital-marketing/social" },
       { label: "Case Studies", href: "/case-studies" },
     ] satisfies SearchRankingTag[],
   },
   differentiators: {
     eyebrow: "Why Digi Carotene",
-    headline: "What makes Digi Carotene different",
-    body: "One data-led team for search, AI visibility, performance, creative and on-ground activations — with reporting you can actually use.",
+    headline: "Why Brands in Hyderabad and Abroad Choose Digi Carotene",
+    body: "Reported in leads and revenue — with every digital channel under one roof.",
     cards: [
       {
-        id: "data",
-        title: "We decide with data, not hunches",
-        body: "Every campaign starts with a baseline and ends with a report you can understand. We track cost per lead, cost per acquisition, return on ad spend, footfall and revenue — not vanity metrics.",
-      },
-      {
-        id: "visibility",
-        title: "Visible where people actually look now",
-        body: "Google search, Maps, AI answer engines, Instagram, YouTube, WhatsApp, malls, metro, campuses and gated communities — planned as one system.",
+        id: "reported",
+        title: "Reported in leads and revenue, not likes",
+        body: "Monthly reports on enquiries, cost per lead, ROAS and repeat customers.",
       },
       {
         id: "one-team",
-        title: "One team, one plan, one report",
-        body: "Strategists, performance marketers, designers, developers, writers, production and on-ground activation — same brief. No vendor ping-pong.",
+        title: "Every digital channel, one team",
+        body: "Ads, growth, social, content, SEO, web, design and shoots under one roof, including our in-house studio (#DCProductions).",
       },
       {
-        id: "cities",
-        title: "Hyderabad roots, Bangalore reach",
-        body: "We know how a Jubilee Hills diner decides differently from a Whitefield techie — and which playbooks travel after 300+ clients across industries.",
+        id: "test-scale",
+        title: "Built to test and scale",
+        body: "Weekly optimisation, clear experiments, no lock-in to what isn't working.",
+      },
+      {
+        id: "local-global",
+        title: "Local muscle, global standards",
+        body: "On-ground in Hyderabad; time-zone-friendly service for international clients.",
       },
     ] satisfies DifferentiatorCard[],
   },
   servicePanels: {
     eyebrow: "Our services",
-    headline: "Full-stack discovery under one roof.",
-    body: "Pick a lane — or hand us the whole funnel.",
-    exploreHref: "/services/digital-marketing",
+    headline: "Performance and Growth Marketing, Powered by Every Digital Channel",
+    body: "We plan every channel around one goal: profitable growth. Performance marketing brings in customers today, growth marketing makes each one cheaper to win and more likely to return, and every other service feeds that engine.",
+    exploreHref: "/services",
     exploreLabel: "Explore All Services",
     panels: [
       {
-        id: "search-ai",
-        title: "Search and AI Discovery",
-        body: "SEO, AEO and GEO so you rank on Google and get recommended by ChatGPT, Gemini and Perplexity.",
-        href: "/services/digital-marketing/seo",
-        tone: "yellow",
-      },
-      {
         id: "performance",
-        title: "Performance and Growth",
-        body: "Google Ads, Meta Ads and full-funnel growth experiments built around what it costs to win a customer.",
+        title: "Performance Marketing",
+        body: "Google, Meta, YouTube and LinkedIn ads managed for cost per lead and ROAS.",
         href: "/services/digital-marketing/performance-marketing",
-        tone: "green",
+        tone: toneAt(0),
       },
       {
-        id: "creative",
-        title: "Content, Social and Creative",
-        body: "Content, social, graphic design, Instagram shoots and personal branding people actually stop to watch.",
+        id: "growth",
+        title: "Growth Marketing",
+        body: "Funnel experiments, retention and referral programs that lower acquisition cost.",
+        href: "/services/digital-marketing/growth-marketing",
+        tone: toneAt(1),
+      },
+      {
+        id: "social",
+        title: "Social Media Marketing",
+        body: "Reels, content calendars and community management that bring customers.",
         href: "/services/digital-marketing/social",
-        tone: "blue",
+        tone: toneAt(2),
+      },
+      {
+        id: "seo",
+        title: "Search Engine Optimization",
+        body: "Rank on Google, win Maps and get recommended by AI search.",
+        href: "/services/digital-marketing/seo",
+        tone: toneAt(3),
+      },
+      {
+        id: "content",
+        title: "Content Marketing",
+        body: "Website copy, blogs and scripts that answer questions and convert.",
+        href: "/services/digital-marketing/content",
+        tone: toneAt(4),
       },
       {
         id: "web",
-        title: "Websites that convert",
-        body: "Fast, SEO-ready websites and landing pages designed to turn visitors into enquiries.",
+        title: "Web Design & Development",
+        body: "Fast, conversion-ready websites and landing pages.",
         href: "/services/digital-marketing/web",
-        tone: "purple",
+        tone: toneAt(0),
       },
       {
-        id: "offline",
-        title: "Offline and Experiential",
-        body: "Mall, residential, campus and festival activations, theatre and metro branding, pop-ups and influencers — trackable back to digital.",
-        href: "/services/offline-marketing",
-        tone: "red",
+        id: "graphic",
+        title: "Graphic Designing",
+        body: "Brand identity, ad creatives and social designs that stop the scroll.",
+        href: "/services/digital-marketing/graphic-design",
+        tone: toneAt(1),
+      },
+      {
+        id: "personal",
+        title: "Personal Branding",
+        body: "Founders and doctors positioned as the trusted name in their field.",
+        href: "/services/digital-marketing/personal-branding",
+        tone: toneAt(2),
+      },
+      {
+        id: "email",
+        title: "Email Marketing",
+        body: "Automated journeys that bring customers back.",
+        href: "/services/digital-marketing/email",
+        tone: toneAt(3),
+      },
+      {
+        id: "insta",
+        title: "Insta Shoot",
+        body: "In-house photo and reel production across Hyderabad.",
+        href: "/services/digital-marketing/insta-shoot",
+        tone: toneAt(4),
       },
     ] satisfies ServicePanel[],
-  },
-  audiences: {
-    eyebrow: "Who we work with",
-    headline: "Built for brands that need customers, not vanity metrics.",
-    body: "From restaurants and clinics to edtech, real estate and founder-led SaaS — across Hyderabad, Bangalore and beyond.",
-    items: [
+    secondary: [
       {
-        id: "food",
-        label: "Restaurants & cloud kitchens",
-        body: "Full tables and steady delivery orders.",
+        id: "offline",
+        title: "Offline & Experiential",
+        body: "Malls, campuses, metro, festivals and pop-ups — tracked back to digital.",
+        href: "/services/offline-marketing",
       },
       {
+        id: "pr",
+        title: "PR & Brand Communications",
+        body: "Media coverage and reputation that also feed AI citations.",
+        href: "/services/pr",
+      },
+    ] as const,
+  },
+  growthEngine: {
+    eyebrow: "Growth engine",
+    headline: "How Our Growth Engine Works",
+    body: "Four stages, one team, one report.",
+    stages: [
+      {
+        number: "01",
+        title: "Attract",
+        body: "Performance ads, social media, SEO and content bring the right people in.",
+      },
+      {
+        number: "02",
+        title: "Convert",
+        body: "Landing pages, websites and WhatsApp follow-up turn visitors into enquiries.",
+      },
+      {
+        number: "03",
+        title: "Retain",
+        body: "Email, WhatsApp and loyalty journeys turn first-time buyers into regulars.",
+      },
+      {
+        number: "04",
+        title: "Scale",
+        body: "We test, read the numbers weekly and move budget to what works.",
+      },
+    ] as const,
+    footnote:
+      "Customers now also ask ChatGPT, Gemini and Google AI Overviews for recommendations — our SEO and content work makes sure you're named there too.",
+  },
+  hyderabadGlobal: {
+    eyebrow: "Hyderabad + world",
+    headline: "Rooted in Hyderabad. Working With Brands Worldwide.",
+    body: "Our team works from [[Manikonda / office area — to confirm]], Hyderabad, and serves clients across Hyderabad, Secunderabad, Bangalore, [[other Indian cities — to confirm]] and international markets including [[USA, UAE, UK, Singapore, Australia — to confirm]]. Local clients get on-ground shoots, activations and same-city meetings. Global clients get a dedicated account manager, overlap hours in their time zone, and reporting in their currency.",
+    links: [
+      {
+        label: "Digital Marketing in Hyderabad",
+        href: "/digital-marketing-agency-hyderabad",
+      },
+      { label: "Global Clients", href: "/global" },
+    ] as const,
+  },
+  audiences: {
+    eyebrow: "Industries",
+    headline: "Industries We Grow — From Local Leaders to Global Brands",
+    body: "Keep the six cards; add one line of proof to each when confirmed. Each card links to its Industry page.",
+    items: [
+      {
         id: "health",
-        label: "Clinics & wellness",
-        body: "Patient enquiries, not just likes.",
+        label: "Healthcare & Clinics",
+        body: "[[X]] clinics and hospitals — [[proof line — to confirm]]",
+        href: "/industries/healthcare",
+      },
+      {
+        id: "food",
+        label: "Restaurants & QSR",
+        body: "[[proof line — to confirm]]",
+        href: "/industries/restaurants",
       },
       {
         id: "lifestyle",
-        label: "Salons, fashion & lifestyle",
-        body: "Brands that live and die by Instagram.",
+        label: "Salons & Beauty",
+        body: "[[proof line — to confirm]]",
+        href: "/industries/salons",
       },
       {
         id: "edu",
-        label: "Schools, colleges & edtech",
-        body: "Admissions seasons on tight deadlines.",
+        label: "Education",
+        body: "[[proof line — to confirm]]",
+        href: "/industries/education",
       },
       {
         id: "retail",
-        label: "Real estate & high-ticket retail",
-        body: "Every lead is worth chasing.",
+        label: "Real Estate & Furniture",
+        body: "[[proof line — to confirm]]",
+        href: "/industries/real-estate-furniture",
       },
       {
         id: "b2b",
-        label: "Startups, SaaS & B2B",
-        body: "Selling to Bangalore, Hyderabad and the world.",
+        label: "B2B & Technology",
+        body: "[[proof line — to confirm]]",
+        href: "/industries/b2b-technology",
       },
-    ] satisfies AudienceItem[],
+    ] satisfies Array<AudienceItem & { href: string }>,
   },
   framework: {
     eyebrow: "How we work",
-    headline: "Diagnose, Plan, Launch, Measure",
+    headline: "How We Work: Diagnose, Launch, Scale, Compound",
     body: "A clear operating system that turns marketing spend into results you can count.",
     steps: [
       {
         number: "01",
         title: "Diagnose",
-        body: "We audit where you show up today: Google rankings, AI answers, ads, social, website speed and local listings — so you see where customers slip away.",
-        tags: ["SEO audit", "AI visibility", "Ads", "Local"],
+        body: "Audit your ads, funnel, website, social and search presence; set targets for cost per lead and revenue.",
+        tags: ["Ads", "Funnel", "Search", "Targets"],
       },
       {
         number: "02",
-        title: "Plan",
-        body: "We set targets with you (leads, sales, footfall, CPA) and build a channel plan and budget split to hit them.",
-        tags: ["Targets", "Budget", "Channels"],
+        title: "Launch",
+        body: "Campaigns, creatives, landing pages and tracking go live within [[2]] weeks.",
+        tags: ["Campaigns", "Creative", "Tracking"],
       },
       {
         number: "03",
-        title: "Launch",
-        body: "Creative, campaigns, content and on-ground activations go live on an agreed calendar — tagged and tracked from day one.",
-        tags: ["Campaigns", "Creative", "Activations"],
+        title: "Scale",
+        body: "Weekly testing of audiences, offers and creatives; budget moves to winners.",
+        tags: ["Tests", "Budget", "ROAS"],
       },
       {
         number: "04",
-        title: "Measure",
-        body: "Weekly checks, monthly reports and a live dashboard. We move budget towards what works and cut what does not.",
-        tags: ["Reporting", "ROAS", "Improve"],
+        title: "Compound",
+        body: "Retention journeys, content and SEO keep lowering acquisition cost month after month.",
+        tags: ["Retention", "SEO", "Content"],
       },
     ] satisfies FrameworkStep[],
   },
@@ -255,89 +364,91 @@ export const homeSections = {
     ] satisfies ReelItem[],
   },
   results: {
-    eyebrow: "Results, not reports",
-    headline: "Results that speak volumes.",
-    body: "Replace with three real case cards (industry, city, one headline metric, time frame). Do not publish invented numbers.",
+    eyebrow: "Proof",
+    headline: "Growth Our Clients Can Count",
+    body: "Three case-study cards from different services — replace with real numbers before publishing.",
     cards: [
       {
         id: "r1",
-        client: "[[Industry — to confirm]]",
+        client: "[[Performance client — to confirm]]",
         industry: "[[City]]",
-        metric: "[[Metric]]",
-        metricLabel: "[[Outcome label]]",
+        metric: "[[45%]]",
+        metricLabel: "lower cost per lead in [[3]] months",
         summary: "[[Challenge + outcome — to confirm]]",
-        tags: ["SEO", "Content"],
+        tags: ["Performance"],
       },
       {
         id: "r2",
-        client: "[[Industry — to confirm]]",
+        client: "[[Growth client — to confirm]]",
         industry: "[[City]]",
-        metric: "[[Metric]]",
-        metricLabel: "[[Outcome label]]",
+        metric: "[[2x]]",
+        metricLabel: "repeat orders through WhatsApp journeys",
         summary: "[[Challenge + outcome — to confirm]]",
-        tags: ["Performance", "CRO"],
+        tags: ["Growth"],
       },
       {
         id: "r3",
-        client: "[[Industry — to confirm]]",
+        client: "[[Social client — to confirm]]",
         industry: "[[City]]",
-        metric: "[[Metric]]",
-        metricLabel: "[[Outcome label]]",
+        metric: "[[X]]",
+        metricLabel: "bookings a month from Instagram",
         summary: "[[Challenge + outcome — to confirm]]",
-        tags: ["Social", "Activations"],
+        tags: ["Social"],
       },
     ] satisfies ResultCard[],
   },
   faq: {
     eyebrow: "FAQ",
     kicker: "Clarity",
-    headline: "Frequently asked questions",
+    headline: "Frequently Asked Questions",
     items: [
       {
-        question: "What does a digital marketing agency in Hyderabad do?",
+        question:
+          "Which is the best digital marketing agency in Hyderabad for small businesses?",
         answer:
-          "A digital marketing agency helps businesses win customers online through SEO, paid ads, social media, content and websites. Digi Carotene, a data-led agency based in Hyderabad, also covers AI search visibility, offline activations and PR, and reports every result against targets like cost per lead and revenue.",
+          "The right agency reports in enquiries and revenue, not just reach. Digi Carotene works with clinics, salons, restaurants, schools and retailers across Hyderabad, with plans that start small and scale with results.",
       },
       {
-        question: "What is AEO and GEO, and do I still need SEO?",
+        question:
+          "What is the difference between performance marketing and growth marketing?",
         answer:
-          "AEO (Answer Engine Optimization) structures your content so AI assistants and Google's AI Overviews can quote it. GEO (Generative Engine Optimization) increases how often tools like ChatGPT and Perplexity mention your brand. You still need SEO, because AI engines mostly pull answers from pages that already rank and are trusted.",
+          "Performance marketing buys customers through paid ads and is measured on cost per lead and ROAS. Growth marketing improves the whole funnel — conversion, retention and referrals — so each customer costs less and buys more often. We run both together.",
       },
       {
-        question: "Do you work with businesses in Bangalore?",
+        question: "Which digital marketing services do you offer?",
         answer:
-          "Yes. Digi Carotene works with brands across Bangalore and Hyderabad, and with clients in other countries. Digital work is run remotely with regular reviews, and our on-ground team handles activations, shoots and events in both cities.",
+          "Performance marketing, growth marketing, social media, SEO, content, web design, graphic design, personal branding, email marketing and Instagram shoots, plus offline activations and PR.",
+      },
+      {
+        question: "Do you work with clients outside India?",
+        answer:
+          "Yes. We work with brands in [[countries — to confirm]], with a dedicated account manager, video calls in your time zone and invoicing in [[USD/AED/GBP — to confirm]].",
       },
       {
         question: "How much does digital marketing cost in Hyderabad?",
         answer:
-          "It depends on your goals, channels and ad budget. Agency fees are separate from ad spend. After a free audit, Digi Carotene shares a fixed-scope proposal with clear deliverables and the targets we will report against, so you know exactly what you are paying for.",
+          "It depends on channels and goals. Most retainers start at [[₹ X per month — to confirm]]; ad spend is separate. We share a fixed scope and price after a free audit.",
       },
       {
-        question: "How soon will I see results?",
+        question: "Where is Digi Carotene located?",
         answer:
-          "Paid ads can generate leads within the first one to two weeks. SEO, AEO and content usually show measurable movement in three to six months. Offline activations deliver results on the day, and we track the follow-up conversions digitally.",
-      },
-      {
-        question: "Do you only do digital marketing?",
-        answer:
-          "No. Alongside digital, Digi Carotene runs mall, residential, campus and festival activations, theatre and metro branding, pop-up stores, corporate events, influencer campaigns and PR, so online and offline marketing work as one plan.",
+          "[[Full address]], Hyderabad, Telangana [[PIN — to confirm]]. We meet clients in person across Hyderabad and online worldwide.",
       },
     ] satisfies FaqItem[],
   },
   cta: {
     eyebrow: "Next step",
-    headline: "Find out how visible your brand really is.",
-    body: "Get a free audit of your Google rankings, AI search visibility, ads and website. No obligation — just a clear report and a plan.",
-    primary: { label: "Get My Free Audit", href: "/contact" },
+    headline: "Where Is Your Growth Leaking?",
+    body: "Get a free growth audit. We'll review your ads, funnel, website and social presence, then show you the three fastest wins to lower cost per lead and grow revenue.",
+    primary: { label: "Get Your Free Growth Audit", href: "/contact" },
     secondary: {
-      label: "Talk to Us on WhatsApp",
+      label: "Talk to Our Founders",
       href: "/contact",
     },
   },
   meta: {
-    title: "Data-Led Digital Marketing Agency, Hyderabad & Bangalore",
+    title: "Digital Marketing Agency in Hyderabad | Digi Carotene",
     description:
-      "Data-led digital marketing agency with 7+ years and 300+ clients. SEO, AEO, performance ads, social, web and offline activations in Hyderabad and Bangalore.",
+      "SEO, AI search (GEO/AEO), ads, social media, websites and BTL activations for 300+ brands in Hyderabad and worldwide. Get a free audit.",
   },
 } as const
