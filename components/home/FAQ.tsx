@@ -64,8 +64,6 @@ export function FAQ() {
             </div>
           </aside>
 
-          
-
           <div className="lg:col-span-7">
             {/* Answers stay in the HTML for crawlers (v2). Accordion is progressive enhancement. */}
             <Accordion
