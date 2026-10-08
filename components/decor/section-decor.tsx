@@ -229,9 +229,9 @@ export function SectionDecor({
           const baseDuration =
             floatDuration ??
             (floatAxis === "x" ? 4.2 : floatAxis === "xy" ? 4.8 : 3.6)
-          // Travel +20% again; cycle length unchanged → covers more ground a bit quicker.
+          // Travel scale kept; shorter cycle → slightly faster drift.
           const travelScale = 1.944
-          const durationScale = 1.2
+          const durationScale = 1.05
           const duration =
             baseDuration * (floatDuration ? 0.85 : 1) * durationScale
           const distance = floatDistance * travelScale

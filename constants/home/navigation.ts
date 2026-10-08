@@ -19,6 +19,8 @@ import {
   UtensilsCrossed,
 } from "lucide-react"
 
+import { siteContact } from "@/constants/site/contact"
+
 export type NavLinkItem = {
   title: string
   href: string
@@ -282,8 +284,7 @@ export const mainNav: NavItem[] = [
 
 export const contactHref = "/contact"
 
-/**
- * WhatsApp — UAE placeholder removed per v2 audit.
- * Until [[+91 XXXXX XXXXX — to confirm]] is set, route to contact.
- */
-export const whatsappHref = `${contactHref}?via=whatsapp`
+/** WhatsApp deep link — number from digicarotene.com. */
+export const whatsappHref = siteContact.whatsappHref
+
+export { siteContact }

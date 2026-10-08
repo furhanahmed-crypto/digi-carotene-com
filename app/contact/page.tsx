@@ -12,7 +12,7 @@ import {
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
-import { whatsappHref } from "@/constants/home/navigation"
+import { siteContact, whatsappHref } from "@/constants/home/navigation"
 
 export default function ContactPage() {
   const [formState, setFormState] = React.useState({
@@ -62,19 +62,32 @@ export default function ContactPage() {
                 </dt>
                 <dd className="mt-1">
                   <a
-                    href="mailto:hello@digicarotene.com"
+                    href={siteContact.emailHref}
                     className="text-base text-foreground transition-colors hover:text-brand-yellow"
                   >
-                    hello@digicarotene.com
+                    {siteContact.email}
                   </a>
                 </dd>
               </div>
               <div>
                 <dt className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
-                  Phone & WhatsApp
+                  Phone
+                </dt>
+                <dd className="mt-1">
+                  <a
+                    href={siteContact.phoneHref}
+                    className="text-base text-foreground transition-colors hover:text-brand-yellow"
+                  >
+                    {siteContact.phoneDisplay}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                  WhatsApp
                 </dt>
                 <dd className="mt-1 text-base text-foreground">
-                  [[+91 XXXXX XXXXX — to confirm]]
+                  {siteContact.whatsappDisplay}
                 </dd>
                 <dd className="mt-2">
                   <a
@@ -92,7 +105,14 @@ export default function ContactPage() {
                   Hyderabad office
                 </dt>
                 <dd className="mt-1 text-base text-foreground">
-                  [[Full address, landmark, PIN — to confirm]]
+                  <a
+                    href={siteContact.mapsHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="transition-colors hover:text-brand-yellow"
+                  >
+                    {siteContact.addressOneLine}
+                  </a>
                 </dd>
               </div>
               <div>
@@ -100,7 +120,25 @@ export default function ContactPage() {
                   Hours
                 </dt>
                 <dd className="mt-1 text-base text-foreground">
-                  Monday to Saturday, 10 am to 7 pm
+                  {siteContact.hours}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[13px] tracking-[0.03em] text-muted-foreground uppercase">
+                  Social
+                </dt>
+                <dd className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                  {siteContact.socials.map((social) => (
+                    <a
+                      key={social.href}
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-medium text-foreground underline decoration-brand-yellow underline-offset-4"
+                    >
+                      {social.label}
+                    </a>
+                  ))}
                 </dd>
               </div>
             </dl>

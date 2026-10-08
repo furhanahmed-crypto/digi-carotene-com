@@ -5,17 +5,23 @@ Archive: `docs/content/Digi_Carotene_Website_Content.pdf` (v1)
 What used what: `docs/content/CONTENT-USAGE.md`
 Do not invent values. Replace when confirmed.
 
-## NAP / contact (must match Google Business Profile)
+## NAP / contact (from digicarotene.com — confirm vs Google Business Profile)
 
-- Phone / WhatsApp: `[[+91 XXXXX XXXXX — to confirm]]` (replace UAE `wa.me/971…` in `constants/home/navigation.ts`)
-- Hyderabad office address + PIN — to confirm
+Source of truth in code: `constants/site/contact.ts`
+
+- Email: `info@digicarotene.com`
+- Phone: `+91 99598 20874`
+- WhatsApp: `+91 93986 82206` (`wa.me/919398682206`) — **different from voice line on old site; confirm both still correct**
+- Address: Plot No 45, Street No 3, Patrika Nagar, Madhapur, Hyderabad 500081
+- Hours shown: Mon–Sat 10am–7pm — **confirm against GBP**
+- Socials: Instagram / Facebook / LinkedIn `@digicarotene` company pages
 - Bangalore office — only if a real office exists
-- Hours currently shown as Mon–Sat 10am–7pm (confirm)
 
 ## About / proof counts
 
 - `[[Campaigns / activations / websites count — to confirm]]`
 - Countries list for remote clients — to confirm
+- Footer still shows `[[7+]]` / `[[300+]]` bracketed counts — confirm before launch
 
 ## Results cards (home)
 
@@ -47,7 +53,7 @@ Do not invent values. Replace when confirmed.
 
 ## City pages
 
-- Hyderabad office NAP (address, phone, hours) — must match GBP
+- Hyderabad NAP wired from `siteContact` — still match GBP
 - Bangalore staffed office — publish address only if real
 
 ## Production

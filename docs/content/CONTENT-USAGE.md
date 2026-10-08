@@ -75,7 +75,7 @@ Still on home for design proof: Clients marquee, Visual showcase, Creative reels
 | --- | --- |
 | Nav | **Industries**, **Locations** added; Clients → “Clients & Global Presence”; Journal + Free GEO scan |
 | Footer | One NAP block + location/industry/service links |
-| WhatsApp | UAE `971…` removed → `/contact?via=whatsapp` until real number |
+| WhatsApp / NAP | From digicarotene.com via `constants/site/contact.ts` |
 
 ### New pages (v2)
 

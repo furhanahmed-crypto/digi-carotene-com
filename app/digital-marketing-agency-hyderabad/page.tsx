@@ -13,7 +13,7 @@ import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
-import { contactHref } from "@/constants/home/navigation"
+import { contactHref, siteContact } from "@/constants/home/navigation"
 import type { Metadata } from "next"
 import { metadataFor } from "@/lib/seo/page-meta"
 
@@ -128,9 +128,9 @@ export default function HyderabadAgencyPage() {
                 titleProps={{ "data-reveal": "heading" }}
                 bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
-                eyebrow="NAP to confirm"
+                eyebrow="Visit us"
                 title="Hyderabad office"
-                body="[[Full Hyderabad office address, phone and hours — must match Google Business Profile before publishing.]]"
+                body={`${siteContact.addressOneLine}. Call ${siteContact.phoneDisplay}. ${siteContact.hours}.`}
               />
             </Reveal>
           </div>

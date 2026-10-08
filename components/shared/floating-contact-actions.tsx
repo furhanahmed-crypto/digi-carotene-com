@@ -4,7 +4,7 @@ import type { ReactNode } from "react"
 import Link from "next/link"
 import { Mail } from "lucide-react"
 
-import { contactHref, whatsappHref } from "@/constants/home/navigation"
+import { siteContact, whatsappHref } from "@/constants/home/navigation"
 import { cn } from "@/lib/utils"
 
 import { WhatsAppIcon } from "./whatsapp-icon"
@@ -83,8 +83,9 @@ export function FloatingContactActions() {
         expandedClassName="bg-[#25D366] hover:shadow-[#25D366]/35"
       />
       <ExpandAction
-        href={contactHref}
-        label="Contact"
+        href={siteContact.emailHref}
+        label="Email"
+        external
         icon={<Mail className="size-5" />}
         iconClassName="bg-brand-yellow text-ink"
         expandedClassName="bg-brand-yellow hover:shadow-brand-yellow/40"

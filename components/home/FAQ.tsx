@@ -68,8 +68,8 @@ export function FAQ() {
             {/* Answers stay in the HTML for crawlers (v2). Accordion is progressive enhancement. */}
             <Accordion
               data-reveal-group
-              multiple
-              defaultValue={faq.items.map((_, index) => `faq-${index}`)}
+              multiple={false}
+              defaultValue={["faq-0"]}
               className="overflow-hidden rounded-2xl border border-ink/10 bg-background shadow-[0_18px_50px_rgba(17,17,17,0.08)] dark:border-border dark:bg-card dark:shadow-none"
             >
               {faq.items.map((item, index) => (
@@ -84,7 +84,7 @@ export function FAQ() {
                       {item.question}
                     </h3>
                   </AccordionTrigger>
-                  <AccordionContent className="pb-5 text-base leading-[1.6] text-muted-foreground md:text-lg">
+                  <AccordionContent className="pb-5 text-sm font-normal leading-relaxed text-muted-foreground">
                     <p>{item.answer}</p>
                   </AccordionContent>
                 </AccordionItem>

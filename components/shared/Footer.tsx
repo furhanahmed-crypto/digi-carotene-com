@@ -3,7 +3,12 @@
 import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
-import { contactHref, mainNav } from "@/constants/home/navigation"
+import {
+  contactHref,
+  mainNav,
+  siteContact,
+  whatsappHref,
+} from "@/constants/home/navigation"
 import { SiteLogo } from "@/components/shared/site-logo"
 
 const servicesNav = mainNav.find((item) => item.type === "groups")
@@ -44,10 +49,52 @@ export function Footer() {
               <p className="text-[13px] font-medium tracking-[0.03em] uppercase dark:text-white/55">
                 Hyderabad · Bangalore · Global
               </p>
-              <p>[[Full office address + PIN — match GBP]]</p>
-              <p>[[+91 XXXXX XXXXX — to confirm]]</p>
-              <p>[[Office hours IST — to confirm]]</p>
+              <p>
+                <a
+                  href={siteContact.mapsHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={linkClass}
+                >
+                  {siteContact.addressOneLine}
+                </a>
+              </p>
+              <p>
+                <a href={siteContact.phoneHref} className={linkClass}>
+                  {siteContact.phoneDisplay}
+                </a>
+              </p>
+              <p>
+                <a href={siteContact.emailHref} className={linkClass}>
+                  {siteContact.email}
+                </a>
+              </p>
+              <p>{siteContact.hoursShort}</p>
             </div>
+            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground dark:text-white/65">
+              {siteContact.socials.map((social) => (
+                <li key={social.href}>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={linkClass}
+                  >
+                    {social.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={linkClass}
+                >
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
             <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground dark:text-white/65">
               <li>
                 <Link href="/digital-marketing-agency-hyderabad" className={linkClass}>

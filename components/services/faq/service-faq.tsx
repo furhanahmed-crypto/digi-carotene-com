@@ -53,6 +53,8 @@ export function ServiceFaqSection({ name, faqs }: ServiceFaqSectionProps) {
           <div className="lg:col-span-7">
             <Accordion
               data-reveal-group
+              multiple={false}
+              defaultValue={faqs.length > 0 ? ["faq-0"] : []}
               className="overflow-hidden rounded-2xl border border-ink/10 bg-background shadow-[0_18px_50px_rgba(17,17,17,0.08)] dark:border-border dark:bg-card dark:shadow-none"
             >
               {faqs.map((faq, index) => (
@@ -65,8 +67,8 @@ export function ServiceFaqSection({ name, faqs }: ServiceFaqSectionProps) {
                   <AccordionTrigger className="rounded-none py-5 text-left font-display text-[17px] leading-[1.3] font-medium hover:no-underline data-panel-open:text-ink md:text-[20px] **:data-[slot=accordion-trigger-icon]:text-ink/45 data-panel-open:**:data-[slot=accordion-trigger-icon]:text-ink">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="pb-5 text-base leading-[1.6] text-muted-foreground md:text-lg">
-                    {faq.answer}
+                  <AccordionContent className="pb-5 text-sm font-normal leading-relaxed text-muted-foreground">
+                    <p>{faq.answer}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
