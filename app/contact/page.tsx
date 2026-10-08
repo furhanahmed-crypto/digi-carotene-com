@@ -12,14 +12,33 @@ import { Button } from "@/components/ui/button"
 import { siteContact, whatsappHref } from "@/constants/home/navigation"
 import { WhatsAppIcon } from "@/components/shared/whatsapp-icon"
 
+/** v2 PDF: name, business, website, country, service, budget, message. */
+const serviceOptions = [
+  "Performance Marketing",
+  "Growth Marketing",
+  "SEO / AEO / GEO",
+  "Social Media",
+  "Website / Design",
+  "Offline Activations",
+  "PR / ORM",
+  "Not sure yet",
+] as const
+
+const budgetOptions = [
+  "Under ₹50k / month",
+  "₹50k – ₹1.5L / month",
+  "₹1.5L – ₹5L / month",
+  "₹5L+ / month",
+  "Prefer not to say",
+] as const
+
 export default function ContactPage() {
   const [formState, setFormState] = React.useState({
     name: "",
     business: "",
-    phone: "",
-    email: "",
-    city: "Hyderabad",
-    need: "",
+    website: "",
+    country: "",
+    service: "",
     budget: "",
     message: "",
   })
@@ -84,10 +103,10 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <SectionMark>Free audit form</SectionMark>
+                  <SectionMark>Free proposal</SectionMark>
                   <p className="text-sm text-muted-foreground">
-                    Share a few details — we reply with a prioritised action
-                    plan, not a sales script.
+                    Six fields — wherever you are in the world. We reply within
+                    one working day.
                   </p>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <input
@@ -102,7 +121,7 @@ export default function ContactPage() {
                     <input
                       required
                       className={fieldClassName}
-                      placeholder="Business name"
+                      placeholder="Business"
                       value={formState.business}
                       onChange={(e) =>
                         setFormState((s) => ({
@@ -114,57 +133,74 @@ export default function ContactPage() {
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <input
-                      required
+                      type="url"
                       className={fieldClassName}
-                      placeholder="Phone (WhatsApp)"
-                      value={formState.phone}
+                      placeholder="Website (optional)"
+                      value={formState.website}
                       onChange={(e) =>
-                        setFormState((s) => ({ ...s, phone: e.target.value }))
+                        setFormState((s) => ({
+                          ...s,
+                          website: e.target.value,
+                        }))
                       }
                     />
                     <input
                       required
-                      type="email"
                       className={fieldClassName}
-                      placeholder="Email"
-                      value={formState.email}
+                      placeholder="Country / city"
+                      value={formState.country}
                       onChange={(e) =>
-                        setFormState((s) => ({ ...s, email: e.target.value }))
+                        setFormState((s) => ({
+                          ...s,
+                          country: e.target.value,
+                        }))
                       }
                     />
                   </div>
-                  <select
-                    className={fieldClassName}
-                    value={formState.city}
-                    onChange={(e) =>
-                      setFormState((s) => ({ ...s, city: e.target.value }))
-                    }
-                  >
-                    <option>Hyderabad</option>
-                    <option>Bangalore</option>
-                    <option>Other</option>
-                  </select>
-                  <input
-                    className={fieldClassName}
-                    placeholder="What do you need help with?"
-                    value={formState.need}
-                    onChange={(e) =>
-                      setFormState((s) => ({ ...s, need: e.target.value }))
-                    }
-                  />
-                  <input
-                    className={fieldClassName}
-                    placeholder="Monthly marketing budget (optional)"
-                    value={formState.budget}
-                    onChange={(e) =>
-                      setFormState((s) => ({ ...s, budget: e.target.value }))
-                    }
-                  />
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <select
+                      required
+                      className={fieldClassName}
+                      value={formState.service}
+                      onChange={(e) =>
+                        setFormState((s) => ({
+                          ...s,
+                          service: e.target.value,
+                        }))
+                      }
+                    >
+                      <option value="" disabled>
+                        Service you need
+                      </option>
+                      {serviceOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                    <select
+                      className={fieldClassName}
+                      value={formState.budget}
+                      onChange={(e) =>
+                        setFormState((s) => ({
+                          ...s,
+                          budget: e.target.value,
+                        }))
+                      }
+                    >
+                      <option value="">Monthly budget (optional)</option>
+                      {budgetOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                   <textarea
                     required
                     rows={5}
                     className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-brand-yellow"
-                    placeholder="Message"
+                    placeholder="Message — where is growth stuck?"
                     value={formState.message}
                     onChange={(e) =>
                       setFormState((s) => ({ ...s, message: e.target.value }))
@@ -175,7 +211,7 @@ export default function ContactPage() {
                     size="lg"
                     className="w-full bg-brand-yellow text-ink hover:bg-brand-yellow/90 sm:w-auto"
                   >
-                    Get My Free Audit
+                    Get a Free Proposal
                     <ArrowRight className="size-4" />
                   </Button>
                 </form>
@@ -187,7 +223,7 @@ export default function ContactPage() {
             <div>
               <SectionMark>Get your free audit</SectionMark>
               <p className="mt-5 text-[13px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
-                Hyderabad · Bangalore · Global
+                Hyderabad · Worldwide
               </p>
               <h2 className="mt-3 font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[40px]">
                 Reach us directly

@@ -13,7 +13,7 @@ type ClientLogoProps = {
  */
 const stageClass = {
   marquee: "h-8 w-[8.5rem]",
-  card: "h-11 w-[11.5rem]",
+  card: "h-11 w-[11.5rem] max-w-full",
 } as const
 
 export function ClientLogo({

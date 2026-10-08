@@ -40,6 +40,7 @@ export default async function IndustryPage({ params }: PageProps) {
         mark: industry.name,
       }))}
       clientLogos
+      clientLogoSeed={industry.slug}
       faqs={[]}
       related={industry.relatedServices.map((service) => ({
         title: service.title,

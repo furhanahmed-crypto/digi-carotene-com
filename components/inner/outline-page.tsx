@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { ClientLogoStrip } from "@/components/inner/client-logo-strip"
 import {
   InfoCardGrid,
   OutlineSection,
@@ -24,8 +25,10 @@ type OutlinePageProps = {
   sections: readonly OutlineSectionData[]
   /** FAQ questions from the v2 outline; answers stay placeholders. */
   faqs?: readonly string[]
-  /** Show a permissioned-logos placeholder band (industry pages). */
+  /** Show a client-logo strip (industry pages). */
   clientLogos?: boolean
+  /** Seed for rotating which reference logos appear (e.g. industry slug). */
+  clientLogoSeed?: string
   related: readonly InfoCardItem[]
   primaryCta: string
   ctaTitle: string
@@ -44,6 +47,7 @@ export function OutlinePage({
   sections,
   faqs = [],
   clientLogos = false,
+  clientLogoSeed,
   related,
   primaryCta,
   ctaTitle,
@@ -84,10 +88,9 @@ export function OutlinePage({
           mark="Clients"
           eyebrow="Proof"
           title="Clients We Work With in This Sector"
+          body="Familiar marks for layout only — swap for permissioned sector logos before launch."
         >
-          <PlaceholderBlock data-reveal="card">
-            [[2–3 permissioned client logos from this sector — to confirm]]
-          </PlaceholderBlock>
+          <ClientLogoStrip seed={clientLogoSeed ?? mark} count={6} />
         </OutlineSection>
       ) : null}
 
