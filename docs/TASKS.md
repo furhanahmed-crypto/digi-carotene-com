@@ -19,14 +19,15 @@ Concrete work derived from PRD + DESIGN + ARCHITECTURE.
 - [x] SectionMark on all homepage content sections
 - [x] Equal-height growth framework cards
 - [x] `bun run typecheck`
-- [x] Journal: 10 SEO/AEO blog posts from `Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` (`/blog` + `/blog/[slug]`)
-- [x] Growth scenarios: 5 benchmark case studies from PDF (`/growth-scenarios` hub + `/growth-scenarios/[slug]`; `/case-studies` → redirect; homepage shows 3)
+- [x] The Journal: 10 SEO/AEO pieces from `Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` (UI: The Journal; routes `/blog` + `/blog/[slug]`)
+- [x] Growth scenarios: 5 benchmark case studies from PDF (`/growth-scenarios` hub + `/growth-scenarios/[slug]`; `/case-studies` → redirect; homepage shows 3; no cover images required)
+- [x] Real client reels wired (compressed + posters); Mixkit shells removed
 
 ## Remaining (ops / assets)
 
 - [ ] Visual QA light/dark mobile/desktop
 - [x] Reference media pack under `public/assets/` (mosaic, showcase, reels, fictional client marks) — compressed
-- [ ] Fill real assets from `PLACEHOLDERS.md` when available (NAP, logos, case metrics, reels, blog author/cover images)
+- [ ] Fill real assets from `PLACEHOLDERS.md` when available (NAP, logos, case metrics, reels, Journal author LinkedIn)
 
 ## Later
 

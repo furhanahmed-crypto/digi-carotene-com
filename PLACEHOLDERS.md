@@ -52,9 +52,9 @@ Source: `docs/content/Digi-Carotene-Case-Studies-SEO-AEO-v2.pdf` → `content/gr
 - Skipped 2 widget quotes that are intern/employee, not clients
 - Role, city, and canonical GBP review URL — confirm when available
 
-## Blog / Journal
+## The Journal
 
-Source: `docs/content/Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` → `content/blog/*.json`
+Source: `docs/content/Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` → `content/blog/*.json` (routes stay `/blog`)
 
 - Author role + LinkedIn for Sai Narasimhan Palakolanu — to confirm
 - Featured covers live at `/assets/blog/[slug]/cover.webp` (royalty-free Unsplash stand-ins; swap for licensed Images Bazaar / owned shoots when ready)

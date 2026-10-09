@@ -11,7 +11,7 @@ export function BlogRelated({ posts }: BlogRelatedProps) {
   return (
     <section className="mt-16 w-full border-t border-border pt-12">
       <h2 className="font-display text-[26px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[32px]">
-        Related posts
+        More from The Journal
       </h2>
       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (

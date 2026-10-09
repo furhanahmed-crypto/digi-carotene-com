@@ -25,7 +25,7 @@ export default function BlogPage() {
 
       <SectionLayout tone="white" decor={pageWhiteDecor}>
         <Reveal>
-          <SectionMark data-reveal="eyebrow">Writing</SectionMark>
+          <SectionMark data-reveal="eyebrow">Our Journal</SectionMark>
           <SectionHeading
             eyebrowProps={{ "data-reveal": "eyebrow" }}
             titleProps={{ "data-reveal": "heading" }}
@@ -33,7 +33,7 @@ export default function BlogPage() {
             className="mt-6"
             eyebrow="Insights"
             title="Guides for buyers comparing cost, channels and agencies"
-            body={`${posts.length} posts on performance, growth, local SEO and AI search — written to answer the questions people type into Google and ChatGPT.`}
+            body={`${posts.length} pieces in The Journal on performance, growth, local SEO and AI search — written to answer the questions people type into Google and ChatGPT.`}
           />
           <BlogPostList posts={posts} />
         </Reveal>

@@ -8,7 +8,7 @@ export type ClientLogo = {
   src: string
 }
 
-const v = "8"
+const v = "9"
 
 function logo(id: string, name: string, file: string): ClientLogo {
   return { id, name, src: `/assets/clients/${file}?v=${v}` }

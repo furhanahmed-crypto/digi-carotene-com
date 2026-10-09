@@ -258,7 +258,7 @@ export const mainNav: NavItem[] = [
       {
         title: "The Journal",
         href: "/blog",
-        description: "Insights on SEO, AEO, GEO, and growth.",
+        description: "Our Journal — insights on SEO, AEO, GEO and growth.",
         icon: Newspaper,
       },
       {

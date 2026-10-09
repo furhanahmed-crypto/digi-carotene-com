@@ -48,7 +48,12 @@ export function buildBlogJsonLd(post: BlogPost) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
-        { "@type": "ListItem", position: 2, name: "Blog", item: `${site}/blog` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "The Journal",
+          item: `${site}/blog`,
+        },
         { "@type": "ListItem", position: 3, name: post.h1, item: pageUrl },
       ],
     })

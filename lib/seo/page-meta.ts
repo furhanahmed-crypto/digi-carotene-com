@@ -48,7 +48,7 @@ export const pageMetaBySlug = {
   },
   "/services/digital-marketing/content": {
     title: "Content Marketing Agency in Hyderabad & Bangalore",
-    description: "Blogs, guides, videos and answer-ready content that ranks on Google, gets quoted by AI and turns readers into buyers. Hyderabad and Bangalore.",
+    description: "Articles, guides, videos and answer-ready content that ranks on Google, gets quoted by AI and turns readers into buyers. Hyderabad and Bangalore.",
   },
   "/services/digital-marketing/social": {
     title: "Social Media Marketing Agency Hyderabad, Bangalore",
@@ -138,8 +138,9 @@ export const pageMetaBySlug = {
       "Benchmark-based growth scenarios for clinics, restaurants, salons, colleges and furniture brands: the strategy, the funnel and the numbers to expect.",
   },
   "/blog": {
-    title: "SEO, AI Search & Growth Insights | Digi Carotene Journal",
-    description: "Practical guides on SEO, AI search, ads, social and offline marketing for businesses in Hyderabad, Bangalore and beyond. Written by the Digi Carotene team.",
+    title: "The Journal | SEO, AI Search & Growth Insights | Digi Carotene",
+    description:
+      "Our Journal: practical guides on SEO, AI search, ads, social and offline marketing for businesses in Hyderabad, Bangalore and beyond. Written by the Digi Carotene team.",
   },
   // --- v2 additions (Digi_Carotene_Website_Content_v2) ---
   "/services": {

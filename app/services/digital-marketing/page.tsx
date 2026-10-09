@@ -35,7 +35,7 @@ const digitalServices = [
   {
     slug: "content",
     title: "Content Marketing",
-    desc: "Blogs, guides, videos and answer-ready content that builds trust and search visibility.",
+    desc: "Articles, guides, videos and answer-ready content that builds trust and search visibility.",
   },
   {
     slug: "social",
