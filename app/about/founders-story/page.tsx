@@ -14,7 +14,7 @@ export const metadata: Metadata = metadataFor("/about/founders-story")
 
 
 const promises = [
-  "I will never sell you a metric that does not matter to your business.",
+  "We will never sell you a metric that does not matter to your business.",
   "If something is not working, you will hear it from us before you notice it.",
   "Your growth is the only scoreboard we care about.",
 ]
@@ -37,7 +37,7 @@ export default function FoundersStoryPage() {
           <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <SectionMark data-reveal="eyebrow">
-                The problem I kept seeing
+                The problem we kept seeing
               </SectionMark>
               <SectionHeading
                 eyebrowProps={{ "data-reveal": "eyebrow" }}
@@ -46,7 +46,7 @@ export default function FoundersStoryPage() {
                 className="mt-6"
                 eyebrow="Origin"
                 title="Spend without a clear return"
-                body="Before Digi Carotene, I kept meeting business owners who had spent real money on marketing and could not answer one basic question: what did it bring back? They had beautiful posts. They had reports full of impressions. What they did not have was a clear line from spend to customers."
+                body="Before Digi Carotene, we kept meeting business owners who had spent real money on marketing and could not answer one basic question: what did it bring back? They had beautiful posts. They had reports full of impressions. What they did not have was a clear line from spend to customers."
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
@@ -86,7 +86,7 @@ export default function FoundersStoryPage() {
             <div>
               <Reveal>
                 <SectionMark data-reveal="eyebrow">
-                  What I promise every client
+                  What we promise every client
                 </SectionMark>
                 <SectionHeading
                   eyebrowProps={{ "data-reveal": "eyebrow" }}
@@ -117,7 +117,7 @@ export default function FoundersStoryPage() {
                 </ul>
               </Reveal>
               <p className="mt-8 text-sm text-muted-foreground">
-                Founder, Digi Carotene
+                The Digi Carotene team
               </p>
             </div>
           </div>
