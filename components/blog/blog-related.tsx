@@ -18,10 +18,12 @@ export function BlogRelated({ posts }: BlogRelatedProps) {
           <BlogCard
             key={post.slug}
             href={post.href}
+            slug={post.slug}
             title={post.title}
             excerpt={post.excerpt}
             focusKeyword={post.focusKeyword}
             datePublished={post.datePublished}
+            imageAlt={post.featuredImageAlt}
           />
         ))}
       </div>

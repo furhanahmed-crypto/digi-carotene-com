@@ -43,8 +43,8 @@ Source: `docs/content/Digi-Carotene-Case-Studies-SEO-AEO-v2.pdf` → `content/gr
 
 ## Client logos
 
-- Well-known brand SVGs in `public/assets/clients/` (Flipkart, Google, IBM, etc.) for marquee layout reference only — **not Digi Carotene clients**
-- Permissioned real client logos — to confirm before launch (replace reference marks)
+- Real client marks live in `public/assets/clients/` (17 logos: Naturals, Toni & Guy, Bikanervala, CotAndCouch, etc.)
+- Confirm written permission / usage rights for public site if not already cleared
 
 ## Testimonials
 
@@ -57,7 +57,7 @@ Source: `docs/content/Digi-Carotene-Case-Studies-SEO-AEO-v2.pdf` → `content/gr
 Source: `docs/content/Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` → `content/blog/*.json`
 
 - Author role + LinkedIn for Sai Narasimhan Palakolanu — to confirm
-- Featured cover images at `/blog/[slug]/cover.webp` — to confirm
+- Featured covers live at `/assets/blog/[slug]/cover.webp` (royalty-free Unsplash stand-ins; swap for licensed Images Bazaar / owned shoots when ready)
 - Bracketed confirmations inside posts (e.g. Blog 1 starting prices, Blog 10 USD retainer / country list) — confirm before launch
 - Re-check WhatsApp rates (Blog 7) and NMC rules (Blog 9) on publish date
 

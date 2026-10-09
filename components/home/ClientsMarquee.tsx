@@ -37,7 +37,7 @@ export function ClientsMarquee() {
       bordered
       className="border-y"
       decor={marqueeDecor}
-      aria-label="Brand logo layout references — not Digi Carotene clients"
+      aria-label="Client logos"
     >
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-brand-yellow to-transparent md:w-28 dark:from-secondary" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-brand-yellow to-transparent md:w-28 dark:from-secondary" />

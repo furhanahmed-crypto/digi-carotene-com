@@ -5,6 +5,7 @@ import { BlogArticle } from "@/components/blog/blog-article"
 import { pageWhiteDecor } from "@/components/shared/page-decors"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
+import { blogCoverSrc } from "@/lib/blog/cover"
 import { buildBlogJsonLd } from "@/lib/blog/json-ld"
 import { getBlogPost, getBlogSlugs } from "@/lib/blog/load-posts"
 import { getRelatedPostCards } from "@/lib/blog/related-posts"
@@ -37,6 +38,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.datePublished,
       modifiedTime: post.dateModified,
+      images: [{ url: blogCoverSrc(post.slug), alt: post.featuredImageAlt }],
     },
   }
 }

@@ -15,10 +15,12 @@ export function BlogPostList({ posts }: BlogPostListProps) {
         <div key={post.slug} data-reveal="card" className="min-w-0">
           <BlogCard
             href={`/blog/${post.slug}`}
+            slug={post.slug}
             title={post.title}
             excerpt={post.excerpt}
             focusKeyword={post.focusKeyword}
             datePublished={post.datePublished}
+            imageAlt={post.featuredImageAlt}
           />
         </div>
       ))}

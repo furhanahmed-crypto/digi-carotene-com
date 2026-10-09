@@ -1,9 +1,6 @@
 /**
- * Well-known brand marks for marquee / clients-page layout reference only.
- * Not Digi Carotene clients. Replace with permissioned real client logos before launch.
- * See PLACEHOLDERS.md.
- *
- * PNGs are pre-cropped onto a shared 360×100 transparent stage for consistent marquee sizing.
+ * Client logo strip — assets in public/assets/clients/.
+ * Sourced from Digi Carotene brand pack (Oct 2026). Confirm publish permission as needed.
  */
 export type ClientLogo = {
   id: string
@@ -11,19 +8,28 @@ export type ClientLogo = {
   src: string
 }
 
-const v = "5"
+const v = "6"
+
+function logo(id: string, name: string, file: string): ClientLogo {
+  return { id, name, src: `/assets/clients/${file}?v=${v}` }
+}
 
 export const clientLogos: readonly ClientLogo[] = [
-  { id: "google", name: "Google", src: `/assets/clients/google.png?v=${v}` },
-  { id: "microsoft", name: "Microsoft", src: `/assets/clients/microsoft.png?v=${v}` },
-  { id: "amazon", name: "Amazon", src: `/assets/clients/amazon.png?v=${v}` },
-  { id: "meta", name: "Meta", src: `/assets/clients/meta.png?v=${v}` },
-  { id: "netflix", name: "Netflix", src: `/assets/clients/netflix.png?v=${v}` },
-  { id: "adobe", name: "Adobe", src: `/assets/clients/adobe.png?v=${v}` },
-  { id: "ibm", name: "IBM", src: `/assets/clients/ibm.png?v=${v}` },
-  { id: "shopify", name: "Shopify", src: `/assets/clients/shopify.png?v=${v}` },
-  { id: "nike", name: "Nike", src: `/assets/clients/nike.png?v=${v}` },
-  { id: "mcdonalds", name: "McDonald's", src: `/assets/clients/mcdonalds.png?v=${v}` },
-  { id: "cursor", name: "Cursor", src: `/assets/clients/cursor.png?v=${v}` },
-  { id: "flipkart", name: "Flipkart", src: `/assets/clients/flipkart.png?v=${v}` },
+  logo("lecom", "LECOM Event Center", "01.webp"),
+  logo("valence-asta", "Valence Asta Sports", "02.webp"),
+  logo("ammammillu", "Ammammillu", "03.webp"),
+  logo("aromas", "Aromas & Co.", "04.webp"),
+  logo("aimscs", "C.R. Rao AIMSCS", "05.webp"),
+  logo("essentia", "Essentia The Salon Lounge", "06.webp"),
+  logo("naturals", "Naturals", "07.webp"),
+  logo("tales-of-telugu", "Tales of Telugu", "08.webp"),
+  logo("toni-guy", "Toni & Guy", "09.webp"),
+  logo("bikanervala", "Bikanervala", "10.webp"),
+  logo("south-indian-styling", "South Indian Styling Studio", "11.webp"),
+  logo("veda-hospitals", "Veda Hospitals", "12.webp"),
+  logo("flavours-of-andhra", "Flavours of Andhra", "13.webp"),
+  logo("cot-and-couch", "CotAndCouch", "14.webp"),
+  logo("sorshe", "Sorshe", "15.webp"),
+  logo("jawed-habib", "Jawed Habib", "16.webp"),
+  logo("usha-mulpuri", "Usha Mulpuri's Kitchen", "17.webp"),
 ] as const

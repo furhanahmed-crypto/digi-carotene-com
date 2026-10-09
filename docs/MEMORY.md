@@ -36,9 +36,10 @@
 - Line-art on inner pages via `page-decors.tsx` (header + white/cream/services/CTA). Float amp ~1.35× / parallax ~12% so motion reads without feeling floaty.
 - Service detail pages compose homepage section patterns (`components/services/*`): sticky overview, multi-color deliverables, framework steps, audience cards, sticky FAQ, related color panels, yellow `ServiceCta`. No old numbered border-list layout.
 - Public NAP/socials live in `constants/site/contact.ts`. Office: Dwaraka Pride, HITEC City (maps embed `mapsEmbedSrc`). Voice `+91 99598 20874` vs WhatsApp `93986 82206` — confirm vs GBP.
-- Reference media lives under `public/assets/` (`hero/mosaic`, `reels`, `showcase`, `clients`, `scores`). Keep only wired files; compress webp/mp4 before commit. Mixkit reels are layout shells. Client marquee may use familiar brand marks (Google, Shopify, etc.) as **spacing references only** — never claim them as Digi Carotene clients; replace with permissioned logos before launch.
+- Reference media lives under `public/assets/` (`hero/mosaic`, `reels`, `campaigns`, `blog`, `clients`, `scores`). Keep only wired files; compress webp/mp4 before commit. Mixkit reels are layout shells. Blog covers: `/assets/blog/[slug]/cover.webp`. Campaign/visual-showcase stills: `/assets/campaigns/01–10.webp`. Images Bazaar is paid stock — do not scrape; drop licensed files into those folders when purchased.
 - Blog posts live as JSON under `content/blog/` (PDF is source of truth). Listing at `/blog`, details at `/blog/[slug]`. Render via `components/blog/*`; loaders in `lib/blog/*`. Do not rewrite PDF copy; keep bracketed `[[…]]` / `[… — confirm]` placeholders until confirmed.
 - Growth scenarios (case studies PDF) live under `content/growth-scenarios/`. List at `/case-studies`; details at `/growth-scenarios/[slug]` per PDF URLs. Always label as **Benchmark scenario** until real client results replace them. Homepage Results shows `homeFeatured` three.
+- Hero mosaic tiles: `public/assets/hero/mosaic/01–10.webp` (Downloads pack). Client logos: `public/assets/clients/01–17.webp` wired via `constants/home/clients.ts` into marquee, `/about/clients`, and industry logo strips.
 
 ## Constraints that keep biting us
 

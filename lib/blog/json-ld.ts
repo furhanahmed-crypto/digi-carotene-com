@@ -11,7 +11,7 @@ export function buildBlogJsonLd(post: BlogPost) {
       "@type": "BlogPosting",
       headline: post.h1,
       description: post.metaDescription,
-      image: `${site}/blog/${post.slug}/cover.webp`,
+      image: `${site}/assets/blog/${post.slug}/cover.webp`,
       datePublished: post.datePublished,
       dateModified: post.dateModified,
       author: {

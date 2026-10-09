@@ -7,13 +7,9 @@ type ClientLogoProps = {
   size?: "marquee" | "card"
 }
 
-/**
- * Shared stage — source PNGs are already normalized to 360×100.
- * Marquee/card only scale that stage; no per-brand transforms.
- */
 const stageClass = {
-  marquee: "h-8 w-[8.5rem]",
-  card: "h-11 w-[11.5rem] max-w-full",
+  marquee: "h-9 w-[9rem]",
+  card: "h-12 w-[12rem] max-w-full",
 } as const
 
 export function ClientLogo({
@@ -29,10 +25,10 @@ export function ClientLogo({
         className
       )}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element -- local brand PNGs */}
+      {/* eslint-disable-next-line @next/next/no-img-element -- local client logos */}
       <img
         src={logo.src}
-        alt=""
+        alt={logo.name}
         width={360}
         height={100}
         className="h-full w-full object-contain object-center"

@@ -3,7 +3,7 @@ import { clientLogos } from "@/constants/home/clients"
 import { cn } from "@/lib/utils"
 
 type ClientLogoStripProps = {
-  /** Stable seed so each industry page shows a different slice of reference logos. */
+  /** Stable seed so each industry page shows a different slice of client logos. */
   seed?: string
   /** How many logos to show (default 6). */
   count?: number
@@ -23,10 +23,7 @@ function pickLogos(seed: string | undefined, count: number) {
   return picked
 }
 
-/**
- * Clean logo row for industry / outline pages.
- * Marks are layout references only — not claimed as Digi Carotene clients.
- */
+/** Clean logo row for industry / outline pages. */
 export function ClientLogoStrip({
   seed,
   count = 6,
@@ -50,10 +47,6 @@ export function ClientLogoStrip({
           </li>
         ))}
       </ul>
-      <p className="text-xs text-muted-foreground">
-        Layout reference marks — replace with permissioned client logos before
-        launch.
-      </p>
     </div>
   )
 }

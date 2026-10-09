@@ -63,9 +63,9 @@ export default function ClientsPage() {
               titleProps={{ "data-reveal": "heading" }}
               bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
-              eyebrow="Layout reference"
-              title="Familiar brand marks for spacing — not our client roster"
-              body="These logos are layout references only so the grid reads like a real clients band. They are not Digi Carotene clients. Swap in permissioned marks before launch."
+              eyebrow="Our roster"
+              title="Brands that trusted Digi Carotene with their growth"
+              body="A selection of restaurants, salons, clinics, education and lifestyle brands we've worked with across Hyderabad and beyond."
             />
 
             <div
@@ -85,8 +85,8 @@ export default function ClientsPage() {
                     <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </p>
-                    <p className="mt-2 text-base leading-[1.6] text-muted-foreground">
-                      {client.name} — layout reference only
+                    <p className="mt-2 text-base leading-[1.6] text-foreground">
+                      {client.name}
                     </p>
                   </div>
                 </div>
