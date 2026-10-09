@@ -34,7 +34,7 @@ export function BlogCard({
       )}
     >
       <Link href={href} className="flex h-full min-w-0 flex-col">
-        <div className="relative aspect-[16/10] w-full bg-secondary">
+        <div className="relative aspect-video w-full bg-secondary">
           <Image
             src={blogCoverSrc(slug)}
             alt={imageAlt || title}

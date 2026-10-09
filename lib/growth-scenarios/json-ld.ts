@@ -50,7 +50,7 @@ export function buildScenarioJsonLd(scenario: GrowthScenario) {
           "@type": "ListItem",
           position: 2,
           name: "Growth Scenarios",
-          item: `${site}/case-studies`,
+          item: `${site}/growth-scenarios`,
         },
         {
           "@type": "ListItem",

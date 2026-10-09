@@ -20,7 +20,7 @@ Concrete work derived from PRD + DESIGN + ARCHITECTURE.
 - [x] Equal-height growth framework cards
 - [x] `bun run typecheck`
 - [x] Journal: 10 SEO/AEO blog posts from `Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` (`/blog` + `/blog/[slug]`)
-- [x] Growth scenarios: 5 benchmark case studies from PDF (`/case-studies` list + `/growth-scenarios/[slug]`; homepage shows 3)
+- [x] Growth scenarios: 5 benchmark case studies from PDF (`/growth-scenarios` hub + `/growth-scenarios/[slug]`; `/case-studies` → redirect; homepage shows 3)
 
 ## Remaining (ops / assets)
 

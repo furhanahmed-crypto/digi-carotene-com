@@ -7,7 +7,8 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { cn } from "@/lib/utils"
 
 type PageHeaderProps = {
-  title: string
+  /** Page H1. Omit on article pages that render their own H1 in the body. */
+  title?: string
   description?: string
   /** SectionMark label — paper tone on the accent banner. */
   mark?: string
@@ -18,6 +19,8 @@ type PageHeaderProps = {
   /** Background line-art — defaults to pageHeaderDecor. */
   decor?: ReactNode
   className?: string
+  /** Compact band (mark + optional description) — no hero title. */
+  size?: "hero" | "banner"
   /** @deprecated Image backdrops removed — ignored. */
   imageIndex?: number
 }
@@ -34,13 +37,17 @@ export function PageHeader({
   actions,
   decor = pageHeaderDecor,
   className,
+  size = "hero",
 }: PageHeaderProps) {
   return (
     <SectionLayout
       tone="yellow"
       size="hero"
       decor={decor}
-      className={cn(className)}
+      className={cn(
+        size === "banner" && "pb-10 md:pb-12",
+        className
+      )}
       aria-label="Page header"
     >
       <Reveal className="max-w-4xl">
@@ -48,17 +55,22 @@ export function PageHeader({
           {mark}
         </SectionMark>
 
-        <h1
-          data-reveal="heading"
-          className="mt-6 font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] text-ink md:text-[52px] lg:text-[60px] dark:text-foreground"
-        >
-          {title}
-        </h1>
+        {title ? (
+          <h1
+            data-reveal="heading"
+            className="mt-6 font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] text-ink md:text-[52px] lg:text-[60px] dark:text-foreground"
+          >
+            {title}
+          </h1>
+        ) : null}
 
         {description ? (
           <p
             data-reveal="text"
-            className="mt-5 max-w-2xl text-base leading-[1.6] text-ink/75 md:text-lg dark:text-muted-foreground"
+            className={cn(
+              "max-w-2xl text-base leading-[1.6] text-ink/75 md:text-lg dark:text-muted-foreground",
+              title ? "mt-5" : "mt-4"
+            )}
           >
             {description}
           </p>

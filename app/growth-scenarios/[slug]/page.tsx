@@ -55,9 +55,9 @@ export default async function GrowthScenarioPage({ params }: ScenarioPageProps) 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        title={scenario.focusKeyword}
-        description="Benchmark growth scenario — modelled numbers, not a named client claim."
         mark="Growth Scenarios"
+        description="Benchmark scenario — modelled from industry benchmarks, not a named client claim."
+        size="banner"
       />
       <SectionLayout tone="white" decor={pageWhiteDecor}>
         <ScenarioArticle scenario={scenario} />

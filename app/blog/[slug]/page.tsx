@@ -58,9 +58,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <PageHeader
-        title={post.focusKeyword}
-        description="Practical Digi Carotene guides for search, ads, AI and growth."
         mark="The Journal"
+        description={post.metaDescription}
+        size="banner"
       />
       <SectionLayout tone="white" decor={pageWhiteDecor}>
         <BlogArticle post={post} related={related} />

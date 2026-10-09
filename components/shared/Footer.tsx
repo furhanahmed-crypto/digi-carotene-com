@@ -215,7 +215,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className={linkClass}>
+                <Link href="/growth-scenarios" className={linkClass}>
                   Case Studies
                 </Link>
               </li>

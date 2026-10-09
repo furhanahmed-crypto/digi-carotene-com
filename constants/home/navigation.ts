@@ -263,7 +263,7 @@ export const mainNav: NavItem[] = [
       },
       {
         title: "Case Studies",
-        href: "/case-studies",
+        href: "/growth-scenarios",
         description: "Results and stories from real campaigns.",
         icon: FileBarChart,
       },

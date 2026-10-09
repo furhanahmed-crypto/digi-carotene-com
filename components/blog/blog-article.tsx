@@ -29,7 +29,7 @@ export function BlogArticle({ post, related }: BlogArticleProps) {
           <h1 className="mt-4 font-display text-[34px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[48px]">
             {post.h1}
           </h1>
-          <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border bg-secondary">
+          <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-border bg-secondary">
             <Image
               src={blogCoverSrc(post.slug)}
               alt={post.featuredImageAlt}

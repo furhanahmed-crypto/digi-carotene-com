@@ -43,7 +43,7 @@ export function ResultsSpeak() {
 
         <div data-reveal="cta" className="mt-8">
           <Link
-            href="/case-studies"
+            href="/growth-scenarios"
             className="link-underline text-[13px] font-medium tracking-[0.04em] uppercase"
           >
             See all growth scenarios

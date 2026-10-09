@@ -126,10 +126,16 @@ export const pageMetaBySlug = {
     title: "Digital Marketing Agency in Bangalore",
     description: "Data-led digital marketing for Bangalore startups, D2C, healthcare and local brands. SEO, AEO, performance ads, social, web and BTL activations.",
   },
-  "/case-studies": {
-    title: "Growth Scenarios & Marketing Benchmarks | Digi Carotene",
+  "/growth-scenarios": {
+    title: "Marketing Growth Scenarios by Industry | Digi Carotene",
     description:
-      "Five industry growth scenarios with before-and-after numbers for clinics, restaurants, salons, colleges and furniture showrooms. Benchmarks, clearly labelled.",
+      "Benchmark-based growth scenarios for clinics, restaurants, salons, colleges and furniture brands: the strategy, the funnel and the numbers to expect.",
+  },
+  /** Alias — redirects to /growth-scenarios (Case Studies SEO PDF hub). */
+  "/case-studies": {
+    title: "Marketing Growth Scenarios by Industry | Digi Carotene",
+    description:
+      "Benchmark-based growth scenarios for clinics, restaurants, salons, colleges and furniture brands: the strategy, the funnel and the numbers to expect.",
   },
   "/blog": {
     title: "SEO, AI Search & Growth Insights | Digi Carotene Journal",

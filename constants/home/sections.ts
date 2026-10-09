@@ -85,7 +85,7 @@ export const homeSections = {
       { label: "Growth", href: "/services/digital-marketing/growth-marketing" },
       { label: "SEO", href: "/services/digital-marketing/seo" },
       { label: "Social", href: "/services/digital-marketing/social" },
-      { label: "Case Studies", href: "/case-studies" },
+      { label: "Case Studies", href: "/growth-scenarios" },
     ] satisfies SearchRankingTag[],
   },
   differentiators: {
