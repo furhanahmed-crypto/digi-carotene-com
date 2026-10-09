@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react"
 
 import { useEnquiry } from "@/components/enquiry/enquiry-provider"
 import { Button } from "@/components/ui/button"
-import { matchEnquiryService } from "@/lib/enquiry"
 import { cn } from "@/lib/utils"
 
 type OpenEnquiryButtonProps = {
@@ -27,9 +26,7 @@ export function OpenEnquiryButton({
       type="button"
       size={size}
       className={cn(className)}
-      onClick={() =>
-        openEnquiry({ service: matchEnquiryService(serviceName) })
-      }
+      onClick={() => openEnquiry({ service: serviceName })}
     >
       {label}
       <ArrowRight className="size-4" />

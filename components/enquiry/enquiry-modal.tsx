@@ -10,12 +10,15 @@ type EnquiryModalProps = {
   open: boolean
   onOpenChange: (open: boolean) => void
   defaultService?: string
+  /** Bumps on each open so the form remounts with fresh defaults. */
+  formKey?: number
 }
 
 export function EnquiryModal({
   open,
   onOpenChange,
   defaultService,
+  formKey = 0,
 }: EnquiryModalProps) {
   const lenis = useLenis()
 
@@ -37,11 +40,14 @@ export function EnquiryModal({
       modal="trap-focus"
       contentClassName="sm:max-w-md"
     >
-      <EnquiryForm
-        defaultService={defaultService}
-        source="enquiry"
-        onSubmitted={() => onOpenChange(false)}
-      />
+      {open ? (
+        <EnquiryForm
+          key={formKey}
+          defaultService={defaultService}
+          source="enquiry"
+          onSubmitted={() => onOpenChange(false)}
+        />
+      ) : null}
     </Modal>
   )
 }

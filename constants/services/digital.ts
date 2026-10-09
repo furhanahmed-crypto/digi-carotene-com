@@ -184,7 +184,7 @@ export const digitalServiceCopy: Record<
     ],
   },
   "web": {
-    shortTitle: "Web Design and Development",
+    shortTitle: "Web-Design & Development",
     title: "Your Website Is Either Your Best Salesperson or the Reason Leads Quietly Leave.",
     description: "Most visitors decide within seconds whether to stay. We design and build websites that load fast, explain clearly, rank on Google, get read by AI and turn visitors into enquiries.",
     whatIs: "A beautiful website that doesn't convert is an expensive brochure We see it all the time: a stunning homepage, a contact form buried three clicks deep, a mobile version that takes eight seconds to load and service pages that never say what the business actually does. Every ad rupee and SEO effort you make ends up on your website. If the site leaks, everything leaks.",

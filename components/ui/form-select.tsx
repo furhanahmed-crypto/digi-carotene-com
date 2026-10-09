@@ -51,6 +51,7 @@ export function FormSelect({
   return (
     <Select
       modal={false}
+      items={items}
       value={value || null}
       onValueChange={(next) => onValueChange(next ?? "")}
       name={name}

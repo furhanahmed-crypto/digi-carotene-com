@@ -181,7 +181,7 @@ export const offlineServiceCopy: Record<
     ],
   },
   "popup-stores": {
-    shortTitle: "Popup Stores",
+    shortTitle: "Popup-stores",
     title: "Scarcity Sells. A Store That Disappears on Sunday Sells Faster.",
     description: "A pop-up store gives online brands a physical home, gives established brands a fresh stage, and gives customers a reason to come now. We find the location, design the space, build it, staff it and measure it.",
     whatIs: "The cheapest way to test a city before you commit Signing a long retail lease without knowing if a neighbourhood will buy is a big bet. A pop-up lets you test demand, pricing and product mix in Hyderabad or Bangalore for weeks instead of years, while building buzz, content and a customer list.",

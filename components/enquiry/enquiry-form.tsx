@@ -40,12 +40,6 @@ export function EnquiryForm({
     message: "",
   })
 
-  React.useEffect(() => {
-    if (defaultService) {
-      setFormState((s) => ({ ...s, service: defaultService }))
-    }
-  }, [defaultService])
-
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
     onSubmitted?.()

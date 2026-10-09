@@ -3,8 +3,10 @@
 import * as React from "react"
 
 import { EnquiryModal } from "@/components/enquiry/enquiry-modal"
+import { matchEnquiryService } from "@/lib/enquiry"
 
 type OpenEnquiryOptions = {
+  /** Page/service label — matched onto enquiry options when possible. */
   service?: string
 }
 
@@ -18,9 +20,12 @@ const EnquiryContext = React.createContext<EnquiryContextValue | null>(null)
 export function EnquiryProvider({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = React.useState(false)
   const [defaultService, setDefaultService] = React.useState("")
+  /** Remount the form on each open so defaults (incl. service) always apply. */
+  const [formKey, setFormKey] = React.useState(0)
 
   const openEnquiry = React.useCallback((options?: OpenEnquiryOptions) => {
-    setDefaultService(options?.service ?? "")
+    setDefaultService(matchEnquiryService(options?.service))
+    setFormKey((key) => key + 1)
     setOpen(true)
   }, [])
 
@@ -40,6 +45,7 @@ export function EnquiryProvider({ children }: { children: React.ReactNode }) {
         open={open}
         onOpenChange={setOpen}
         defaultService={defaultService}
+        formKey={formKey}
       />
     </EnquiryContext.Provider>
   )

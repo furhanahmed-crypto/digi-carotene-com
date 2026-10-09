@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react"
 import { useEnquiry } from "@/components/enquiry/enquiry-provider"
 import { Button } from "@/components/ui/button"
 import { whatsappHref } from "@/constants/home/navigation"
-import { matchEnquiryService } from "@/lib/enquiry"
 import { cn } from "@/lib/utils"
 
 type ConversationActionsProps = {
@@ -31,9 +30,7 @@ export function ConversationActions({
         type="button"
         size="lg"
         className={primaryClassName}
-        onClick={() =>
-          openEnquiry({ service: matchEnquiryService(serviceName) })
-        }
+        onClick={() => openEnquiry({ service: serviceName })}
       >
         Start a conversation
         <ArrowRight className="size-4" />
