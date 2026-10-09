@@ -34,7 +34,8 @@ export function EnquiryModal({
       onOpenChange={onOpenChange}
       title="Enquire with Digi Carotene"
       description="Share a few details and a strategist will get back within one working day."
-      contentClassName="max-h-[min(90vh,720px)] overflow-y-auto sm:max-w-md"
+      modal="trap-focus"
+      contentClassName="sm:max-w-md"
     >
       <EnquiryForm
         defaultService={defaultService}

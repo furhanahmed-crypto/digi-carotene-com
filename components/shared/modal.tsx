@@ -1,6 +1,7 @@
 "use client"
 
 import type { ReactNode } from "react"
+import type { Dialog as DialogPrimitive } from "@base-ui/react/dialog"
 
 import {
   Dialog,
@@ -22,6 +23,11 @@ export type ModalProps = {
   className?: string
   contentClassName?: string
   showCloseButton?: boolean
+  /**
+   * Prefer `trap-focus` when the modal hosts a portaled Select/Menu —
+   * full `true` scroll-lock blocks wheel on those popups.
+   */
+  modal?: DialogPrimitive.Root.Props["modal"]
 }
 
 /**
@@ -38,14 +44,15 @@ export function Modal({
   className,
   contentClassName,
   showCloseButton = true,
+  modal = "trap-focus",
 }: ModalProps) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChange} modal={modal}>
       <DialogContent
         showCloseButton={showCloseButton}
         className={cn(className, contentClassName)}
       >
-        <DialogHeader>
+        <DialogHeader className="shrink-0">
           <DialogTitle>{title}</DialogTitle>
           {description ? (
             <DialogDescription>{description}</DialogDescription>
