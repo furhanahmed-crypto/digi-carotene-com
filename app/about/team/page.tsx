@@ -82,6 +82,12 @@ export default function TeamPage() {
 
       <SectionLayout tone="white" decor={pageWhiteDecor}>
         <div>
+          <Reveal className="mb-16 lg:mb-24">
+            <div data-reveal="image">
+              <MediaFrame index={5} label="The Digi Carotene team" aspect="photo" />
+            </div>
+          </Reveal>
+
           <Reveal>
             <SectionMark data-reveal="eyebrow">Leadership</SectionMark>
             <SectionHeading
@@ -103,7 +109,7 @@ export default function TeamPage() {
                 >
                   <MediaFrame
                     index={index}
-                    label={member.name}
+                    label={`${member.name} photo`}
                     aspect="photo"
                     className="border-0 border-b"
                   />

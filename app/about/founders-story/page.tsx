@@ -45,7 +45,7 @@ export default function FoundersStoryPage() {
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
-              <MediaFrame index={2} label="Founder" />
+              <MediaFrame index={2} label="Hyderabad studio" aspect="photo" />
             </div>
           </Reveal>
 
@@ -63,19 +63,24 @@ export default function FoundersStoryPage() {
               />
             </Reveal>
 
-            <Reveal>
-              <SectionMark data-reveal="eyebrow">
-                Building Digi Carotene
-              </SectionMark>
-              <SectionHeading
-                eyebrowProps={{ "data-reveal": "eyebrow" }}
-                titleProps={{ "data-reveal": "heading" }}
-                bodyProps={{ "data-reveal": "text" }}
-                className="mt-6"
-                eyebrow="Seven years on"
-                title="One channel was never enough"
-                body="Over the next seven years, that rule turned into an agency. We added SEO, then performance marketing, then production, web development and on-ground activations, because our clients' customers were not living in one channel, so neither could we. Today we have worked with 300+ clients, from neighbourhood restaurants in Hyderabad to brands abroad. The tools have changed. AI search did not exist when we started. The question has not changed: where did the money go, and what did it bring back?"
-              />
+            <Reveal className="grid items-start gap-10 md:grid-cols-2 md:gap-12">
+              <div>
+                <SectionMark data-reveal="eyebrow">
+                  Building Digi Carotene
+                </SectionMark>
+                <SectionHeading
+                  eyebrowProps={{ "data-reveal": "eyebrow" }}
+                  titleProps={{ "data-reveal": "heading" }}
+                  bodyProps={{ "data-reveal": "text" }}
+                  className="mt-6"
+                  eyebrow="Seven years on"
+                  title="One channel was never enough"
+                  body="Over the next seven years, that rule turned into an agency. We added SEO, then performance marketing, then production, web development and on-ground activations, because our clients' customers were not living in one channel, so neither could we. Today we have worked with 300+ clients, from neighbourhood restaurants in Hyderabad to brands abroad. The tools have changed. AI search did not exist when we started. The question has not changed: where did the money go, and what did it bring back?"
+                />
+              </div>
+              <div data-reveal="image">
+                <MediaFrame index={3} label="Founder" aspect="photo" />
+              </div>
             </Reveal>
 
             <div>
@@ -111,9 +116,12 @@ export default function FoundersStoryPage() {
                   ))}
                 </ul>
               </Reveal>
-              <p className="mt-8 text-sm text-muted-foreground">
-                The Digi Carotene team
-              </p>
+
+              <Reveal className="mt-12">
+                <div data-reveal="image">
+                  <MediaFrame index={4} label="The Digi Carotene team" aspect="photo" />
+                </div>
+              </Reveal>
             </div>
           </div>
 
