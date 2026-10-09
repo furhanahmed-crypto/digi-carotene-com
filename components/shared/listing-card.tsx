@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { MediaFrame } from "@/components/shared/media-frame"
+import { getPlaceholderImage } from "@/lib/placeholder-images"
 
 type ListingCardProps = {
   href: string
@@ -15,7 +16,11 @@ export function ListingCard({ href, index, title, body }: ListingCardProps) {
       href={href}
       className="group flex h-full flex-col border border-line bg-background transition-colors hover:border-carotene/40"
     >
-      <MediaFrame index={index} label={title} className="border-0 border-b" />
+      <MediaFrame
+        src={getPlaceholderImage(index)}
+        label={title}
+        className="border-0 border-b"
+      />
       <div className="flex flex-1 flex-col gap-3 p-5">
         <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
           {index + 1}

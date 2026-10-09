@@ -1,9 +1,8 @@
 import { ImagePlaceholder } from "@/components/shared/image-placeholder"
-import { getPlaceholderImage } from "@/lib/placeholder-images"
 import { cn } from "@/lib/utils"
 
 type MediaFrameProps = {
-  index?: number
+  /** Real or stock image URL. Omit for an empty labeled slot. */
   src?: string
   label?: string
   aspect?: "video" | "square" | "photo"
@@ -17,22 +16,27 @@ const aspectClass = {
 }
 
 export function MediaFrame({
-  index = 0,
   src,
   label = "Image here",
   aspect = "video",
   className,
 }: MediaFrameProps) {
   return (
-    <div className={cn("relative overflow-hidden border border-line bg-background", className)}>
+    <div
+      className={cn(
+        "relative overflow-hidden bg-background",
+        src ? "border border-line" : "border border-dashed border-line",
+        className
+      )}
+    >
       <span
         className="bg-carotene absolute top-0 left-0 z-10 h-full w-1"
         aria-hidden="true"
       />
       <ImagePlaceholder
-        src={src ?? getPlaceholderImage(index)}
+        src={src}
         label={label}
-        className={cn("w-full", aspectClass[aspect])}
+        className={cn("w-full border-0", aspectClass[aspect])}
       />
     </div>
   )

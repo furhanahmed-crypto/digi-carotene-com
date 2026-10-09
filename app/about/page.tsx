@@ -80,7 +80,7 @@ export default function AboutPage() {
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
-              <MediaFrame index={1} label="Team" aspect="photo" />
+              <MediaFrame label="Team" aspect="photo" />
             </div>
           </Reveal>
 

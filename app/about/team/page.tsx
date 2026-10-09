@@ -84,7 +84,7 @@ export default function TeamPage() {
         <div>
           <Reveal className="mb-16 lg:mb-24">
             <div data-reveal="image">
-              <MediaFrame index={5} label="The Digi Carotene team" aspect="photo" />
+              <MediaFrame label="The Digi Carotene team" aspect="photo" />
             </div>
           </Reveal>
 
@@ -108,7 +108,6 @@ export default function TeamPage() {
                   className="border border-line bg-background"
                 >
                   <MediaFrame
-                    index={index}
                     label={`${member.name} photo`}
                     aspect="photo"
                     className="border-0 border-b"

@@ -101,7 +101,7 @@ export default function PRServicesPage() {
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
-              <MediaFrame index={1} label="PR" />
+              <MediaFrame label="PR" />
             </div>
           </Reveal>
 

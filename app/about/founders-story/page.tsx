@@ -45,7 +45,7 @@ export default function FoundersStoryPage() {
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
-              <MediaFrame index={2} label="Hyderabad studio" aspect="photo" />
+              <MediaFrame label="Hyderabad studio" aspect="photo" />
             </div>
           </Reveal>
 
@@ -79,7 +79,7 @@ export default function FoundersStoryPage() {
                 />
               </div>
               <div data-reveal="image">
-                <MediaFrame index={3} label="Founder" aspect="photo" />
+                <MediaFrame label="Founder" aspect="photo" />
               </div>
             </Reveal>
 
@@ -119,7 +119,7 @@ export default function FoundersStoryPage() {
 
               <Reveal className="mt-12">
                 <div data-reveal="image">
-                  <MediaFrame index={4} label="The Digi Carotene team" aspect="photo" />
+                  <MediaFrame label="The Digi Carotene team" aspect="photo" />
                 </div>
               </Reveal>
             </div>
