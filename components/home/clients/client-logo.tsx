@@ -7,9 +7,13 @@ type ClientLogoProps = {
   size?: "marquee" | "card"
 }
 
+/**
+ * Height-led stage: square marks fill the cell; wide wordmarks stay capped by max-width.
+ * Assets are tight-cropped — no wide transparent padding that shrinks object-contain.
+ */
 const stageClass = {
-  marquee: "h-9 w-[9rem]",
-  card: "h-12 w-[12rem] max-w-full",
+  marquee: "h-[3.75rem] max-w-[12rem] sm:h-16 sm:max-w-[12.5rem]",
+  card: "h-14 max-w-full",
 } as const
 
 export function ClientLogo({
@@ -29,9 +33,7 @@ export function ClientLogo({
       <img
         src={logo.src}
         alt={logo.name}
-        width={360}
-        height={100}
-        className="h-full w-full object-contain object-center"
+        className="h-full w-auto max-w-full object-contain object-center"
         loading="lazy"
         decoding="async"
       />

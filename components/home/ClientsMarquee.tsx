@@ -7,17 +7,17 @@ function MarqueeRow() {
   const loop = [...clientLogos, ...clientLogos]
 
   return (
-    <div className="flex overflow-hidden">
+    <div className="flex overflow-hidden py-1">
       {[0, 1].map((copy) => (
         <div
           key={copy}
-          className="flex shrink-0 items-center gap-5 px-5 animate-marquee [animation-duration:32s] md:gap-6 md:px-6"
+          className="flex shrink-0 items-center gap-3 px-3 animate-marquee [animation-duration:40s] md:gap-4 md:px-4"
           aria-hidden={copy === 1}
         >
           {loop.map((logo, i) => (
             <div
               key={`${logo.id}-${copy}-${i}`}
-              className="flex h-[3.75rem] w-[10.5rem] shrink-0 items-center justify-center border border-ink/15 bg-white/90 px-5"
+              className="flex h-20 w-[12rem] shrink-0 items-center justify-center rounded-xl border border-ink/15 bg-white/95 px-2.5 sm:h-[5.25rem] sm:w-[13.5rem] sm:px-3"
             >
               <ClientLogo logo={logo} size="marquee" />
             </div>

@@ -43,7 +43,7 @@ export function ClientLogoStrip({
             data-reveal="card"
             className="flex h-24 items-center justify-center rounded-2xl border border-border bg-white/90 px-4 shadow-sm dark:bg-card"
           >
-            <ClientLogo logo={logo} size="card" className="h-9 w-auto max-w-full" />
+            <ClientLogo logo={logo} size="card" className="h-12 w-auto max-w-full" />
           </li>
         ))}
       </ul>

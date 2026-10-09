@@ -10,17 +10,18 @@ import type {
 } from "@/types/home"
 
 /** Nine distinct tiles — never cycle a shorter set or the pulse animation reads as a repeat.
- *  10.webp kept for visual showcase / future use. */
+ *  10.webp kept for visual showcase / future use.
+ *  No query strings — next/image localPatterns rejects them. */
 const heroMosaic = [
-  "/assets/hero/mosaic/01.webp?v=2",
-  "/assets/hero/mosaic/02.webp?v=2",
-  "/assets/hero/mosaic/03.webp?v=2",
-  "/assets/hero/mosaic/04.webp?v=2",
-  "/assets/hero/mosaic/05.webp?v=2",
-  "/assets/hero/mosaic/06.webp?v=2",
-  "/assets/hero/mosaic/07.webp?v=2",
-  "/assets/hero/mosaic/08.webp?v=2",
-  "/assets/hero/mosaic/09.webp?v=2",
+  "/assets/hero/mosaic/01.webp",
+  "/assets/hero/mosaic/02.webp",
+  "/assets/hero/mosaic/03.webp",
+  "/assets/hero/mosaic/04.webp",
+  "/assets/hero/mosaic/05.webp",
+  "/assets/hero/mosaic/06.webp",
+  "/assets/hero/mosaic/07.webp",
+  "/assets/hero/mosaic/08.webp",
+  "/assets/hero/mosaic/09.webp",
 ] as const
 
 const serviceTones = [
