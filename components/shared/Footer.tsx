@@ -38,7 +38,7 @@ export function Footer() {
               className="group inline-flex items-center"
               aria-label="Digi Carotene home"
             >
-              <SiteLogo heightClassName="h-16" />
+              <SiteLogo heightClassName="h-[4.5rem]" />
             </Link>
             <p className="max-w-sm text-sm leading-[1.6] text-muted-foreground md:text-base dark:text-white/70">
               Found. Chosen. Measured. Performance and growth marketing for

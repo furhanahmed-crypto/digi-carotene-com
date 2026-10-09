@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import {
+  faqContentClassName,
   faqItemClassName,
   faqTriggerClassName,
 } from "@/constants/ui/faq-accordion"
@@ -71,7 +72,7 @@ export function ServiceFaqSection({ name, faqs }: ServiceFaqSectionProps) {
                   <AccordionTrigger className={faqTriggerClassName}>
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="pb-5 text-sm font-normal leading-relaxed text-muted-foreground">
+                  <AccordionContent className={faqContentClassName}>
                     <p>{faq.answer}</p>
                   </AccordionContent>
                 </AccordionItem>

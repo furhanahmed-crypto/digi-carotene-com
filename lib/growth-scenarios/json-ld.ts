@@ -22,7 +22,7 @@ export function buildScenarioJsonLd(scenario: GrowthScenario) {
         name: "Digi Carotene",
         logo: {
           "@type": "ImageObject",
-          url: `${site}/logo/logo-light-1.png`,
+          url: `${site}/logo/dc-logo-light.png`,
         },
       },
       mainEntityOfPage: pageUrl,

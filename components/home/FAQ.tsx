@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/accordion"
 
 import {
+  faqContentClassName,
   faqItemClassName,
   faqTriggerClassName,
 } from "@/constants/ui/faq-accordion"
@@ -87,7 +88,7 @@ export function FAQ() {
                   <AccordionTrigger className={`${faqTriggerClassName} pr-2`}>
                     <span className="pr-4">{item.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="pb-5 text-sm font-normal leading-relaxed text-muted-foreground">
+                  <AccordionContent className={faqContentClassName}>
                     <p>{item.answer}</p>
                   </AccordionContent>
                 </AccordionItem>

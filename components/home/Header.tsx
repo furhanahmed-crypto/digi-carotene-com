@@ -46,7 +46,7 @@ export function Header() {
             className="inline-flex shrink-0 items-center px-2 py-2 sm:px-3 sm:py-2.5"
             aria-label="Digi Carotene home"
           >
-            <SiteLogo priority heightClassName="h-10 sm:h-11" />
+            <SiteLogo priority heightClassName="h-11 sm:h-12" />
           </Link>
 
           <div className="hidden flex-1 items-center justify-center py-3 lg:flex">

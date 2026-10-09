@@ -25,7 +25,7 @@ export function buildBlogJsonLd(post: BlogPost) {
       publisher: {
         "@type": "Organization",
         name: "Digi Carotene",
-        logo: { "@type": "ImageObject", url: `${site}/logo/logo-light-1.png` },
+        logo: { "@type": "ImageObject", url: `${site}/logo/dc-logo-light.png` },
       },
       mainEntityOfPage: pageUrl,
       keywords: post.metaKeywords.join(", "),
