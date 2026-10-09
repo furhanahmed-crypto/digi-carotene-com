@@ -40,6 +40,7 @@
 - Blog posts live as JSON under `content/blog/` (PDF is source of truth). Listing at `/blog`, details at `/blog/[slug]`. Render via `components/blog/*`; loaders in `lib/blog/*`. Do not rewrite PDF copy; keep bracketed `[[…]]` / `[… — confirm]` placeholders until confirmed.
 - Growth scenarios (case studies PDF) live under `content/growth-scenarios/`. List at `/case-studies`; details at `/growth-scenarios/[slug]` per PDF URLs. Always label as **Benchmark scenario** until real client results replace them. Homepage Results shows `homeFeatured` three.
 - Hero mosaic tiles: `public/assets/hero/mosaic/01–10.webp` (Downloads pack). Client logos: `public/assets/clients/01–17.webp` wired via `constants/home/clients.ts` into marquee, `/about/clients`, and industry logo strips.
+- Color contract: `--ink` / `--on-yellow` stay `#111` in dark for solid yellow fills only. FAQ/hover washes use `--yellow-tint*` + `text-foreground` (`constants/ui/faq-accordion.ts`). Never `data-panel-open:text-ink` on tinted rows.
 
 ## Constraints that keep biting us
 

@@ -9,8 +9,10 @@
   --color-foreground: var(--foreground);
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
+  /* ink / on-yellow = ALWAYS dark — solid yellow/carotene fills only */
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
+  --color-on-yellow: var(--on-yellow);
   --color-carotene: var(--carotene);
   --color-line: var(--line);
   --color-brand-yellow: var(--brand-yellow);
@@ -19,6 +21,8 @@
   --color-brand-purple: var(--brand-purple);
   --color-brand-red: var(--brand-red);
   --color-section-dark: var(--section-dark);
+  --color-yellow-tint: var(--yellow-tint);
+  --color-yellow-tint-strong: var(--yellow-tint-strong);
   --font-sans: var(--font-sans);
   --font-display: var(--font-display), ui-serif, Georgia, serif;
   --font-heading: var(--font-display), ui-serif, Georgia, serif;
@@ -62,11 +66,24 @@
   --radius-4xl: 1.5rem;
 }
 
-/* Free agency palette — not logo-locked. Digital Mojo / ShootOrder energy. */
+/*
+  Token contract (light + dark)
+  ─────────────────────────────
+  --foreground          Readable body/title text on page, cards, tints
+  --background / --card Theme surfaces
+  --brand-yellow        Solid accent fill (CTAs, marks, yellow bands)
+  --on-yellow / --ink   ALWAYS #111 — text/icons ON solid yellow only
+  --yellow-tint*        Soft yellow wash; pair with --foreground, never --ink
+  --muted-foreground    Secondary copy on any surface
+
+  Never use text-ink / text-on-yellow on charcoal, translucent, or tint washes.
+*/
+
 :root {
   --paper: #fafaf8;
   --paper-2: #f0efeb;
-  --ink: #111111;
+  --on-yellow: #111111;
+  --ink: var(--on-yellow);
   --ink-muted: #5c5c5c;
   --carotene: #f5c400;
   --line: #e5e5e5;
@@ -76,6 +93,8 @@
   --brand-purple: #6d28d9;
   --brand-red: #e23d2f;
   --section-dark: #111111;
+  --yellow-tint: color-mix(in oklab, var(--brand-yellow) 12%, transparent);
+  --yellow-tint-strong: color-mix(in oklab, var(--brand-yellow) 18%, transparent);
   --background: #fafaf8;
   --foreground: #111111;
   --card: #ffffff;
@@ -108,14 +127,15 @@
   --sidebar-accent-foreground: #111111;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #f5c400;
-  /* Line-art section motifs — warm ink on light bands */
   --decor-ink: #3a2a1c;
 }
 
 .dark {
   --paper: #fafaf8;
   --paper-2: #f0efeb;
-  --ink: #111111;
+  /* Solid yellow fills still need dark type — do not theme these light */
+  --on-yellow: #111111;
+  --ink: var(--on-yellow);
   --ink-muted: #a3a3a3;
   --carotene: #f5c400;
   --line: #2a2a2a;
@@ -125,6 +145,9 @@
   --brand-purple: #8b5cf6;
   --brand-red: #f05444;
   --section-dark: #0a0a0a;
+  /* Mix into card so tints stay elevated charcoal, not muddy olive+black type */
+  --yellow-tint: color-mix(in oklab, var(--brand-yellow) 16%, var(--card));
+  --yellow-tint-strong: color-mix(in oklab, var(--brand-yellow) 24%, var(--card));
   --background: #0f0f10;
   --foreground: #f5f5f5;
   --card: #171717;
@@ -156,7 +179,6 @@
   --sidebar-accent-foreground: #f5f5f5;
   --sidebar-border: #2a2a2a;
   --sidebar-ring: #f5c400;
-  /* Line-art section motifs — cream/white on dark */
   --decor-ink: #f3efe6;
 }
 
@@ -180,8 +202,22 @@
 
   ::selection {
     background: var(--brand-yellow);
-    color: #111111;
+    color: var(--on-yellow);
   }
+}
+
+/* Solid yellow control — always dark type */
+@utility on-yellow {
+  @apply bg-brand-yellow text-on-yellow;
+}
+
+/* Soft yellow wash — theme-aware; use with text-foreground */
+@utility surface-yellow-tint {
+  background-color: var(--yellow-tint);
+}
+
+@utility surface-yellow-tint-strong {
+  background-color: var(--yellow-tint-strong);
 }
 
 @utility glass-panel {
@@ -199,7 +235,6 @@
 }
 
 @utility animate-featured-border-spin {
-  /* One travelling highlight — clockwise only; slightly slower in light for focus */
   animation: featured-border-spin 3.2s linear infinite;
 }
 
@@ -285,13 +320,11 @@
   animation: contact-float 3s ease-in-out infinite;
 }
 
-/* Anti-flash: hide reveal targets until GSAP runs (only when motion is enabled). */
 [data-motion="on"] [data-reveal] {
   opacity: 0;
   visibility: hidden;
 }
 
-/* Native smooth scroll fights App Router + Lenis; Lenis owns smoothing. */
 html {
   scroll-behavior: auto;
 }

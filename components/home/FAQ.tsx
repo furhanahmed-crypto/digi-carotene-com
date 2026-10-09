@@ -11,6 +11,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
+import {
+  faqItemClassName,
+  faqTriggerClassName,
+} from "@/constants/ui/faq-accordion"
+
 import { FaqQuestionMark } from "./faq/faq-question-mark"
 
 export function FAQ() {
@@ -77,9 +82,9 @@ export function FAQ() {
                   key={item.question}
                   value={`faq-${index}`}
                   data-reveal="card"
-                  className="border-ink/10 px-2 transition-colors not-last:border-b hover:bg-brand-yellow/12 data-open:bg-brand-yellow/18 dark:border-border dark:hover:bg-brand-yellow/10 dark:data-open:bg-brand-yellow/14 sm:px-5"
+                  className={faqItemClassName}
                 >
-                  <AccordionTrigger className="rounded-none py-5 pr-2 text-left font-display text-[17px] leading-[1.3] font-medium hover:no-underline data-panel-open:text-ink md:text-[20px] **:data-[slot=accordion-trigger-icon]:text-ink/45 data-panel-open:**:data-[slot=accordion-trigger-icon]:text-ink">
+                  <AccordionTrigger className={`${faqTriggerClassName} pr-2`}>
                     <span className="pr-4">{item.question}</span>
                   </AccordionTrigger>
                   <AccordionContent className="pb-5 text-sm font-normal leading-relaxed text-muted-foreground">

@@ -20,7 +20,7 @@ export function ConversationActions({
   serviceName,
   className,
   primaryClassName = "bg-ink text-paper hover:bg-ink/90 hover:text-paper",
-  whatsappClassName = "border-ink/25 bg-white/50 text-ink hover:border-ink hover:bg-white dark:border-border dark:bg-transparent dark:text-foreground",
+  whatsappClassName = "border-border bg-card/80 text-foreground hover:border-foreground hover:bg-card",
 }: ConversationActionsProps) {
   const { openEnquiry } = useEnquiry()
 

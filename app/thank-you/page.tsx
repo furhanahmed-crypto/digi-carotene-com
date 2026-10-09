@@ -60,7 +60,7 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
               render={<Link href="/services" />}
               size="lg"
               variant="outline"
-              className="border-ink/25 bg-white/50 text-ink hover:border-ink hover:bg-white"
+              className="border-border bg-card/80 text-foreground hover:border-foreground hover:bg-card"
             >
               Browse services
             </Button>

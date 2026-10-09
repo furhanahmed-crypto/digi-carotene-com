@@ -137,7 +137,7 @@ function MobileEntry({
                 className="flex items-center gap-2.5 py-1.5 text-base text-muted-foreground transition-colors hover:text-foreground"
               >
                 {Icon ? (
-                  <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-brand-yellow/20 text-ink">
+                  <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-md bg-brand-yellow/20 text-ink dark:bg-brand-yellow/15 dark:text-brand-yellow">
                     <Icon className="size-3.5" aria-hidden="true" />
                   </span>
                 ) : null}

@@ -24,8 +24,8 @@ export function SectionMark({
       className={cn(
         "inline-flex max-w-full items-center gap-3 px-5 py-3 pr-8 [clip-path:polygon(0_0,calc(100%-14px)_0,100%_100%,0_100%)]",
         tone === "carotene"
-          ? "bg-brand-yellow text-ink"
-          : "bg-paper text-ink dark:bg-secondary dark:text-paper",
+          ? "bg-brand-yellow text-on-yellow"
+          : "bg-paper text-on-yellow dark:bg-secondary dark:text-paper",
         className
       )}
       {...rest}

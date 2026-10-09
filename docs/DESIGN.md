@@ -50,10 +50,14 @@ Charcoal page + elevated bands; yellow for CTAs/marks; atmosphere opacity reduce
 
 | Token | Role |
 | --- | --- |
-| `--background` | White band |
-| `--brand-yellow` / `--carotene` | Bands, CTAs, marks |
+| `--background` / `--foreground` | Page surface + readable text (theme-aware) |
+| `--brand-yellow` / `--carotene` | Solid yellow fills — CTAs, marks, yellow bands |
+| `--on-yellow` / `--ink` | **Always `#111`** — type/icons **only** on solid yellow |
+| `--yellow-tint` / `--yellow-tint-strong` | Soft yellow wash; pair with `--foreground`, never `--ink` |
 | `--brand-blue/green/purple/red` | Service cards / sparse accents |
-| Cream `#f3efe6` | Soft content bands |
+| Cream `#f3efe6` | Soft content bands (light) |
+
+**Dark mode rule:** never put `text-ink` / `text-on-yellow` on charcoal, glass, or yellow tints — use `text-foreground`. Solid yellow CTAs keep dark type via `text-on-yellow`.
 
 ## Homepage band order (reference)
 

@@ -35,7 +35,7 @@ function DropdownContent({ items }: { items: NavLinkItem[] }) {
               className="flex items-start gap-3 rounded-xl p-3 hover:bg-secondary"
             >
               {Icon ? (
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-yellow/20 text-ink">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-yellow/20 text-ink dark:bg-brand-yellow/15 dark:text-brand-yellow">
                   <Icon className="size-4" aria-hidden="true" />
                 </span>
               ) : null}
@@ -69,7 +69,7 @@ function ServicesMegaMenu() {
                 render={<Link href={item.href} />}
                 className="flex items-start gap-3 rounded-xl p-3 hover:bg-secondary"
               >
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-yellow/20 text-ink">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-brand-yellow/20 text-ink dark:bg-brand-yellow/15 dark:text-brand-yellow">
                   <Icon className="size-4" />
                 </span>
                 <span className="min-w-0">

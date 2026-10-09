@@ -44,7 +44,7 @@ export function AgencyCta() {
             render={<Link href={cta.secondary.href} />}
             size="lg"
             variant="outline"
-            className="border-ink/25 bg-white/50 text-ink hover:border-ink hover:bg-white dark:border-border dark:bg-transparent dark:text-foreground"
+            className="border-border bg-card/80 text-foreground hover:border-foreground hover:bg-card dark:bg-transparent"
           >
             {cta.secondary.label}
           </Button>
