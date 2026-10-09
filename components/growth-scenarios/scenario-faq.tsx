@@ -29,11 +29,9 @@ export function ScenarioFaqSection({ faqs }: ScenarioFaqSectionProps) {
             value={`faq-${index}`}
             className="border-border px-4 not-last:border-b sm:px-5"
           >
-            <h3>
-              <AccordionTrigger className="py-5 text-left font-display text-[17px] font-medium hover:no-underline md:text-[19px]">
-                {faq.question}
-              </AccordionTrigger>
-            </h3>
+            <AccordionTrigger className="py-5 text-left font-display text-[17px] font-medium hover:no-underline md:text-[19px]">
+              {faq.question}
+            </AccordionTrigger>
             <AccordionContent className="pb-5 text-sm leading-relaxed text-muted-foreground md:text-base">
               <p>{faq.answer}</p>
             </AccordionContent>
