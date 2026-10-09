@@ -25,7 +25,7 @@ export function PageCta({
   const body = (
     <>
       <SectionMark tone={band ? "paper" : "carotene"}>{mark}</SectionMark>
-      <h3 className="mt-5 max-w-3xl font-display text-[28px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[36px]">
+      <h3 className="mt-5 max-w-3xl font-display text-[28px] leading-heading font-medium tracking-display md:text-4xl">
         {title}
       </h3>
       <div className="mt-6">

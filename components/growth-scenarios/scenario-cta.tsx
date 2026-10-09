@@ -11,7 +11,7 @@ type ScenarioCtaBoxProps = {
 export function ScenarioCtaBox({ cta }: ScenarioCtaBoxProps) {
   return (
     <aside className="mt-12 rounded-2xl border border-ink/10 bg-brand-yellow p-6 text-ink md:p-8">
-      <p className="text-[12px] font-medium tracking-[0.1em] uppercase">
+      <p className="text-xs font-medium tracking-widest uppercase">
         Next step
       </p>
       <p className="mt-3 max-w-2xl text-base leading-relaxed md:text-[17px]">

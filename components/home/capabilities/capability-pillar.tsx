@@ -48,7 +48,7 @@ export function CapabilityPillar({
       <div className="-mx-1 py-3 lg:sticky lg:top-17.5 lg:z-10 lg:mx-0 lg:bg-background/95 lg:backdrop-blur-md">
         <SectionMark>{title}</SectionMark>
       </div>
-      <p className="mt-6 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">
+      <p className="mt-6 max-w-2xl text-base leading-body text-muted-foreground md:text-lg">
         {summary}
       </p>
 
@@ -59,15 +59,15 @@ export function CapabilityPillar({
             className="grid gap-5 border-b border-border py-6 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-8"
           >
             <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-              <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+              <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                 {index + 1}
               </p>
-              <p className="mt-1 text-[13px] font-medium tracking-[0.03em] text-foreground uppercase md:text-sm">
+              <p className="mt-1 text-[13px] font-medium tracking-caption text-foreground uppercase md:text-sm">
                 {item.label}
               </p>
             </div>
             <div className="flex flex-col gap-5 md:col-span-8">
-              <p className="text-base leading-[1.6] text-muted-foreground">
+              <p className="text-base leading-body text-muted-foreground">
                 {item.body}
               </p>
               <Button

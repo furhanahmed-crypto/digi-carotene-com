@@ -26,7 +26,7 @@ export function ColorServicePanels() {
         <SectionMark data-reveal="eyebrow">{servicePanels.eyebrow}</SectionMark>
         <h2
           data-reveal="heading"
-          className="mt-6 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+          className="mt-6 max-w-3xl min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
         >
           {servicePanels.headline}
         </h2>
@@ -57,7 +57,7 @@ export function ColorServicePanels() {
                   {panel.body}
                 </p>
               </div>
-              <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium tracking-[0.06em] uppercase">
+              <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium tracking-mark uppercase">
                 Explore
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
@@ -83,15 +83,6 @@ export function ColorServicePanels() {
               <ArrowUpRight className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           ))}
-        </div>
-
-        <div data-reveal="cta" className="mt-8">
-          <Link
-            href={servicePanels.exploreHref}
-            className="link-underline text-[13px] font-medium tracking-[0.04em] uppercase"
-          >
-            {servicePanels.exploreLabel}
-          </Link>
         </div>
       </Reveal>
     </SectionLayout>

@@ -14,7 +14,7 @@ export function FeaturedResultCard({ className }: FeaturedResultCardProps) {
 
   return (
     <div className={cn("relative pt-3", className)}>
-      <span className="absolute top-0 right-4 z-20 rounded-full bg-brand-red px-3 py-1 text-[10px] font-bold tracking-[0.08em] text-white uppercase shadow-[0_6px_16px_rgba(226,61,47,0.45)] md:right-6">
+      <span className="absolute top-0 right-4 z-20 rounded-full bg-brand-red px-3 py-1 text-[10px] font-bold tracking-label text-white uppercase shadow-[0_6px_16px_rgba(226,61,47,0.45)] md:right-6">
         #1 Result
       </span>
 
@@ -45,13 +45,13 @@ export function FeaturedResultCard({ className }: FeaturedResultCardProps) {
               <p className="truncate text-sm font-medium text-[#202124] dark:text-foreground">
                 {searchRanking.siteName}
               </p>
-              <p className="truncate text-[12px] text-[#4d5156] dark:text-muted-foreground">
+              <p className="truncate text-xs text-[#4d5156] dark:text-muted-foreground">
                 {searchRanking.urlPath}
               </p>
             </div>
           </div>
 
-          <h2 className="mt-3 font-sans text-[20px] leading-snug font-normal text-[#1a0dab] md:text-[22px] dark:text-[#8ab4f8]">
+          <h2 className="mt-3 font-sans text-xl leading-snug font-normal text-[#1a0dab] md:text-[22px] dark:text-[#8ab4f8]">
             <Link
               href="/"
               className="transition-colors hover:underline hover:underline-offset-2"
@@ -71,7 +71,7 @@ export function FeaturedResultCard({ className }: FeaturedResultCardProps) {
             </p>
           </div>
 
-          <p className="mt-3 text-[14px] leading-relaxed text-[#4d5156] md:text-[15px] dark:text-muted-foreground">
+          <p className="mt-3 text-sm leading-relaxed text-[#4d5156] md:text-[15px] dark:text-muted-foreground">
             {searchRanking.snippet}
           </p>
 
@@ -80,7 +80,7 @@ export function FeaturedResultCard({ className }: FeaturedResultCardProps) {
               <Link
                 key={tag.label}
                 href={tag.href}
-                className="rounded-full border border-black/10 bg-[#f1f3f4] px-3.5 py-1.5 text-[12px] font-medium text-[#3c4043] transition-colors hover:border-black/20 hover:bg-[#e8eaed] dark:border-border dark:bg-secondary dark:text-foreground dark:hover:bg-muted"
+                className="rounded-full border border-black/10 bg-[#f1f3f4] px-3.5 py-1.5 text-xs font-medium text-[#3c4043] transition-colors hover:border-black/20 hover:bg-[#e8eaed] dark:border-border dark:bg-secondary dark:text-foreground dark:hover:bg-muted"
               >
                 {tag.label}
               </Link>

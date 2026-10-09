@@ -31,15 +31,15 @@ export function WhyUsList() {
             onMouseLeave={cursor.hide}
           >
             <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-              <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+              <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                 {String(index + 1).padStart(2, "0")}
               </p>
-              <h3 className="mt-2 font-display text-[21px] leading-[1.2] font-medium md:text-[26px]">
+              <h3 className="mt-2 font-display text-[21px] leading-title font-medium md:text-[26px]">
                 {point.title}
               </h3>
             </div>
             <div className="flex flex-col gap-5 md:col-span-8">
-              <p className="text-base leading-[1.6] text-muted-foreground md:text-lg">
+              <p className="text-base leading-body text-muted-foreground md:text-lg">
                 {point.body}
               </p>
               <Button

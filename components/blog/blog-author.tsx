@@ -15,7 +15,7 @@ export function BlogAuthorBox({ author, dateModified }: BlogAuthorBoxProps) {
   return (
     <aside className="mt-12 flex flex-col gap-3 rounded-2xl border border-border bg-secondary/40 p-5 md:flex-row md:items-center md:justify-between md:p-6">
       <div>
-        <p className="text-[12px] font-medium tracking-[0.1em] text-muted-foreground uppercase">
+        <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
           Author
         </p>
         <p className="mt-2 font-display text-xl font-medium">{author.name}</p>

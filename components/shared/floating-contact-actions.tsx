@@ -32,7 +32,7 @@ function ExpandAction({
 }: ExpandActionProps) {
   const className = cn(
     "group flex h-12 items-center overflow-hidden rounded-full shadow-lg transition-[width,box-shadow,transform] duration-300 ease-out",
-    "w-12 hover:w-44 focus-visible:w-44 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+    "w-12 hover:w-44 focus-visible:w-44 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring",
     expandedClassName
   )
 
@@ -48,7 +48,7 @@ function ExpandAction({
       </span>
       <span
         className={cn(
-          "max-w-0 overflow-hidden whitespace-nowrap pr-0 text-[12px] font-semibold tracking-[0.08em] uppercase opacity-0 transition-all duration-300 ease-out group-hover:max-w-28 group-hover:pr-4 group-hover:opacity-100 group-focus-visible:max-w-28 group-focus-visible:pr-4 group-focus-visible:opacity-100",
+          "max-w-0 overflow-hidden whitespace-nowrap pr-0 text-xs font-semibold tracking-label uppercase opacity-0 transition-all duration-300 ease-out group-hover:max-w-28 group-hover:pr-4 group-hover:opacity-100 group-focus-visible:max-w-28 group-focus-visible:pr-4 group-focus-visible:opacity-100",
           labelClassName
         )}
       >

@@ -31,3 +31,5 @@ Public marketing site. No user accounts in current scope.
 ## Secrets
 
 Marketing homepage needs none today. Future integrations must use environment variables and document required keys — never paste secrets into docs or commits.
+
+Public (non-secret) env for live reviews: `NEXT_PUBLIC_FEATURABLE_WIDGET_ID` — Featurable widget ID only; never put Google Places API keys in `NEXT_PUBLIC_*`. Documented in `.env.example`.

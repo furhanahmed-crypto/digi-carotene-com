@@ -23,10 +23,10 @@ export function BlogArticle({ post, related }: BlogArticleProps) {
       <BlogReadingProgress />
       <div className="w-full">
         <article id="blog-article" className="mx-auto max-w-3xl">
-          <p className="text-[13px] tracking-[0.04em] text-muted-foreground uppercase">
+          <p className="text-[13px] tracking-soft text-muted-foreground uppercase">
             {post.focusKeyword} · {formatBlogDate(post.datePublished)}
           </p>
-          <h1 className="mt-4 font-display text-[34px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[48px]">
+          <h1 className="mt-4 font-display text-[34px] leading-display font-medium tracking-display md:text-5xl">
             {post.h1}
           </h1>
           <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-border bg-secondary">

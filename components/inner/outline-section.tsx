@@ -71,7 +71,7 @@ export function PlaceholderBlock({
   return (
     <p
       className={cn(
-        "rounded-2xl border border-dashed border-ink/25 bg-background/70 p-6 text-base leading-[1.6] text-muted-foreground dark:border-border dark:bg-card/60",
+        "rounded-2xl border border-dashed border-ink/25 bg-background/70 p-6 text-base leading-body text-muted-foreground dark:border-border dark:bg-card/60",
         className
       )}
       {...rest}
@@ -121,10 +121,10 @@ export function InfoCardGrid({
       {items.map((item, index) => {
         const content = (
           <>
-            <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+            <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
               {String(index + 1).padStart(2, "0")}
             </p>
-            <Heading className="mt-3 font-display text-[21px] leading-[1.2] font-medium">
+            <Heading className="mt-3 font-display text-[21px] leading-title font-medium">
               {item.title}
             </Heading>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

@@ -158,7 +158,7 @@ export default function GlobalPage() {
           className="overflow-x-auto rounded-2xl border border-border bg-card"
         >
           <table className="w-full min-w-[32rem] text-left text-sm">
-            <thead className="border-b border-border bg-secondary/60 text-[12px] tracking-[0.08em] uppercase">
+            <thead className="border-b border-border bg-secondary/60 text-xs tracking-label uppercase">
               <tr>
                 <th scope="col" className="px-5 py-3 font-medium">
                   Client region

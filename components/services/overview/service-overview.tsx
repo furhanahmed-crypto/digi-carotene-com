@@ -25,13 +25,13 @@ export function ServiceOverview({ name, whatIs }: ServiceOverviewProps) {
             </SectionMark>
             <p
               data-reveal="text"
-              className="mt-5 text-[13px] font-medium tracking-[0.08em] text-muted-foreground uppercase"
+              className="mt-5 text-[13px] font-medium tracking-label text-muted-foreground uppercase"
             >
               What is {name}?
             </p>
             <h2
               data-reveal="heading"
-              className="mt-3 max-w-md font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+              className="mt-3 max-w-md font-display text-[32px] leading-display font-medium tracking-display md:text-[44px]"
             >
               {name}, built for outcomes.
             </h2>
@@ -48,7 +48,7 @@ export function ServiceOverview({ name, whatIs }: ServiceOverviewProps) {
               data-reveal="card"
               className="rounded-2xl border border-border bg-white/90 p-6 shadow-sm backdrop-blur-[1px] md:p-8 dark:bg-card"
             >
-              <p className="text-base leading-[1.7] text-muted-foreground md:text-lg">
+              <p className="text-base leading-prose text-muted-foreground md:text-lg">
                 {whatIs}
               </p>
             </div>

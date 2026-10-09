@@ -40,12 +40,12 @@ export function Footer() {
             >
               <SiteLogo heightClassName="h-[4.5rem]" />
             </Link>
-            <p className="max-w-sm text-sm leading-[1.6] text-muted-foreground md:text-base dark:text-white/70">
+            <p className="max-w-sm text-sm leading-body text-muted-foreground md:text-base dark:text-white/70">
               Found. Chosen. Measured. Performance and growth marketing for
               brands in Hyderabad and worldwide — 7+ years, 300+ clients.
             </p>
             <div className="space-y-1 text-sm text-muted-foreground dark:text-white/65">
-              <p className="text-[13px] font-medium tracking-[0.03em] uppercase dark:text-white/55">
+              <p className="text-[13px] font-medium tracking-caption uppercase dark:text-white/55">
                 Hyderabad · Bangalore · Global
               </p>
               <p>
@@ -124,10 +124,10 @@ export function Footer() {
           </div>
 
           <div className="space-y-4 lg:col-span-2">
-            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
+            <h4 className="font-display text-[15px] font-medium tracking-mark uppercase">
               About
             </h4>
-            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground dark:text-white/65">
+            <ul className="space-y-2 text-sm leading-body text-muted-foreground dark:text-white/65">
               <li>
                 <Link href="/about" className={linkClass}>
                   About Us
@@ -152,10 +152,10 @@ export function Footer() {
           </div>
 
           <div className="space-y-4 lg:col-span-2">
-            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
+            <h4 className="font-display text-[15px] font-medium tracking-mark uppercase">
               Digital Services
             </h4>
-            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground dark:text-white/65">
+            <ul className="space-y-2 text-sm leading-body text-muted-foreground dark:text-white/65">
               {digitalGroup?.items?.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={linkClass}>
@@ -167,10 +167,10 @@ export function Footer() {
           </div>
 
           <div className="space-y-4 lg:col-span-2">
-            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
+            <h4 className="font-display text-[15px] font-medium tracking-mark uppercase">
               Offline & PR
             </h4>
-            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground dark:text-white/65">
+            <ul className="space-y-2 text-sm leading-body text-muted-foreground dark:text-white/65">
               {offlineGroup?.items?.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={linkClass}>
@@ -189,10 +189,10 @@ export function Footer() {
           </div>
 
           <div className="space-y-4 lg:col-span-2">
-            <h4 className="font-display text-[15px] font-medium tracking-[0.06em] uppercase">
+            <h4 className="font-display text-[15px] font-medium tracking-mark uppercase">
               Resources
             </h4>
-            <ul className="space-y-2 text-sm leading-[1.6] text-muted-foreground dark:text-white/65">
+            <ul className="space-y-2 text-sm leading-body text-muted-foreground dark:text-white/65">
               <li>
                 <Link
                   href="/digital-marketing-agency-hyderabad"
@@ -231,7 +231,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-[13px] font-medium tracking-[0.03em] text-muted-foreground uppercase md:flex-row dark:border-white/10 dark:text-white/50">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-[13px] font-medium tracking-caption text-muted-foreground uppercase md:flex-row dark:border-white/10 dark:text-white/50">
           <div>&copy; {currentYear} Digi Carotene. All rights reserved.</div>
           <div className="flex gap-6">
             <Link

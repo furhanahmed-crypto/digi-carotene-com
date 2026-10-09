@@ -90,12 +90,17 @@ function isTypingTarget(target: EventTarget | null) {
     return false
   }
 
-  return (
+  if (
     target.isContentEditable ||
     target.tagName === "INPUT" ||
     target.tagName === "TEXTAREA" ||
     target.tagName === "SELECT"
-  )
+  ) {
+    return true
+  }
+
+  // Autofill / suggestion UI often targets a wrapper, not the input itself.
+  return Boolean(target.closest("input, textarea, select, [contenteditable=true]"))
 }
 
 function ThemeHotkey() {
@@ -111,7 +116,8 @@ function ThemeHotkey() {
         return
       }
 
-      if (event.key.toLowerCase() !== "d") {
+      // Autofill / suggestion pick can fire keydown without a key string.
+      if ((event.key ?? "").toLowerCase() !== "d") {
         return
       }
 

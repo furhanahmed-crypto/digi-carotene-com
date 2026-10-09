@@ -13,7 +13,7 @@ export function GrowthFramework() {
         <SectionMark data-reveal="eyebrow">{framework.eyebrow}</SectionMark>
         <h2
           data-reveal="heading"
-          className="mt-6 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+          className="mt-6 max-w-3xl min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
         >
           {framework.headline}
         </h2>
@@ -50,7 +50,7 @@ export function GrowthFramework() {
                 {step.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-border px-3 py-1 text-[11px] font-medium tracking-[0.04em] text-muted-foreground uppercase"
+                    className="rounded-full border border-border px-3 py-1 text-[11px] font-medium tracking-soft text-muted-foreground uppercase"
                   >
                     {tag}
                   </span>

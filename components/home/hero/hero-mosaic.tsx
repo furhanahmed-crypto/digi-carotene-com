@@ -10,7 +10,8 @@ const COLS = 3
 const PULSE = 0.55
 const STAGGER = 0.09
 const PAUSE_BETWEEN_SESSIONS = 3
-const PEAK_SCALE = 1.1
+const PEAK_SCALE_DESKTOP = 1.08
+const PEAK_SCALE_MOBILE = 1.03
 
 type HeroMosaicProps = {
   images: readonly string[]
@@ -31,49 +32,60 @@ export function HeroMosaic({ images, startDelay = 0 }: HeroMosaicProps) {
 
       const mm = gsap.matchMedia()
 
-      mm.add("(prefers-reduced-motion: no-preference)", () => {
-        gsap.set(cells, { scale: 1, force3D: true })
+      mm.add(
+        {
+          isDesktop: "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
+          isMobile: "(max-width: 767px) and (prefers-reduced-motion: no-preference)",
+        },
+        (context) => {
+          const { isDesktop } = context.conditions as {
+            isDesktop: boolean
+          }
+          const peak = isDesktop ? PEAK_SCALE_DESKTOP : PEAK_SCALE_MOBILE
 
-        const tl = gsap.timeline({
-          delay: startDelay,
-          repeat: -1,
-          repeatDelay: PAUSE_BETWEEN_SESSIONS,
-          defaults: { overwrite: false },
-        })
+          gsap.set(cells, { scale: 1, force3D: true })
 
-        cells.forEach((cell, i) => {
-          const diagonal = Math.floor(i / COLS) + (i % COLS)
-          const start = diagonal * STAGGER
+          const tl = gsap.timeline({
+            delay: startDelay,
+            repeat: -1,
+            repeatDelay: PAUSE_BETWEEN_SESSIONS,
+            defaults: { overwrite: false },
+          })
 
-          tl.to(
-            cell,
-            {
-              scale: PEAK_SCALE,
-              duration: PULSE * 0.4,
-              ease: "sine.out",
-              onStart: () => {
-                gsap.set(cell, { zIndex: 1 })
+          cells.forEach((cell, i) => {
+            const diagonal = Math.floor(i / COLS) + (i % COLS)
+            const start = diagonal * STAGGER
+
+            tl.to(
+              cell,
+              {
+                scale: peak,
+                duration: PULSE * 0.4,
+                ease: "sine.out",
+                onStart: () => {
+                  gsap.set(cell, { zIndex: 1 })
+                },
               },
-            },
-            start
-          ).to(
-            cell,
-            {
-              scale: 1,
-              duration: PULSE * 0.6,
-              ease: "back.out(2.2)",
-              onComplete: () => {
-                gsap.set(cell, { zIndex: 0 })
+              start
+            ).to(
+              cell,
+              {
+                scale: 1,
+                duration: PULSE * 0.6,
+                ease: "back.out(2.2)",
+                onComplete: () => {
+                  gsap.set(cell, { zIndex: 0 })
+                },
               },
-            },
-            start + PULSE * 0.4
-          )
-        })
+              start + PULSE * 0.4
+            )
+          })
 
-        return () => {
-          tl.kill()
+          return () => {
+            tl.kill()
+          }
         }
-      })
+      )
 
       return () => mm.revert()
     },
@@ -81,19 +93,22 @@ export function HeroMosaic({ images, startDelay = 0 }: HeroMosaicProps) {
   )
 
   return (
-    <div ref={gridRef} className="grid grid-cols-3 gap-2.5 md:gap-3">
+    <div
+      ref={gridRef}
+      className="grid w-full max-w-full grid-cols-3 gap-1.5 overflow-hidden min-[360px]:gap-2 md:gap-3"
+    >
       {images.map((src, index) => (
         <div
           key={`${src}-${index}`}
           data-mosaic-cell
-          className="group relative aspect-square overflow-hidden rounded-2xl border border-border bg-secondary shadow-sm will-change-transform"
+          className="group relative aspect-square min-w-0 overflow-hidden rounded-xl border border-border bg-secondary shadow-sm will-change-transform min-[360px]:rounded-2xl"
         >
           <Image
             src={src}
             alt=""
             fill
             sizes="(max-width: 768px) 30vw, 140px"
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-110 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100 md:group-hover:scale-110"
             priority={index < 3}
           />
         </div>

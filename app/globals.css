@@ -64,6 +64,23 @@
   --radius-2xl: 1rem;
   --radius-3xl: 1.25rem;
   --radius-4xl: 1.5rem;
+  /* Named tracking / leading — prefer these over arbitrary values */
+  --tracking-display: -0.02em;
+  --tracking-caption: 0.03em;
+  --tracking-soft: 0.04em;
+  --tracking-mark: 0.06em;
+  --tracking-label: 0.08em;
+  --tracking-loose: 0.12em;
+  --leading-display: 1.1;
+  --leading-display-sm: 1.08;
+  --leading-heading: 1.15;
+  --leading-title: 1.2;
+  --leading-body: 1.6;
+  --leading-prose: 1.65;
+  --aspect-photo: 4 / 3;
+  --aspect-reel: 9 / 16;
+  --aspect-wide: 16 / 10;
+  --aspect-ultrawide: 21 / 9;
 }
 
 /*
@@ -189,10 +206,13 @@
 
   html {
     @apply scroll-smooth font-sans;
+    overflow-x: clip;
   }
 
   body {
-    @apply bg-background text-foreground text-[16px] leading-[1.6] antialiased md:text-[18px];
+    @apply bg-background text-foreground text-base leading-body antialiased md:text-lg;
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   button:not(:disabled),

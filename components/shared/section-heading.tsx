@@ -33,7 +33,7 @@ export function SectionHeading({
         <p
           {...eyebrowProps}
           className={cn(
-            "text-[13px] font-medium tracking-[0.03em] uppercase md:text-sm",
+            "text-[13px] font-medium tracking-caption uppercase md:text-sm",
             inverted ? "text-white/70" : "text-muted-foreground",
             eyebrowProps?.className
           )}
@@ -44,7 +44,7 @@ export function SectionHeading({
       <h2
         {...titleProps}
         className={cn(
-          "font-display text-[30px] leading-[1.1] font-medium md:text-[44px]",
+          "font-display text-3xl leading-display font-medium md:text-[44px]",
           eyebrow && "mt-4",
           inverted ? "text-white" : "text-foreground",
           titleProps?.className
@@ -56,7 +56,7 @@ export function SectionHeading({
         <p
           {...bodyProps}
           className={cn(
-            "mt-5 text-base leading-[1.6] md:text-lg",
+            "mt-5 text-base leading-body md:text-lg",
             inverted ? "text-white/80" : "text-muted-foreground",
             bodyProps?.className
           )}

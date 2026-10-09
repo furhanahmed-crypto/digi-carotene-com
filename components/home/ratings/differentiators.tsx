@@ -14,7 +14,7 @@ export function Differentiators() {
         <div className="mt-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2
             data-reveal="heading"
-            className="max-w-2xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+            className="max-w-2xl min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
           >
             {differentiators.headline}
           </h2>

@@ -259,7 +259,7 @@ export function OfflineActivations() {
             <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary mb-3 block">
               Offline Marketing & Experiential
             </span>
-            <h2 className="font-lustria text-3xl md:text-5xl font-normal tracking-tight mb-6 leading-tight bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text text-transparent">
+            <h2 className="font-lustria text-3xl md:text-5xl font-normal tracking-tight mb-6 leading-tight bg-linear-to-b from-foreground to-foreground/80 bg-clip-text text-transparent">
               Real-World Impact. Direct Connections.
             </h2>
             <p className="text-muted-foreground font-sans font-light text-sm md:text-base leading-relaxed mb-8">
@@ -283,7 +283,7 @@ export function OfflineActivations() {
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   {/* Subtle inner radial gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-b ${service.bgGradient} via-transparent to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500`} />
+                  <div className={`absolute inset-0 bg-linear-to-b ${service.bgGradient} via-transparent to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500`} />
 
                   {/* SVG Representation Pane (Top half of offline cards) */}
                   <div className="relative h-28 w-full border-b border-border/40 bg-muted/10 overflow-hidden">

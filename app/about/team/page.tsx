@@ -113,13 +113,13 @@ export default function TeamPage() {
                     className="border-0 border-b"
                   />
                   <div className="p-5">
-                    <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                    <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                       {index + 1} · {member.role}
                     </p>
-                    <h3 className="mt-3 font-display text-[21px] leading-[1.2] font-medium">
+                    <h3 className="mt-3 font-display text-[21px] leading-title font-medium">
                       {member.name}
                     </h3>
-                    <p className="mt-3 text-base leading-[1.6] text-muted-foreground">
+                    <p className="mt-3 text-base leading-body text-muted-foreground">
                       {member.description}
                     </p>
                   </div>
@@ -148,14 +148,14 @@ export default function TeamPage() {
                     className="grid gap-5 border-b border-line py-8 transition-colors hover:bg-secondary/40 md:grid-cols-12 md:gap-8 md:py-10"
                   >
                     <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-                      <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                      <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                         {String(index + 1).padStart(2, "0")}
                       </p>
-                      <h3 className="mt-2 font-display text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                      <h3 className="mt-2 font-display text-[21px] leading-title font-medium md:text-[26px]">
                         {dept.name}
                       </h3>
                     </div>
-                    <p className="text-base leading-[1.6] text-muted-foreground md:col-span-8 md:text-lg">
+                    <p className="text-base leading-body text-muted-foreground md:col-span-8 md:text-lg">
                       {dept.description}
                     </p>
                   </li>

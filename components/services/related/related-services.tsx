@@ -37,7 +37,7 @@ export function RelatedServices({ items, basePath }: RelatedServicesProps) {
         </SectionMark>
         <h2
           data-reveal="heading"
-          className="mt-6 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+          className="mt-6 max-w-3xl font-display text-[32px] leading-display font-medium tracking-display md:text-[44px]"
         >
           Keep exploring.
         </h2>
@@ -67,7 +67,7 @@ export function RelatedServices({ items, basePath }: RelatedServicesProps) {
                   {item.description}
                 </p>
               </div>
-              <span className="mt-8 inline-flex items-center gap-1 text-sm font-medium tracking-[0.06em] uppercase">
+              <span className="mt-8 inline-flex items-center gap-1 text-sm font-medium tracking-mark uppercase">
                 Explore
                 <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>

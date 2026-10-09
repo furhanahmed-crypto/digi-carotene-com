@@ -25,7 +25,7 @@ export function ServiceApproach({ steps }: ServiceApproachProps) {
         </SectionMark>
         <h2
           data-reveal="heading"
-          className="mt-6 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+          className="mt-6 max-w-3xl font-display text-[32px] leading-display font-medium tracking-display md:text-[44px]"
         >
           How we implement it.
         </h2>

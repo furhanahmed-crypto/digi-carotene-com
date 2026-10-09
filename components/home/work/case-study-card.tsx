@@ -28,13 +28,13 @@ export function CaseStudyCard({
         />
       </div>
       <div className="flex flex-1 flex-col gap-3 border-t border-line p-5">
-        <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+        <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
           {meta}
         </p>
-        <h3 className="font-display text-[21px] leading-[1.2] font-medium">
+        <h3 className="font-display text-[21px] leading-title font-medium">
           {label}
         </h3>
-        <p className="line-clamp-3 text-base leading-[1.6] text-muted-foreground">
+        <p className="line-clamp-3 text-base leading-body text-muted-foreground">
           {summary}
         </p>
       </div>

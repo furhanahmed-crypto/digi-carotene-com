@@ -18,14 +18,14 @@ export function HeroHeadlineAccent({ accents }: HeroHeadlineAccentProps) {
   useCyclingTypewriter(textRef, { items: accents, holdSeconds: 3 })
 
   return (
-    <span className="relative mt-1 block w-fit max-w-full">
-      {/* Reserve width/height of the longest accent so the underline stays one clean line */}
-      <span className="invisible whitespace-nowrap" aria-hidden="true">
+    <span className="relative mt-1 block w-full max-w-full min-w-0">
+      {/* Reserve height of the longest accent; wrap on narrow viewports */}
+      <span className="invisible break-words" aria-hidden="true">
         {longest}
       </span>
       <span
         ref={textRef}
-        className="absolute inset-0 whitespace-nowrap underline decoration-brand-yellow decoration-[0.12em] underline-offset-[0.14em]"
+        className="absolute inset-0 break-words underline decoration-brand-yellow decoration-[0.12em] underline-offset-[0.14em]"
       />
     </span>
   )

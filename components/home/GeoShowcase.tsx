@@ -110,7 +110,7 @@ export function GeoShowcase() {
             </div>
 
             {/* Glowing borders */}
-            <div className="absolute -inset-px -z-10 rounded-2xl bg-gradient-to-tr from-primary/10 via-transparent to-transparent opacity-50 blur-sm" />
+            <div className="absolute -inset-px -z-10 rounded-2xl bg-linear-to-tr from-primary/10 via-transparent to-transparent opacity-50 blur-sm" />
           </div>
         </div>
       </div>

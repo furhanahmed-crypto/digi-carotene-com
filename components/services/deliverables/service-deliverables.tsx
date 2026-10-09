@@ -47,7 +47,7 @@ export function ServiceDeliverables({ items }: ServiceDeliverablesProps) {
         <div className="mt-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2
             data-reveal="heading"
-            className="max-w-2xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+            className="max-w-2xl font-display text-[32px] leading-display font-medium tracking-display md:text-[44px]"
           >
             What we put in motion.
           </h2>

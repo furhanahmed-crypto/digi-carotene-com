@@ -63,7 +63,7 @@ export function Hero() {
       <Container className="relative z-10 grid items-end gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-8">
           <div className="glass-panel p-5 md:p-7">
-            <p className="text-[13px] font-medium tracking-[0.03em] text-ink-muted uppercase md:text-sm">
+            <p className="text-[13px] font-medium tracking-caption text-ink-muted uppercase md:text-sm">
               {hero.eyebrow}
             </p>
             <div className="relative mt-5 min-h-34 md:min-h-56">
@@ -71,7 +71,7 @@ export function Hero() {
                 <h1
                   key={slide.id}
                   className={cn(
-                    "font-display absolute inset-0 text-[40px] leading-[1.05] font-medium tracking-[-0.01em] transition-all duration-500 md:text-[72px]",
+                    "font-display absolute inset-0 text-[40px] leading-none font-medium tracking-display transition-all duration-500 md:text-7xl",
                     index === selectedIndex
                       ? "translate-y-0 opacity-100 blur-0"
                       : "pointer-events-none translate-y-2 opacity-0 blur-sm"
@@ -84,7 +84,7 @@ export function Hero() {
                 </h1>
               ))}
             </div>
-            <p className="mt-7 max-w-2xl text-base leading-[1.6] text-muted-foreground md:text-lg">
+            <p className="mt-7 max-w-2xl text-base leading-body text-muted-foreground md:text-lg">
               {hero.body}
             </p>
           </div>
@@ -121,10 +121,10 @@ export function Hero() {
             aria-hidden="true"
           />
           <SectionMark>The name</SectionMark>
-          <p className="mt-5 font-display text-[26px] leading-[1.2] font-medium">
+          <p className="mt-5 font-display text-[26px] leading-title font-medium">
             Carotene is a pigment.
           </p>
-          <p className="mt-4 text-base leading-[1.6] text-muted-foreground">
+          <p className="mt-4 text-base leading-body text-muted-foreground">
             Warm, concentrated, used with intent — not as decoration. That is
             also how the work should feel.
           </p>

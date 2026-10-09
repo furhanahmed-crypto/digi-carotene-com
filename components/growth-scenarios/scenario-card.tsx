@@ -45,20 +45,20 @@ export function ScenarioCard({
         <p className="mt-8 font-display text-4xl font-medium tracking-tight">
           {item.headlineMetric}
         </p>
-        <p className="mt-2 line-clamp-2 text-[12px] font-semibold tracking-[0.08em] text-ink/55 uppercase dark:text-muted-foreground">
+        <p className="mt-2 line-clamp-2 text-xs font-semibold tracking-label text-ink/55 uppercase dark:text-muted-foreground">
           {item.headlineMetricLabel}
         </p>
         <p className="mt-4 line-clamp-3 flex-1 text-sm leading-relaxed text-muted-foreground">
           {item.cardSummary}
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
-          <span className="rounded-full border border-border px-3 py-1 text-[11px] font-medium tracking-[0.04em] text-muted-foreground uppercase">
+          <span className="rounded-full border border-border px-3 py-1 text-[11px] font-medium tracking-soft text-muted-foreground uppercase">
             Benchmark
           </span>
           {item.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-border px-3 py-1 text-[11px] font-medium tracking-[0.04em] text-muted-foreground uppercase"
+              className="rounded-full border border-border px-3 py-1 text-[11px] font-medium tracking-soft text-muted-foreground uppercase"
             >
               {tag}
             </span>

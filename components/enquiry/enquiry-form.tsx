@@ -14,7 +14,7 @@ import {
 import { cn } from "@/lib/utils"
 
 const fieldClassName =
-  "h-11 w-full rounded-xl border border-border bg-background px-3.5 text-sm text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-brand-yellow"
+  "h-11 w-full rounded-xl border border-border bg-background px-3.5 text-sm text-foreground outline-hidden placeholder:text-muted-foreground/50 focus:border-brand-yellow"
 
 type EnquiryFormProps = {
   defaultService?: string
@@ -102,7 +102,7 @@ export function EnquiryForm({
       <textarea
         name="message"
         rows={3}
-        className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-brand-yellow"
+        className="w-full rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm text-foreground outline-hidden placeholder:text-muted-foreground/50 focus:border-brand-yellow"
         placeholder="Message (optional)"
         value={formState.message}
         onChange={(e) =>

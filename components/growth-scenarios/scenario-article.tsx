@@ -13,10 +13,10 @@ type ScenarioArticleProps = {
 export function ScenarioArticle({ scenario }: ScenarioArticleProps) {
   return (
     <article className="mx-auto max-w-3xl">
-      <p className="text-[13px] tracking-[0.04em] text-muted-foreground uppercase">
+      <p className="text-[13px] tracking-soft text-muted-foreground uppercase">
         {scenario.label} · {scenario.industry}
       </p>
-      <h1 className="mt-4 font-display text-[34px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[48px]">
+      <h1 className="mt-4 font-display text-[34px] leading-display font-medium tracking-display md:text-5xl">
         {scenario.h1}
       </h1>
       <ScenarioQuickAnswer
@@ -25,7 +25,7 @@ export function ScenarioArticle({ scenario }: ScenarioArticleProps) {
       />
       <ScenarioPattern pattern={scenario.businessPattern} />
       <section id="the-challenge" className="scroll-mt-28 pt-10">
-        <h2 className="font-display text-[26px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[32px]">
+        <h2 className="font-display text-[26px] leading-heading font-medium tracking-display md:text-[32px]">
           The Challenge
         </h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-[17px]">
@@ -33,7 +33,7 @@ export function ScenarioArticle({ scenario }: ScenarioArticleProps) {
         </p>
       </section>
       <section id="objectives" className="scroll-mt-28 pt-10">
-        <h2 className="font-display text-[26px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[32px]">
+        <h2 className="font-display text-[26px] leading-heading font-medium tracking-display md:text-[32px]">
           Objectives
         </h2>
         <ol className="mt-4 list-decimal space-y-2 pl-5 text-base leading-relaxed text-muted-foreground md:text-[17px]">
@@ -43,7 +43,7 @@ export function ScenarioArticle({ scenario }: ScenarioArticleProps) {
         </ol>
       </section>
       <section id="what-we-did" className="scroll-mt-28 pt-10">
-        <h2 className="font-display text-[26px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[32px]">
+        <h2 className="font-display text-[26px] leading-heading font-medium tracking-display md:text-[32px]">
           What We Did
         </h2>
         <ol className="mt-4 list-decimal space-y-4 pl-5 text-base leading-relaxed text-muted-foreground md:text-[17px]">
@@ -60,7 +60,7 @@ export function ScenarioArticle({ scenario }: ScenarioArticleProps) {
         results={scenario.results}
       />
       <section id="what-made-the-difference" className="scroll-mt-28 pt-10">
-        <h2 className="font-display text-[26px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[32px]">
+        <h2 className="font-display text-[26px] leading-heading font-medium tracking-display md:text-[32px]">
           What Made the Difference
         </h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-[17px]">

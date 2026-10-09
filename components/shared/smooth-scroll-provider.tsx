@@ -30,8 +30,10 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       lerp: isMobile ? 0.12 : isTablet ? 0.1 : 0.08,
       duration: isMobile ? 0.95 : isTablet ? 1.05 : 1.2,
       smoothWheel: true,
-      syncTouch: true,
-      touchMultiplier: isMobile ? 1.45 : isTablet ? 1.25 : 1,
+      // Off on touch: lets horizontal carousels (reels) own the gesture axis.
+      // Vertical page scroll still works via native touch + Lenis wheel smoothing on desktop.
+      syncTouch: !isMobile,
+      touchMultiplier: isMobile ? 1.2 : isTablet ? 1.25 : 1,
       // Lets Next.js App Router scroll-to-top win; without this Lenis keeps the prior scroll.
       stopInertiaOnNavigate: true,
     }

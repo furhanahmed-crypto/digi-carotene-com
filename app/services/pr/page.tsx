@@ -125,14 +125,14 @@ export default function PRServicesPage() {
                     className="grid gap-5 border-b border-line py-8 md:grid-cols-12 md:gap-8 md:py-10"
                   >
                     <div className="border-carotene md:col-span-4 md:border-l-2 md:pl-6">
-                      <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                      <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                         {String(index + 1).padStart(2, "0")}
                       </p>
-                      <h3 className="mt-2 font-display text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                      <h3 className="mt-2 font-display text-[21px] leading-title font-medium md:text-[26px]">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-base leading-[1.6] text-muted-foreground md:col-span-8 md:text-lg">
+                    <p className="text-base leading-body text-muted-foreground md:col-span-8 md:text-lg">
                       {item.body}
                     </p>
                   </li>
@@ -163,7 +163,7 @@ export default function PRServicesPage() {
                     data-reveal="card"
                     className="rounded-2xl border border-border bg-card p-6"
                   >
-                    <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                    <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </p>
                     <h3 className="mt-3 font-display text-xl font-medium">

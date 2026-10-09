@@ -20,7 +20,7 @@ export function ServiceCta({ name }: ServiceCtaProps) {
         </SectionMark>
         <h2
           data-reveal="heading"
-          className="mt-6 max-w-3xl font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] md:text-[52px]"
+          className="mt-6 max-w-3xl font-display text-4xl leading-display-sm font-medium tracking-display md:text-[52px]"
         >
           Ready to put {name} to work?
         </h2>

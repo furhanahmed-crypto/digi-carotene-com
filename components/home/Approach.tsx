@@ -35,13 +35,13 @@ export function Approach() {
                 className="relative h-full bg-background p-6 md:p-8"
               >
                 <span className="absolute top-0 left-0 h-full w-1 bg-carotene" />
-                <p className="text-[12px] font-medium tracking-[0.12em] text-muted-foreground uppercase">
+                <p className="text-xs font-medium tracking-loose text-muted-foreground uppercase">
                   {step.number}
                 </p>
-                <h3 className="mt-4 font-display text-[21px] leading-[1.2] font-medium md:text-[26px]">
+                <h3 className="mt-4 font-display text-[21px] leading-title font-medium md:text-[26px]">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-base leading-[1.6] text-muted-foreground">
+                <p className="mt-3 text-base leading-body text-muted-foreground">
                   {step.body}
                 </p>
               </li>

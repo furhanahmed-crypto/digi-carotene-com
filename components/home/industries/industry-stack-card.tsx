@@ -56,17 +56,17 @@ export const IndustryStackCard = React.forwardRef<
         aria-hidden="true"
       />
       <div className="flex min-h-0 flex-1 flex-col gap-4 md:gap-5">
-        <p className="shrink-0 text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+        <p className="shrink-0 text-xs font-medium tracking-label text-muted-foreground uppercase">
           {String(index + 1).padStart(2, "0")} · Vertical
         </p>
         <div className="min-h-0 space-y-3 overflow-hidden md:space-y-4">
-          <h3 className="font-display text-[22px] leading-[1.15] font-medium md:text-[30px] lg:text-[34px]">
+          <h3 className="font-display text-[22px] leading-heading font-medium md:text-3xl lg:text-[34px]">
             {title}
           </h3>
-          <p className="text-sm leading-[1.65] text-muted-foreground md:text-base">
+          <p className="text-sm leading-prose text-muted-foreground md:text-base">
             {body}
           </p>
-          <p className="text-sm leading-[1.65] text-muted-foreground md:text-[15px]">
+          <p className="text-sm leading-prose text-muted-foreground md:text-[15px]">
             {detail}
           </p>
         </div>

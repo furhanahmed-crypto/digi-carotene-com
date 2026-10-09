@@ -32,7 +32,7 @@ export function DecorPreviewBoard({ variant }: DecorPreviewBoardProps) {
   return (
     <article className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
       <div className="border-b border-border px-4 py-3">
-        <p className="font-mono text-[12px] tracking-[0.04em] text-muted-foreground">
+        <p className="font-mono text-xs tracking-soft text-muted-foreground">
           {variant}
         </p>
       </div>
@@ -42,7 +42,7 @@ export function DecorPreviewBoard({ variant }: DecorPreviewBoardProps) {
             key={surface.id}
             className={`relative h-36 overflow-hidden ${surface.className}`}
           >
-            <p className="absolute top-2 left-2 z-10 text-[10px] font-medium tracking-[0.08em] uppercase opacity-50">
+            <p className="absolute top-2 left-2 z-10 text-[10px] font-medium tracking-label uppercase opacity-50">
               {surface.label}
             </p>
             <SectionDecor

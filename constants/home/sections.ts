@@ -119,8 +119,6 @@ export const homeSections = {
     eyebrow: "Our services",
     headline: "Performance and Growth Marketing, Powered by Every Digital Channel",
     body: "We plan every channel around one goal: profitable growth. Performance marketing brings in customers today, growth marketing makes each one cheaper to win and more likely to return, and every other service feeds that engine.",
-    exploreHref: "/services",
-    exploreLabel: "Explore All Services",
     panels: [
       {
         id: "performance",

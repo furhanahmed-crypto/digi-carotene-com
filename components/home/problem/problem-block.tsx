@@ -13,7 +13,7 @@ export function ProblemBlock() {
         <SectionMark data-reveal="eyebrow">{problem.eyebrow}</SectionMark>
         <h2
           data-reveal="heading"
-          className="mt-6 max-w-3xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+          className="mt-6 max-w-3xl min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
         >
           {problem.headline}
         </h2>

@@ -13,7 +13,7 @@ export function BlogToc({ sections }: BlogTocProps) {
       className="mt-8 rounded-2xl border border-border bg-secondary/40 p-5 md:p-6"
       aria-label="Table of contents"
     >
-      <p className="text-[12px] font-medium tracking-[0.1em] text-muted-foreground uppercase">
+      <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
         On this page
       </p>
       <ol className="mt-4 space-y-2">

@@ -21,7 +21,7 @@ export function ResultsSpeak() {
         <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <h2
             data-reveal="heading"
-            className="max-w-xl font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+            className="max-w-xl min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
           >
             {results.headline}
           </h2>
@@ -44,7 +44,7 @@ export function ResultsSpeak() {
         <div data-reveal="cta" className="mt-8">
           <Link
             href="/growth-scenarios"
-            className="link-underline text-[13px] font-medium tracking-[0.04em] uppercase"
+            className="link-underline text-[13px] font-medium tracking-soft uppercase"
           >
             See all growth scenarios
           </Link>

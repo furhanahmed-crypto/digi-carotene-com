@@ -36,7 +36,7 @@ export function ImagePlaceholder({
           className="absolute inset-0 h-full w-full object-cover"
         />
       ) : (
-        <span className="absolute inset-0 flex items-center justify-center p-4 text-center text-[12px] font-medium tracking-[0.12em] text-muted-foreground uppercase">
+        <span className="absolute inset-0 flex items-center justify-center p-4 text-center text-xs font-medium tracking-loose text-muted-foreground uppercase">
           {label}
         </span>
       )}

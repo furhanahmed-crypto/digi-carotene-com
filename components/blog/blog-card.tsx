@@ -44,13 +44,13 @@ export function BlogCard({
           />
         </div>
         <div className="flex min-w-0 flex-1 flex-col p-5 md:p-6">
-          <p className="truncate text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+          <p className="truncate text-xs font-medium tracking-label text-muted-foreground uppercase">
             {focusKeyword}
           </p>
-          <h3 className="mt-3 line-clamp-3 font-display text-[20px] leading-[1.25] font-medium md:text-[22px]">
+          <h3 className="mt-3 line-clamp-3 font-display text-xl leading-tight font-medium md:text-[22px]">
             {title}
           </h3>
-          <p className="mt-3 line-clamp-3 flex-1 text-sm leading-[1.6] text-muted-foreground md:text-base">
+          <p className="mt-3 line-clamp-3 flex-1 text-sm leading-body text-muted-foreground md:text-base">
             {excerpt}
           </p>
           <p className="mt-5 text-[13px] text-muted-foreground">

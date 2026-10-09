@@ -54,7 +54,7 @@ export function SearchRanking() {
           </SectionMark>
           <h2
             data-reveal="heading"
-            className="mt-5 font-display text-[28px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[40px]"
+            className="mt-5 font-display text-[28px] leading-heading font-medium tracking-display md:text-[40px]"
           >
             {searchRanking.headline}
           </h2>
@@ -69,7 +69,7 @@ export function SearchRanking() {
         <div data-reveal="image" className="mx-auto max-w-[760px]">
           <div className="relative">
             <div
-              className="pointer-events-none absolute -inset-4 rounded-[2rem] border border-brand-yellow/35 bg-white/40 shadow-[0_30px_80px_rgba(32,33,36,0.1)] backdrop-blur-[2px] md:-inset-6 dark:border-brand-yellow/20 dark:bg-card/30"
+              className="pointer-events-none absolute -inset-4 rounded-4xl border border-brand-yellow/35 bg-white/40 shadow-[0_30px_80px_rgba(32,33,36,0.1)] backdrop-blur-[2px] md:-inset-6 dark:border-brand-yellow/20 dark:bg-card/30"
               aria-hidden="true"
             />
 
@@ -78,7 +78,7 @@ export function SearchRanking() {
                 <li
                   key={label}
                   className={cn(
-                    "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[11px] font-semibold tracking-[0.06em] text-foreground uppercase shadow-sm dark:text-white",
+                    "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[11px] font-semibold tracking-mark text-foreground uppercase shadow-sm dark:text-white",
                     chip
                   )}
                 >
@@ -100,7 +100,7 @@ export function SearchRanking() {
                 <span className="size-2.5 rounded-full bg-[#ff5f57]" />
                 <span className="size-2.5 rounded-full bg-[#febc2e]" />
                 <span className="size-2.5 rounded-full bg-[#28c840]" />
-                <span className="ml-2 truncate text-[11px] tracking-[0.04em] text-muted-foreground uppercase">
+                <span className="ml-2 truncate text-[11px] tracking-soft text-muted-foreground uppercase">
                   Search · AI answers · Local
                 </span>
               </div>

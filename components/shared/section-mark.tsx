@@ -37,7 +37,7 @@ export function SectionMark({
         )}
         aria-hidden="true"
       />
-      <span className="font-display text-[15px] leading-none font-medium tracking-[0.06em] uppercase md:text-[16px]">
+      <span className="font-display text-[15px] leading-none font-medium tracking-mark uppercase md:text-base">
         {children}
       </span>
     </div>

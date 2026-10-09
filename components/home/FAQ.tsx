@@ -52,13 +52,13 @@ export function FAQ() {
             </SectionMark>
             <p
               data-reveal="text"
-              className="mt-5 text-[13px] font-medium tracking-[0.08em] text-muted-foreground uppercase"
+              className="mt-5 text-[13px] font-medium tracking-label text-muted-foreground uppercase"
             >
               {faq.kicker}
             </p>
             <h2
               data-reveal="heading"
-              className="mt-3 max-w-md font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+              className="mt-3 max-w-md min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
             >
               {faq.headline}
             </h2>

@@ -64,10 +64,10 @@ export default function ServicesHubPage() {
                   groupAccents[index % groupAccents.length]
                 )}
               >
-                <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+                <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h2 className="mt-3 font-display text-[24px] leading-[1.2] font-medium md:text-[28px]">
+                <h2 className="mt-3 font-display text-2xl leading-title font-medium md:text-[28px]">
                   {group.title}
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -112,7 +112,7 @@ export default function ServicesHubPage() {
               data-reveal="card"
               className="rounded-2xl border border-border bg-card p-6"
             >
-              <p className="text-[12px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+              <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                 {String(index + 1).padStart(2, "0")}
               </p>
               <h3 className="mt-3 font-display text-xl font-medium">
@@ -141,7 +141,7 @@ export default function ServicesHubPage() {
               data-reveal="card"
               className="flex h-full flex-col rounded-2xl border border-border bg-card p-6"
             >
-              <h3 className="font-display text-[24px] leading-[1.2] font-medium">
+              <h3 className="font-display text-2xl leading-title font-medium">
                 {pkg.title}
               </h3>
               <p className="mt-2 text-sm text-muted-foreground">

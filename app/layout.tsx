@@ -9,6 +9,7 @@ import { Footer } from "@/components/shared/Footer"
 import { BackToTop } from "@/components/shared/back-to-top"
 import { FloatingContactActions } from "@/components/shared/floating-contact-actions"
 import { EnquiryProvider } from "@/components/enquiry/enquiry-provider"
+import { GrowthAuditProvider } from "@/components/growth-audit/growth-audit-provider"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider"
 import { cn } from "@/lib/utils"
@@ -59,13 +60,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon/icon-light.png",
+        url: "/favicon/icon-light.png?v=4",
         type: "image/png",
         sizes: "512x512",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/favicon/icon-dark.png",
+        url: "/favicon/icon-dark.png?v=4",
         type: "image/png",
         sizes: "512x512",
         media: "(prefers-color-scheme: dark)",
@@ -73,7 +74,7 @@ export const metadata: Metadata = {
     ],
     apple: [
       {
-        url: "/favicon/apple-touch-icon.png",
+        url: "/favicon/apple-touch-icon.png?v=4",
         sizes: "180x180",
         type: "image/png",
       },
@@ -131,11 +132,13 @@ export default async function RootLayout({
         >
           <SmoothScrollProvider>
             <EnquiryProvider>
-              <Header />
-              {children}
-              <Footer />
-              <BackToTop />
-              <FloatingContactActions />
+              <GrowthAuditProvider>
+                <Header />
+                {children}
+                <Footer />
+                <BackToTop />
+                <FloatingContactActions />
+              </GrowthAuditProvider>
             </EnquiryProvider>
           </SmoothScrollProvider>
         </ThemeProvider>

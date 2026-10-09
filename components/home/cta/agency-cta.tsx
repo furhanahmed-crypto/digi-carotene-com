@@ -1,6 +1,6 @@
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
 import { ctaDecor } from "@/components/home/section-decors"
 import { homeSections } from "@/constants/home/sections"
 import { Reveal } from "@/components/motion/reveal"
@@ -19,7 +19,7 @@ export function AgencyCta() {
         </SectionMark>
         <h2
           data-reveal="heading"
-          className="mt-6 max-w-3xl font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] md:text-[52px]"
+          className="mt-6 max-w-3xl min-w-0 font-display text-[28px] leading-display-sm font-medium tracking-display break-words min-[360px]:text-[32px] sm:text-4xl md:text-[52px]"
         >
           {cta.headline}
         </h2>
@@ -30,23 +30,20 @@ export function AgencyCta() {
           {cta.body}
         </p>
         <div data-reveal="cta" className="mt-8 flex flex-wrap gap-3">
-          <Button
-            nativeButton={false}
-            render={<Link href={cta.primary.href} />}
-            size="lg"
+          <OpenGrowthAuditButton
+            label={cta.primary.label}
+            ctaLocation="home_final_cta"
             className="bg-ink text-paper hover:bg-ink/90 hover:text-paper"
-          >
-            {cta.primary.label}
-            <ArrowRight className="size-4" />
-          </Button>
+          />
           <Button
             nativeButton={false}
-            render={<Link href={cta.secondary.href} />}
+            render={<a href={cta.secondary.href} />}
             size="lg"
             variant="outline"
             className="border-border bg-card/80 text-foreground hover:border-foreground hover:bg-card dark:bg-transparent"
           >
             {cta.secondary.label}
+            <ArrowRight className="size-4" />
           </Button>
         </div>
       </Reveal>

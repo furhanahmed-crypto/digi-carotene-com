@@ -50,7 +50,7 @@ export function VisualBentoItem({
             "linear-gradient(to top, rgba(17,17,17,0.92) 0%, rgba(17,17,17,0.78) 28%, rgba(17,17,17,0.42) 58%, rgba(17,17,17,0.12) 82%, rgba(17,17,17,0) 100%)",
         }}
       >
-        <h3 className="font-display text-[18px] leading-snug font-medium text-paper md:text-[22px]">
+        <h3 className="font-display text-lg leading-snug font-medium text-paper md:text-[22px]">
           {title}
         </h3>
         <p className="mt-1.5 max-w-prose text-[13px] leading-relaxed text-paper/80 md:text-sm">

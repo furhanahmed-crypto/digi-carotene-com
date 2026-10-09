@@ -158,7 +158,7 @@ export function WhyChooseUs() {
               
               {/* Colored subtle accent border/glow on container */}
               <div className={cn(
-                "absolute inset-0 -z-10 rounded-3xl bg-gradient-to-tr transition-opacity duration-700 blur-sm opacity-20",
+                "absolute inset-0 -z-10 rounded-3xl bg-linear-to-tr transition-opacity duration-700 blur-sm opacity-20",
                 activeTab === "citation" && "from-emerald-500/10 via-transparent to-transparent",
                 activeTab === "activation" && "from-primary/10 via-transparent to-transparent",
                 activeTab === "voice" && "from-blue-500/10 via-transparent to-transparent"

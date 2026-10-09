@@ -37,13 +37,13 @@ export function ServiceFaqSection({ name, faqs }: ServiceFaqSectionProps) {
             </SectionMark>
             <p
               data-reveal="text"
-              className="mt-5 text-[13px] font-medium tracking-[0.08em] text-muted-foreground uppercase"
+              className="mt-5 text-[13px] font-medium tracking-label text-muted-foreground uppercase"
             >
               Clarity on {name}
             </p>
             <h2
               data-reveal="heading"
-              className="mt-3 max-w-md font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[44px]"
+              className="mt-3 max-w-md font-display text-[32px] leading-display font-medium tracking-display md:text-[44px]"
             >
               Questions we hear most.
             </h2>

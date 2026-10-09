@@ -12,7 +12,7 @@ type MediaFrameProps = {
 const aspectClass = {
   video: "aspect-video",
   square: "aspect-square",
-  photo: "aspect-[4/3]",
+  photo: "aspect-photo",
 }
 
 export function MediaFrame({

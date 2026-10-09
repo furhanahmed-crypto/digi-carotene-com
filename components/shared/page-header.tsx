@@ -58,7 +58,7 @@ export function PageHeader({
         {title ? (
           <h1
             data-reveal="heading"
-            className="mt-6 font-display text-[36px] leading-[1.08] font-medium tracking-[-0.02em] text-ink md:text-[52px] lg:text-[60px] dark:text-foreground"
+            className="mt-6 font-display text-4xl leading-display-sm font-medium tracking-display text-ink md:text-[52px] lg:text-6xl dark:text-foreground"
           >
             {title}
           </h1>
@@ -68,7 +68,7 @@ export function PageHeader({
           <p
             data-reveal="text"
             className={cn(
-              "max-w-2xl text-base leading-[1.6] text-ink/75 md:text-lg dark:text-muted-foreground",
+              "max-w-2xl text-base leading-body text-ink/75 md:text-lg dark:text-muted-foreground",
               title ? "mt-5" : "mt-4"
             )}
           >

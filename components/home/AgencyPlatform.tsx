@@ -18,7 +18,7 @@ export function AgencyPlatform() {
           <span className="text-xs font-mono font-semibold uppercase tracking-wider text-primary mb-3 block">
             The Digi Carotene Platform
           </span>
-          <h2 className="font-lustria text-3xl md:text-5xl font-normal tracking-tight mb-4 bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text text-transparent">
+          <h2 className="font-lustria text-3xl md:text-5xl font-normal tracking-tight mb-4 bg-linear-to-b from-foreground to-foreground/80 bg-clip-text text-transparent">
             The Execution Platform for Modern Marketing
           </h2>
           <p className="text-muted-foreground font-sans font-light text-base md:text-lg">
@@ -36,7 +36,7 @@ export function AgencyPlatform() {
             onMouseLeave={() => setHoveredCard(null)}
           >
             {/* Soft Green background gradient block */}
-            <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-linear-to-b from-emerald-500/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
             
             {/* Visual Vector Container (Top half of the card) */}
             <div className="relative h-56 w-full border-b border-border/40 bg-muted/10 overflow-hidden">
@@ -109,7 +109,7 @@ export function AgencyPlatform() {
             onMouseLeave={() => setHoveredCard(null)}
           >
             {/* Soft Salmon/Orange background gradient block */}
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-linear-to-b from-primary/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
             
             {/* Visual Vector Container (Top half of the card) */}
             <div className="relative h-56 w-full border-b border-border/40 bg-muted/10 overflow-hidden">
@@ -187,7 +187,7 @@ export function AgencyPlatform() {
             onMouseLeave={() => setHoveredCard(null)}
           >
             {/* Soft Blue background gradient block */}
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-linear-to-b from-blue-500/5 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
             
             {/* Visual Vector Container (Top half of the card) */}
             <div className="relative h-56 w-full border-b border-border/40 bg-muted/10 overflow-hidden">

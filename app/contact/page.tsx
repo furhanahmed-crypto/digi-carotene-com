@@ -53,7 +53,7 @@ export default function ContactPage() {
   }
 
   const fieldClassName =
-    "h-12 w-full rounded-xl border border-border bg-background px-4 text-base text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-brand-yellow"
+    "h-12 w-full rounded-xl border border-border bg-background px-4 text-base text-foreground outline-hidden placeholder:text-muted-foreground/50 focus:border-brand-yellow"
 
   return (
     <div className="min-h-svh">
@@ -173,7 +173,7 @@ export default function ContactPage() {
                 <textarea
                   required
                   rows={5}
-                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-brand-yellow"
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base text-foreground outline-hidden placeholder:text-muted-foreground/50 focus:border-brand-yellow"
                   placeholder="Message — where is growth stuck?"
                   value={formState.message}
                   onChange={(e) =>
@@ -195,10 +195,10 @@ export default function ContactPage() {
           <aside className="order-2 space-y-6 lg:order-1 lg:col-span-5">
             <div>
               <SectionMark>Get your free audit</SectionMark>
-              <p className="mt-5 text-[13px] font-medium tracking-[0.08em] text-muted-foreground uppercase">
+              <p className="mt-5 text-[13px] font-medium tracking-label text-muted-foreground uppercase">
                 Hyderabad · Worldwide
               </p>
-              <h2 className="mt-3 font-display text-[32px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[40px]">
+              <h2 className="mt-3 font-display text-[32px] leading-display font-medium tracking-display md:text-[40px]">
                 Reach us directly
               </h2>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
@@ -282,7 +282,7 @@ export default function ContactPage() {
 
       <SectionLayout tone="white" decor={pageWhiteDecor}>
         <SectionMark>Visit us</SectionMark>
-        <h2 className="mt-6 max-w-2xl font-display text-[28px] leading-[1.1] font-medium tracking-[-0.02em] md:text-[36px]">
+        <h2 className="mt-6 max-w-2xl font-display text-[28px] leading-display font-medium tracking-display md:text-4xl">
           {siteContact.building}, HITEC City
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-muted-foreground md:text-base">
@@ -299,7 +299,7 @@ export default function ContactPage() {
           <iframe
             title="Digi Carotene office — Dwaraka Pride, HITEC City"
             src={siteContact.mapsEmbedSrc}
-            className="aspect-[16/10] w-full border-0 md:aspect-[21/9]"
+            className="aspect-wide w-full border-0 md:aspect-ultrawide"
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -329,7 +329,7 @@ function ContactChip({
         {icon}
       </span>
       <span className="min-w-0">
-        <span className="block text-[12px] font-medium tracking-[0.06em] text-muted-foreground uppercase">
+        <span className="block text-xs font-medium tracking-mark text-muted-foreground uppercase">
           {label}
         </span>
         <span className="mt-0.5 block text-sm leading-snug font-medium text-foreground">

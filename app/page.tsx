@@ -20,7 +20,7 @@ export const metadata: Metadata = metadataFor("/")
 
 export default function Page() {
   return (
-    <main className="relative flex min-h-svh flex-col">
+    <main className="relative flex min-h-svh min-w-0 flex-col overflow-x-clip">
       <AgencyHero />
       <ClientsMarquee />
       <ProblemBlock />

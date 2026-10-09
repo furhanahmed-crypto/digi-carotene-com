@@ -99,7 +99,7 @@ export function Capabilities() {
           <Link
             href="/services/digital-marketing"
             data-reveal="cta"
-            className="link-underline text-[13px] font-medium tracking-[0.03em] uppercase"
+            className="link-underline text-[13px] font-medium tracking-caption uppercase"
           >
             All services
           </Link>

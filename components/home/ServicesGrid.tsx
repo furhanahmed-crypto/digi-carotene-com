@@ -400,7 +400,7 @@ export function ServicesGrid() {
           <span className="mb-2 block text-xs font-mono font-semibold uppercase tracking-wider text-primary">
             Digital Capabilities
           </span>
-          <h2 className="mb-3 bg-gradient-to-b from-foreground to-foreground/80 bg-clip-text font-lustria text-3xl font-normal tracking-tight text-transparent md:text-4xl">
+          <h2 className="mb-3 bg-linear-to-b from-foreground to-foreground/80 bg-clip-text font-lustria text-3xl font-normal tracking-tight text-transparent md:text-4xl">
             Unified Digital Marketing Ecosystem
           </h2>
           <p className="mx-auto max-w-2xl font-sans text-sm font-light leading-relaxed text-muted-foreground md:text-base">
@@ -423,7 +423,7 @@ export function ServicesGrid() {
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <div
-                    className={`absolute inset-0 bg-gradient-to-b ${service.bgGradient} via-transparent to-transparent opacity-40 transition-opacity duration-500 group-hover:opacity-100`}
+                    className={`absolute inset-0 bg-linear-to-b ${service.bgGradient} via-transparent to-transparent opacity-40 transition-opacity duration-500 group-hover:opacity-100`}
                   />
 
                   <div className="relative h-40 w-full overflow-hidden border-b border-border/40 bg-muted/10 md:h-44">
@@ -455,7 +455,7 @@ export function ServicesGrid() {
                     </Link>
                   </div>
 
-                  <div className="absolute inset-px -z-10 rounded-3xl bg-gradient-to-tr from-primary/5 to-transparent opacity-0 blur-sm transition-opacity group-hover:opacity-100" />
+                  <div className="absolute inset-px -z-10 rounded-3xl bg-linear-to-tr from-primary/5 to-transparent opacity-0 blur-sm transition-opacity group-hover:opacity-100" />
                 </div>
               )
             })}

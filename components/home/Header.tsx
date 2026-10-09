@@ -67,7 +67,7 @@ export function Header() {
 
           <button
             type="button"
-            className="relative mr-1 flex size-12 shrink-0 items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus:outline-none lg:hidden"
+            className="relative mr-1 flex size-12 shrink-0 items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus:outline-hidden lg:hidden"
             onClick={() => setIsMenuOpen((open) => !open)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}

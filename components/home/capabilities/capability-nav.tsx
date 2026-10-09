@@ -1,3 +1,4 @@
+import { HorizontalScroll } from "@/components/shared/horizontal-scroll"
 import { cn } from "@/lib/utils"
 
 type CapabilityNavPillar = {
@@ -20,9 +21,9 @@ export function CapabilityNav({
   return (
     <nav
       aria-label="Service pillars"
-      className="border-border bg-background/90 z-20 -mx-5 mb-8 border-y px-5 backdrop-blur-md md:-mx-8 md:px-8 lg:sticky lg:top-21.25 lg:col-span-4 lg:mx-0 lg:mb-0 lg:border-0 lg:bg-transparent lg:px-0 lg:backdrop-blur-none xl:col-span-3"
+      className="border-border bg-background/90 z-20 -mx-3.5 mb-8 border-y px-3.5 backdrop-blur-md min-[360px]:-mx-5 min-[360px]:px-5 md:-mx-8 md:px-8 lg:sticky lg:top-21.25 lg:col-span-4 lg:mx-0 lg:mb-0 lg:border-0 lg:bg-transparent lg:px-0 lg:backdrop-blur-none xl:col-span-3"
     >
-      <div className="flex gap-2 overflow-x-auto py-3 lg:flex-col lg:gap-0 lg:overflow-visible lg:py-0">
+      <HorizontalScroll className="gap-2 py-3 lg:flex-col lg:gap-0 lg:overflow-visible lg:py-0">
         {pillars.map((pillar, index) => {
           const isActive = activeId === pillar.id
           return (
@@ -32,7 +33,7 @@ export function CapabilityNav({
               onClick={() => onSelect(pillar.id)}
               aria-current={isActive ? "true" : undefined}
               className={cn(
-                "relative shrink-0 border border-transparent px-4 py-3 text-left text-[12px] font-medium tracking-[0.08em] uppercase transition-colors lg:w-full lg:border-border lg:bg-secondary lg:px-5 lg:py-4 lg:text-[13px] lg:tracking-[0.12em]",
+                "relative shrink-0 border border-transparent px-4 py-3 text-left text-xs font-medium tracking-label uppercase transition-colors lg:w-full lg:border-border lg:bg-secondary lg:px-5 lg:py-4 lg:text-[13px] lg:tracking-loose",
                 isActive
                   ? "border-carotene/30 bg-secondary text-foreground lg:border-border lg:bg-muted"
                   : "text-muted-foreground hover:text-foreground lg:hover:bg-muted/60"
@@ -51,7 +52,7 @@ export function CapabilityNav({
             </button>
           )
         })}
-      </div>
+      </HorizontalScroll>
     </nav>
   )
 }

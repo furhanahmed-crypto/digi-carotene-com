@@ -48,9 +48,9 @@ Source: `docs/content/Digi-Carotene-Case-Studies-SEO-AEO-v2.pdf` → `content/gr
 
 ## Testimonials
 
-- Wired from digicarotene.com Client Stories (3 client-facing Google quotes) on `/about/clients` and `/digital-marketing-agency-hyderabad`
-- Skipped 2 widget quotes that are intern/employee, not clients
-- Role, city, and canonical GBP review URL — confirm when available
+- Live Google reviews via Featurable + `react-google-reviews` on `/about/clients` and `/digital-marketing-agency-hyderabad`
+- Set `NEXT_PUBLIC_FEATURABLE_WIDGET_ID` (see `.env.example`) — connect GBP Place ID `ChIJ8f2i9ySVyzsRoslWhqhFFz4`
+- Without the env var, the section shows a Google link fallback (no invented quotes)
 
 ## The Journal
 

@@ -1,8 +1,5 @@
 "use client"
 
-import { useLenis } from "lenis/react"
-import * as React from "react"
-
 import { EnquiryForm } from "@/components/enquiry/enquiry-form"
 import { Modal } from "@/components/shared/modal"
 
@@ -20,17 +17,6 @@ export function EnquiryModal({
   defaultService,
   formKey = 0,
 }: EnquiryModalProps) {
-  const lenis = useLenis()
-
-  React.useEffect(() => {
-    if (!lenis) return
-    if (open) lenis.stop()
-    else lenis.start()
-    return () => {
-      lenis.start()
-    }
-  }, [open, lenis])
-
   return (
     <Modal
       open={open}

@@ -31,13 +31,13 @@ export function Problem() {
           <div className="lg:col-span-7">
             <p
               data-reveal="text"
-              className="text-lg leading-[1.6] text-muted-foreground md:text-xl"
+              className="text-lg leading-body text-muted-foreground md:text-xl"
             >
               {problem.body}
             </p>
             <p
               data-reveal="text"
-              className="mt-6 text-base leading-[1.6] text-muted-foreground md:text-lg"
+              className="mt-6 text-base leading-body text-muted-foreground md:text-lg"
             >
               {problem.closer}
             </p>
@@ -46,7 +46,7 @@ export function Problem() {
               className="mt-8 border border-border bg-secondary p-6"
             >
               <SectionMark>{problem.mark}</SectionMark>
-              <p className="mt-5 text-base leading-[1.6] text-muted-foreground">
+              <p className="mt-5 text-base leading-body text-muted-foreground">
                 {problem.markBody}
               </p>
             </div>

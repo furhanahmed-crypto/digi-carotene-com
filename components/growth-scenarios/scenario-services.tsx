@@ -11,7 +11,7 @@ export function ScenarioServices({ services }: ScenarioServicesProps) {
 
   return (
     <section id="services-used" className="scroll-mt-28 pt-10">
-      <h2 className="font-display text-[26px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[32px]">
+      <h2 className="font-display text-[26px] leading-heading font-medium tracking-display md:text-[32px]">
         Services used
       </h2>
       <ul className="mt-5 flex flex-wrap gap-2">

@@ -64,7 +64,7 @@ export default function DecorPreviewPage() {
       <header className="sticky top-0 z-20 border-b border-border bg-background/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
           <div>
-            <p className="text-[12px] font-medium tracking-[0.12em] text-muted-foreground uppercase">
+            <p className="text-xs font-medium tracking-loose text-muted-foreground uppercase">
               Approval preview
             </p>
             <h1 className="font-display text-2xl font-medium md:text-3xl">

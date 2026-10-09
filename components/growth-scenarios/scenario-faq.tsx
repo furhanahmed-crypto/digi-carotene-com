@@ -15,7 +15,7 @@ export function ScenarioFaqSection({ faqs }: ScenarioFaqSectionProps) {
 
   return (
     <section id="faqs" className="scroll-mt-28 border-t border-border pt-12">
-      <h2 className="font-display text-[26px] leading-[1.15] font-medium tracking-[-0.02em] md:text-[32px]">
+      <h2 className="font-display text-[26px] leading-heading font-medium tracking-display md:text-[32px]">
         FAQs
       </h2>
       <Accordion
