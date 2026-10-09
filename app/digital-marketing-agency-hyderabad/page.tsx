@@ -3,11 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
-import {
-  pageCreamDecor,
-  pageServicesDecor,
-  pageWhiteDecor,
-} from "@/components/shared/page-decors"
+import { pageWhiteDecor } from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
@@ -100,7 +96,7 @@ export default function HyderabadAgencyPage() {
                 data-reveal-group
                 className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
               >
-                {services.map((item, index) => (
+                {services.map((item) => (
                   <article
                     key={item.title}
                     data-reveal="card"

@@ -13,12 +13,14 @@ export function SiteLogo({
 }: SiteLogoProps) {
   return (
     <span className={cn("inline-flex items-center", className)}>
+      {/* eslint-disable-next-line @next/next/no-img-element -- brand logos with light/dark swap */}
       <img
         src="/logo/logo-light-1.png?v=2"
         alt="Digi Carotene"
         fetchPriority={priority ? "high" : undefined}
         className={cn("w-auto object-contain dark:hidden", heightClassName)}
       />
+      {/* eslint-disable-next-line @next/next/no-img-element -- brand logos with light/dark swap */}
       <img
         src="/logo/logo-dark-1.png?v=2"
         alt=""

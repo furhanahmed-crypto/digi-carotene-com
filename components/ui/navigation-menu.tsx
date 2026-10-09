@@ -125,11 +125,13 @@ function NavigationMenuPositioner({
 
 function NavigationMenuLink({
   className,
+  closeOnClick = true,
   ...props
 }: NavigationMenuPrimitive.Link.Props) {
   return (
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
+      closeOnClick={closeOnClick}
       className={cn(
         "flex items-center gap-2 rounded-lg p-2 text-sm transition-all duration-300 outline-none hover:bg-foreground/[0.04] hover:translate-x-0.5 focus:bg-foreground/[0.04] focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-md data-active:bg-foreground/[0.04] data-active:hover:bg-foreground/[0.06] data-active:focus:bg-foreground/[0.04] [&_svg:not([class*='size-'])]:size-4",
         className

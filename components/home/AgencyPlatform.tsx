@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { ArrowRight, Cpu, Network, Sparkles, Workflow } from "lucide-react"
+import { ArrowRight, Cpu, Network, Workflow } from "lucide-react"
 import Link from "next/link"
 
 import { contactHref } from "@/constants/home/navigation"

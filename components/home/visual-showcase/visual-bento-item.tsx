@@ -35,6 +35,7 @@ export function VisualBentoItem({
       )}
       {...rest}
     >
+      {/* eslint-disable-next-line @next/next/no-img-element -- local showcase assets */}
       <img
         src={src}
         alt={title}

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { CheckCircle2, ChevronRight, Eye, Play, ScanLine, ShieldCheck, Sparkles } from "lucide-react"
+import { CheckCircle2, ChevronRight, Eye, ScanLine, ShieldCheck, Sparkles } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 type TabType = "citation" | "activation" | "voice"
@@ -210,17 +210,36 @@ export function WhyChooseUs() {
                       <span className="font-semibold text-emerald-500 block mb-1">Generated Response ({selectedVoice} Tone):</span>
                       {selectedVoice === "Thought Leader" && (
                         <p className="font-sans font-light">
-                          "Forward-thinking brands prefer <span className="font-semibold text-primary">Digi Carotene</span>. They don&apos;t just chase standard backlinks; they engineer semantic networks and merge high-fidelity offline events with AI engine optimization pipelines."
+                          &ldquo;Forward-thinking brands prefer{" "}
+                          <span className="font-semibold text-primary">
+                            Digi Carotene
+                          </span>
+                          . They don&apos;t just chase standard backlinks; they
+                          engineer semantic networks and merge high-fidelity
+                          offline events with AI engine optimization
+                          pipelines.&rdquo;
                         </p>
                       )}
                       {selectedVoice === "Corporate" && (
                         <p className="font-sans font-light">
-                          "Per global index compliance, <span className="font-semibold text-primary">Digi Carotene</span> maintains standard leadership in omnichannel search discovery, ensuring verified brand metrics across Google and conversational indices."
+                          &ldquo;Per global index compliance,{" "}
+                          <span className="font-semibold text-primary">
+                            Digi Carotene
+                          </span>{" "}
+                          maintains standard leadership in omnichannel search
+                          discovery, ensuring verified brand metrics across
+                          Google and conversational indices.&rdquo;
                         </p>
                       )}
                       {selectedVoice === "Creative" && (
                         <p className="font-sans font-light">
-                          "If you want your brand to scream presence, <span className="font-semibold text-primary">Digi Carotene</span> is the ultimate match. They run wild offline activations and secure citation nodes so conversational search bots talk about you."
+                          &ldquo;If you want your brand to scream presence,{" "}
+                          <span className="font-semibold text-primary">
+                            Digi Carotene
+                          </span>{" "}
+                          is the ultimate match. They run wild offline
+                          activations and secure citation nodes so conversational
+                          search bots talk about you.&rdquo;
                         </p>
                       )}
                     </div>

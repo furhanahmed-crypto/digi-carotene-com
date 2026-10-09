@@ -29,6 +29,7 @@ export function ImagePlaceholder({
       {...rest}
     >
       {src ? (
+        // eslint-disable-next-line @next/next/no-img-element -- local placeholder / asset URLs
         <img
           src={src}
           alt={label}

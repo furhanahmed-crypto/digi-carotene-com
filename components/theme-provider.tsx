@@ -69,8 +69,12 @@ function ThemeProvider({
     const stored = readStoredTheme()
     // Prefer an explicit toggle; otherwise stay on SSR/default light — never OS dark.
     const next = stored ?? (initialTheme === "dark" ? "dark" : "light")
-    setThemeState(next)
     applyTheme(next)
+    // Defer so we don't sync-set state inside the effect body (cascading render lint).
+    const id = window.requestAnimationFrame(() => {
+      setThemeState(next)
+    })
+    return () => window.cancelAnimationFrame(id)
   }, [initialTheme])
 
   return (

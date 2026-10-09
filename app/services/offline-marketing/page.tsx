@@ -3,11 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
-import {
-  pageCreamDecor,
-  pageServicesDecor,
-  pageWhiteDecor,
-} from "@/components/shared/page-decors"
+import { pageServicesDecor } from "@/components/shared/page-decors"
 import { ListingCard } from "@/components/shared/listing-card"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
