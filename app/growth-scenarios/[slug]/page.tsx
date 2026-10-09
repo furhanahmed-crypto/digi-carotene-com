@@ -57,11 +57,6 @@ export default async function GrowthScenarioPage({ params }: ScenarioPageProps) 
       <PageHeader
         title={scenario.focusKeyword}
         description="Benchmark growth scenario — modelled numbers, not a named client claim."
-        breadcrumbs={[
-          { label: "Resources", href: "/case-studies" },
-          { label: "Growth Scenarios", href: "/case-studies" },
-          { label: scenario.industry },
-        ]}
         mark="Growth Scenarios"
       />
       <SectionLayout tone="white" decor={pageWhiteDecor}>

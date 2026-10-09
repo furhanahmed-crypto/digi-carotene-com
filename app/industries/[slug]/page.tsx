@@ -31,10 +31,6 @@ export default async function IndustryPage({ params }: PageProps) {
       title={industry.h1}
       description={`Marketing built for how ${industry.name.toLowerCase()} actually win customers — online, on Maps and on the ground.`}
       mark={industry.name}
-      breadcrumbs={[
-        { label: "Industries", href: "/industries" },
-        { label: industry.name },
-      ]}
       sections={industry.sections.map((section) => ({
         ...section,
         mark: industry.name,

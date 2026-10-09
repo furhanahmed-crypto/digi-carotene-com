@@ -42,7 +42,6 @@ export default async function ThankYouPage({ searchParams }: ThankYouPageProps) 
       <PageHeader
         title={headline}
         description={body}
-        breadcrumbs={[{ label: "Thank you" }]}
         mark="Thank you"
         actions={
           <div className="flex flex-wrap gap-3">

@@ -22,7 +22,6 @@ export default function CaseStudiesPage() {
       <PageHeader
         title="Growth Scenarios: What Results Can Look Like"
         description="Five anonymised industry benchmark scenarios with before-and-after numbers. Labelled clearly as modelled benchmarks — swap in approved client results when ready."
-        breadcrumbs={[{ label: "Resources" }, { label: "Case Studies" }]}
         mark="Growth Scenarios"
       />
 

@@ -9,10 +9,7 @@ import {
   type InfoCardItem,
 } from "@/components/inner/outline-section"
 import { PageCta } from "@/components/shared/page-cta"
-import {
-  PageHeader,
-  type BreadcrumbItem,
-} from "@/components/shared/page-header"
+import { PageHeader } from "@/components/shared/page-header"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
 import type { OutlineSectionData } from "@/types/inner-pages"
@@ -21,7 +18,6 @@ type OutlinePageProps = {
   title: string
   description: string
   mark: string
-  breadcrumbs: BreadcrumbItem[]
   sections: readonly OutlineSectionData[]
   /** FAQ questions from the v2 outline; answers stay placeholders. */
   faqs?: readonly string[]
@@ -43,7 +39,6 @@ export function OutlinePage({
   title,
   description,
   mark,
-  breadcrumbs,
   sections,
   faqs = [],
   clientLogos = false,
@@ -67,7 +62,6 @@ export function OutlinePage({
       <PageHeader
         title={title}
         description={description}
-        breadcrumbs={breadcrumbs}
         mark={mark}
         actions={
           <Button

@@ -60,11 +60,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <PageHeader
         title={post.focusKeyword}
         description="Practical Digi Carotene guides for search, ads, AI and growth."
-        breadcrumbs={[
-          { label: "Resources", href: "/blog" },
-          { label: "Blog", href: "/blog" },
-          { label: post.focusKeyword },
-        ]}
         mark="The Journal"
       />
       <SectionLayout tone="white" decor={pageWhiteDecor}>

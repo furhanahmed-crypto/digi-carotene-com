@@ -17,11 +17,6 @@ export default function OrmPage() {
       title="Online Reputation Management (ORM) Services in Hyderabad"
       description="Reviews and search results shape trust before the first call. We grow the good, monitor the noise and respond with a plan."
       mark="Online Reputation Management"
-      breadcrumbs={[
-        { label: "Services", href: "/services" },
-        { label: "Digital Marketing", href: "/services/digital-marketing" },
-        { label: "Online Reputation Management" },
-      ]}
       sections={[
         body(
           "Google Review Growth and Response",

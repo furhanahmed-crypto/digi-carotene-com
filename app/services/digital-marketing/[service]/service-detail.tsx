@@ -32,8 +32,6 @@ export function DigitalServiceDetail({ service }: { service: string }) {
         faqs: data.faqs,
       }}
       related={related}
-      categoryLabel="Digital Marketing"
-      categoryHref="/services/digital-marketing"
       relatedBasePath="/services/digital-marketing"
     />
   )

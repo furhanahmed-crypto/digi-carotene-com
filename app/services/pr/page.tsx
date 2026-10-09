@@ -16,7 +16,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/services/pr")
 
-
 const capabilities = [
   {
     title: "Media relations and press coverage",
@@ -69,10 +68,6 @@ export default function PRServicesPage() {
       <PageHeader
         title="When Someone Googles You, or Asks ChatGPT About You, What Comes Back?"
         description="Your reputation now lives in search results, news archives, review sites and AI answers. Investors, customers, partners and future hires all check it before they trust you. We help you earn coverage that matters and make sure the story told about you is accurate, consistent and working in your favour."
-        breadcrumbs={[
-          { label: "Services", href: "/services/digital-marketing" },
-          { label: "PR" },
-        ]}
         mark="PR and Reputation"
       />
 

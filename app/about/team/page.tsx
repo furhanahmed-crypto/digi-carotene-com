@@ -12,7 +12,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/about/team")
 
-
 const leadership = [
   {
     name: "Founder",
@@ -78,7 +77,6 @@ export default function TeamPage() {
       <PageHeader
         title="The People Behind the Numbers"
         description="Great marketing is part science and part craft. Our team brings both: analysts who live in spreadsheets, creatives who live in Figma and on set, and an on-ground crew that knows how to make a crowd stop and look."
-        breadcrumbs={[{ label: "About", href: "/about" }, { label: "Team" }]}
         mark="Our Team"
       />
 

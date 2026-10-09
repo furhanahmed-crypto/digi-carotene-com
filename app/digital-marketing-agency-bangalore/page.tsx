@@ -15,7 +15,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/digital-marketing-agency-bangalore")
 
-
 const services = [
   {
     title: "Growth and performance marketing",
@@ -49,7 +48,6 @@ export default function BangaloreAgencyPage() {
       <PageHeader
         title="Bengaluru Tests Everything. Your Marketing Should Too."
         description="Bangalore buyers read reviews, compare prices, ask AI and try the free trial before they commit. Investors ask about CAC and retention before revenue. Digi Carotene brings a data-led, test-and-learn approach to Bangalore brands, with 7+ years and 300+ clients of experience behind every recommendation."
-        breadcrumbs={[{ label: "Locations" }, { label: "Bangalore" }]}
         mark="Digital Marketing Agency in Bangalore"
       />
 

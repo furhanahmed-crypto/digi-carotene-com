@@ -16,7 +16,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/digital-marketing-agency-hyderabad")
 
-
 const services = [
   {
     title: "Local SEO and Google Maps",
@@ -50,7 +49,6 @@ export default function HyderabadAgencyPage() {
       <PageHeader
         title="The Data-Led Digital Marketing Agency Hyderabad Businesses Trust"
         description="Hyderabad doesn't buy on hype. It buys on trust, then tells everyone. For 7+ years, Digi Carotene has helped Hyderabad restaurants, clinics, salons, colleges, real estate firms and tech companies earn that trust online and on the ground, with results measured in enquiries, footfall and revenue."
-        breadcrumbs={[{ label: "Locations" }, { label: "Hyderabad" }]}
         mark="Digital Marketing Agency in Hyderabad"
       />
 

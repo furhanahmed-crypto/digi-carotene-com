@@ -9,7 +9,7 @@ export type ServiceApproachStep = {
 }
 
 export type ServiceDetailData = {
-  /** Real service name for breadcrumbs / marks (e.g. "Content Marketing"). */
+  /** Real service name for SectionMark (e.g. "Content Marketing"). */
   name: string
   /** Creative H1 from the PDF. */
   title: string

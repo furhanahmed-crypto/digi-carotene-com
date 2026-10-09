@@ -32,8 +32,6 @@ export function OfflineServiceDetail({ service }: { service: string }) {
         faqs: data.faqs,
       }}
       related={related}
-      categoryLabel="Offline Marketing"
-      categoryHref="/services/offline-marketing"
       relatedBasePath="/services/offline-marketing"
     />
   )

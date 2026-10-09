@@ -60,7 +60,6 @@ export default function ContactPage() {
       <PageHeader
         title="Let's Talk About Where You Want Your Business to Be"
         description="Tell us a little about your business and goals. A strategist (not a salesperson) will get back to you within one working day with honest thoughts on what we would do and whether we are the right fit."
-        breadcrumbs={[{ label: "Contact" }]}
         mark="Contact Us"
         actions={
           <div className="flex flex-wrap gap-3">

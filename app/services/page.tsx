@@ -37,7 +37,6 @@ export default function ServicesHubPage() {
       <PageHeader
         title="Digital Marketing, Offline Activation and PR Services in Hyderabad"
         description="Everything a brand needs to be found, chosen and remembered — planned by one team, executed in-house, reported in leads."
-        breadcrumbs={[{ label: "Services" }]}
         mark="Services"
         actions={
           <Button

@@ -14,7 +14,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/about/clients")
 
-
 const industries = [
   {
     title: "Restaurants, Cafes and QSR",
@@ -48,7 +47,6 @@ export default function ClientsPage() {
       <PageHeader
         title="300+ Clients. One Thing in Common: They Wanted Proof."
         description="From neighbourhood favourites to fast-growing startups and international brands, our clients came to us for the same reason. They wanted marketing they could measure."
-        breadcrumbs={[{ label: "About", href: "/about" }, { label: "Clients" }]}
         mark="Our Clients"
       />
 

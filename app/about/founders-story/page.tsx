@@ -12,7 +12,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/about/founders-story")
 
-
 const promises = [
   "We will never sell you a metric that does not matter to your business.",
   "If something is not working, you will hear it from us before you notice it.",
@@ -25,10 +24,6 @@ export default function FoundersStoryPage() {
       <PageHeader
         title='It Started With a Simple Question: "Where Did the Money Go?"'
         description="How a Hyderabad founder built a data-led marketing agency trusted by 300+ clients over 7+ years — and why every campaign still starts with a number."
-        breadcrumbs={[
-          { label: "About", href: "/about" },
-          { label: "Founder's Story" },
-        ]}
         mark="Founder's Story"
       />
 

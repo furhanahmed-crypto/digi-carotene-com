@@ -16,7 +16,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/about")
 
-
 const beliefs = [
   {
     title: "Data decides",
@@ -42,7 +41,6 @@ export default function AboutPage() {
       <PageHeader
         title="We Are Not Here to Make Marketing Look Busy. We Are Here to Make It Pay."
         description="Digi Carotene is a data-led, results-first marketing agency based in Hyderabad. For more than seven years we have helped 300+ clients in Hyderabad, Bangalore and across the globe get found, get chosen and grow — with every decision backed by numbers."
-        breadcrumbs={[{ label: "About" }]}
         mark="About Digi Carotene"
       />
 

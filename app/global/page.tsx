@@ -91,10 +91,6 @@ export default function GlobalPage() {
       <PageHeader
         title="Global Digital Marketing Agency — Hyderabad Talent, Worldwide Results"
         description="Brands abroad work with Digi Carotene for one reason: a senior, full-stack marketing team that delivers like an in-house department — at a cost that makes long-term growth possible."
-        breadcrumbs={[
-          { label: "Locations", href: "/digital-marketing-agency-hyderabad" },
-          { label: "Global" },
-        ]}
         mark="Global Markets"
         actions={
           <Button

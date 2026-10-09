@@ -1,4 +1,3 @@
-import Link from "next/link"
 import type { ReactNode } from "react"
 
 import { Reveal } from "@/components/motion/reveal"
@@ -7,16 +6,10 @@ import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { cn } from "@/lib/utils"
 
-export type BreadcrumbItem = {
-  label: string
-  href?: string
-}
-
 type PageHeaderProps = {
   title: string
   description?: string
-  breadcrumbs?: BreadcrumbItem[]
-  /** SectionMark label — paper tone on the yellow banner. */
+  /** SectionMark label — paper tone on the accent banner. */
   mark?: string
   /** Optional motif to the right of the SectionMark. */
   adornment?: ReactNode
@@ -30,21 +23,18 @@ type PageHeaderProps = {
 }
 
 /**
- * Inner-page banner — yellow `SectionLayout` band (homepage language).
- * No photo backdrops or glass cards.
+ * Inner-page banner — accent `SectionLayout` band (homepage language).
+ * No breadcrumbs, photo backdrops, or glass cards.
  */
 export function PageHeader({
   title,
   description,
-  breadcrumbs = [],
-  mark,
+  mark = "Overview",
   adornment,
   actions,
   decor = pageHeaderDecor,
   className,
 }: PageHeaderProps) {
-  const sectionMark = mark ?? breadcrumbs.at(-1)?.label ?? "Overview"
-
   return (
     <SectionLayout
       tone="yellow"
@@ -54,42 +44,8 @@ export function PageHeader({
       aria-label="Page header"
     >
       <Reveal className="max-w-4xl">
-        {breadcrumbs.length > 0 ? (
-          <nav
-            data-reveal="eyebrow"
-            className="mb-6 flex flex-wrap items-center gap-2 text-[13px] tracking-[0.03em] text-ink/70 uppercase dark:text-muted-foreground"
-            aria-label="Breadcrumb"
-          >
-            <Link
-              href="/"
-              className="transition-colors hover:text-ink dark:hover:text-foreground"
-            >
-              Home
-            </Link>
-            {breadcrumbs.map((item) => (
-              <span key={item.label} className="flex items-center gap-2">
-                <span aria-hidden="true">/</span>
-                {item.href ? (
-                  <Link
-                    href={item.href}
-                    className="transition-colors hover:text-ink dark:hover:text-foreground"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <span className="text-ink dark:text-foreground">{item.label}</span>
-                )}
-              </span>
-            ))}
-          </nav>
-        ) : null}
-
-        <SectionMark
-          data-reveal="eyebrow"
-          tone="paper"
-          adornment={adornment}
-        >
-          {sectionMark}
+        <SectionMark data-reveal="eyebrow" tone="paper" adornment={adornment}>
+          {mark}
         </SectionMark>
 
         <h1

@@ -22,7 +22,6 @@ export default function IndustriesPage() {
       <PageHeader
         title="Digital Marketing by Industry — Strategies Built for Your Business"
         description="Industry-specific marketing for Hyderabad businesses and global brands — playbooks shaped by how each sector buys."
-        breadcrumbs={[{ label: "Industries" }]}
         mark="Industries"
         actions={
           <Button

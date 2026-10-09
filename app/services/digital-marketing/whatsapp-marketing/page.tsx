@@ -19,11 +19,6 @@ export default function WhatsAppMarketingPage() {
       title="WhatsApp Business API and Marketing Automation in Hyderabad"
       description="Turn enquiries into bookings and one-time buyers into regulars with official WhatsApp Business API, click-to-WhatsApp ads and automated journeys."
       mark="WhatsApp Marketing"
-      breadcrumbs={[
-        { label: "Services", href: "/services" },
-        { label: "Digital Marketing", href: "/services/digital-marketing" },
-        { label: "WhatsApp Marketing" },
-      ]}
       sections={[
         body(
           "Official WhatsApp Business API Setup",

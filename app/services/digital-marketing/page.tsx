@@ -16,7 +16,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/services/digital-marketing")
 
-
 const digitalServices = [
   {
     slug: "performance-marketing",
@@ -83,10 +82,6 @@ export default function DigitalMarketingLandingPage() {
       <PageHeader
         title="Digital Marketing Services That Report in Revenue, Not Reach"
         description="Search, ads, social, content and your website are not separate jobs. They are one machine for winning customers. We build and run that machine for brands in Hyderabad, Bangalore and around the world, and we report it in the numbers your business runs on."
-        breadcrumbs={[
-          { label: "Services", href: "/services/digital-marketing" },
-          { label: "Digital Marketing" },
-        ]}
         mark="Digital Marketing Services"
       />
 

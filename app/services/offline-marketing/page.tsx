@@ -16,7 +16,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/services/offline-marketing")
 
-
 const offlineServices = [
   {
     slug: "mall-activations",
@@ -71,10 +70,6 @@ export default function OfflineMarketingLandingPage() {
       <PageHeader
         title="Some Moments Can't Be Scrolled Past."
         description="A sampling counter at a busy mall on a Sunday. A stall at the society gate during Diwali week. A takeover at the metro station a commuter passes every morning. Offline marketing puts your brand in front of real people at the exact moment they are ready to notice. We make sure every one of those moments is measured."
-        breadcrumbs={[
-          { label: "Services", href: "/services/offline-marketing" },
-          { label: "Offline Marketing" },
-        ]}
         mark="Offline and Experiential Marketing"
       />
 

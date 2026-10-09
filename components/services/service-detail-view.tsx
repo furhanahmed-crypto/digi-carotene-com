@@ -20,8 +20,6 @@ export type {
 type ServiceDetailViewProps = {
   data: ServiceDetailData
   related: RelatedService[]
-  categoryLabel: string
-  categoryHref: string
   relatedBasePath: string
 }
 
@@ -32,8 +30,6 @@ type ServiceDetailViewProps = {
 export function ServiceDetailView({
   data,
   related,
-  categoryLabel,
-  categoryHref,
   relatedBasePath,
 }: ServiceDetailViewProps) {
   return (
@@ -41,11 +37,6 @@ export function ServiceDetailView({
       <PageHeader
         title={data.title}
         description={data.description}
-        breadcrumbs={[
-          { label: "Services", href: categoryHref },
-          { label: categoryLabel, href: categoryHref },
-          { label: data.name },
-        ]}
         mark={data.name}
         adornment={<MegaphoneMotif />}
         actions={<ConversationActions serviceName={data.name} />}

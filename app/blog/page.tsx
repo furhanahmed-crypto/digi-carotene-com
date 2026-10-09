@@ -20,7 +20,6 @@ export default function BlogPage() {
       <PageHeader
         title="Marketing Insights You Can Actually Use"
         description="No fluff, no recycled listicles. Practical guides on search, AI, ads, social and on-ground marketing, written by the people running campaigns every day in Hyderabad and Bangalore."
-        breadcrumbs={[{ label: "Resources" }, { label: "Blog" }]}
         mark="The Journal"
       />
 
