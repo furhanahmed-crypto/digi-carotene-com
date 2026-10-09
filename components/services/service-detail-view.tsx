@@ -1,7 +1,5 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-
 import { MegaphoneMotif } from "@/components/decor/motifs"
+import { ConversationActions } from "@/components/enquiry/conversation-actions"
 import { ServiceApproach } from "@/components/services/approach/service-approach"
 import { ServiceAudiences } from "@/components/services/audiences/service-audiences"
 import { ServiceCta } from "@/components/services/cta/service-cta"
@@ -10,8 +8,6 @@ import { ServiceFaqSection } from "@/components/services/faq/service-faq"
 import { ServiceOverview } from "@/components/services/overview/service-overview"
 import { RelatedServices } from "@/components/services/related/related-services"
 import { PageHeader } from "@/components/shared/page-header"
-import { Button } from "@/components/ui/button"
-import { contactHref, whatsappHref } from "@/constants/home/navigation"
 import type { RelatedService, ServiceDetailData } from "@/types/services"
 
 export type {
@@ -52,30 +48,7 @@ export function ServiceDetailView({
         ]}
         mark={data.name}
         adornment={<MegaphoneMotif />}
-        actions={
-          <div className="flex flex-wrap gap-3">
-            <Button
-              nativeButton={false}
-              render={<Link href={contactHref} />}
-              size="lg"
-              className="bg-ink text-paper hover:bg-ink/90 hover:text-paper"
-            >
-              Start a conversation
-              <ArrowRight className="size-4" />
-            </Button>
-            <Button
-              nativeButton={false}
-              render={
-                <a href={whatsappHref} target="_blank" rel="noreferrer" />
-              }
-              size="lg"
-              variant="outline"
-              className="border-ink/25 bg-white/50 text-ink hover:border-ink hover:bg-white dark:border-border dark:bg-transparent dark:text-foreground"
-            >
-              WhatsApp us
-            </Button>
-          </div>
-        }
+        actions={<ConversationActions serviceName={data.name} />}
       />
 
       <ServiceOverview name={data.name} whatIs={data.whatIs} />

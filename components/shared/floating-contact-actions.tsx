@@ -1,30 +1,34 @@
 "use client"
 
 import type { ReactNode } from "react"
-import Link from "next/link"
 import { Mail } from "lucide-react"
 
-import { siteContact, whatsappHref } from "@/constants/home/navigation"
+import { useEnquiry } from "@/components/enquiry/enquiry-provider"
+import { whatsappHref } from "@/constants/home/navigation"
 import { cn } from "@/lib/utils"
 
 import { WhatsAppIcon } from "./whatsapp-icon"
 
 type ExpandActionProps = {
-  href: string
   label: string
-  external?: boolean
   icon: ReactNode
   iconClassName: string
   expandedClassName: string
+  labelClassName?: string
+  href?: string
+  external?: boolean
+  onClick?: () => void
 }
 
 function ExpandAction({
-  href,
   label,
-  external,
   icon,
   iconClassName,
   expandedClassName,
+  labelClassName = "text-white",
+  href,
+  external,
+  onClick,
 }: ExpandActionProps) {
   const className = cn(
     "group flex h-12 items-center overflow-hidden rounded-full shadow-lg transition-[width,box-shadow,transform] duration-300 ease-out",
@@ -42,13 +46,31 @@ function ExpandAction({
       >
         {icon}
       </span>
-      <span className="max-w-0 overflow-hidden whitespace-nowrap pr-0 text-[12px] font-semibold tracking-[0.08em] text-white uppercase opacity-0 transition-all duration-300 ease-out group-hover:max-w-28 group-hover:pr-4 group-hover:opacity-100 group-focus-visible:max-w-28 group-focus-visible:pr-4 group-focus-visible:opacity-100">
+      <span
+        className={cn(
+          "max-w-0 overflow-hidden whitespace-nowrap pr-0 text-[12px] font-semibold tracking-[0.08em] uppercase opacity-0 transition-all duration-300 ease-out group-hover:max-w-28 group-hover:pr-4 group-hover:opacity-100 group-focus-visible:max-w-28 group-focus-visible:pr-4 group-focus-visible:opacity-100",
+          labelClassName
+        )}
+      >
         {label}
       </span>
     </>
   )
 
-  if (external) {
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        aria-label={label}
+        className={className}
+      >
+        {content}
+      </button>
+    )
+  }
+
+  if (external && href) {
     return (
       <a
         href={href}
@@ -63,13 +85,15 @@ function ExpandAction({
   }
 
   return (
-    <Link href={href} aria-label={label} className={className}>
+    <a href={href} aria-label={label} className={className}>
       {content}
-    </Link>
+    </a>
   )
 }
 
 export function FloatingContactActions() {
+  const { openEnquiry } = useEnquiry()
+
   return (
     <div
       className="fixed right-5 bottom-20 z-40 flex flex-col items-end gap-3 md:right-6"
@@ -78,17 +102,19 @@ export function FloatingContactActions() {
       <ExpandAction
         href={whatsappHref}
         label="WhatsApp"
+        external
         icon={<WhatsAppIcon className="size-5" />}
         iconClassName="bg-[#25D366] text-white"
         expandedClassName="bg-[#25D366] hover:shadow-[#25D366]/35"
+        labelClassName="text-white"
       />
       <ExpandAction
-        href={siteContact.emailHref}
-        label="Email"
-        external
+        label="Enquire"
+        onClick={() => openEnquiry()}
         icon={<Mail className="size-5" />}
         iconClassName="bg-brand-yellow text-ink"
         expandedClassName="bg-brand-yellow hover:shadow-brand-yellow/40"
+        labelClassName="text-ink"
       />
     </div>
   )

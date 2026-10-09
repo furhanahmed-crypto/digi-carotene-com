@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import { ArrowRight, Clock3, Mail, MapPin, Phone } from "lucide-react"
 
 import { PageHeader } from "@/components/shared/page-header"
@@ -12,20 +13,13 @@ import {
 } from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { Button } from "@/components/ui/button"
+import { FormSelect } from "@/components/ui/form-select"
 import { siteContact, whatsappHref } from "@/constants/home/navigation"
 import { WhatsAppIcon } from "@/components/shared/whatsapp-icon"
-
-/** v2 PDF: name, business, website, country, service, budget, message. */
-const serviceOptions = [
-  "Performance Marketing",
-  "Growth Marketing",
-  "SEO / AEO / GEO",
-  "Social Media",
-  "Website / Design",
-  "Offline Activations",
-  "PR / ORM",
-  "Not sure yet",
-] as const
+import {
+  buildThankYouHref,
+  enquiryServiceOptions,
+} from "@/lib/enquiry"
 
 const budgetOptions = [
   "Under ₹50k / month",
@@ -36,6 +30,7 @@ const budgetOptions = [
 ] as const
 
 export default function ContactPage() {
+  const router = useRouter()
   const [formState, setFormState] = React.useState({
     name: "",
     business: "",
@@ -45,11 +40,16 @@ export default function ContactPage() {
     budget: "",
     message: "",
   })
-  const [isSubmitted, setIsSubmitted] = React.useState(false)
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
-    setIsSubmitted(true)
+    router.push(
+      buildThankYouHref({
+        name: formState.name,
+        service: formState.service,
+        source: "contact",
+      })
+    )
   }
 
   const fieldClassName =
@@ -93,132 +93,103 @@ export default function ContactPage() {
           {/* Form first visually — fills the band; sticky so no empty void. */}
           <div className="order-1 lg:order-2 lg:col-span-7">
             <div className="rounded-2xl border border-border bg-white p-6 shadow-sm lg:sticky lg:top-28 md:p-8 dark:bg-card">
-              {isSubmitted ? (
-                <div className="py-10">
-                  <SectionMark>Received</SectionMark>
-                  <h3 className="mt-6 font-display text-[26px] leading-[1.2] font-medium md:text-[32px]">
-                    Inquiry received
-                  </h3>
-                  <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-                    Thank you. A strategist will get back within one working
-                    day.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <SectionMark>Free proposal</SectionMark>
-                  <p className="text-sm text-muted-foreground">
-                    Six fields — wherever you are in the world. We reply within
-                    one working day.
-                  </p>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <input
-                      required
-                      className={fieldClassName}
-                      placeholder="Name"
-                      value={formState.name}
-                      onChange={(e) =>
-                        setFormState((s) => ({ ...s, name: e.target.value }))
-                      }
-                    />
-                    <input
-                      required
-                      className={fieldClassName}
-                      placeholder="Business"
-                      value={formState.business}
-                      onChange={(e) =>
-                        setFormState((s) => ({
-                          ...s,
-                          business: e.target.value,
-                        }))
-                      }
-                    />
-                  </div>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <input
-                      type="url"
-                      className={fieldClassName}
-                      placeholder="Website (optional)"
-                      value={formState.website}
-                      onChange={(e) =>
-                        setFormState((s) => ({
-                          ...s,
-                          website: e.target.value,
-                        }))
-                      }
-                    />
-                    <input
-                      required
-                      className={fieldClassName}
-                      placeholder="Country / city"
-                      value={formState.country}
-                      onChange={(e) =>
-                        setFormState((s) => ({
-                          ...s,
-                          country: e.target.value,
-                        }))
-                      }
-                    />
-                  </div>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <select
-                      required
-                      className={fieldClassName}
-                      value={formState.service}
-                      onChange={(e) =>
-                        setFormState((s) => ({
-                          ...s,
-                          service: e.target.value,
-                        }))
-                      }
-                    >
-                      <option value="" disabled>
-                        Service you need
-                      </option>
-                      {serviceOptions.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                    <select
-                      className={fieldClassName}
-                      value={formState.budget}
-                      onChange={(e) =>
-                        setFormState((s) => ({
-                          ...s,
-                          budget: e.target.value,
-                        }))
-                      }
-                    >
-                      <option value="">Monthly budget (optional)</option>
-                      {budgetOptions.map((option) => (
-                        <option key={option} value={option}>
-                          {option}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <textarea
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <SectionMark>Free proposal</SectionMark>
+                <p className="text-sm text-muted-foreground">
+                  Six fields — wherever you are in the world. We reply within
+                  one working day.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <input
                     required
-                    rows={5}
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-brand-yellow"
-                    placeholder="Message — where is growth stuck?"
-                    value={formState.message}
+                    className={fieldClassName}
+                    placeholder="Name"
+                    value={formState.name}
                     onChange={(e) =>
-                      setFormState((s) => ({ ...s, message: e.target.value }))
+                      setFormState((s) => ({ ...s, name: e.target.value }))
                     }
                   />
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-brand-yellow text-ink hover:bg-brand-yellow/90 sm:w-auto"
-                  >
-                    Get a Free Proposal
-                    <ArrowRight className="size-4" />
-                  </Button>
-                </form>
-              )}
+                  <input
+                    required
+                    className={fieldClassName}
+                    placeholder="Business"
+                    value={formState.business}
+                    onChange={(e) =>
+                      setFormState((s) => ({
+                        ...s,
+                        business: e.target.value,
+                      }))
+                    }
+                  />
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <input
+                    type="url"
+                    className={fieldClassName}
+                    placeholder="Website (optional)"
+                    value={formState.website}
+                    onChange={(e) =>
+                      setFormState((s) => ({
+                        ...s,
+                        website: e.target.value,
+                      }))
+                    }
+                  />
+                  <input
+                    required
+                    className={fieldClassName}
+                    placeholder="Country / city"
+                    value={formState.country}
+                    onChange={(e) =>
+                      setFormState((s) => ({
+                        ...s,
+                        country: e.target.value,
+                      }))
+                    }
+                  />
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <FormSelect
+                    required
+                    name="service"
+                    placeholder="Service you need"
+                    value={formState.service}
+                    onValueChange={(service) =>
+                      setFormState((s) => ({ ...s, service }))
+                    }
+                    options={enquiryServiceOptions}
+                    triggerClassName="h-12 text-base"
+                  />
+                  <FormSelect
+                    name="budget"
+                    placeholder="Monthly budget (optional)"
+                    value={formState.budget}
+                    onValueChange={(budget) =>
+                      setFormState((s) => ({ ...s, budget }))
+                    }
+                    options={budgetOptions}
+                    triggerClassName="h-12 text-base"
+                  />
+                </div>
+                <textarea
+                  required
+                  rows={5}
+                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-base text-foreground outline-none placeholder:text-muted-foreground/50 focus:border-brand-yellow"
+                  placeholder="Message — where is growth stuck?"
+                  value={formState.message}
+                  onChange={(e) =>
+                    setFormState((s) => ({ ...s, message: e.target.value }))
+                  }
+                />
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-brand-yellow text-ink hover:bg-brand-yellow/90 sm:w-auto"
+                >
+                  Get a Free Proposal
+                  <ArrowRight className="size-4" />
+                </Button>
+              </form>
             </div>
           </div>
 

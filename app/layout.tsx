@@ -8,6 +8,7 @@ import { Header } from "@/components/home/Header"
 import { Footer } from "@/components/shared/Footer"
 import { BackToTop } from "@/components/shared/back-to-top"
 import { FloatingContactActions } from "@/components/shared/floating-contact-actions"
+import { EnquiryProvider } from "@/components/enquiry/enquiry-provider"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SmoothScrollProvider } from "@/components/shared/smooth-scroll-provider"
 import { cn } from "@/lib/utils"
@@ -129,11 +130,13 @@ export default async function RootLayout({
           initialTheme={themeClass === "dark" ? "dark" : "light"}
         >
           <SmoothScrollProvider>
-            <Header />
-            {children}
-            <Footer />
-            <BackToTop />
-            <FloatingContactActions />
+            <EnquiryProvider>
+              <Header />
+              {children}
+              <Footer />
+              <BackToTop />
+              <FloatingContactActions />
+            </EnquiryProvider>
           </SmoothScrollProvider>
         </ThemeProvider>
       </body>

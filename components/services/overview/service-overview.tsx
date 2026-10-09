@@ -1,13 +1,9 @@
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-
 import { TargetArrowMotif } from "@/components/decor/motifs"
+import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { Reveal } from "@/components/motion/reveal"
 import { pageCreamDecor } from "@/components/shared/page-decors"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
-import { Button } from "@/components/ui/button"
-import { contactHref } from "@/constants/home/navigation"
 
 type ServiceOverviewProps = {
   name: string
@@ -40,15 +36,10 @@ export function ServiceOverview({ name, whatIs }: ServiceOverviewProps) {
               {name}, built for outcomes.
             </h2>
             <div data-reveal="cta" className="mt-8">
-              <Button
-                nativeButton={false}
-                render={<Link href={contactHref} />}
-                size="lg"
+              <OpenEnquiryButton
+                serviceName={name}
                 className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
-              >
-                Start a conversation
-                <ArrowRight className="size-4" />
-              </Button>
+              />
             </div>
           </aside>
 
