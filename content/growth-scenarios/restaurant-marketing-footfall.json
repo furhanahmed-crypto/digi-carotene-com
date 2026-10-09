@@ -1,0 +1,125 @@
+{
+  "slug": "restaurant-marketing-footfall",
+  "number": 2,
+  "industry": "Restaurants",
+  "label": "Benchmark scenario",
+  "metaTitle": "Restaurant Marketing Scenario: 8.5x Return on Ad Spend",
+  "metaDescription": "How a two-outlet restaurant can turn Instagram Reels, Google Maps and a WhatsApp loyalty loop into 520 tracked visits a month — a benchmark scenario.",
+  "focusKeyword": "restaurant marketing Hyderabad",
+  "secondaryKeywords": [
+    "increase restaurant footfall",
+    "restaurant Instagram marketing",
+    "restaurant WhatsApp loyalty program",
+    "QSR digital marketing India",
+    "Google Maps for restaurants"
+  ],
+  "metaKeywords": [
+    "restaurant marketing",
+    "restaurant footfall",
+    "QSR marketing",
+    "Instagram Reels for restaurants",
+    "WhatsApp loyalty",
+    "Google Business Profile restaurant",
+    "direct ordering",
+    "Hyderabad"
+  ],
+  "ogTitle": "Empty Weekdays to Tracked Footfall: A Restaurant Growth Scenario",
+  "ogDescription": "Food shoots, radius-targeted Reels and a WhatsApp loyalty loop — the numbers a two-outlet restaurant can expect.",
+  "featuredImageAlt": "Chef plating a dish in a busy restaurant kitchen during a weekday lunch service",
+  "internalLinks": [
+    "/industries/restaurants",
+    "/services/digital-marketing/social",
+    "/services/digital-marketing/insta-shoot",
+    "/blog/google-business-profile-checklist-hyderabad"
+  ],
+  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "h1": "How a Restaurant Can Fill Weekdays and Turn First Visits into Regulars",
+  "quickAnswer": "In this benchmark scenario, a two-outlet restaurant spends ₹40,000 a month on radius-targeted Instagram Reels with a weekday first-visit offer redeemed on WhatsApp. It tracks 520 first visits a month at ₹77 each — about ₹3.38 lakh in sales, an 8.5x return — and repeat customers rise from 18% to 27%.",
+  "headlineMetric": "8.5x",
+  "headlineMetricLabel": "Return on ad spend",
+  "cardSummary": "520 tracked first visits a month from Instagram, and repeat customers up from 18% to 27% in 90 days.",
+  "tags": ["Restaurants"],
+  "homeFeatured": true,
+  "businessPattern": {
+    "type": "Two outlets, dine-in plus delivery apps, regional menu",
+    "location": "Residential and IT-corridor neighbourhoods of a metro city",
+    "ticketSize": "Average bill ₹650 per table",
+    "salesCycle": "Same day — decisions made within hours",
+    "monthlyAdBudget": "₹40,000 (Meta + Google)"
+  },
+  "challenge": "\"Weekends are full, weekdays are empty, and delivery apps take a big cut of every order.\" Social media was a feed of dish photos with no offer, no tracking and no way to bring customers back. Google Maps listings had old photos and wrong weekday hours.",
+  "objectives": [
+    "Fill weekday lunch and dinner slots with trackable first visits",
+    "Turn first-time diners into regulars without relying on discounts",
+    "Move a share of delivery orders from aggregators to direct ordering"
+  ],
+  "whatWeDid": [
+    {
+      "title": "In-house food shoot",
+      "body": "One shoot day produced 12 Reels: dishes being made, the kitchen team, weekday combos. Real food and real people, no stock images."
+    },
+    {
+      "title": "Radius-targeted Meta ads",
+      "body": "Reels shown to people within 4 km of each outlet, with a weekday-only first-visit offer redeemed by showing a WhatsApp message at the counter."
+    },
+    {
+      "title": "Google Maps clean-up",
+      "body": "Correct hours for each outlet, full menu, weekly photo uploads and a reply to every review."
+    },
+    {
+      "title": "WhatsApp loyalty loop",
+      "body": "Diners who redeemed the offer were opted in to a WhatsApp list: a birthday treat, new-dish alerts, and a direct-order link with no aggregator commission."
+    },
+    {
+      "title": "Weekly read-out",
+      "body": "Redemptions counted by outlet and day, so budget moved to the outlet and slot with the lowest cost per visit."
+    }
+  ],
+  "resultsTitle": "Results (90 Days)",
+  "results": {
+    "headers": ["Metric", "Before", "After 90 days", "Benchmark basis"],
+    "rows": [
+      ["Monthly ad spend", "₹40,000 (boosted posts)", "₹40,000", "—"],
+      ["Google Maps direction requests / month", "180", "420", "Modelled from profile completeness and weekly activity"],
+      ["Tracked first visits from ads / month", "Not tracked", "520", "Indian Meta CPC ₹8–25 (OwlClaw) and restaurant search conversion rate ~8% (LocaliQ, US data)"],
+      ["Cost per tracked first visit", "—", "₹77", "Spend ÷ redemptions"],
+      ["Revenue from tracked visits / month", "—", "₹3.38 lakh", "520 visits × ₹650 average bill"],
+      ["Repeat-customer rate (90-day)", "18%", "27%", "Modelled effect of the WhatsApp loyalty loop"],
+      ["Return on ad spend", "—", "8.5x", "Revenue ÷ spend"]
+    ]
+  },
+  "whatMadeTheDifference": "Tracking. Once every first visit was counted through a WhatsApp redemption, the restaurant could see which outlet, day and creative paid back — and stop paying for the rest. The WhatsApp list also turned one-off diners into a channel the restaurant owns.",
+  "faqs": [
+    {
+      "question": "How can a restaurant increase footfall on weekdays?",
+      "answer": "Run short Reels ads to people within a few kilometres, with a weekday-only offer that is easy to redeem and track. Keep Google Maps hours, menu and photos current so nearby searchers pick you."
+    },
+    {
+      "question": "How do you track footfall from Instagram ads?",
+      "answer": "Use a redemption step — showing a WhatsApp message or code at the counter — and count redemptions by outlet and day. That turns ad spend into a cost per visit."
+    },
+    {
+      "question": "How can restaurants reduce dependence on delivery apps?",
+      "answer": "Build a WhatsApp list of diners who opt in, and share a direct-ordering link with new-dish alerts and occasion offers. Every direct order avoids aggregator commission."
+    },
+    {
+      "question": "What return on ad spend can a restaurant expect?",
+      "answer": "It varies by average bill and offer. In this scenario, a ₹650 average bill and ₹77 cost per visit give about 8.5x. Track it from your own redemptions."
+    }
+  ],
+  "servicesUsed": [
+    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
+    {"label": "Social Media Marketing", "href": "/services/digital-marketing/social"},
+    {"label": "Insta Shoot", "href": "/services/digital-marketing/insta-shoot"},
+    {"label": "Local SEO & Google Business Profile", "href": "/services/digital-marketing/seo"},
+    {"label": "WhatsApp Marketing", "href": "/services/digital-marketing/whatsapp-marketing"}
+  ],
+  "cta": {
+    "body": "Get results like these for your business.",
+    "primaryLabel": "Get Your Free Growth Audit",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Chat on WhatsApp",
+    "secondaryHref": "https://wa.me/919398682206"
+  },
+  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+}

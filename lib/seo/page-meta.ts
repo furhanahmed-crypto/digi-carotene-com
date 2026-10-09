@@ -127,8 +127,9 @@ export const pageMetaBySlug = {
     description: "Data-led digital marketing for Bangalore startups, D2C, healthcare and local brands. SEO, AEO, performance ads, social, web and BTL activations.",
   },
   "/case-studies": {
-    title: "Marketing Case Studies & Results",
-    description: "Real results from Digi Carotene clients: lower cost per lead, higher rankings, more footfall and more revenue. See how data-led marketing performs.",
+    title: "Growth Scenarios & Marketing Benchmarks | Digi Carotene",
+    description:
+      "Five industry growth scenarios with before-and-after numbers for clinics, restaurants, salons, colleges and furniture showrooms. Benchmarks, clearly labelled.",
   },
   "/blog": {
     title: "SEO, AI Search & Growth Insights | Digi Carotene Journal",

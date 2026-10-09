@@ -1,0 +1,244 @@
+{
+  "slug": "meta-ads-vs-google-ads",
+  "number": 3,
+  "metaTitle": "Meta Ads vs Google Ads: Which Is Better for Your Business?",
+  "metaDescription": "Google Ads captures people already searching; Meta Ads creates demand on Instagram and Facebook. Compare cost, intent and fit for Indian businesses.",
+  "focusKeyword": "Meta ads vs Google ads",
+  "secondaryKeywords": [
+    "Facebook ads vs Google ads India",
+    "Instagram ads or Google ads",
+    "best ads for small business India",
+    "Google Ads agency Hyderabad",
+    "Meta ads agency Hyderabad"
+  ],
+  "metaKeywords": [
+    "Meta ads vs Google ads",
+    "Facebook ads vs Google ads",
+    "Instagram ads",
+    "Google Search ads",
+    "Performance Max",
+    "Advantage+",
+    "small business advertising India"
+  ],
+  "searchIntent": "Commercial investigation",
+  "ogTitle": "Google or Instagram Ads? How to Choose Without Wasting Budget",
+  "featuredImageAlt": "Side-by-side comparison of Meta Ads and Google Ads for small businesses in India",
+  "internalLinks": [
+    "/services/digital-marketing/performance-marketing",
+    "/industries/restaurants",
+    "/industries/healthcare",
+    "/blog/reduce-cost-per-lead-meta-ads"
+  ],
+  "schema": [
+    "BlogPosting",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
+  "h1": "Meta Ads vs Google Ads: Which Is Better for Small Businesses in India?",
+  "quickAnswer": "Google Ads works best when people already search for what you sell — \"dermatologist near me\" or \"CA firm in Hyderabad\". Meta Ads (Instagram and Facebook) works best when you need to create demand with visuals — food, fashion, salons, events and offers. Most growing businesses use both: Google to capture intent, Meta to build it.",
+  "datePublished": "2026-10-20",
+  "dateModified": "2026-10-20",
+  "author": {
+    "name": "Sai Narasimhan Palakolanu",
+    "role": "[[Author role — to confirm]]",
+    "url": "/about/team",
+    "linkedIn": "[[LinkedIn URL — to confirm]]"
+  },
+  "sections": [
+    {
+      "id": "what-is-the-core-difference-between-google-ads-and-meta-ads",
+      "heading": "What is the core difference between Google Ads and Meta Ads?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Google Ads is intent-based. Your ad appears when someone types a search, so they already want a solution. Meta Ads is interest-based. Your ad appears in feeds, Reels and Stories for people who match an audience, whether or not they were looking today."
+        },
+        {
+          "type": "paragraph",
+          "text": "Think of Google as a shop on a busy street where people walk in asking for something. Meta is a stall at a crowded mall: people weren't looking for you, but a good display stops them."
+        }
+      ]
+    },
+    {
+      "id": "google-ads-vs-meta-ads-compared",
+      "heading": "Google Ads vs Meta Ads compared",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "Google Ads",
+            "Meta Ads"
+          ],
+          "rows": [
+            [
+              "How people find you",
+              "They search for it",
+              "You appear in their feed"
+            ],
+            [
+              "Best for",
+              "Urgent or considered needs",
+              "Visual, impulse and lifestyle products"
+            ],
+            [
+              "Cost per click",
+              "Higher, especially in competitive categories",
+              "Lower per click and per view"
+            ],
+            [
+              "Lead quality",
+              "Usually higher intent",
+              "Varies; needs good qualification"
+            ],
+            [
+              "Creative needed",
+              "Text ads, landing page",
+              "Reels, images, carousels"
+            ],
+            [
+              "Speed to scale",
+              "Limited by search volume",
+              "Large reach, scales quickly"
+            ],
+            [
+              "Local targeting",
+              "Strong (keywords + location + Maps)",
+              "Strong (radius + interests)"
+            ],
+            [
+              "Formats that help",
+              "Search, Performance Max, call ads, local ads",
+              "Reels, lead forms, click-to-WhatsApp, Advantage+"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "when-should-you-choose-google-ads",
+      "heading": "When should you choose Google Ads?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose Google first when the need is urgent or specific and people actively look for it:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Clinics, dentists, diagnostics and physiotherapy",
+            "Home services: pest control, AC repair, interiors, packers and movers",
+            "Professional services: CA, legal, B2B software, IT services",
+            "Education searches such as \"MBA colleges in Hyderabad\""
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If few people search for your category, Google will struggle to spend your budget well."
+        }
+      ]
+    },
+    {
+      "id": "when-should-you-choose-meta-ads",
+      "heading": "When should you choose Meta Ads?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose Meta first when your product sells on looks, emotion or an offer:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Restaurants, cafés and cloud kitchens",
+            "Salons, spas, fashion, jewellery and bridal services",
+            "D2C products, home foods, furniture and décor",
+            "Events, launches and new store openings"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Meta also works for services people don't search for yet, such as a new nutrition program or an online course, because it lets you introduce the idea."
+        }
+      ]
+    },
+    {
+      "id": "which-costs-less-in-india",
+      "heading": "Which costs less in India?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Meta usually has a lower cost per click and per thousand impressions, so it looks cheaper. But the right measure is cost per customer, not cost per click. A ₹40 Google click from someone searching \"skin specialist in Jubilee Hills\" can be worth more than five ₹8 clicks from Instagram scrollers. Track both channels to the sale or booking — using call tracking, WhatsApp tracking and Meta's Conversions API — before deciding."
+        }
+      ]
+    },
+    {
+      "id": "how-should-you-split-the-budget-between-them",
+      "heading": "How should you split the budget between them?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A practical starting split for local businesses:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "High-intent services (clinics, professional services): 70% Google, 30% Meta retargeting.",
+            "Visual and offer-led businesses (restaurants, salons, D2C): 30% Google, 70% Meta.",
+            "New categories (new concept, new product): 20% Google, 80% Meta to build awareness first."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Review the split every month and move money to the channel with the lower cost per customer."
+        }
+      ]
+    },
+    {
+      "id": "how-do-google-and-meta-work-together",
+      "heading": "How do Google and Meta work together?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The strongest setup uses both in sequence. Meta Reels introduce your brand to people nearby. Some of them later search your name or category on Google — and your search ad and Google Business Profile catch them. Meanwhile, Meta retargeting reminds website visitors who didn't book. Each channel makes the other cheaper."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Are Facebook ads and Meta ads the same?",
+      "answer": "Yes. Meta Ads Manager runs ads across Facebook, Instagram, Messenger, WhatsApp and the Audience Network from one account."
+    },
+    {
+      "question": "What is the minimum budget for Google or Meta ads?",
+      "answer": "There is no fixed minimum, but for local lead generation plan at least ₹500–₹1,000 a day per channel so the algorithms get enough data to optimise."
+    },
+    {
+      "question": "Which is better for B2B?",
+      "answer": "Google Search and LinkedIn usually lead for B2B. Meta can work for retargeting and small-business buyers."
+    },
+    {
+      "question": "Can I run click-to-WhatsApp ads?",
+      "answer": "Yes. Meta's click-to-WhatsApp ads open a chat directly, which suits Indian buyers who prefer messaging over forms."
+    },
+    {
+      "question": "Should an agency run my ads or can I do it myself?",
+      "answer": "You can start yourself with small budgets. An agency adds value through creative testing, tracking setup and weekly optimisation, which usually lowers cost per lead."
+    }
+  ],
+  "cta": {
+    "body": "Not sure where your budget should go? We'll review your category, competitors and current ads, and recommend a Google–Meta split with a target cost per lead.",
+    "primaryLabel": "Get Your Free Growth Audit",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Chat on WhatsApp",
+    "secondaryHref": "https://wa.me/919398682206"
+  },
+  "relatedSlugs": [
+    "reduce-cost-per-lead-meta-ads",
+    "digital-marketing-cost-hyderabad",
+    "performance-marketing-vs-growth-marketing"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "slug": "dermatology-clinic-patient-acquisition",
+  "number": 1,
+  "industry": "Healthcare",
+  "label": "Benchmark scenario",
+  "metaTitle": "Dermatology Clinic Marketing: Cut Cost per Appointment 66%",
+  "metaDescription": "Benchmark scenario for a dermatology clinic: Google Search, NMC-compliant content and WhatsApp follow-up cut cost per appointment from ₹1,714 to ₹577.",
+  "focusKeyword": "dermatology clinic marketing",
+  "secondaryKeywords": [
+    "skin clinic patient acquisition",
+    "healthcare digital marketing Hyderabad",
+    "Google Ads for dermatologists",
+    "NMC-compliant clinic marketing",
+    "cost per appointment"
+  ],
+  "metaKeywords": [
+    "dermatology clinic marketing",
+    "skin clinic marketing India",
+    "patient acquisition",
+    "healthcare marketing agency Hyderabad",
+    "Google Ads for clinics",
+    "WhatsApp appointment booking",
+    "NMC guidelines"
+  ],
+  "ogTitle": "How a Skin Clinic Can Book 3x More Appointments at the Same Budget",
+  "ogDescription": "Search-first ads, educational Reels and five-minute WhatsApp follow-up — a benchmark scenario for specialist clinics.",
+  "featuredImageAlt": "Dermatology clinic reception with appointment bookings on a tablet",
+  "internalLinks": [
+    "/industries/healthcare",
+    "/services/digital-marketing/performance-marketing",
+    "/services/digital-marketing/whatsapp-marketing",
+    "/blog/nmc-advertising-guidelines-2026-doctors-hospitals"
+  ],
+  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "h1": "How a Dermatology Clinic Can Cut Cost per Appointment by 66% in 90 Days",
+  "quickAnswer": "In this benchmark scenario, a single-location dermatology clinic spending ₹60,000 a month moves budget to Google Search, swaps discount ads for NMC-compliant educational Reels, and replies to every enquiry on WhatsApp within five minutes. Booked appointments rise from 35 to 104 a month, and cost per appointment falls from ₹1,714 to ₹577.",
+  "headlineMetric": "−66%",
+  "headlineMetricLabel": "Cost per appointment",
+  "cardSummary": "Cost per booked appointment down from ₹1,700 to under ₹600 in 90 days, at the same ad budget.",
+  "tags": ["Healthcare"],
+  "homeFeatured": true,
+  "businessPattern": {
+    "type": "Single-location specialist clinic, 2 consultant dermatologists",
+    "location": "Premium residential area of a metro city (Tier 1)",
+    "ticketSize": "Consultation ₹800–1,200; treatment packages ₹8,000–60,000",
+    "salesCycle": "1–14 days from enquiry to first visit",
+    "monthlyAdBudget": "₹60,000 (Google + Meta)"
+  },
+  "challenge": "\"We get plenty of enquiries, but half never pick up when the front desk calls back, and the ones who come want the cheapest service.\" The clinic ran boosted posts with discount offers, had an incomplete Google Business Profile, and followed up leads by phone the next working day. Booking rate from enquiries was about 1 in 4.",
+  "objectives": [
+    "Lower cost per booked appointment by at least 40%",
+    "Shift enquiry mix toward high-value treatments (acne scar, pigmentation, hair loss)",
+    "Keep all communication compliant with the NMC's October 2026 advertising guidelines"
+  ],
+  "whatWeDid": [
+    {
+      "title": "Search-first budget",
+      "body": "Moved 65% of spend to Google Search on condition-led keywords (\"acne scar treatment near me\", \"hair fall doctor in [area]\") with call and appointment-form extensions."
+    },
+    {
+      "title": "Education instead of offers",
+      "body": "Replaced discount creatives with doctor-led explainer Reels on conditions and what to expect, with qualifications and registration number shown. No testimonials, no before-and-after images, no \"best\" claims."
+    },
+    {
+      "title": "Google Business Profile rebuild",
+      "body": "Exact categories, every treatment listed, weekly posts and photos of the facility."
+    },
+    {
+      "title": "Five-minute WhatsApp follow-up",
+      "body": "Every lead got an instant WhatsApp reply with available slots, then a call from the front desk; reminders went out the day before."
+    },
+    {
+      "title": "Call and WhatsApp tracking",
+      "body": "Every call, form and chat was tagged by campaign, so budget moved weekly to what produced appointments, not just leads."
+    }
+  ],
+  "resultsTitle": "Results (90 Days)",
+  "results": {
+    "headers": ["Metric", "Before", "After 90 days", "Benchmark basis"],
+    "rows": [
+      ["Monthly ad spend", "₹60,000", "₹60,000", "—"],
+      ["Cost per lead", "₹420", "₹230", "Indian healthcare Meta CPL ₹180–380 (OwlClaw)"],
+      ["Leads per month", "140", "260", "Spend ÷ CPL"],
+      ["Enquiry-to-appointment rate", "25%", "40%", "Modelled effect of instant WhatsApp follow-up"],
+      ["Booked appointments per month", "35", "104", "Leads × booking rate"],
+      ["Cost per booked appointment", "₹1,714", "₹577", "Spend ÷ appointments (−66%)"]
+    ]
+  },
+  "whatMadeTheDifference": "Speed of follow-up, not ad targeting. Most of the gain came from booking 40% of enquiries instead of 25%. Google Search brought higher-intent patients, and the instant WhatsApp reply caught them before they called the next clinic.",
+  "faqs": [
+    {
+      "question": "How can a dermatology clinic get more patients online?",
+      "answer": "Run Google Search ads on condition-led keywords, keep a complete Google Business Profile, publish educational content from the doctors, and reply to every enquiry within minutes on WhatsApp. Fast follow-up usually adds more appointments than extra ad spend."
+    },
+    {
+      "question": "Is Google Ads or Instagram better for a skin clinic?",
+      "answer": "Google Search usually brings higher-intent patients because they are already looking for treatment. Instagram works best for education and retargeting. Most clinics do well with roughly two-thirds of budget on Google."
+    },
+    {
+      "question": "Can clinics still advertise under the NMC 2026 guidelines?",
+      "answer": "Clinics can share factual information and public-health education. Testimonials, before-and-after photos, superiority claims and inducement offers are not allowed. Check campaigns with a legal adviser."
+    },
+    {
+      "question": "What is a good cost per lead for a clinic in India?",
+      "answer": "Published Indian benchmarks put healthcare Meta cost per lead at roughly ₹180–380. Judge success by cost per booked appointment, not cost per lead."
+    }
+  ],
+  "servicesUsed": [
+    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
+    {"label": "Local SEO & Google Business Profile", "href": "/services/digital-marketing/seo"},
+    {"label": "WhatsApp Marketing & Automation", "href": "/services/digital-marketing/whatsapp-marketing"},
+    {"label": "Content Marketing", "href": "/services/digital-marketing/content"}
+  ],
+  "cta": {
+    "body": "Get results like these for your business.",
+    "primaryLabel": "Get Your Free Growth Audit",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Chat on WhatsApp",
+    "secondaryHref": "https://wa.me/919398682206"
+  },
+  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+}

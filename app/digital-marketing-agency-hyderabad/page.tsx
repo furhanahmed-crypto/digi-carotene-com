@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { GoogleReviews } from "@/components/shared/google-reviews"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { pageWhiteDecor } from "@/components/shared/page-decors"
@@ -113,6 +114,8 @@ export default function HyderabadAgencyPage() {
               </div>
             </Reveal>
           </div>
+
+          <GoogleReviews title="What Hyderabad Clients Say" />
 
           <div className="rounded-2xl border border-border bg-[#f3efe6] p-6 md:p-8 dark:bg-secondary">
             <Reveal>

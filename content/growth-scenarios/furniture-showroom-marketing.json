@@ -1,0 +1,125 @@
+{
+  "slug": "furniture-showroom-marketing",
+  "number": 5,
+  "industry": "Home & furniture",
+  "label": "Benchmark scenario",
+  "metaTitle": "Furniture Showroom Marketing: 11.3x Return on Ad Spend",
+  "metaDescription": "A benchmark scenario for a solid-wood furniture showroom: craft videos, WhatsApp qualifying and visit-first offers grow ad sales from ₹3.4L to ₹8.5L.",
+  "focusKeyword": "furniture showroom marketing",
+  "secondaryKeywords": [
+    "furniture store lead generation",
+    "increase showroom walk-ins",
+    "Meta ads for furniture",
+    "furniture marketing Hyderabad",
+    "home décor digital marketing India"
+  ],
+  "metaKeywords": [
+    "furniture marketing",
+    "furniture showroom",
+    "showroom footfall",
+    "furniture leads",
+    "teak wood furniture marketing",
+    "Meta ads furniture",
+    "Google Ads furniture",
+    "WhatsApp lead qualification"
+  ],
+  "ogTitle": "Fewer Price-Shoppers, More Showroom Buyers: A Furniture Growth Scenario",
+  "ogDescription": "Workshop Reels, a WhatsApp qualifying flow and a visit-first offer — what a furniture showroom can expect in 90 days.",
+  "featuredImageAlt": "Customers inspecting a solid-wood bed in a furniture showroom",
+  "internalLinks": [
+    "/industries/real-estate-furniture",
+    "/services/digital-marketing/performance-marketing",
+    "/services/digital-marketing/insta-shoot",
+    "/blog/meta-ads-vs-google-ads"
+  ],
+  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "h1": "How a Furniture Showroom Can Grow Sales from Ads 2.5x by Optimising for Visits",
+  "quickAnswer": "In this benchmark scenario, a solid-wood furniture showroom spending ₹75,000 a month replaces discount ads with workshop Reels, qualifies leads on WhatsApp by room, budget and timeline, and offers a free design consultation at the showroom. Showroom visits from ads rise from 12 to 34 a month and sales from ₹3.4 lakh to ₹8.5 lakh.",
+  "headlineMetric": "11.3x",
+  "headlineMetricLabel": "Return on ad spend",
+  "cardSummary": "Showroom visits from digital nearly tripled, and monthly sales from ads grew from ₹3.4 lakh to ₹8.5 lakh at the same budget.",
+  "tags": ["Home & furniture"],
+  "homeFeatured": false,
+  "businessPattern": {
+    "type": "Single large showroom with an in-house workshop; premium and value ranges",
+    "location": "Fast-growing residential suburb of a metro city",
+    "ticketSize": "Average order ₹85,000; range ₹25,000–2.5 lakh",
+    "salesCycle": "2–8 weeks; usually 1–2 showroom visits before buying",
+    "monthlyAdBudget": "₹75,000 (Meta + Google)"
+  },
+  "challenge": "\"People message asking for the price list and disappear. The ones who come to the showroom buy — we just can't get enough of them through the door.\" Ads promoted discounts to a broad audience, so most leads were price-shoppers. There was no way to tell which ads produced visits or sales.",
+  "objectives": [
+    "Raise the share of qualified leads (budget, timeline, location fit)",
+    "Turn more qualified leads into showroom visits",
+    "Measure sales from ads, not just leads"
+  ],
+  "whatWeDid": [
+    {
+      "title": "Craft-led video",
+      "body": "Workshop Reels showing timber selection, joinery and finishing — giving buyers a reason to pay for quality rather than chase the lowest price."
+    },
+    {
+      "title": "Qualifying WhatsApp flow",
+      "body": "Leads chose the room, budget band and move-in timeline before receiving a catalogue; hot leads were called within the hour."
+    },
+    {
+      "title": "Visit-first offer",
+      "body": "Instead of a discount, a free home-measurement and design consultation booked during the showroom visit."
+    },
+    {
+      "title": "Google Search for high intent",
+      "body": "Campaigns on \"teak wood bed [city]\" and \"furniture showroom near me\", plus Google Maps visibility with directions and showroom photos."
+    },
+    {
+      "title": "Closed-loop tracking",
+      "body": "Every lead got a WhatsApp ID that the showroom team marked as visited and sold, so cost per sale could be calculated by campaign."
+    }
+  ],
+  "resultsTitle": "Results (90 Days)",
+  "results": {
+    "headers": ["Metric", "Before", "After 90 days", "Benchmark basis"],
+    "rows": [
+      ["Monthly ad spend", "₹75,000", "₹75,000", "—"],
+      ["Cost per lead", "₹650", "₹380", "Published Indian interiors campaign: ₹190 CPL on Meta (MonkeyAds); furniture search conversion rate is among the lowest at ~3% (LocaliQ, US data)"],
+      ["Leads per month", "115", "197", "Spend ÷ CPL"],
+      ["Qualified-lead share", "20%", "35%", "Interiors campaign above: ~17% qualified; uplift modelled from qualifying flow"],
+      ["Showroom visits from ads", "12", "34", "Half of qualified leads visit"],
+      ["Sales from ads", "4", "10", "About 30% of visits convert"],
+      ["Revenue from ads", "₹3.4 lakh", "₹8.5 lakh", "Sales × ₹85,000 average order"],
+      ["Return on ad spend", "4.5x", "11.3x", "Revenue ÷ spend"]
+    ]
+  },
+  "whatMadeTheDifference": "Optimising for the showroom visit, not the lead. Furniture is bought after people touch and sit on it. Filtering price-shoppers early and giving serious buyers a reason to visit lifted sales even though total leads grew only modestly.",
+  "faqs": [
+    {
+      "question": "How can a furniture store get more showroom visits?",
+      "answer": "Qualify leads before sharing prices, then give serious buyers a reason to visit — such as a free measurement or design consultation — instead of a discount. Keep Google Maps directions and photos current."
+    },
+    {
+      "question": "Are Meta ads good for furniture businesses?",
+      "answer": "Yes, for showing craftsmanship and reaching nearby homeowners. Pair them with Google Search for high-intent queries like \"furniture showroom near me\"."
+    },
+    {
+      "question": "Why do furniture leads go cold?",
+      "answer": "Most early enquiries are price checks. A short WhatsApp flow asking room, budget and move-in date separates buyers from browsers, and fast calls to hot leads keep them warm."
+    },
+    {
+      "question": "How should a furniture brand measure ad results?",
+      "answer": "Track each lead through to showroom visit and sale. Cost per sale and return on ad spend matter more than cost per lead for high-ticket purchases."
+    }
+  ],
+  "servicesUsed": [
+    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
+    {"label": "Insta Shoot", "href": "/services/digital-marketing/insta-shoot"},
+    {"label": "WhatsApp Marketing & Automation", "href": "/services/digital-marketing/whatsapp-marketing"},
+    {"label": "Local SEO & Google Business Profile", "href": "/services/digital-marketing/seo"}
+  ],
+  "cta": {
+    "body": "Get results like these for your business.",
+    "primaryLabel": "Get Your Free Growth Audit",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Chat on WhatsApp",
+    "secondaryHref": "https://wa.me/919398682206"
+  },
+  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+}

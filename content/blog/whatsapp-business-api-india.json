@@ -1,0 +1,236 @@
+{
+  "slug": "whatsapp-business-api-india",
+  "number": 7,
+  "metaTitle": "WhatsApp Business API in India: 2026 Pricing & Setup Guide",
+  "metaDescription": "WhatsApp Business API explained for Indian businesses: 2026 per-message pricing, app vs API, setup steps, use cases and DPDP consent rules.",
+  "focusKeyword": "WhatsApp Business API India",
+  "secondaryKeywords": [
+    "WhatsApp API pricing India 2026",
+    "WhatsApp Business app vs API",
+    "WhatsApp marketing for small business",
+    "click-to-WhatsApp ads",
+    "WhatsApp automation Hyderabad"
+  ],
+  "metaKeywords": [
+    "WhatsApp Business API",
+    "WhatsApp API pricing",
+    "WhatsApp marketing",
+    "WhatsApp automation",
+    "click-to-WhatsApp ads",
+    "BSP",
+    "template messages",
+    "DPDP"
+  ],
+  "searchIntent": "Commercial investigation",
+  "ogTitle": "Is WhatsApp Business API Worth It for a Small Business?",
+  "featuredImageAlt": "WhatsApp Business API booking reminder and order update messages for a small business",
+  "internalLinks": [
+    "/services/digital-marketing/whatsapp-marketing",
+    "/services/digital-marketing/growth-marketing",
+    "/industries/healthcare",
+    "/industries/salons"
+  ],
+  "schema": [
+    "BlogPosting",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
+  "h1": "WhatsApp Business API for Small Businesses in India: Pricing, Setup and Use Cases (2026)",
+  "quickAnswer": "The WhatsApp Business API lets a business send automated, personalised messages at scale — booking reminders, order updates, offers and chatbot replies — from one number used by a whole team. In India, Meta charges per delivered template message: about ₹0.86 for marketing and ₹0.115 for utility messages in 2026, plus 18% GST and your provider's platform fee.",
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "author": {
+    "name": "Sai Narasimhan Palakolanu",
+    "role": "[[Author role — to confirm]]",
+    "url": "/about/team",
+    "linkedIn": "[[LinkedIn URL — to confirm]]"
+  },
+  "sections": [
+    {
+      "id": "what-is-the-difference-between-the-whatsapp-business-app-and-the-api",
+      "heading": "What is the difference between the WhatsApp Business app and the API?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you reply to under 30–40 chats a day yourself, the free app is enough. Once several people handle chats, or you want reminders and follow-ups to send themselves, the API pays for itself."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "WhatsApp Business app",
+            "WhatsApp Business API"
+          ],
+          "rows": [
+            [
+              "Best for",
+              "Solo owners, low volume",
+              "Teams, automation, high volume"
+            ],
+            [
+              "Users",
+              "One phone plus a few linked devices",
+              "Many agents on one number via a dashboard"
+            ],
+            [
+              "Automation",
+              "Basic quick replies and away messages",
+              "Chatbots, CRM and booking integrations, triggered messages"
+            ],
+            [
+              "Broadcasts",
+              "Limited lists, only to saved contacts",
+              "Template messages to opted-in customers at scale"
+            ],
+            [
+              "Cost",
+              "Free",
+              "Per-message fees plus a provider (BSP) fee"
+            ],
+            [
+              "Ads integration",
+              "Basic",
+              "Full click-to-WhatsApp tracking and automation"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-much-does-the-whatsapp-business-api-cost-in-india-in-2026",
+      "heading": "How much does the WhatsApp Business API cost in India in 2026?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Since 1 July 2025, Meta charges per delivered template message rather than per conversation (Meta pricing documentation). On 1 January 2026, India's marketing rate rose about 10%, from roughly ₹0.7846 to ₹0.8631 per message (Monty Mobile)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Message type",
+            "Example",
+            "Approx. Meta rate (India, 2026)"
+          ],
+          "rows": [
+            [
+              "Marketing",
+              "Festive offer, new launch, win-back",
+              "₹0.8631 per message"
+            ],
+            [
+              "Utility",
+              "Booking confirmation, order update, payment reminder",
+              "~₹0.115 per message"
+            ],
+            [
+              "Authentication",
+              "OTP, login code",
+              "~₹0.115 per message"
+            ],
+            [
+              "Service",
+              "Your reply when a customer messages first",
+              "Free"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Three more costs to budget for: 18% GST on Meta's charges, your Business Solution Provider's (BSP) monthly platform fee, and any per-message markup the BSP adds. Meta has adjusted rates several times in 2026, so check the current rate card before you plan a large campaign (Baat.ai)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Cost-saving tip: a marketing message costs several times more than a utility one. Send order updates and reminders as utility templates, and keep marketing messages for offers that earn their cost. Meta reviews categories, so don't file promotions as utility."
+        }
+      ]
+    },
+    {
+      "id": "what-can-a-small-business-use-it-for",
+      "heading": "What can a small business use it for?",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Clinics and wellness: appointment confirmations, reminders a day before, follow-up and review requests",
+            "Salons: booking via chatbot, reminders, birthday offers and membership renewals",
+            "Restaurants and home foods: order updates, festive pre-order campaigns, reorder reminders",
+            "Education: enquiry follow-up, counselling slot booking, admission deadline reminders",
+            "Retail and D2C: cart recovery, delivery updates, restock alerts"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Paired with click-to-WhatsApp ads on Instagram and Facebook, the API turns an ad click into a qualified conversation in seconds — often the fastest way to cut cost per customer."
+        }
+      ]
+    },
+    {
+      "id": "how-do-you-set-up-the-whatsapp-business-api",
+      "heading": "How do you set up the WhatsApp Business API?",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Choose a BSP (Business Solution Provider) or connect directly through Meta's Cloud API.",
+            "Verify your business in Meta Business Manager with your GST or registration documents.",
+            "Register a phone number that isn't active on the regular WhatsApp app (or migrate it).",
+            "Set your display name and profile — logo, description, address, website.",
+            "Create message templates for confirmations, reminders and offers, and submit them for approval.",
+            "Connect your systems — booking software, CRM, Shopify or your website forms — so messages trigger automatically.",
+            "Build opt-in into every form, ad and checkout, and track replies and conversions."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Most businesses go live within one to two weeks once documents are ready."
+        }
+      ]
+    },
+    {
+      "id": "what-about-consent-and-india-s-data-protection-law",
+      "heading": "What about consent and India's data protection law?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Only message people who have opted in, and make opting out easy. India's Digital Personal Data Protection Rules were notified in November 2025, with the main consent, notice and data-rights obligations enforceable from 13 May 2027 (Consent.in). Building clear, recorded opt-in now avoids rework later and protects your number's quality rating."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the WhatsApp Business API free in India?",
+      "answer": "No. Replies to customer-initiated chats are free, but template messages you send are charged per delivery, plus GST and your provider's fee."
+    },
+    {
+      "question": "Can I send bulk messages to all my contacts?",
+      "answer": "Only to customers who have opted in, using approved templates. Messaging people without consent leads to blocks, a lower quality rating and limits on your number."
+    },
+    {
+      "question": "Do I get the green tick?",
+      "answer": "The verified badge is granted by Meta to notable brands and isn't guaranteed. Business verification and a complete profile still build trust."
+    },
+    {
+      "question": "Can I keep using my current number?",
+      "answer": "Yes, but it must be removed from the regular WhatsApp or WhatsApp Business app before it is registered on the API."
+    },
+    {
+      "question": "How is the API different from WhatsApp Channels?",
+      "answer": "Channels are one-way broadcasts to followers. The API is for two-way, personalised messages to individual customers."
+    }
+  ],
+  "cta": {
+    "body": "Turn WhatsApp into your booking and repeat-sales engine. We set up the API, templates, chatbot and click-to-WhatsApp ads, and track every conversation to revenue.",
+    "primaryLabel": "Get Your Free Growth Audit",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Chat on WhatsApp",
+    "secondaryHref": "https://wa.me/919398682206"
+  },
+  "relatedSlugs": [
+    "reduce-cost-per-lead-meta-ads",
+    "performance-marketing-vs-growth-marketing",
+    "nmc-advertising-guidelines-2026-doctors-hospitals"
+  ]
+}

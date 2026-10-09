@@ -1,0 +1,213 @@
+{
+  "slug": "performance-marketing-vs-growth-marketing",
+  "number": 2,
+  "metaTitle": "Performance Marketing vs Growth Marketing: Key Differences",
+  "metaDescription": "Performance marketing buys customers through ads; growth marketing makes each one cheaper and more loyal. See the differences and which you need first.",
+  "focusKeyword": "performance marketing vs growth marketing",
+  "secondaryKeywords": [
+    "what is performance marketing",
+    "what is growth marketing",
+    "growth marketing agency India",
+    "performance marketing agency Hyderabad",
+    "full-funnel marketing"
+  ],
+  "metaKeywords": [
+    "performance marketing",
+    "growth marketing",
+    "difference between performance and growth marketing",
+    "ROAS",
+    "customer acquisition cost",
+    "retention marketing"
+  ],
+  "searchIntent": "Informational → commercial (definitions, then choosing a service)",
+  "ogTitle": "Performance or Growth Marketing? What Your Business Needs First",
+  "featuredImageAlt": "Diagram comparing performance marketing and growth marketing across the funnel",
+  "internalLinks": [
+    "/services/digital-marketing/performance-marketing",
+    "/services/digital-marketing/growth-marketing",
+    "/services/digital-marketing/email",
+    "/ (growth engine section)"
+  ],
+  "schema": [
+    "BlogPosting",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
+  "h1": "Performance Marketing vs Growth Marketing: What's the Difference and Which Do You Need?",
+  "quickAnswer": "Performance marketing uses paid ads on Google, Meta, YouTube or LinkedIn to win customers now, measured by cost per lead and return on ad spend (ROAS). Growth marketing improves the whole funnel — conversion, retention and referrals — so each customer costs less and buys more often. Most businesses need performance marketing first, then growth marketing to make it profitable.",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "author": {
+    "name": "Sai Narasimhan Palakolanu",
+    "role": "[[Author role — to confirm]]",
+    "url": "/about/team",
+    "linkedIn": "[[LinkedIn URL — to confirm]]"
+  },
+  "sections": [
+    {
+      "id": "what-is-performance-marketing",
+      "heading": "What is performance marketing?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Performance marketing is advertising you pay for and measure by outcomes: leads, sales, app installs or bookings. You set a budget, target an audience, and optimise every week based on what each rupee returns. Typical channels are Google Search and Performance Max, Meta (Facebook and Instagram), YouTube, LinkedIn and click-to-WhatsApp ads."
+        },
+        {
+          "type": "paragraph",
+          "text": "The core metrics are cost per lead (CPL), cost per acquisition (CPA) and ROAS. Its strength is speed: a well-built campaign can bring enquiries within days. Its weakness is that results stop when the budget stops."
+        }
+      ]
+    },
+    {
+      "id": "what-is-growth-marketing",
+      "heading": "What is growth marketing?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Growth marketing is a system for growing revenue across the full customer journey, not only the first click. It runs structured experiments on offers, landing pages, follow-up, onboarding, retention and referrals, then scales what works."
+        },
+        {
+          "type": "paragraph",
+          "text": "Its metrics are customer acquisition cost (CAC), conversion rate, repeat purchase rate and customer lifetime value (LTV). Its strength is compounding: every improvement keeps paying off. Its weakness is that it takes longer to show a headline number."
+        }
+      ]
+    },
+    {
+      "id": "performance-marketing-vs-growth-marketing-at-a-glance",
+      "heading": "Performance marketing vs growth marketing at a glance",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "Performance marketing",
+            "Growth marketing"
+          ],
+          "rows": [
+            [
+              "Goal",
+              "Win customers now",
+              "Make growth cheaper and repeatable"
+            ],
+            [
+              "Funnel stage",
+              "Top and middle (attract, capture)",
+              "Whole funnel (convert, retain, refer)"
+            ],
+            [
+              "Main channels",
+              "Google, Meta, YouTube, LinkedIn ads",
+              "Landing pages, WhatsApp, email, CRM, referral and loyalty programs"
+            ],
+            [
+              "Key metrics",
+              "CPL, CPA, ROAS",
+              "CAC, conversion rate, retention, LTV"
+            ],
+            [
+              "Time to results",
+              "Days to weeks",
+              "Weeks to months, then compounding"
+            ],
+            [
+              "When it stops",
+              "When ad spend stops",
+              "Keeps working after each fix"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "which-one-does-your-business-need-first",
+      "heading": "Which one does your business need first?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Choose based on where your growth is leaking:"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Not enough enquiries? Start with performance marketing. You need traffic before you can improve conversion.",
+            "Enough enquiries but few sales? Add growth marketing at the conversion stage: faster WhatsApp replies, better landing pages, clearer offers.",
+            "Customers buy once and disappear? Growth marketing at the retention stage: reminders, loyalty offers and win-back messages.",
+            "Ad costs rising every month? Both. Better creatives and targeting (performance) plus higher conversion and repeat rates (growth) bring CAC down."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why-do-the-two-work-best-together",
+      "heading": "Why do the two work best together?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Performance marketing fills the funnel; growth marketing stops it leaking. Imagine a clinic in Hyderabad paying ₹300 per lead with 1 in 10 leads booking. Each patient costs ₹3,000. If WhatsApp follow-up lifts bookings to 1 in 6, the same ads now cost ₹1,800 per patient — a 40% drop without spending more on ads."
+        },
+        {
+          "type": "paragraph",
+          "text": "That is why we run both as one engine at Digi Carotene: Attract (ads, social, SEO), Convert (landing pages, WhatsApp), Retain (email, WhatsApp journeys, loyalty) and Scale (weekly testing, budget moved to winners)."
+        }
+      ]
+    },
+    {
+      "id": "what-does-a-growth-marketing-experiment-look-like",
+      "heading": "What does a growth marketing experiment look like?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A good experiment has one change, one metric and a fixed time window. Examples:"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Replace a \"Contact us\" form with a click-to-WhatsApp button and measure enquiry-to-booking rate for 14 days.",
+            "Add a ₹200 first-visit offer to Meta ads and compare cost per booking against the control ad.",
+            "Send a WhatsApp reminder 30 days after purchase and track the repeat order rate."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Run three or four tests a month, keep the winners and drop the rest."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is performance marketing the same as digital marketing?",
+      "answer": "No. Performance marketing is the paid, results-measured part of digital marketing. Digital marketing also includes SEO, content, social media, email and websites."
+    },
+    {
+      "question": "Is growth hacking the same as growth marketing?",
+      "answer": "They overlap. Growth hacking usually means quick, low-cost tricks; growth marketing is a sustained, data-led process across the full funnel."
+    },
+    {
+      "question": "What is a good ROAS?",
+      "answer": "It depends on your margins. A business with 50% gross margin breaks even at 2x ROAS; most aim for 3–4x. Lead-generation businesses track cost per qualified lead instead."
+    },
+    {
+      "question": "Can a small business afford growth marketing?",
+      "answer": "Yes. Many growth fixes cost little: faster follow-up, a better landing page or a WhatsApp reminder flow. They often save more than they cost within a month."
+    },
+    {
+      "question": "Does Digi Carotene offer both?",
+      "answer": "Yes — performance and growth marketing are our core services, run by one team and reported in leads, cost per customer and revenue."
+    }
+  ],
+  "cta": {
+    "body": "Find where your growth is leaking. Our free growth audit reviews your ads, funnel and follow-up and shows the three fastest wins.",
+    "primaryLabel": "Get Your Free Growth Audit",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Chat on WhatsApp",
+    "secondaryHref": "https://wa.me/919398682206"
+  },
+  "relatedSlugs": [
+    "reduce-cost-per-lead-meta-ads",
+    "meta-ads-vs-google-ads",
+    "whatsapp-business-api-india"
+  ]
+}

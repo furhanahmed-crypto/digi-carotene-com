@@ -365,40 +365,10 @@ export const homeSections = {
   },
   results: {
     eyebrow: "Proof",
-    headline: "Growth Our Clients Can Count",
-    body: "Sample outcome frames — we publish named case studies with real metrics once clients approve.",
-    cards: [
-      {
-        id: "r1",
-        client: "Performance marketing",
-        industry: "Lead gen",
-        metric: "CPL",
-        metricLabel: "Cost per lead, reported weekly",
-        summary:
-          "Paid search and Meta campaigns structured around unit economics, not vanity clicks.",
-        tags: ["Performance"],
-      },
-      {
-        id: "r2",
-        client: "Growth marketing",
-        industry: "Retention",
-        metric: "LTV",
-        metricLabel: "Repeat purchase & retention loops",
-        summary:
-          "WhatsApp and email journeys that turn one-time buyers into regulars.",
-        tags: ["Growth"],
-      },
-      {
-        id: "r3",
-        client: "Social media",
-        industry: "Demand",
-        metric: "Leads",
-        metricLabel: "Enquiries from content & paid social",
-        summary:
-          "Reels, calendars and community work measured in bookings, not just followers.",
-        tags: ["Social"],
-      },
-    ] satisfies ResultCard[],
+    headline: "Results that speak volumes.",
+    body: "Benchmark scenarios with before-and-after numbers — modelled from industry data until named client results are approved.",
+    /** Cards load from content/growth-scenarios (homeFeatured). */
+    cards: [] satisfies ResultCard[],
   },
   faq: {
     eyebrow: "FAQ",

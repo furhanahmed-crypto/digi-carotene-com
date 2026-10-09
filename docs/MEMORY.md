@@ -37,6 +37,8 @@
 - Service detail pages compose homepage section patterns (`components/services/*`): sticky overview, multi-color deliverables, framework steps, audience cards, sticky FAQ, related color panels, yellow `ServiceCta`. No old numbered border-list layout.
 - Public NAP/socials live in `constants/site/contact.ts`. Office: Dwaraka Pride, HITEC City (maps embed `mapsEmbedSrc`). Voice `+91 99598 20874` vs WhatsApp `93986 82206` — confirm vs GBP.
 - Reference media lives under `public/assets/` (`hero/mosaic`, `reels`, `showcase`, `clients`, `scores`). Keep only wired files; compress webp/mp4 before commit. Mixkit reels are layout shells. Client marquee may use familiar brand marks (Google, Shopify, etc.) as **spacing references only** — never claim them as Digi Carotene clients; replace with permissioned logos before launch.
+- Blog posts live as JSON under `content/blog/` (PDF is source of truth). Listing at `/blog`, details at `/blog/[slug]`. Render via `components/blog/*`; loaders in `lib/blog/*`. Do not rewrite PDF copy; keep bracketed `[[…]]` / `[… — confirm]` placeholders until confirmed.
+- Growth scenarios (case studies PDF) live under `content/growth-scenarios/`. List at `/case-studies`; details at `/growth-scenarios/[slug]` per PDF URLs. Always label as **Benchmark scenario** until real client results replace them. Homepage Results shows `homeFeatured` three.
 
 ## Constraints that keep biting us
 

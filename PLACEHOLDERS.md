@@ -32,9 +32,14 @@ Source of truth in code: `constants/site/contact.ts`
 - Stock Mixkit shells live in `public/assets/reels/` (layout reference only)
 - Real client reel files / posters / handles — to confirm
 
-## Case studies
+## Case studies / growth scenarios
 
-- Client / project names, outcomes, imagery — to confirm
+Source: `docs/content/Digi-Carotene-Case-Studies-SEO-AEO-v2.pdf` → `content/growth-scenarios/`
+
+- Current pages are **benchmark scenarios** (modelled), not named Digi Carotene client results
+- Internal real-results slots in PDF (Skin Origins, Toni & Guy, Cot & Couch, etc.) — do not publish until confirmed
+- Cover images at `/growth-scenarios/[slug]/cover.webp` — to confirm
+- Swap modelled numbers for approved client metrics before presenting as client proof
 
 ## Client logos
 
@@ -43,7 +48,18 @@ Source of truth in code: `constants/site/contact.ts`
 
 ## Testimonials
 
-- Omit attributed quotes until real ones exist
+- Wired from digicarotene.com Client Stories (3 client-facing Google quotes) on `/about/clients` and `/digital-marketing-agency-hyderabad`
+- Skipped 2 widget quotes that are intern/employee, not clients
+- Role, city, and canonical GBP review URL — confirm when available
+
+## Blog / Journal
+
+Source: `docs/content/Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` → `content/blog/*.json`
+
+- Author role + LinkedIn for Sai Narasimhan Palakolanu — to confirm
+- Featured cover images at `/blog/[slug]/cover.webp` — to confirm
+- Bracketed confirmations inside posts (e.g. Blog 1 starting prices, Blog 10 USD retainer / country list) — confirm before launch
+- Re-check WhatsApp rates (Blog 7) and NMC rules (Blog 9) on publish date
 
 ## Team / founders
 

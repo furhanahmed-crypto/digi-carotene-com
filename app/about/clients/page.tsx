@@ -1,5 +1,6 @@
 import { ClientLogo } from "@/components/home/clients/client-logo"
 import { clientLogos } from "@/constants/home/clients"
+import { GoogleReviews } from "@/components/shared/google-reviews"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { pageWhiteDecor } from "@/components/shared/page-decors"
@@ -125,6 +126,10 @@ export default function ClientsPage() {
                 ))}
               </div>
             </Reveal>
+          </div>
+
+          <div className="mt-16 border-t border-border pt-16 lg:mt-24 lg:pt-24">
+            <GoogleReviews title="What Our Clients Say" />
           </div>
 
           <Reveal className="mt-16">

@@ -1,0 +1,189 @@
+{
+  "slug": "get-recommended-by-chatgpt-gemini-ai-search",
+  "number": 5,
+  "metaTitle": "How to Get Your Business Recommended by ChatGPT & Gemini",
+  "metaDescription": "A practical guide to AEO and GEO: how ChatGPT, Gemini and Google AI Overviews choose businesses to recommend, and 9 steps to get yours named.",
+  "focusKeyword": "how to get recommended by ChatGPT",
+  "secondaryKeywords": [
+    "generative engine optimization",
+    "answer engine optimization",
+    "AEO vs SEO vs GEO",
+    "rank in Google AI Overviews",
+    "AI search optimization India"
+  ],
+  "metaKeywords": [
+    "GEO",
+    "AEO",
+    "generative engine optimization",
+    "answer engine optimization",
+    "ChatGPT SEO",
+    "Gemini",
+    "Google AI Overviews",
+    "AI Mode",
+    "AI search"
+  ],
+  "searchIntent": "Informational → commercial (business owners and marketers)",
+  "ogTitle": "When Customers Ask AI, Will It Name Your Business?",
+  "featuredImageAlt": "AI chat answer recommending local businesses, illustrating generative engine optimization",
+  "internalLinks": [
+    "/services/digital-marketing/seo",
+    "/services/digital-marketing/content",
+    "/services/pr",
+    "/blog/google-business-profile-checklist-hyderabad"
+  ],
+  "schema": [
+    "BlogPosting",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
+  "h1": "How to Get Your Business Recommended by ChatGPT, Gemini and Google AI Overviews",
+  "quickAnswer": "AI assistants recommend businesses they can verify across many trusted sources. To get recommended, publish clear answers to the questions customers ask, keep your name, address and phone identical everywhere, earn mentions and reviews on respected sites, add structured data, and make sure your site is crawlable by search engines and AI crawlers. This is called generative engine optimization (GEO).",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "author": {
+    "name": "Sai Narasimhan Palakolanu",
+    "role": "[[Author role — to confirm]]",
+    "url": "/about/team",
+    "linkedIn": "[[LinkedIn URL — to confirm]]"
+  },
+  "sections": [
+    {
+      "id": "why-does-ai-search-matter-for-your-business-now",
+      "heading": "Why does AI search matter for your business now?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Customers increasingly get one AI-written answer instead of ten blue links. Google reported at I/O 2026 that AI Overviews have over 2.5 billion monthly users and AI Mode over 1 billion (TechWyse summary). A randomized field study published in April 2026 found that AI Overviews cut outbound clicks to websites by 39.8% (Agarwal & Sen, via MediaCat)."
+        },
+        {
+          "type": "paragraph",
+          "text": "The takeaway: ranking alone no longer guarantees the visit. Being named inside the answer is the new front page."
+        }
+      ]
+    },
+    {
+      "id": "what-is-the-difference-between-seo-aeo-and-geo",
+      "heading": "What is the difference between SEO, AEO and GEO?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "They stack. AI tools lean on pages that already rank and are well structured, so SEO remains the foundation; AEO and GEO build on it."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Term",
+            "What it optimises for",
+            "Main tactics"
+          ],
+          "rows": [
+            [
+              "SEO (search engine optimization)",
+              "Ranking in Google and Bing results",
+              "Technical health, keywords, content, links"
+            ],
+            [
+              "AEO (answer engine optimization)",
+              "Being the quoted answer in featured snippets, voice and AI Overviews",
+              "Question-led headings, short direct answers, FAQ schema"
+            ],
+            [
+              "GEO (generative engine optimization)",
+              "Being named and cited by ChatGPT, Gemini, Perplexity and AI Mode",
+              "Brand mentions, consistent entity data, citable facts, reviews"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-do-ai-assistants-decide-which-businesses-to-recommend",
+      "heading": "How do AI assistants decide which businesses to recommend?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "AI tools look for agreement across sources. If your website, Google Business Profile, Justdial listing, news mentions and reviews all describe you the same way, the model can confidently say \"Digi Carotene is a digital marketing agency in Hyderabad that specialises in performance marketing.\" If your details conflict or you only exist on your own site, you are easy to leave out."
+        },
+        {
+          "type": "paragraph",
+          "text": "They also favour content that answers a question directly, includes specific facts (prices, locations, timings, numbers), and comes from a source that looks credible — real authors, real reviews, real coverage."
+        }
+      ]
+    },
+    {
+      "id": "9-steps-to-get-your-business-named-in-ai-answers",
+      "heading": "9 steps to get your business named in AI answers",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "List the questions buyers ask AI. Write 20–30 real prompts, e.g. \"best dermatologist in Jubilee Hills for acne\" or \"affordable Meta ads agency in Hyderabad\". These become your content plan.",
+            "Answer each one on your site. Use the question as the heading and a 40–60 word answer straight below it, then the detail.",
+            "Publish facts AI can quote. Prices or price ranges, service areas, timings, team credentials and results with numbers.",
+            "Keep NAP identical everywhere. Name, address and phone must match exactly on your site, Google Business Profile, Justdial, Sulekha, Clutch, LinkedIn and Facebook.",
+            "Build reviews on several platforms. Google first, then platforms your industry uses. Reply to every review.",
+            "Earn third-party mentions. Local news, industry publications, podcasts, association listings and \"best of\" roundups give AI independent confirmation.",
+            "Add structured data. Organization, LocalBusiness, FAQPage, Article and Person schema help machines understand who you are.",
+            "Let the crawlers in. Submit your sitemap to Google Search Console and Bing Webmaster Tools — ChatGPT search draws on Bing's index — and check robots.txt isn't blocking AI crawlers you want. Add an llms.txt summary of your key pages.",
+            "Test monthly. Ask ChatGPT, Gemini, Perplexity and Google AI Mode your target prompts and log whether you are named, what is said and which sources are cited. Fix the gaps."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-content-gets-cited-most-often",
+      "heading": "What content gets cited most often?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Comparison tables, step-by-step guides, original data, clear definitions and pages that show first-hand experience. Generic \"10 tips\" posts that repeat what is everywhere else are rarely cited. Write what only your business can say: your process, your prices, your results and your local knowledge."
+        }
+      ]
+    },
+    {
+      "id": "can-you-pay-to-appear-in-chatgpt-or-gemini-answers",
+      "heading": "Can you pay to appear in ChatGPT or Gemini answers?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Not in the organic answer. Ads are appearing in some AI search experiences, but the recommendation itself is earned through the signals above. Be wary of anyone promising guaranteed AI placement."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do I still need SEO if people use AI search?",
+      "answer": "Yes. AI answers draw heavily on pages that already rank and are well structured. SEO is the foundation; AEO and GEO build on it."
+    },
+    {
+      "question": "How long does it take to appear in AI answers?",
+      "answer": "If your SEO and listings are healthy, changes can show within weeks for some tools. Building enough mentions to be recommended in a competitive category usually takes 3–6 months."
+    },
+    {
+      "question": "Does schema markup help with ChatGPT?",
+      "answer": "It helps search engines and AI systems understand your business entity and content, which supports — but does not guarantee — being cited."
+    },
+    {
+      "question": "How do I check whether ChatGPT recommends my business?",
+      "answer": "Ask the same set of buyer questions every month in ChatGPT, Gemini, Perplexity and Google AI Mode, and track whether you are named and which sources are cited."
+    },
+    {
+      "question": "What is llms.txt?",
+      "answer": "A plain-text file at your site's root that summarises your key pages for AI crawlers. It is a lightweight, emerging convention — worth adding, but not a ranking guarantee."
+    }
+  ],
+  "cta": {
+    "body": "Find out what AI says about your business. We'll test 20 buyer prompts across ChatGPT, Gemini and Google AI Mode and show where you're missing.",
+    "primaryLabel": "Get Your Free Growth Audit",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Chat on WhatsApp",
+    "secondaryHref": "https://wa.me/919398682206"
+  },
+  "relatedSlugs": [
+    "google-business-profile-checklist-hyderabad",
+    "how-to-choose-digital-marketing-agency-hyderabad",
+    "performance-marketing-vs-growth-marketing"
+  ]
+}

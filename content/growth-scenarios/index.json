@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "dermatology-clinic-patient-acquisition",
+    "number": 1,
+    "industry": "Healthcare",
+    "title": "How a Dermatology Clinic Can Cut Cost per Appointment by 66% in 90 Days",
+    "metaTitle": "Dermatology Clinic Marketing: Cut Cost per Appointment 66%",
+    "focusKeyword": "dermatology clinic marketing",
+    "headlineMetric": "−66%",
+    "headlineMetricLabel": "Cost per appointment",
+    "cardSummary": "Cost per booked appointment down from ₹1,700 to under ₹600 in 90 days, at the same ad budget.",
+    "tags": ["Healthcare"],
+    "homeFeatured": true,
+    "featuredImageAlt": "Dermatology clinic reception with appointment bookings on a tablet"
+  },
+  {
+    "slug": "restaurant-marketing-footfall",
+    "number": 2,
+    "industry": "Restaurants",
+    "title": "How a Restaurant Can Fill Weekdays and Turn First Visits into Regulars",
+    "metaTitle": "Restaurant Marketing Scenario: 8.5x Return on Ad Spend",
+    "focusKeyword": "restaurant marketing Hyderabad",
+    "headlineMetric": "8.5x",
+    "headlineMetricLabel": "Return on ad spend",
+    "cardSummary": "520 tracked first visits a month from Instagram, and repeat customers up from 18% to 27% in 90 days.",
+    "tags": ["Restaurants"],
+    "homeFeatured": true,
+    "featuredImageAlt": "Chef plating a dish in a busy restaurant kitchen during a weekday lunch service"
+  },
+  {
+    "slug": "salon-bridal-studio-bookings",
+    "number": 3,
+    "industry": "Salons",
+    "title": "How a Salon and Bridal Studio Can Grow Bookings 5x with Click-to-WhatsApp Ads",
+    "metaTitle": "Salon Marketing: Click-to-WhatsApp Ads Cut Booking Cost 80%",
+    "focusKeyword": "salon marketing ideas",
+    "headlineMetric": "5x",
+    "headlineMetricLabel": "Ad-sourced bookings",
+    "cardSummary": "Ad-sourced bookings up from 58 to 296 a month, with cost per booking down 80%, at ₹45 per WhatsApp conversation.",
+    "tags": ["Salons"],
+    "homeFeatured": true,
+    "featuredImageAlt": "Stylist finishing a client's hair in a premium salon chair"
+  },
+  {
+    "slug": "college-admissions-marketing",
+    "number": 4,
+    "industry": "Education",
+    "title": "How a Private Engineering College Can Get 2.5x More Admissions in One Season",
+    "metaTitle": "College Admissions Marketing: Cost per Admission Down 61%",
+    "focusKeyword": "college admissions marketing",
+    "headlineMetric": "−61%",
+    "headlineMetricLabel": "Cost per admission",
+    "cardSummary": "2.5x more admissions from digital in one season, with cost per admission down from ₹25,000 to under ₹10,000.",
+    "tags": ["Education"],
+    "homeFeatured": false,
+    "featuredImageAlt": "Students and parents at a college campus open-house admissions counter"
+  },
+  {
+    "slug": "furniture-showroom-marketing",
+    "number": 5,
+    "industry": "Home & furniture",
+    "title": "How a Furniture Showroom Can Grow Sales from Ads 2.5x by Optimising for Visits",
+    "metaTitle": "Furniture Showroom Marketing: 11.3x Return on Ad Spend",
+    "focusKeyword": "furniture showroom marketing",
+    "headlineMetric": "11.3x",
+    "headlineMetricLabel": "Return on ad spend",
+    "cardSummary": "Showroom visits from digital nearly tripled, and monthly sales from ads grew from ₹3.4 lakh to ₹8.5 lakh at the same budget.",
+    "tags": ["Home & furniture"],
+    "homeFeatured": false,
+    "featuredImageAlt": "Customers inspecting a solid-wood bed in a furniture showroom"
+  }
+]
