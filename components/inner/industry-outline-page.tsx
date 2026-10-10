@@ -1,45 +1,48 @@
+import { OpenContactButton } from "@/components/contact-popup/open-contact-button"
+import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
+import { IndustryFaqSection } from "@/components/inner/industry-faq-section"
 import {
   InfoCardGrid,
   OutlineSection,
-  PlaceholderBlock,
   type InfoCardItem,
 } from "@/components/inner/outline-section"
-import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
 import { PageCta } from "@/components/shared/page-cta"
 import { PageHeader } from "@/components/shared/page-header"
-import { bannerCtaPrimaryClassName } from "@/constants/ui/banner-cta"
+import type { IndustryFaqBlock } from "@/constants/inner/industry-faqs"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+} from "@/constants/ui/banner-cta"
 import type { OutlineSectionData } from "@/types/inner-pages"
 
-type OutlinePageProps = {
+type IndustryOutlinePageProps = {
   title: string
   description: string
   mark: string
   sections: readonly OutlineSectionData[]
-  /** FAQ questions — answers stay placeholders until content is ready. */
-  faqs?: readonly string[]
+  faq: IndustryFaqBlock
   related: readonly InfoCardItem[]
   primaryCta: string
   ctaTitle: string
   ctaLabel: string
-  ctaLocation?: string
+  auditIndustry?: string
+  ctaKey: string
 }
 
-/**
- * Shell for service outline pages (WhatsApp, ORM).
- * Industry pages use `IndustryOutlinePage` instead.
- */
-export function OutlinePage({
+/** Industry detail shell — CR-10–13 (audit CTAs, FAQs, expert contact). */
+export function IndustryOutlinePage({
   title,
   description,
   mark,
   sections,
-  faqs = [],
+  faq,
   related,
   primaryCta,
   ctaTitle,
   ctaLabel,
-  ctaLocation = "service_outline",
-}: OutlinePageProps) {
+  auditIndustry,
+  ctaKey,
+}: IndustryOutlinePageProps) {
   let bandIndex = 0
   const nextTone = () =>
     (bandIndex++ % 2 === 0 ? "white" : "cream") as "white" | "cream"
@@ -54,11 +57,14 @@ export function OutlinePage({
         description={description}
         mark={mark}
         actions={
-          <OpenGrowthAuditButton
-            label={primaryCta}
-            ctaLocation={`${ctaLocation}_hero`}
-            className={bannerCtaPrimaryClassName}
-          />
+          <div className={bannerCtaRowClassName}>
+            <OpenGrowthAuditButton
+              label={primaryCta}
+              ctaLocation={`${ctaKey}_hero`}
+              industry={auditIndustry}
+              className={bannerCtaPrimaryClassName}
+            />
+          </div>
         }
       />
 
@@ -67,7 +73,7 @@ export function OutlinePage({
           tone={nextTone()}
           mark={mark}
           eyebrow="Capabilities"
-          title="How we help"
+          title="How we help in this vertical"
         >
           <InfoCardGrid
             colorful
@@ -79,6 +85,14 @@ export function OutlinePage({
                 `${section.title} — planned and reported as part of one growth system.`,
             }))}
           />
+          <div className="mt-8">
+            <OpenGrowthAuditButton
+              label="Get a Free Growth Audit"
+              ctaLocation={`${ctaKey}_mid`}
+              industry={auditIndustry}
+              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+            />
+          </div>
         </OutlineSection>
       ) : null}
 
@@ -101,31 +115,14 @@ export function OutlinePage({
         tone={nextTone()}
         mark="FAQs"
         eyebrow="Questions"
-        title="FAQs"
-        body="Answers stay visible in the HTML and pair with FAQPage schema at launch."
+        title={faq.title}
+        body={faq.body}
       >
-        {faqs.length ? (
-          <div data-reveal-group className="grid gap-4 md:grid-cols-2">
-            {faqs.map((question) => (
-              <article
-                key={question}
-                data-reveal="card"
-                className="rounded-2xl border border-border bg-card p-6"
-              >
-                <h3 className="font-display text-lg font-medium">{question}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Full answers publish here with FAQ schema at launch. Reach out
-                  via Contact for a quick reply in the meantime.
-                </p>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <PlaceholderBlock data-reveal="card">
-            Have a question about this page? Message us on WhatsApp or use the
-            contact form — we reply within one working day.
-          </PlaceholderBlock>
-        )}
+        <IndustryFaqSection
+          faq={faq}
+          contactCtaLocation={`${ctaKey}_faq`}
+          industry={auditIndustry}
+        />
       </OutlineSection>
 
       <OutlineSection
@@ -141,9 +138,10 @@ export function OutlinePage({
         band
         title={ctaTitle}
         action={
-          <OpenGrowthAuditButton
+          <OpenContactButton
             label={ctaLabel}
-            ctaLocation={`${ctaLocation}_final`}
+            ctaLocation={`${ctaKey}_expert`}
+            industry={auditIndustry}
             className="bg-ink text-paper hover:bg-ink/90 dark:bg-brand-yellow dark:text-ink dark:hover:bg-brand-yellow/90"
           />
         }

@@ -11,6 +11,11 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+  bannerCtaSecondaryClassName,
+} from "@/constants/ui/banner-cta"
 import type { Metadata } from "next"
 import { metadataFor } from "@/lib/seo/page-meta"
 
@@ -83,16 +88,13 @@ export default function DigitalMarketingLandingPage() {
         title="Digital Marketing Services That Report in Revenue, Not Reach"
         description="Search, ads, social, content and your website are not separate jobs. They are one machine for winning customers. We build and run that machine for brands in Hyderabad, Bangalore and around the world, and we report it in the numbers your business runs on."
         mark="Digital Marketing Services"
-      />
-
-      <SectionLayout tone="white" decor={pageServicesDecor}>
-        <div className="space-y-16 lg:space-y-24">
-          <div className="flex flex-wrap gap-3">
+        actions={
+          <div className={bannerCtaRowClassName}>
             <Button
               nativeButton={false}
               render={<Link href={contactHref} />}
               size="lg"
-              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+              className={bannerCtaPrimaryClassName}
             >
               Get a Free Digital Audit
               <ArrowRight className="size-4" />
@@ -102,11 +104,16 @@ export default function DigitalMarketingLandingPage() {
               render={<Link href={contactHref} />}
               size="lg"
               variant="outline"
+              className={bannerCtaSecondaryClassName}
             >
               Talk to a Strategist
             </Button>
           </div>
+        }
+      />
 
+      <SectionLayout tone="white" decor={pageServicesDecor}>
+        <div className="space-y-16 lg:space-y-24">
           <Reveal>
             <SectionMark data-reveal="eyebrow">The shift</SectionMark>
             <SectionHeading

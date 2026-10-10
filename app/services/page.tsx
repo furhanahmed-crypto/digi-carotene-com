@@ -14,6 +14,7 @@ import { PageCta } from "@/components/shared/page-cta"
 import { PageHeader } from "@/components/shared/page-header"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import { bannerCtaPrimaryClassName } from "@/constants/ui/banner-cta"
 import {
   hubGroups,
   hubPackages,
@@ -43,7 +44,7 @@ export default function ServicesHubPage() {
             nativeButton={false}
             render={<Link href={contactHref} />}
             size="lg"
-            className="bg-ink text-paper hover:bg-ink/90 dark:bg-brand-yellow dark:text-ink dark:hover:bg-brand-yellow/90"
+            className={bannerCtaPrimaryClassName}
           >
             Get a Free Growth Audit
             <ArrowRight className="size-4" />

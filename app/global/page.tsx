@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { GlobalClientStories } from "@/components/global/global-client-stories"
 import {
   InfoCardGrid,
   OutlineSection,
@@ -11,6 +12,7 @@ import { PageCta } from "@/components/shared/page-cta"
 import { PageHeader } from "@/components/shared/page-header"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import { bannerCtaPrimaryClassName } from "@/constants/ui/banner-cta"
 import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/global")
@@ -97,7 +99,7 @@ export default function GlobalPage() {
             nativeButton={false}
             render={<Link href={contactHref} />}
             size="lg"
-            className="bg-ink text-paper hover:bg-ink/90 dark:bg-brand-yellow dark:text-ink dark:hover:bg-brand-yellow/90"
+            className={bannerCtaPrimaryClassName}
           >
             Book a Call in Your Time Zone
             <ArrowRight className="size-4" />
@@ -211,11 +213,9 @@ export default function GlobalPage() {
         mark="Proof"
         eyebrow="Stories"
         title="Global Client Stories"
+        body="From a 4,500-seat arena in New York to SAP and SaaS companies in Texas and California, here's how we help brands outside India find customers and grow."
       >
-        <PlaceholderBlock data-reveal="card">
-          Named global case stories publish here once clients approve metrics
-          and logos. Until then, ask us for a relevant reference on the call.
-        </PlaceholderBlock>
+        <GlobalClientStories />
       </OutlineSection>
 
       <OutlineSection

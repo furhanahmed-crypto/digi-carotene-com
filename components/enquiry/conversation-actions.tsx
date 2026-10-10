@@ -5,6 +5,11 @@ import { ArrowRight } from "lucide-react"
 import { useEnquiry } from "@/components/enquiry/enquiry-provider"
 import { Button } from "@/components/ui/button"
 import { whatsappHref } from "@/constants/home/navigation"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+  bannerCtaSecondaryClassName,
+} from "@/constants/ui/banner-cta"
 import { cn } from "@/lib/utils"
 
 type ConversationActionsProps = {
@@ -19,13 +24,13 @@ type ConversationActionsProps = {
 export function ConversationActions({
   serviceName,
   className,
-  primaryClassName = "bg-ink text-paper hover:bg-ink/90 hover:text-paper",
-  whatsappClassName = "border-border bg-card/80 text-foreground hover:border-foreground hover:bg-card",
+  primaryClassName = bannerCtaPrimaryClassName,
+  whatsappClassName = bannerCtaSecondaryClassName,
 }: ConversationActionsProps) {
   const { openEnquiry } = useEnquiry()
 
   return (
-    <div className={cn("flex flex-wrap gap-3", className)}>
+    <div className={cn(bannerCtaRowClassName, className)}>
       <Button
         type="button"
         size="lg"

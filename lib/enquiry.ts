@@ -92,5 +92,5 @@ export function buildThankYouHref({
   params.set("name", name.trim())
   if (service?.trim()) params.set("service", service.trim())
   params.set("source", source)
-  return `/thank-you?${params.toString()}`
+  return `/thank-you/?${params.toString()}`
 }

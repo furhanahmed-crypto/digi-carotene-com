@@ -2,6 +2,8 @@
 
 ## Core decisions
 
+0. **Static HTML export** — `output: "export"` + `trailingSlash` + `images.unoptimized` in `next.config.ts`. Deploy folder is `out/` (not `.next/`). No `cookies()` / `searchParams` in Server Components (thank-you reads query via client `useSearchParams`). Apache helpers in `public/.htaccess`.
+0b. **Contact popup (CR-07)** — `ContactPopupProvider` + `#contact` hash; reuse from About / industry expert CTAs. Growth audit stays separate (`#growth-audit`). Industry pages use `IndustryOutlinePage` (not shared `OutlinePage`).
 1. **Agency, not blog** — Manager rejected the prior “notes/article” feel. Homepage must signal a marketing agency.
 2. **Honesty first** — Never invent clients, logos, metrics, awards, or testimonials. Use `[[… — to confirm]]` and track in `PLACEHOLDERS.md`.
 3. **White + cream + yellow bands** — Light-mode section backgrounds only. Yellow for CTAs / marks / underlines. Multi-color service cards stay on white bands.

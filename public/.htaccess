@@ -1,0 +1,10 @@
+# Apache / typical cPanel static hosting
+DirectoryIndex index.html
+
+# Old case-studies URLs → growth scenarios
+Redirect 301 /case-studies /growth-scenarios/
+Redirect 301 /case-studies/ /growth-scenarios/
+
+# Prefer folder index.html for clean paths
+Options -MultiViews
+ErrorDocument 404 /404.html

@@ -12,6 +12,8 @@ import {
 
 type OpenGrowthAuditOptions = {
   ctaLocation?: AuditCtaLocation
+  /** Pre-select Step 1 industry (visitor can change). */
+  industry?: string
 }
 
 type GrowthAuditContextValue = {
@@ -48,12 +50,16 @@ export function GrowthAuditProvider({
   const [open, setOpen] = React.useState(false)
   const [ctaLocation, setCtaLocation] =
     React.useState<AuditCtaLocation>("home_hero")
+  const [initialIndustry, setInitialIndustry] = React.useState<
+    string | undefined
+  >()
   const [formKey, setFormKey] = React.useState(0)
 
   const openGrowthAudit = React.useCallback(
     (options?: OpenGrowthAuditOptions) => {
       const location = options?.ctaLocation ?? "home_hero"
       setCtaLocation(location)
+      setInitialIndustry(options?.industry)
       setFormKey((k) => k + 1)
       setOpen(true)
       setGrowthAuditHash(true)
@@ -69,10 +75,10 @@ export function GrowthAuditProvider({
 
   const handleOpenChange = React.useCallback(
     (next: boolean) => {
-      if (next) openGrowthAudit({ ctaLocation })
+      if (next) openGrowthAudit({ ctaLocation, industry: initialIndustry })
       else closeGrowthAudit()
     },
-    [closeGrowthAudit, ctaLocation, openGrowthAudit]
+    [closeGrowthAudit, ctaLocation, initialIndustry, openGrowthAudit]
   )
 
   React.useEffect(() => {
@@ -101,6 +107,7 @@ export function GrowthAuditProvider({
         open={open}
         onOpenChange={handleOpenChange}
         ctaLocation={ctaLocation}
+        initialIndustry={initialIndustry}
         formKey={formKey}
       />
     </GrowthAuditContext.Provider>

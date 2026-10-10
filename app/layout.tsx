@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next"
-import { cookies } from "next/headers"
 import { Geist_Mono, Inter, Fraunces } from "next/font/google"
 import Script from "next/script"
 
@@ -8,6 +7,7 @@ import { Header } from "@/components/home/Header"
 import { Footer } from "@/components/shared/Footer"
 import { BackToTop } from "@/components/shared/back-to-top"
 import { FloatingContactActions } from "@/components/shared/floating-contact-actions"
+import { ContactPopupProvider } from "@/components/contact-popup/contact-popup-provider"
 import { EnquiryProvider } from "@/components/enquiry/enquiry-provider"
 import { GrowthAuditProvider } from "@/components/growth-audit/growth-audit-provider"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -82,24 +82,17 @@ export const metadata: Metadata = {
   },
 }
 
-export async function generateViewport(): Promise<Viewport> {
-  const themeCookie = (await cookies()).get("theme")?.value
-  const isDark = themeCookie === "dark"
-
-  return {
-    colorScheme: isDark ? "dark" : "light",
-    themeColor: isDark ? "#0F0F10" : "#FAFAF8",
-  }
+/** Static export cannot read cookies — default light; client ThemeProvider syncs. */
+export const viewport: Viewport = {
+  colorScheme: "light",
+  themeColor: "#FAFAF8",
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const themeCookie = (await cookies()).get("theme")?.value
-  const themeClass = themeCookie === "dark" ? "dark" : "light"
-
   return (
     <html
       lang="en"
@@ -111,9 +104,9 @@ export default async function RootLayout({
         inter.variable,
         fraunces.variable,
         fontMono.variable,
-        themeClass
+        "light"
       )}
-      style={{ colorScheme: themeClass }}
+      style={{ colorScheme: "light" }}
     >
       <body>
         <Script
@@ -126,18 +119,17 @@ export default async function RootLayout({
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;visibility:visible!important}`}</style>
         </noscript>
-        <ThemeProvider
-          defaultTheme="light"
-          initialTheme={themeClass === "dark" ? "dark" : "light"}
-        >
+        <ThemeProvider defaultTheme="light" initialTheme="light">
           <SmoothScrollProvider>
             <EnquiryProvider>
               <GrowthAuditProvider>
-                <Header />
-                {children}
-                <Footer />
-                <BackToTop />
-                <FloatingContactActions />
+                <ContactPopupProvider>
+                  <Header />
+                  {children}
+                  <Footer />
+                  <BackToTop />
+                  <FloatingContactActions />
+                </ContactPopupProvider>
               </GrowthAuditProvider>
             </EnquiryProvider>
           </SmoothScrollProvider>

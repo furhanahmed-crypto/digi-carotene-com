@@ -268,9 +268,9 @@ export const mainNav: NavItem[] = [
         icon: FileBarChart,
       },
       {
-        title: "Free GEO & AEO Scan",
-        href: "/contact",
-        description: "Request a free discovery audit.",
+        title: "Free Growth Audit",
+        href: "/#growth-audit",
+        description: "Get your free three-win growth audit.",
         icon: ScanSearch,
       },
     ],

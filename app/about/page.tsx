@@ -1,6 +1,8 @@
-import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
+import { OpenContactButton } from "@/components/contact-popup/open-contact-button"
+import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { pageWhiteDecor } from "@/components/shared/page-decors"
@@ -10,7 +12,11 @@ import { MediaFrame } from "@/components/shared/media-frame"
 import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
-import { contactHref } from "@/constants/home/navigation"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+  bannerCtaSecondaryClassName,
+} from "@/constants/ui/banner-cta"
 import type { Metadata } from "next"
 import { metadataFor } from "@/lib/seo/page-meta"
 
@@ -42,30 +48,25 @@ export default function AboutPage() {
         title="We Are Not Here to Make Marketing Look Busy. We Are Here to Make It Pay."
         description="Digi Carotene is a data-led, results-first marketing agency based in Hyderabad. For more than seven years we have helped 300+ clients in Hyderabad, Bangalore and across the globe get found, get chosen and grow — with every decision backed by numbers."
         mark="About Digi Carotene"
+        actions={
+          <div className={bannerCtaRowClassName}>
+            <OpenGrowthAuditButton
+              label="Work With Us"
+              ctaLocation="about_hero"
+              className={bannerCtaPrimaryClassName}
+            />
+            <OpenContactButton
+              label="Contact Us"
+              ctaLocation="about_hero_contact"
+              variant="outline"
+              className={bannerCtaSecondaryClassName}
+            />
+          </div>
+        }
       />
 
       <SectionLayout tone="white" decor={pageWhiteDecor}>
         <div className="space-y-16 lg:space-y-24">
-          <div className="flex flex-wrap gap-3">
-            <Button
-              nativeButton={false}
-              render={<Link href={contactHref} />}
-              size="lg"
-              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
-            >
-              Work With Us
-              <ArrowRight className="size-4" />
-            </Button>
-            <Button
-              nativeButton={false}
-              render={<Link href="/about/team" />}
-              size="lg"
-              variant="outline"
-            >
-              Meet the Team
-            </Button>
-          </div>
-
           <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <SectionMark data-reveal="eyebrow">Why we exist</SectionMark>
@@ -162,18 +163,46 @@ export default function AboutPage() {
               titleProps={{ "data-reveal": "heading" }}
               bodyProps={{ "data-reveal": "text" }}
               className="mt-6"
-              eyebrow="Hyderabad · Bangalore · Global"
-              title="Home in Hyderabad. Reach across Bangalore."
-              body="Our home is Hyderabad, from Hitech City to Dilsukhnagar. We also run campaigns for brands across Bangalore — from Koramangala startups to Whitefield retail — and serve clients in other countries remotely."
+              eyebrow="Hyderabad · Across India · Worldwide"
+              title="Home in Hyderabad. Reach Worldwide."
+              body="Our home is Hyderabad, from Hitech City to Dilsukhnagar. From here we grow brands across India and around the world — from a 4,500-seat arena in New York and SAP and SaaS companies in Texas and California to businesses in Europe and Denmark — working across time zones with one dedicated team."
             />
+            <div
+              data-reveal="text"
+              className="mt-6 flex flex-wrap gap-3 text-sm font-medium"
+            >
+              <Button
+                nativeButton={false}
+                render={<Link href="/digital-marketing-agency-hyderabad/" />}
+                variant="outline"
+                size="sm"
+              >
+                Hyderabad
+                <ArrowRight className="size-3.5" />
+              </Button>
+              <Button
+                nativeButton={false}
+                render={<Link href="/global/" />}
+                variant="outline"
+                size="sm"
+              >
+                Worldwide
+                <ArrowRight className="size-3.5" />
+              </Button>
+            </div>
           </Reveal>
 
           <Reveal>
             <div data-reveal="cta">
               <PageCta
                 title="Want to see if this fits your brand?"
-                label="Start a conversation"
-                href={contactHref}
+                action={
+                  <OpenContactButton
+                    label="Start a conversation"
+                    ctaLocation="about_final_cta"
+                    className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+                  />
+                }
               />
             </div>
           </Reveal>

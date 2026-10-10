@@ -2,43 +2,45 @@
 
 import { ArrowRight } from "lucide-react"
 
-import { useGrowthAudit } from "@/components/growth-audit/growth-audit-provider"
+import { useContactPopup } from "@/components/contact-popup/contact-popup-provider"
 import { Button } from "@/components/ui/button"
 import {
-  GROWTH_AUDIT_FALLBACK_HREF,
-  type AuditCtaLocation,
-} from "@/lib/growth-audit"
+  CONTACT_POPUP_FALLBACK_HREF,
+  type ContactCtaLocation,
+} from "@/lib/contact-popup"
 import { cn } from "@/lib/utils"
 
-type OpenGrowthAuditButtonProps = {
+type OpenContactButtonProps = {
   label: string
-  ctaLocation: AuditCtaLocation
+  ctaLocation: ContactCtaLocation
   industry?: string
   className?: string
   size?: "default" | "sm" | "lg"
   variant?: "default" | "outline" | "ghost" | "secondary" | "destructive" | "link"
+  showArrow?: boolean
 }
 
-/** Opens the growth-audit modal; no-JS fallback is /contact?audit=1. */
-export function OpenGrowthAuditButton({
+/** Opens the contact popup; no-JS fallback is /contact. */
+export function OpenContactButton({
   label,
   ctaLocation,
   industry,
   className,
   size = "lg",
   variant = "default",
-}: OpenGrowthAuditButtonProps) {
-  const { openGrowthAudit } = useGrowthAudit()
+  showArrow = true,
+}: OpenContactButtonProps) {
+  const { openContactPopup } = useContactPopup()
 
   return (
     <Button
       nativeButton={false}
       render={
         <a
-          href={GROWTH_AUDIT_FALLBACK_HREF}
+          href={CONTACT_POPUP_FALLBACK_HREF}
           onClick={(event) => {
             event.preventDefault()
-            openGrowthAudit({ ctaLocation, industry })
+            openContactPopup({ ctaLocation, industry })
           }}
         />
       }
@@ -47,7 +49,7 @@ export function OpenGrowthAuditButton({
       className={cn(className)}
     >
       {label}
-      <ArrowRight className="size-4" />
+      {showArrow ? <ArrowRight className="size-4" /> : null}
     </Button>
   )
 }

@@ -55,6 +55,7 @@ const checkboxClassName =
 
 type GrowthAuditFormProps = {
   ctaLocation: AuditCtaLocation
+  initialIndustry?: string
   registerDirty: (dirty: boolean) => void
   onStepChange?: (step: GrowthAuditStep) => void
 }
@@ -70,6 +71,7 @@ function FieldError({ id, message }: { id: string; message?: string }) {
 
 export function GrowthAuditForm({
   ctaLocation,
+  initialIndustry,
   registerDirty,
   onStepChange,
 }: GrowthAuditFormProps) {
@@ -84,9 +86,14 @@ export function GrowthAuditForm({
 
   React.useEffect(() => {
     const saved = loadForm()
-    if (saved) setForm(saved)
+    const base = saved ?? emptyGrowthAuditForm()
+    setForm(
+      initialIndustry
+        ? { ...base, industry: initialIndustry, industry_other: "" }
+        : base
+    )
     hydrated.current = true
-  }, [])
+  }, [initialIndustry])
 
   React.useEffect(() => {
     if (!hydrated.current) return

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
+import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
+import { IndustryFaqSection } from "@/components/inner/industry-faq-section"
 import {
   InfoCardGrid,
   OutlineSection,
@@ -9,9 +9,9 @@ import {
 } from "@/components/inner/outline-section"
 import { PageCta } from "@/components/shared/page-cta"
 import { PageHeader } from "@/components/shared/page-header"
-import { Button } from "@/components/ui/button"
 import { industries } from "@/constants/inner/industries"
-import { contactHref } from "@/constants/home/navigation"
+import { industryHubFaqs } from "@/constants/inner/industry-faqs"
+import { bannerCtaPrimaryClassName } from "@/constants/ui/banner-cta"
 import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/industries")
@@ -24,15 +24,11 @@ export default function IndustriesPage() {
         description="Industry-specific marketing for Hyderabad businesses and global brands — playbooks shaped by how each sector buys."
         mark="Industries"
         actions={
-          <Button
-            nativeButton={false}
-            render={<Link href={contactHref} />}
-            size="lg"
-            className="bg-ink text-paper hover:bg-ink/90 dark:bg-brand-yellow dark:text-ink dark:hover:bg-brand-yellow/90"
-          >
-            Talk to an Industry Specialist
-            <ArrowRight className="size-4" />
-          </Button>
+          <OpenGrowthAuditButton
+            label="Get a Free Growth Audit"
+            ctaLocation="industry_hub_hero"
+            className={bannerCtaPrimaryClassName}
+          />
         }
       />
 
@@ -67,12 +63,30 @@ export default function IndustriesPage() {
         </PlaceholderBlock>
       </OutlineSection>
 
+      <OutlineSection
+        tone="white"
+        mark="FAQs"
+        eyebrow="Questions"
+        title={industryHubFaqs.title}
+        body={industryHubFaqs.body}
+      >
+        <IndustryFaqSection
+          faq={industryHubFaqs}
+          contactCtaLocation="industry_hub_faq"
+        />
+      </OutlineSection>
+
       <PageCta
         band
-        mark="Industry specialist"
-        title="Talk to an Industry Specialist"
-        label="Get a Free Growth Audit"
-        href={contactHref}
+        mark="Next step"
+        title="Ready to grow in your industry?"
+        action={
+          <OpenGrowthAuditButton
+            label="Get a Free Growth Audit"
+            ctaLocation="industry_hub_final"
+            className="bg-ink text-paper hover:bg-ink/90 dark:bg-brand-yellow dark:text-ink dark:hover:bg-brand-yellow/90"
+          />
+        }
       />
     </div>
   )

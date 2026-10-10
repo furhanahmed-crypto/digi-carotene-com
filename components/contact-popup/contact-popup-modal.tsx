@@ -2,44 +2,43 @@
 
 import * as React from "react"
 
-import { GrowthAuditForm } from "@/components/growth-audit/growth-audit-form"
+import { ContactPopupForm } from "@/components/contact-popup/contact-popup-form"
 import { Modal } from "@/components/shared/modal"
-import { AUDIT_REPLY_DAYS } from "@/constants/growth-audit/options"
 import {
-  type AuditCtaLocation,
-  trackAuditEvent,
-} from "@/lib/growth-audit"
+  CONTACT_REPLY_DAYS,
+  type ContactCtaLocation,
+  trackContactEvent,
+} from "@/lib/contact-popup"
 
-type GrowthAuditModalProps = {
+type ContactPopupModalProps = {
   open: boolean
   onOpenChange: (open: boolean) => void
-  ctaLocation: AuditCtaLocation
-  initialIndustry?: string
+  ctaLocation: ContactCtaLocation
+  industry?: string
   formKey: number
 }
 
-export function GrowthAuditModal({
+export function ContactPopupModal({
   open,
   onOpenChange,
   ctaLocation,
-  initialIndustry,
+  industry,
   formKey,
-}: GrowthAuditModalProps) {
+}: ContactPopupModalProps) {
   const dirtyRef = React.useRef(false)
-  const lastStepRef = React.useRef(1)
 
   const requestClose = React.useCallback(() => {
     if (dirtyRef.current) {
       const leave = window.confirm(
-        "Leave the audit form? Your details will be lost."
+        "Leave this form? Your details will be lost."
       )
       if (!leave) return
-      trackAuditEvent("audit_form_abandon", {
-        last_step: lastStepRef.current,
+      trackContactEvent("contact_form_abandon", {
+        cta_location: ctaLocation,
       })
     }
     onOpenChange(false)
-  }, [onOpenChange])
+  }, [ctaLocation, onOpenChange])
 
   return (
     <Modal
@@ -48,21 +47,23 @@ export function GrowthAuditModal({
         if (!next) requestClose()
         else onOpenChange(true)
       }}
-      title="Get Your Free Growth Audit"
-      description={`Tell us about your business. We'll review your website, social channels and ads, then send you the three fastest wins — free. Reply within ${AUDIT_REPLY_DAYS}.`}
+      title="Let's Talk"
+      description={`Tell us what you need and we'll get back to you within ${CONTACT_REPLY_DAYS}.`}
       modal="trap-focus"
       contentClassName="max-h-[min(100dvh,720px)] w-full sm:max-w-[640px] max-md:top-auto max-md:bottom-0 max-md:max-h-[100dvh] max-md:translate-y-0 max-md:rounded-b-none max-md:data-closed:slide-out-to-bottom max-md:data-open:slide-in-from-bottom"
     >
       {open ? (
-        <GrowthAuditForm
+        <ContactPopupForm
           key={formKey}
           ctaLocation={ctaLocation}
-          initialIndustry={initialIndustry}
+          industry={industry}
           registerDirty={(dirty) => {
             dirtyRef.current = dirty
           }}
-          onStepChange={(step) => {
-            lastStepRef.current = step
+          onClose={() => onOpenChange(false)}
+          onCloseSilent={() => {
+            dirtyRef.current = false
+            onOpenChange(false)
           }}
         />
       ) : null}

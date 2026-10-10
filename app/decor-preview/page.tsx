@@ -57,7 +57,11 @@ const SECTION_GROUPS: {
 
 export default function DecorPreviewPage() {
   const listed = new Set(SECTION_GROUPS.flatMap((g) => g.variants))
-  const orphan = DECOR_VARIANTS.filter((v) => !listed.has(v))
+  // Turbopack SSR can surface the export as a non-array; normalize before filter.
+  const allVariants = Array.isArray(DECOR_VARIANTS)
+    ? DECOR_VARIANTS
+    : (Object.values(DECOR_VARIANTS ?? {}) as DecorVariant[])
+  const orphan = allVariants.filter((v) => !listed.has(v))
 
   return (
     <main className="min-h-svh bg-background text-foreground">

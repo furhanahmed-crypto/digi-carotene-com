@@ -11,6 +11,11 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+  bannerCtaSecondaryClassName,
+} from "@/constants/ui/banner-cta"
 import type { Metadata } from "next"
 import { metadataFor } from "@/lib/seo/page-meta"
 
@@ -71,16 +76,13 @@ export default function OfflineMarketingLandingPage() {
         title="Some Moments Can't Be Scrolled Past."
         description="A sampling counter at a busy mall on a Sunday. A stall at the society gate during Diwali week. A takeover at the metro station a commuter passes every morning. Offline marketing puts your brand in front of real people at the exact moment they are ready to notice. We make sure every one of those moments is measured."
         mark="Offline and Experiential Marketing"
-      />
-
-      <SectionLayout tone="white" decor={pageServicesDecor}>
-        <div className="space-y-16 lg:space-y-24">
-          <div className="flex flex-wrap gap-3">
+        actions={
+          <div className={bannerCtaRowClassName}>
             <Button
               nativeButton={false}
               render={<Link href={contactHref} />}
               size="lg"
-              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+              className={bannerCtaPrimaryClassName}
             >
               Plan an Activation
               <ArrowRight className="size-4" />
@@ -90,11 +92,16 @@ export default function OfflineMarketingLandingPage() {
               render={<Link href={contactHref} />}
               size="lg"
               variant="outline"
+              className={bannerCtaSecondaryClassName}
             >
               Talk to Our On-Ground Team
             </Button>
           </div>
+        }
+      />
 
+      <SectionLayout tone="white" decor={pageServicesDecor}>
+        <div className="space-y-16 lg:space-y-24">
           <Reveal>
             <SectionMark data-reveal="eyebrow">Measured offline</SectionMark>
             <SectionHeading

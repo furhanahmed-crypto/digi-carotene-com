@@ -10,6 +10,11 @@ import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+  bannerCtaSecondaryClassName,
+} from "@/constants/ui/banner-cta"
 import type { Metadata } from "next"
 import { metadataFor } from "@/lib/seo/page-meta"
 
@@ -49,16 +54,13 @@ export default function BangaloreAgencyPage() {
         title="Bengaluru Tests Everything. Your Marketing Should Too."
         description="Bangalore buyers read reviews, compare prices, ask AI and try the free trial before they commit. Investors ask about CAC and retention before revenue. Digi Carotene brings a data-led, test-and-learn approach to Bangalore brands, with 7+ years and 300+ clients of experience behind every recommendation."
         mark="Digital Marketing Agency in Bangalore"
-      />
-
-      <SectionLayout tone="white" decor={pageWhiteDecor}>
-        <div className="space-y-16 lg:space-y-24">
-          <div className="flex flex-wrap gap-3">
+        actions={
+          <div className={bannerCtaRowClassName}>
             <Button
               nativeButton={false}
               render={<Link href={contactHref} />}
               size="lg"
-              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+              className={bannerCtaPrimaryClassName}
             >
               Get a Free Audit
               <ArrowRight className="size-4" />
@@ -68,11 +70,16 @@ export default function BangaloreAgencyPage() {
               render={<Link href={contactHref} />}
               size="lg"
               variant="outline"
+              className={bannerCtaSecondaryClassName}
             >
               Talk to a Strategist
             </Button>
           </div>
+        }
+      />
 
+      <SectionLayout tone="white" decor={pageWhiteDecor}>
+        <div className="space-y-16 lg:space-y-24">
           <Reveal>
             <SectionMark data-reveal="eyebrow">The market</SectionMark>
             <SectionHeading

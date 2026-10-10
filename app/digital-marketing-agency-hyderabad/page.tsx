@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
 import { GoogleReviews } from "@/components/shared/google-reviews"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
@@ -8,40 +9,102 @@ import { pageWhiteDecor } from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
+import { TrackedCtaLink } from "@/components/shared/tracked-cta-link"
 import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
-import { contactHref, siteContact } from "@/constants/home/navigation"
+import { whatsappHref, siteContact } from "@/constants/home/navigation"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+  bannerCtaSecondaryClassName,
+} from "@/constants/ui/banner-cta"
 import type { Metadata } from "next"
 import { metadataFor } from "@/lib/seo/page-meta"
 
-export const metadata: Metadata = metadataFor("/digital-marketing-agency-hyderabad")
+export const metadata: Metadata = metadataFor(
+  "/digital-marketing-agency-hyderabad"
+)
 
-const services = [
+const mixSteps = [
   {
-    title: "Local SEO and Google Maps",
-    body: 'Rank in the map pack for "near me" searches in your area, from Madhapur to Malakpet.',
+    title: "Understand your business model",
+    body: "Customers, margins, sales cycle and what's working today.",
   },
   {
-    title: "AI search visibility",
-    body: "Get recommended when someone asks ChatGPT or Gemini for the best option in Hyderabad.",
+    title: "Choose the right services",
+    body: "Only the channels that fit your goals and budget.",
   },
   {
-    title: "Google and Meta ads",
-    body: "Paid campaigns built around cost per lead and city-level intent, not vanity reach.",
+    title: "Measure in leads and revenue",
+    body: "Cost per lead, ROAS and repeat customers, reported monthly.",
+  },
+] as const
+
+const digitalServices = [
+  {
+    title: "Performance Marketing",
+    body: "Google, Meta, YouTube and LinkedIn ads built around cost per lead and ROAS, targeted to the Hyderabad areas you serve.",
+    href: "/services/digital-marketing/performance-marketing/",
   },
   {
-    title: "Social, content and web",
-    body: "Feeds, answer-ready content and conversion-focused sites that match how Hyderabad buys.",
+    title: "Growth Marketing",
+    body: "Funnel fixes, WhatsApp follow-ups, offers and referral programs that make every customer cheaper to win and quicker to return.",
+    href: "/services/digital-marketing/growth-marketing/",
   },
   {
-    title: "BTL activations",
-    body: "Mall, society, campus and festival work measured with QR, WhatsApp and offer codes.",
+    title: "Social Media Marketing",
+    body: "Reels, content calendars and community management in Telugu and English that turn followers into bookings.",
+    href: "/services/digital-marketing/social/",
   },
   {
-    title: "PR and reputation",
-    body: "Coverage and brand facts that strengthen what Google and AI say about you.",
+    title: "SEO, Google Maps & AI Search",
+    body: 'Rank in the map pack for "near me" searches from Madhapur to Malakpet, and get named when people ask ChatGPT or Gemini.',
+    href: "/services/digital-marketing/seo/",
   },
-]
+  {
+    title: "Content Marketing",
+    body: "Website copy, blogs and video scripts that answer what Hyderabad customers ask before they buy.",
+    href: "/services/digital-marketing/content/",
+  },
+  {
+    title: "Web Design & Development",
+    body: "Fast, mobile-first websites and landing pages built to convert ad and search traffic into enquiries.",
+    href: "/services/digital-marketing/web/",
+  },
+  {
+    title: "Graphic Designing",
+    body: "Brand identity, ad creatives and social designs that stop the scroll.",
+    href: "/services/digital-marketing/graphic-design/",
+  },
+  {
+    title: "Personal Branding",
+    body: "Founders, doctors and experts positioned as the trusted name in their field.",
+    href: "/services/digital-marketing/personal-branding/",
+  },
+  {
+    title: "WhatsApp & Email Marketing",
+    body: "Automated reminders, broadcasts and journeys that bring customers back.",
+    href: "/services/digital-marketing/whatsapp-marketing/",
+  },
+  {
+    title: "Insta Shoot",
+    body: "In-house photo and reel shoots at your outlet, anywhere in Hyderabad.",
+    href: "/services/digital-marketing/insta-shoot/",
+  },
+] as const
+
+const secondaryServices = [
+  {
+    title: "BTL Activations",
+    body: "Mall, society, campus and festival activations measured with QR, WhatsApp and offer codes.",
+    href: "/services/offline-marketing/",
+  },
+  {
+    title: "PR & Reputation",
+    body: "Media coverage, Google review growth and reputation management that build trust.",
+    href: "/services/pr/",
+  },
+] as const
 
 export default function HyderabadAgencyPage() {
   return (
@@ -50,22 +113,29 @@ export default function HyderabadAgencyPage() {
         title="The Data-Led Digital Marketing Agency Hyderabad Businesses Trust"
         description="Hyderabad doesn't buy on hype. It buys on trust, then tells everyone. For 7+ years, Digi Carotene has helped Hyderabad restaurants, clinics, salons, colleges, real estate firms and tech companies earn that trust online and on the ground, with results measured in enquiries, footfall and revenue."
         mark="Digital Marketing Agency in Hyderabad"
+        actions={
+          <div className={bannerCtaRowClassName}>
+            <OpenGrowthAuditButton
+              label="Get a Free Growth Audit"
+              ctaLocation="hyderabad_hero"
+              className={bannerCtaPrimaryClassName}
+            />
+            <Button
+              nativeButton={false}
+              render={<a href={whatsappHref} />}
+              size="lg"
+              variant="outline"
+              className={bannerCtaSecondaryClassName}
+            >
+              Chat on WhatsApp
+              <ArrowRight className="size-4" />
+            </Button>
+          </div>
+        }
       />
 
       <SectionLayout tone="white" decor={pageWhiteDecor}>
         <div className="space-y-16 lg:space-y-24">
-          <div className="flex flex-wrap gap-3">
-            <Button
-              nativeButton={false}
-              render={<Link href={contactHref} />}
-              size="lg"
-              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
-            >
-              Get a Free Audit
-              <ArrowRight className="size-4" />
-            </Button>
-          </div>
-
           <Reveal>
             <SectionMark data-reveal="eyebrow">Why Hyderabad</SectionMark>
             <SectionHeading
@@ -88,27 +158,81 @@ export default function HyderabadAgencyPage() {
                 bodyProps={{ "data-reveal": "text" }}
                 className="mt-6"
                 eyebrow="Local + digital"
-                title="What we do for Hyderabad businesses"
+                title="What We Do for Hyderabad Businesses"
+                body="We don't sell fixed packages. We first study your business model — who buys, how they decide, what a customer is worth — then pick the services from our list that will grow it fastest, and report every month in leads and revenue."
               />
+
+              <div
+                data-reveal-group
+                className="mt-10 grid gap-4 sm:grid-cols-3"
+              >
+                {mixSteps.map((step, index) => (
+                  <article
+                    key={step.title}
+                    data-reveal="card"
+                    className="rounded-2xl border border-border bg-secondary/40 p-5"
+                  >
+                    <p className="text-xs font-semibold tracking-loose text-muted-foreground uppercase">
+                      Step {index + 1}
+                    </p>
+                    <h3 className="mt-2 font-display text-lg font-medium">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {step.body}
+                    </p>
+                  </article>
+                ))}
+              </div>
 
               <div
                 data-reveal-group
                 className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
               >
-                {services.map((item) => (
-                  <article
+                {digitalServices.map((item) => (
+                  <Link
                     key={item.title}
+                    href={item.href}
                     data-reveal="card"
-                    className="rounded-2xl border border-border bg-card p-6"
+                    className="group rounded-2xl border border-border bg-card p-6 transition-colors hover:border-foreground/30"
                   >
-                    <h3 className="font-display text-xl font-medium">
+                    <h3 className="font-display text-xl font-medium group-hover:underline">
                       {item.title}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
                       {item.body}
                     </p>
-                  </article>
+                  </Link>
                 ))}
+              </div>
+
+              <div
+                data-reveal-group
+                className="mt-4 grid gap-4 sm:grid-cols-2"
+              >
+                {secondaryServices.map((item) => (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    data-reveal="card"
+                    className="group rounded-2xl border border-dashed border-border bg-secondary/30 p-5 transition-colors hover:border-foreground/30"
+                  >
+                    <h3 className="font-display text-lg font-medium group-hover:underline">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {item.body}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+
+              <div data-reveal="cta" className="mt-8">
+                <OpenGrowthAuditButton
+                  label="Get a Free Growth Audit"
+                  ctaLocation="hyderabad_services"
+                  className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+                />
               </div>
             </Reveal>
           </div>
@@ -136,8 +260,14 @@ export default function HyderabadAgencyPage() {
             <div data-reveal="cta">
               <PageCta
                 title="Ready to grow in Hyderabad?"
-                label="Get a Free Audit"
-                href={contactHref}
+                action={
+                  <TrackedCtaLink
+                    href="/contact/"
+                    label="Contact Us"
+                    ctaLocation="hyderabad_final_cta"
+                    className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+                  />
+                }
               />
             </div>
           </Reveal>

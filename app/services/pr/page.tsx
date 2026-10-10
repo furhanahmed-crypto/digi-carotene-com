@@ -11,6 +11,10 @@ import { PageCta } from "@/components/shared/page-cta"
 import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { contactHref } from "@/constants/home/navigation"
+import {
+  bannerCtaPrimaryClassName,
+  bannerCtaRowClassName,
+} from "@/constants/ui/banner-cta"
 import type { Metadata } from "next"
 import { metadataFor } from "@/lib/seo/page-meta"
 
@@ -69,22 +73,23 @@ export default function PRServicesPage() {
         title="When Someone Googles You, or Asks ChatGPT About You, What Comes Back?"
         description="Your reputation now lives in search results, news archives, review sites and AI answers. Investors, customers, partners and future hires all check it before they trust you. We help you earn coverage that matters and make sure the story told about you is accurate, consistent and working in your favour."
         mark="PR and Reputation"
-      />
-
-      <SectionLayout tone="white" decor={pageServicesDecor}>
-        <div className="space-y-16 lg:space-y-24">
-          <div className="flex flex-wrap gap-3">
+        actions={
+          <div className={bannerCtaRowClassName}>
             <Button
               nativeButton={false}
               render={<Link href={contactHref} />}
               size="lg"
-              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+              className={bannerCtaPrimaryClassName}
             >
               Talk to Our PR Team
               <ArrowRight className="size-4" />
             </Button>
           </div>
+        }
+      />
 
+      <SectionLayout tone="white" decor={pageServicesDecor}>
+        <div className="space-y-16 lg:space-y-24">
           <Reveal className="grid items-start gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <SectionMark data-reveal="eyebrow">

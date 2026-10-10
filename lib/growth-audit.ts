@@ -424,7 +424,7 @@ export function buildGrowthAuditThankYouHref(
   if (params.business.trim()) search.set("business", params.business.trim())
   if (params.links.trim()) search.set("links", params.links.trim())
   search.set("channel", params.channel)
-  return `/thank-you?${search.toString()}`
+  return `/thank-you/?${search.toString()}`
 }
 
 export function trackAuditEvent(

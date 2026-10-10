@@ -79,6 +79,6 @@ Source: `docs/content/Digi-Carotene-Blog-10-SEO-AEO-Posts.pdf` → `content/blog
 ## v2 pages (shells)
 
 - `/services` — group summaries, quiz logic, package inclusions and "from ₹ X/month" prices — to confirm
-- `/global` — markets with real clients, time-zone overlap/meeting windows, payment + security details, global case stories, FAQ answers — to confirm
-- `/industries` + `/industries/*` — one-line proof per industry, one-line industry problem, permissioned sector logos, mini case studies, FAQ answers — to confirm
+- `/global` — markets with real clients, time-zone overlap/meeting windows, payment + security details, international FAQ answers — to confirm (Global Client Stories shipped without unapproved result numbers / logos)
+- `/industries` + `/industries/*` — one-line proof per industry, one-line industry problem, mini case studies — to confirm (sector FAQ answers + FAQPage schema shipped; client-logo strip removed per CR-11)
 - `/services/digital-marketing/whatsapp-marketing` and `/orm` — all section copy, FAQ answers — to confirm

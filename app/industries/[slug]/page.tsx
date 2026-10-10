@@ -1,8 +1,13 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
-import { OutlinePage } from "@/components/inner/outline-page"
+import { IndustryOutlinePage } from "@/components/inner/industry-outline-page"
 import { getIndustry, industries } from "@/constants/inner/industries"
+import { industryFaqsBySlug } from "@/constants/inner/industry-faqs"
+import {
+  industrySlugToAuditLabel,
+  industrySlugToCtaKey,
+} from "@/lib/contact-popup"
 import { metadataFor, type PageSlug } from "@/lib/seo/page-meta"
 
 export function generateStaticParams() {
@@ -26,8 +31,14 @@ export default async function IndustryPage({ params }: PageProps) {
   const industry = getIndustry(slug)
   if (!industry) notFound()
 
+  const faq = industryFaqsBySlug[industry.slug]
+  if (!faq) notFound()
+
+  const auditIndustry = industrySlugToAuditLabel[industry.slug]
+  const ctaKey = `industry_${industrySlugToCtaKey[industry.slug]}`
+
   return (
-    <OutlinePage
+    <IndustryOutlinePage
       title={industry.h1}
       description={`Marketing built for how ${industry.name.toLowerCase()} actually win customers — online, on Maps and on the ground.`}
       mark={industry.name}
@@ -35,17 +46,17 @@ export default async function IndustryPage({ params }: PageProps) {
         ...section,
         mark: industry.name,
       }))}
-      clientLogos
-      clientLogoSeed={industry.slug}
-      faqs={[]}
+      faq={faq}
       related={industry.relatedServices.map((service) => ({
         title: service.title,
         href: service.href,
         body: "A capability we often pair with this industry playbook.",
       }))}
       primaryCta="Get a Free Growth Audit"
-      ctaTitle={`Talk to our ${industry.name} specialists`}
-      ctaLabel="Talk to an Industry Specialist"
+      ctaTitle={`Speak to our ${industry.name} experts`}
+      ctaLabel="Speak to Our Expert"
+      auditIndustry={auditIndustry}
+      ctaKey={ctaKey}
     />
   )
 }

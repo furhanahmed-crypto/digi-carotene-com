@@ -62,14 +62,14 @@ export default function ContactPage() {
         description="Tell us a little about your business and goals. A strategist (not a salesperson) will get back to you within one working day with honest thoughts on what we would do and whether we are the right fit."
         mark="Contact Us"
         actions={
-          <div className="flex flex-wrap gap-3">
+          <div className="flex w-full flex-col gap-3 min-[400px]:flex-row min-[400px]:flex-wrap">
             <Button
               nativeButton={false}
               render={
                 <a href={whatsappHref} target="_blank" rel="noreferrer" />
               }
               size="lg"
-              className="bg-ink text-paper hover:bg-ink/90"
+              className="w-full border border-ink bg-paper text-ink hover:bg-paper/90 min-[400px]:w-auto"
             >
               WhatsApp us
               <ArrowRight className="size-4" />
@@ -79,7 +79,7 @@ export default function ContactPage() {
               render={<a href={siteContact.phoneHref} />}
               size="lg"
               variant="outline"
-              className="border-border bg-card/80 text-foreground hover:border-foreground hover:bg-card"
+              className="w-full border-ink/40 text-ink hover:bg-ink/5 min-[400px]:w-auto"
             >
               Call {siteContact.phoneDisplay}
             </Button>
