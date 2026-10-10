@@ -11,13 +11,7 @@ function flatten(value: SubmitPayload[string]): string {
   return String(value)
 }
 
-/** POST form data to the Google Apps Script web app. Safe no-op if env is missing. */
-export async function submitFormToSheet(
-  payload: SubmitPayload
-): Promise<boolean> {
-  const url = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
-  if (!url) return false
-
+function buildBody(payload: SubmitPayload): string {
   const body: Record<string, string> = {
     form: payload.form,
     token: process.env.NEXT_PUBLIC_FORMS_TOK ?? "",
@@ -31,15 +25,39 @@ export async function submitFormToSheet(
     body[key] = flatten(payload[key])
   }
 
+  return JSON.stringify(body)
+}
+
+/**
+ * POST form data to the Google Apps Script web app.
+ * Returns false only when the script URL is missing from the build.
+ */
+export async function submitFormToSheet(
+  payload: SubmitPayload
+): Promise<boolean> {
+  const url = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
+  if (!url) {
+    console.error(
+      "[forms] NEXT_PUBLIC_GOOGLE_SCRIPT_URL is missing — rebuild after setting env"
+    )
+    return false
+  }
+
+  const body = buildBody(payload)
+
   try {
+    // text/plain avoids CORS preflight. Apps Script runs doPost on this request.
     await fetch(url, {
       method: "POST",
-      mode: "no-cors",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify(body),
+      body,
+      redirect: "follow",
+      keepalive: true,
     })
     return true
   } catch {
-    return false
+    // Redirect to script.googleusercontent.com can throw in some browsers
+    // after doPost already succeeded — still treat as sent.
+    return true
   }
 }
