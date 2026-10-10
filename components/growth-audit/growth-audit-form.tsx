@@ -43,6 +43,7 @@ import {
   trackAuditEvent,
   validateStep,
 } from "@/lib/growth-audit"
+import { submitFormToSheet } from "@/lib/forms/submit-form"
 import { cn } from "@/lib/utils"
 
 const fieldClassName =
@@ -187,7 +188,7 @@ export function GrowthAuditForm({
     setStep((s) => (s === 3 ? 2 : 1))
   }
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
     if (form.company_fax.trim()) return
     // Enter in earlier steps must not validate / surface step-3 errors.
@@ -209,23 +210,24 @@ export function GrowthAuditForm({
 
     setSubmitting(true)
     const normalized = normalizeFormForSubmit(form)
-    // Client-only UI submit — no storage/API. Meta ready for later wiring.
-    void {
+    const utms = loadUtms()
+
+    await submitFormToSheet({
+      form: "growth_audit",
       ...normalized,
-      phone_e164: phoneToE164(normalized.country_code, normalized.phone),
+      phone: phoneToE164(normalized.country_code, normalized.phone) || normalized.phone,
       cta_location: ctaLocation,
-      page_url: typeof window !== "undefined" ? window.location.href : "",
-      referrer: typeof document !== "undefined" ? document.referrer : "",
-      device:
-        typeof window !== "undefined" &&
-        window.matchMedia("(max-width: 767px)").matches
-          ? "mobile"
-          : "desktop",
-      submitted_at: new Date().toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata",
-      }),
-      ...(loadUtms() ?? {}),
-    }
+      page_url: window.location.href,
+      referrer: document.referrer,
+      device: window.matchMedia("(max-width: 767px)").matches
+        ? "mobile"
+        : "desktop",
+      utm_source: utms?.utm_source,
+      utm_medium: utms?.utm_medium,
+      utm_campaign: utms?.utm_campaign,
+      utm_term: utms?.utm_term,
+      utm_content: utms?.utm_content,
+    })
 
     trackAuditEvent("generate_lead", {
       cta_location: ctaLocation,

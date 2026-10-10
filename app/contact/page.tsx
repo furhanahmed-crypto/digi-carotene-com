@@ -21,6 +21,7 @@ import {
   buildThankYouHref,
   enquiryServiceOptions,
 } from "@/lib/enquiry"
+import { submitFormToSheet } from "@/lib/forms/submit-form"
 
 const budgetOptions = [
   "Under ₹50k / month",
@@ -32,6 +33,7 @@ const budgetOptions = [
 
 export default function ContactPage() {
   const router = useRouter()
+  const [submitting, setSubmitting] = React.useState(false)
   const [formState, setFormState] = React.useState({
     name: "",
     business: "",
@@ -42,8 +44,21 @@ export default function ContactPage() {
     message: "",
   })
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
+    if (submitting) return
+    setSubmitting(true)
+    await submitFormToSheet({
+      form: "contact",
+      name: formState.name,
+      business: formState.business,
+      website: formState.website,
+      country: formState.country,
+      service: formState.service,
+      budget: formState.budget,
+      message: formState.message,
+      source: "contact_page",
+    })
     router.push(
       buildThankYouHref({
         name: formState.name,
@@ -184,9 +199,10 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   size="lg"
+                  disabled={submitting}
                   className="w-full bg-brand-yellow text-ink hover:bg-brand-yellow/90 sm:w-auto"
                 >
-                  Get a Free Proposal
+                  {submitting ? "Sending…" : "Get a Free Proposal"}
                   <ArrowRight className="size-4" />
                 </Button>
               </form>

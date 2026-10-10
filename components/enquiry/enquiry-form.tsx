@@ -11,6 +11,7 @@ import {
   enquiryServiceOptions,
   type EnquirySource,
 } from "@/lib/enquiry"
+import { submitFormToSheet } from "@/lib/forms/submit-form"
 import { cn } from "@/lib/utils"
 
 const fieldClassName =
@@ -32,6 +33,7 @@ export function EnquiryForm({
   onSubmitted,
 }: EnquiryFormProps) {
   const router = useRouter()
+  const [submitting, setSubmitting] = React.useState(false)
   const [formState, setFormState] = React.useState({
     name: "",
     email: "",
@@ -40,8 +42,19 @@ export function EnquiryForm({
     message: "",
   })
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
+    if (submitting) return
+    setSubmitting(true)
+    await submitFormToSheet({
+      form: "enquiry",
+      name: formState.name,
+      email: formState.email,
+      phone: formState.phone,
+      service: formState.service,
+      message: formState.message,
+      source,
+    })
     onSubmitted?.()
     router.push(
       buildThankYouHref({
@@ -112,9 +125,10 @@ export function EnquiryForm({
       <Button
         type="submit"
         size="lg"
+        disabled={submitting}
         className="w-full bg-brand-yellow text-ink hover:bg-brand-yellow/90"
       >
-        {submitLabel}
+        {submitting ? "Sending…" : submitLabel}
         <ArrowRight className="size-4" />
       </Button>
     </form>

@@ -3,6 +3,7 @@
 ## Core decisions
 
 0. **Static HTML export** — `output: "export"` + `trailingSlash` + `images.unoptimized` in `next.config.ts`. Deploy folder is `out/` (not `.next/`). No `cookies()` / `searchParams` in Server Components (thank-you reads query via client `useSearchParams`). Apache helpers in `public/.htaccess`.
+0a. **Forms → Google Sheets** — Client posts to Apps Script web app (`NEXT_PUBLIC_GOOGLE_SCRIPT_URL` + `NEXT_PUBLIC_FORMS_TOK`). Tabs: Growth Audit / Enquiry / Contact. Script + setup: `docs/forms/`.
 0b. **Contact popup (CR-07)** — `ContactPopupProvider` + `#contact` hash; reuse from About / industry expert CTAs. Growth audit stays separate (`#growth-audit`). Industry pages use `IndustryOutlinePage` (not shared `OutlinePage`).
 1. **Agency, not blog** — Manager rejected the prior “notes/article” feel. Homepage must signal a marketing agency.
 2. **Honesty first** — Never invent clients, logos, metrics, awards, or testimonials. Use `[[… — to confirm]]` and track in `PLACEHOLDERS.md`.

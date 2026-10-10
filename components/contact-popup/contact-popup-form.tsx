@@ -25,6 +25,7 @@ import {
   validateContactPopup,
   type ContactPopupFormState,
 } from "@/lib/contact-popup"
+import { submitFormToSheet } from "@/lib/forms/submit-form"
 import { cn } from "@/lib/utils"
 
 const fieldClassName =
@@ -91,7 +92,7 @@ export function ContactPopupForm({
     })
   }
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
     if (form.company_fax.trim()) return
 
@@ -106,15 +107,18 @@ export function ContactPopupForm({
     }
 
     setSubmitting(true)
-    // Client-only UI submit — inbox/CRM wiring later.
-    void {
-      ...form,
+    await submitFormToSheet({
+      form: "contact",
+      name: form.full_name,
+      email: form.email,
+      phone: `${form.country_code} ${form.phone}`.trim(),
+      business: form.business_name,
+      message: form.message,
+      enquiry_type: form.enquiry_type,
+      industry: form.industry,
       cta_location: ctaLocation,
-      form_type: "contact",
-      submitted_at: new Date().toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata",
-      }),
-    }
+      source: "contact_popup",
+    })
 
     trackContactEvent("generate_lead", {
       form_type: "contact",
