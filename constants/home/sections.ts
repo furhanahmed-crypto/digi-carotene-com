@@ -366,7 +366,6 @@ export const homeSections = {
   results: {
     eyebrow: "Proof",
     headline: "Results that speak volumes.",
-    body: "Benchmark scenarios with before-and-after numbers — modelled from industry data until named client results are approved.",
     /** Cards load from content/growth-scenarios (homeFeatured). */
     cards: [] satisfies ResultCard[],
   },

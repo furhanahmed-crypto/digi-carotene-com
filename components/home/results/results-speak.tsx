@@ -18,20 +18,12 @@ export function ResultsSpeak() {
         <SectionMark tone="paper" data-reveal="eyebrow">
           {results.eyebrow}
         </SectionMark>
-        <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <h2
-            data-reveal="heading"
-            className="max-w-xl min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
-          >
-            {results.headline}
-          </h2>
-          <p
-            data-reveal="text"
-            className="max-w-md text-ink/70 dark:text-muted-foreground"
-          >
-            {results.body}
-          </p>
-        </div>
+        <h2
+          data-reveal="heading"
+          className="mt-6 max-w-xl min-w-0 font-display text-[26px] leading-display font-medium tracking-display break-words min-[360px]:text-[30px] sm:text-[32px] md:text-[44px]"
+        >
+          {results.headline}
+        </h2>
 
         <div data-reveal-group className="mt-10 grid gap-4 md:grid-cols-3">
           {cards.map((card) => (
@@ -46,7 +38,7 @@ export function ResultsSpeak() {
             href="/growth-scenarios"
             className="link-underline text-[13px] font-medium tracking-soft uppercase"
           >
-            See all growth scenarios
+            See all growth stories
           </Link>
         </div>
       </Reveal>
