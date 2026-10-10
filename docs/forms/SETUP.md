@@ -1,44 +1,49 @@
 # Forms → Google Sheets setup
 
-Static site posts to a Google Apps Script web app. No Google API keys needed.
-
-## Env keys (Vercel + `.env.local`)
+## Env keys
 
 | Key | Value |
 | --- | --- |
 | `NEXT_PUBLIC_GOOGLE_SCRIPT_URL` | Web app URL ending in `/exec` |
-| `NEXT_PUBLIC_FORMS_TOK` | Same string as `TOKEN` in Apps Script |
+| `NEXT_PUBLIC_FORMS_TOK` | Same as `TOKEN` in Apps Script (`digi-carotene-2026`) |
 
-Current sheet ID (already in script): `1rakD_eH7zhVXTZj-EqhYDMZEDFRCeHvzLdSyhzh73wc`
+## Fix “thank you but sheet empty”
 
-## Steps
+The site always shows thank-you after submit. If the sheet stays empty, the **web app deploy** or **sheet access** failed.
 
-1. Open the Sheet → Extensions → Apps Script.
-2. Paste `docs/forms/google-apps-script.js` (Sheet ID + TOKEN already set).
-3. Save → select function `setupHeaders` → Run (authorize once).
-4. Deploy → New deployment → **Web app**  
+### Do this again carefully
+
+1. Open **this** spreadsheet (not a blank script project):  
+   https://docs.google.com/spreadsheets/d/1rakD_eH7zhVXTZj-EqhYDMZEDFRCeHvzLdSyhzh73wc/edit  
+2. **Extensions → Apps Script** (must open from the Sheet).
+3. Replace all code with `docs/forms/google-apps-script.js` → Save.
+4. Run **`testWrite`** from the dropdown → authorize if asked.  
+   Check the **Enquiry** tab — you should see a row “Editor Test”.  
+   If that fails, stop and fix authorization first.
+5. Run **`setupHeaders`** once.
+6. **Deploy → Manage deployments → Edit (pencil) → New version → Deploy**  
+   (or New deployment if first time)  
+   - Type: **Web app**  
    - Execute as: **Me**  
    - Who has access: **Anyone**  
-   - Deploy → copy the **Web app URL**.
-5. Add to `.env.local` (and Vercel env):
+7. Copy the new `/exec` URL into `.env.local` + Vercel as `NEXT_PUBLIC_GOOGLE_SCRIPT_URL`.
+8. Restart `bun run dev` / redeploy Vercel.
+9. Submit a form again.
 
-```bash
-NEXT_PUBLIC_GOOGLE_SCRIPT_URL=https://script.google.com/macros/s/XXXX/exec
-NEXT_PUBLIC_FORMS_TOK=digi-carotene-2026
+### Quick health check
+
+Open the `/exec` URL in a browser. You should see:
+
+```json
+{"ok":true,"service":"digi-carotene-forms"}
 ```
 
-6. Restart `bun run dev` (or redeploy on Vercel).
-7. Submit each form once; confirm a new row on the matching tab.
+If you see Google’s “Page not found / unable to open the file”, the deployment is wrong — redeploy from the Sheet-bound script.
 
-## Tabs ↔ forms
+## Tabs
 
-| Tab | Site forms |
+| Tab | Forms |
 | --- | --- |
 | Growth Audit | Audit modal + `/growth-audit` |
 | Enquiry | Enquiry modal |
 | Contact | `/contact` + contact popup |
-
-## Notes
-
-- After editing Apps Script, deploy a **new version** (Manage deployments → Edit → New version).
-- Tab names must stay exactly: `Growth Audit`, `Enquiry`, `Contact`.

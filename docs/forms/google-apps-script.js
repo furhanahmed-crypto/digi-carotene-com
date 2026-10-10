@@ -1,14 +1,17 @@
 /**
  * Digi Carotene — form → Google Sheet
- * Paste into Extensions → Apps Script on the Sheet (or a standalone script).
  *
- * TOKEN must match NEXT_PUBLIC_FORMS_TOK in .env.local / Vercel.
+ * IMPORTANT: Create this from the Sheet itself:
+ *   Sheet → Extensions → Apps Script  (container-bound)
  * Then Deploy → New deployment → Web app
- * (Execute as: Me, Who has access: Anyone).
+ *   Execute as: Me
+ *   Who has access: Anyone
+ *
+ * TOKEN must match NEXT_PUBLIC_FORMS_TOK
  */
 
 var SHEET_ID = "1rakD_eH7zhVXTZj-EqhYDMZEDFRCeHvzLdSyhzh73wc"
-var TOKEN = "digi-carotene-2026" // same as NEXT_PUBLIC_FORMS_TOK
+var TOKEN = "digi-carotene-2026"
 
 var TABS = {
   growth_audit: "Growth Audit",
@@ -75,25 +78,48 @@ var COLUMNS = {
   ],
 }
 
+function book_() {
+  var active = SpreadsheetApp.getActiveSpreadsheet()
+  if (active) return active
+  return SpreadsheetApp.openById(SHEET_ID)
+}
+
+function tab_(name) {
+  var book = book_()
+  var sheet = book.getSheetByName(name)
+  if (sheet) return sheet
+  return book.insertSheet(name)
+}
+
 function doPost(e) {
-  var data = JSON.parse(e.postData.contents)
-  if (data.token !== TOKEN) return out_({ ok: false, error: "bad token" })
+  try {
+    var raw = e && e.postData && e.postData.contents
+    if (!raw) return out_({ ok: false, error: "no body" })
 
-  var form = data.form
-  var tab = TABS[form]
-  var cols = COLUMNS[form]
-  if (!tab || !cols) return out_({ ok: false, error: "bad form" })
+    var data = JSON.parse(raw)
+    if (data.token !== TOKEN) return out_({ ok: false, error: "bad token" })
 
-  var sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(tab)
-  if (!sheet) return out_({ ok: false, error: "missing tab" })
+    var form = data.form
+    var tabName = TABS[form]
+    var cols = COLUMNS[form]
+    if (!tabName || !cols) return out_({ ok: false, error: "bad form" })
 
-  var row = cols.map(function (key) {
-    var value = data[key]
-    return value == null ? "" : value
-  })
-  sheet.appendRow(row)
+    var sheet = tab_(tabName)
+    var row = []
+    for (var i = 0; i < cols.length; i++) {
+      var value = data[cols[i]]
+      row.push(value == null ? "" : value)
+    }
+    sheet.appendRow(row)
 
-  return out_({ ok: true })
+    return out_({ ok: true, tab: tabName })
+  } catch (err) {
+    return out_({ ok: false, error: String(err) })
+  }
+}
+
+function doGet() {
+  return out_({ ok: true, service: "digi-carotene-forms" })
 }
 
 function out_(obj) {
@@ -102,13 +128,27 @@ function out_(obj) {
   )
 }
 
-/** Run once from the editor to write header rows on each tab. */
+/** Run once from the editor — writes headers on each tab. */
 function setupHeaders() {
-  var book = SpreadsheetApp.openById(SHEET_ID)
-  Object.keys(COLUMNS).forEach(function (form) {
-    var sheet = book.getSheetByName(TABS[form])
-    if (!sheet) sheet = book.insertSheet(TABS[form])
+  var forms = Object.keys(COLUMNS)
+  for (var i = 0; i < forms.length; i++) {
+    var form = forms[i]
+    var sheet = tab_(TABS[form])
     sheet.clear()
     sheet.appendRow(COLUMNS[form])
-  })
+  }
+}
+
+/** Run from the editor to prove sheet write works. */
+function testWrite() {
+  var sheet = tab_("Enquiry")
+  sheet.appendRow([
+    new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+    "Editor Test",
+    "test@example.com",
+    "000",
+    "Test",
+    "testWrite ok",
+    "editor",
+  ])
 }
