@@ -106,7 +106,7 @@ export default function PRServicesPage() {
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
-              <MediaFrame label="PR" />
+              <MediaFrame label="PR" src="/assets/campaigns/07.webp" />
             </div>
           </Reveal>
 

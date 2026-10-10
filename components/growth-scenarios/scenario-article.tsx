@@ -16,13 +16,9 @@ export function ScenarioArticle({ scenario }: ScenarioArticleProps) {
       <p className="text-[13px] tracking-soft text-muted-foreground uppercase">
         {scenario.label} · {scenario.industry}
       </p>
-      <h1 className="mt-4 font-display text-[34px] leading-display font-medium tracking-display md:text-5xl">
-        {scenario.h1}
-      </h1>
-      <ScenarioQuickAnswer
-        text={scenario.quickAnswer}
-        disclaimer={scenario.disclaimer}
-      />
+      <div className="mt-6">
+        <ScenarioQuickAnswer text={scenario.quickAnswer} />
+      </div>
       <ScenarioPattern pattern={scenario.businessPattern} />
       <section id="the-challenge" className="scroll-mt-28 pt-10">
         <h2 className="font-display text-[26px] leading-heading font-medium tracking-display md:text-[32px]">

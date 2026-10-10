@@ -25,6 +25,11 @@ export const pageMetaBySlug = {
     description:
       "Salons, restaurants, hospitals, colleges and global companies trust Digi Carotene. See logos, stories and reviews.",
   },
+  "/growth-audit": {
+    title: "Free Growth Audit | Digi Carotene",
+    description:
+      "Get a free growth audit from Digi Carotene. We review your ads, funnel, website and social presence, then share the three fastest wins.",
+  },
   "/contact": {
     title: "Contact Digi Carotene | Digital Marketing Agency Hyderabad",
     description:

@@ -12,24 +12,27 @@ import { metadataFor } from "@/lib/seo/page-meta"
 
 export const metadata: Metadata = metadataFor("/about/team")
 
-const leadership = [
+const leadership: {
+  name: string
+  description: string
+  imageSrc?: string
+}[] = [
   {
-    name: "Founder",
-    role: "Founder & Strategy",
+    name: "Leadership",
     description:
       "Sets the growth targets and keeps every channel accountable to leads and revenue.",
   },
   {
-    name: "Performance lead",
-    role: "Performance & Analytics",
+    name: "Performance",
     description:
       "Owns paid media, tracking and weekly optimisation against cost per lead and ROAS.",
+    imageSrc: "/assets/campaigns/02.webp",
   },
   {
-    name: "Creative lead",
-    role: "Content & Production",
+    name: "Creative",
     description:
       "Runs content, design and shoots so campaigns look sharp and convert.",
+    imageSrc: "/assets/campaigns/03.webp",
   },
 ]
 
@@ -84,7 +87,11 @@ export default function TeamPage() {
         <div>
           <Reveal className="mb-16 lg:mb-24">
             <div data-reveal="image">
-              <MediaFrame label="The Digi Carotene team" aspect="photo" />
+              <MediaFrame
+                label="The Digi Carotene team"
+                aspect="photo"
+                src="/assets/campaigns/01.webp"
+              />
             </div>
           </Reveal>
 
@@ -97,13 +104,13 @@ export default function TeamPage() {
               className="mt-6"
               eyebrow="Names to confirm"
               title="Leaders with real credentials"
-              body="Photos, full names, titles, years of experience and LinkedIn links strengthen trust for Google and AI engines. Slots stay explicit until confirmed."
+              body="Photos, full names and LinkedIn links strengthen trust for Google and AI engines. Slots stay explicit until confirmed."
             />
 
             <div data-reveal-group className="mt-12 grid gap-5 md:grid-cols-3">
-              {leadership.map((member, index) => (
+              {leadership.map((member) => (
                 <div
-                  key={`${member.name}-${index}`}
+                  key={member.name}
                   data-reveal="card"
                   className="border border-line bg-background"
                 >
@@ -111,12 +118,10 @@ export default function TeamPage() {
                     label={`${member.name} photo`}
                     aspect="photo"
                     className="border-0 border-b"
+                    src={member.imageSrc}
                   />
                   <div className="p-5">
-                    <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
-                      {index + 1} · {member.role}
-                    </p>
-                    <h3 className="mt-3 font-display text-[21px] leading-title font-medium">
+                    <h3 className="font-display text-[21px] leading-title font-medium">
                       {member.name}
                     </h3>
                     <p className="mt-3 text-base leading-body text-muted-foreground">

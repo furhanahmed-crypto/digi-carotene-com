@@ -30,10 +30,6 @@ export function GrowthAuditModal({
 
   const requestClose = React.useCallback(() => {
     if (dirtyRef.current) {
-      const leave = window.confirm(
-        "Leave the audit form? Your details will be lost."
-      )
-      if (!leave) return
       trackAuditEvent("audit_form_abandon", {
         last_step: lastStepRef.current,
       })
@@ -44,9 +40,15 @@ export function GrowthAuditModal({
   return (
     <Modal
       open={open}
-      onOpenChange={(next) => {
-        if (!next) requestClose()
-        else onOpenChange(true)
+      disablePointerDismissal
+      onOpenChange={(next, details) => {
+        if (next) {
+          onOpenChange(true)
+          return
+        }
+        // Close only via the X button — ignore Escape / outside press.
+        if (details?.reason && details.reason !== "close-press") return
+        requestClose()
       }}
       title="Get Your Free Growth Audit"
       description={`Tell us about your business. We'll review your website, social channels and ads, then send you the three fastest wins — free. Reply within ${AUDIT_REPLY_DAYS}.`}

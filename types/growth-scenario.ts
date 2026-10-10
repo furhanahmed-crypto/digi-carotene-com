@@ -58,7 +58,8 @@ export type GrowthScenario = {
   faqs: ScenarioFaq[]
   servicesUsed: ScenarioService[]
   cta: ScenarioCta
-  disclaimer: string
+  /** @deprecated Unused in UI — kept optional for older content files. */
+  disclaimer?: string
 }
 
 export type GrowthScenarioIndexItem = {

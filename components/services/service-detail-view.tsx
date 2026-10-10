@@ -39,7 +39,12 @@ export function ServiceDetailView({
         description={data.description}
         mark={data.name}
         adornment={<MegaphoneMotif />}
-        actions={<ConversationActions serviceName={data.name} />}
+        actions={
+          <ConversationActions
+            serviceName={data.name}
+            label="Start a conversation"
+          />
+        }
       />
 
       <ServiceOverview name={data.name} whatIs={data.whatIs} />

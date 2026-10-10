@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import {
-  contactHref,
+  growthAuditHref,
   mainNav,
   type NavGroup,
   type NavItem,
@@ -206,11 +206,11 @@ export function MobileNav({
           <ModeToggle />
           <Button
             nativeButton={false}
-            render={<Link href={contactHref} />}
-            className="flex-1"
+            render={<Link href={growthAuditHref} />}
+            className="flex-1 bg-brand-yellow text-ink hover:bg-brand-yellow/90"
             onClick={onClose}
           >
-            Contact Us
+            Growth Audit
           </Button>
         </div>
       </div>

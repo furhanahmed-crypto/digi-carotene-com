@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils"
 
 type ConversationActionsProps = {
   serviceName?: string
+  label?: string
   className?: string
   /** Primary button style for yellow page banners. */
   primaryClassName?: string
@@ -23,6 +24,7 @@ type ConversationActionsProps = {
 /** Banner CTAs — conversation opens enquiry modal; WhatsApp only below md. */
 export function ConversationActions({
   serviceName,
+  label = "Start a conversation",
   className,
   primaryClassName = bannerCtaPrimaryClassName,
   whatsappClassName = bannerCtaSecondaryClassName,
@@ -37,7 +39,7 @@ export function ConversationActions({
         className={primaryClassName}
         onClick={() => openEnquiry({ service: serviceName })}
       >
-        Start a conversation
+        {label}
         <ArrowRight className="size-4" />
       </Button>
       <Button

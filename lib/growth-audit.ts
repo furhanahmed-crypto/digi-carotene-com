@@ -7,7 +7,7 @@ import {
 } from "@/constants/growth-audit/options"
 
 export const GROWTH_AUDIT_HASH = "growth-audit"
-export const GROWTH_AUDIT_FALLBACK_HREF = "/contact?audit=1"
+export const GROWTH_AUDIT_FALLBACK_HREF = "/growth-audit"
 
 const FORM_STORAGE_KEY = "dc-growth-audit-form"
 const UTM_STORAGE_KEY = "dc-growth-audit-utm"

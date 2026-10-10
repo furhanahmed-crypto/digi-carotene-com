@@ -32,13 +32,19 @@
     "/services/digital-marketing/insta-shoot",
     "/blog/meta-ads-vs-google-ads"
   ],
-  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "schema": [
+    "Article",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
   "h1": "How a Furniture Showroom Can Grow Sales from Ads 2.5x by Optimising for Visits",
   "quickAnswer": "In this benchmark scenario, a solid-wood furniture showroom spending ₹75,000 a month replaces discount ads with workshop Reels, qualifies leads on WhatsApp by room, budget and timeline, and offers a free design consultation at the showroom. Showroom visits from ads rise from 12 to 34 a month and sales from ₹3.4 lakh to ₹8.5 lakh.",
   "headlineMetric": "11.3x",
   "headlineMetricLabel": "Return on ad spend",
   "cardSummary": "Showroom visits from digital nearly tripled, and monthly sales from ads grew from ₹3.4 lakh to ₹8.5 lakh at the same budget.",
-  "tags": ["Home & furniture"],
+  "tags": [
+    "Home & furniture"
+  ],
   "homeFeatured": false,
   "businessPattern": {
     "type": "Single large showroom with an in-house workshop; premium and value ranges",
@@ -77,16 +83,52 @@
   ],
   "resultsTitle": "Results (90 Days)",
   "results": {
-    "headers": ["Metric", "Before", "After 90 days", "Benchmark basis"],
+    "headers": [
+      "Metric",
+      "Before",
+      "After 90 days"
+    ],
     "rows": [
-      ["Monthly ad spend", "₹75,000", "₹75,000", "—"],
-      ["Cost per lead", "₹650", "₹380", "Published Indian interiors campaign: ₹190 CPL on Meta (MonkeyAds); furniture search conversion rate is among the lowest at ~3% (LocaliQ, US data)"],
-      ["Leads per month", "115", "197", "Spend ÷ CPL"],
-      ["Qualified-lead share", "20%", "35%", "Interiors campaign above: ~17% qualified; uplift modelled from qualifying flow"],
-      ["Showroom visits from ads", "12", "34", "Half of qualified leads visit"],
-      ["Sales from ads", "4", "10", "About 30% of visits convert"],
-      ["Revenue from ads", "₹3.4 lakh", "₹8.5 lakh", "Sales × ₹85,000 average order"],
-      ["Return on ad spend", "4.5x", "11.3x", "Revenue ÷ spend"]
+      [
+        "Monthly ad spend",
+        "₹75,000",
+        "₹75,000"
+      ],
+      [
+        "Cost per lead",
+        "₹650",
+        "₹380"
+      ],
+      [
+        "Leads per month",
+        "115",
+        "197"
+      ],
+      [
+        "Qualified-lead share",
+        "20%",
+        "35%"
+      ],
+      [
+        "Showroom visits from ads",
+        "12",
+        "34"
+      ],
+      [
+        "Sales from ads",
+        "4",
+        "10"
+      ],
+      [
+        "Revenue from ads",
+        "₹3.4 lakh",
+        "₹8.5 lakh"
+      ],
+      [
+        "Return on ad spend",
+        "4.5x",
+        "11.3x"
+      ]
     ]
   },
   "whatMadeTheDifference": "Optimising for the showroom visit, not the lead. Furniture is bought after people touch and sit on it. Filtering price-shoppers early and giving serious buyers a reason to visit lifted sales even though total leads grew only modestly.",
@@ -109,10 +151,22 @@
     }
   ],
   "servicesUsed": [
-    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
-    {"label": "Insta Shoot", "href": "/services/digital-marketing/insta-shoot"},
-    {"label": "WhatsApp Marketing & Automation", "href": "/services/digital-marketing/whatsapp-marketing"},
-    {"label": "Local SEO & Google Business Profile", "href": "/services/digital-marketing/seo"}
+    {
+      "label": "Performance Marketing",
+      "href": "/services/digital-marketing/performance-marketing"
+    },
+    {
+      "label": "Insta Shoot",
+      "href": "/services/digital-marketing/insta-shoot"
+    },
+    {
+      "label": "WhatsApp Marketing & Automation",
+      "href": "/services/digital-marketing/whatsapp-marketing"
+    },
+    {
+      "label": "Local SEO & Google Business Profile",
+      "href": "/services/digital-marketing/seo"
+    }
   ],
   "cta": {
     "body": "Get results like these for your business.",
@@ -120,6 +174,5 @@
     "primaryHref": "/contact",
     "secondaryLabel": "Chat on WhatsApp",
     "secondaryHref": "https://wa.me/919398682206"
-  },
-  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+  }
 }

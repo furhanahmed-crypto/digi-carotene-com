@@ -413,10 +413,6 @@ export const homeSections = {
     headline: "Where Is Your Growth Leaking?",
     body: "Get a free growth audit. We'll review your ads, funnel, website and social presence, then show you the three fastest wins to lower cost per lead and grow revenue.",
     primary: { label: "Get Your Free Growth Audit", href: "/contact" },
-    secondary: {
-      label: "Talk to Our Founders",
-      href: "/contact",
-    },
   },
   meta: {
     title: "Digital Marketing Agency in Hyderabad | Digi Carotene",

@@ -32,13 +32,19 @@
     "/services/digital-marketing/growth-marketing",
     "/blog/whatsapp-business-api-india"
   ],
-  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "schema": [
+    "Article",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
   "h1": "How a Private Engineering College Can Get 2.5x More Admissions in One Season",
   "quickAnswer": "In this benchmark scenario, a private engineering college spending ₹12 lakh across a four-month admission season runs programme-level ads, qualifying lead forms and a WhatsApp nurture sequence aimed at students and parents. Admissions from digital rise from 48 to 122, and cost per admission falls from ₹25,000 to ₹9,836.",
   "headlineMetric": "−61%",
   "headlineMetricLabel": "Cost per admission",
   "cardSummary": "2.5x more admissions from digital in one season, with cost per admission down from ₹25,000 to under ₹10,000.",
-  "tags": ["Education"],
+  "tags": [
+    "Education"
+  ],
   "homeFeatured": false,
   "businessPattern": {
     "type": "Single campus, 6 UG and PG programmes, state-level intake",
@@ -77,16 +83,52 @@
   ],
   "resultsTitle": "Results (4-Month Season)",
   "results": {
-    "headers": ["Metric", "Previous season", "This season", "Benchmark basis"],
+    "headers": [
+      "Metric",
+      "Previous season",
+      "This season"
+    ],
     "rows": [
-      ["Season ad spend", "₹12 lakh", "₹12 lakh", "—"],
-      ["Cost per lead", "₹520", "₹310", "Indian education Meta CPL ₹200–450 (OwlClaw); ~₹130–350 (Sotros, Q1–Q2 2026)"],
-      ["Leads in season", "2,300", "3,870", "Spend ÷ CPL"],
-      ["Lead-to-application rate", "6%", "9%", "Modelled effect of qualifying forms and nurture"],
-      ["Applications", "138", "348", "Leads × application rate"],
-      ["Application-to-admission rate", "35%", "35%", "Held constant"],
-      ["Admissions from digital", "48", "122", "Applications × admission rate"],
-      ["Cost per admission", "₹25,000", "₹9,836", "Spend ÷ admissions (−61%)"]
+      [
+        "Season ad spend",
+        "₹12 lakh",
+        "₹12 lakh"
+      ],
+      [
+        "Cost per lead",
+        "₹520",
+        "₹310"
+      ],
+      [
+        "Leads in season",
+        "2,300",
+        "3,870"
+      ],
+      [
+        "Lead-to-application rate",
+        "6%",
+        "9%"
+      ],
+      [
+        "Applications",
+        "138",
+        "348"
+      ],
+      [
+        "Application-to-admission rate",
+        "35%",
+        "35%"
+      ],
+      [
+        "Admissions from digital",
+        "48",
+        "122"
+      ],
+      [
+        "Cost per admission",
+        "₹25,000",
+        "₹9,836"
+      ]
     ]
   },
   "whatMadeTheDifference": "Treating admissions as a funnel, not a lead count. Qualifying questions and a ranked call list let counsellors spend their time on students likely to join, and the WhatsApp sequence kept the college in front of parents through a decision that takes months.",
@@ -109,11 +151,26 @@
     }
   ],
   "servicesUsed": [
-    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
-    {"label": "Growth Marketing", "href": "/services/digital-marketing/growth-marketing"},
-    {"label": "Content Marketing", "href": "/services/digital-marketing/content"},
-    {"label": "WhatsApp Marketing & Automation", "href": "/services/digital-marketing/whatsapp-marketing"},
-    {"label": "Web Design (landing pages)", "href": "/services/digital-marketing/web"}
+    {
+      "label": "Performance Marketing",
+      "href": "/services/digital-marketing/performance-marketing"
+    },
+    {
+      "label": "Growth Marketing",
+      "href": "/services/digital-marketing/growth-marketing"
+    },
+    {
+      "label": "Content Marketing",
+      "href": "/services/digital-marketing/content"
+    },
+    {
+      "label": "WhatsApp Marketing & Automation",
+      "href": "/services/digital-marketing/whatsapp-marketing"
+    },
+    {
+      "label": "Web Design (landing pages)",
+      "href": "/services/digital-marketing/web"
+    }
   ],
   "cta": {
     "body": "Get results like these for your business.",
@@ -121,6 +178,5 @@
     "primaryHref": "/contact",
     "secondaryLabel": "Chat on WhatsApp",
     "secondaryHref": "https://wa.me/919398682206"
-  },
-  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+  }
 }

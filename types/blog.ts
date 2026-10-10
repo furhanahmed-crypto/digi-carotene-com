@@ -1,6 +1,5 @@
 export type BlogAuthor = {
   name: string
-  role: string
   url: string
   linkedIn: string
 }

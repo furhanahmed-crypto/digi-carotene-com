@@ -81,7 +81,11 @@ export default function AboutPage() {
               />
             </div>
             <div data-reveal="image" className="lg:col-span-6">
-              <MediaFrame label="Team" aspect="photo" />
+              <MediaFrame
+                label="Team"
+                aspect="photo"
+                src="/assets/campaigns/04.webp"
+              />
             </div>
           </Reveal>
 

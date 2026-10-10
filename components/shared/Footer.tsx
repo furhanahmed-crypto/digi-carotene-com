@@ -10,6 +10,7 @@ import {
   whatsappHref,
 } from "@/constants/home/navigation"
 import { SiteLogo } from "@/components/shared/site-logo"
+import { SocialLinks } from "@/components/shared/social-links"
 
 const servicesNav = mainNav.find((item) => item.type === "groups")
 const serviceGroups =
@@ -70,30 +71,17 @@ export function Footer() {
               </p>
               <p>{siteContact.hoursShort}</p>
             </div>
-            <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground dark:text-white/65">
-              {siteContact.socials.map((social) => (
-                <li key={social.href}>
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={linkClass}
-                  >
-                    {social.label}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={linkClass}
-                >
-                  WhatsApp
-                </a>
-              </li>
-            </ul>
+            <div className="flex flex-wrap items-center gap-3">
+              <SocialLinks />
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-muted-foreground underline decoration-brand-yellow underline-offset-4 transition-colors hover:text-foreground dark:text-white/65"
+              >
+                WhatsApp
+              </a>
+            </div>
             <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground dark:text-white/65">
               <li>
                 <Link href="/digital-marketing-agency-hyderabad" className={linkClass}>

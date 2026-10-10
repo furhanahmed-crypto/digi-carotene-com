@@ -32,7 +32,10 @@ export function ServiceCta({ name }: ServiceCtaProps) {
           metrics that prove it.
         </p>
         <div data-reveal="cta" className="mt-8">
-          <ConversationActions serviceName={name} />
+          <ConversationActions
+            serviceName={name}
+            label="Start a conversation"
+          />
         </div>
       </Reveal>
     </SectionLayout>

@@ -113,5 +113,4 @@ export const globalMarketsStrip = [
   "USA",
   "Europe",
   "Denmark",
-  "India",
 ] as const

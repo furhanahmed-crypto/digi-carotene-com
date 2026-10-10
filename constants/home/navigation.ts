@@ -237,12 +237,13 @@ export const mainNav: NavItem[] = [
         description: "Local SEO, ads, social and activations.",
         icon: MapPin,
       },
-      {
-        title: "Bangalore",
-        href: "/digital-marketing-agency-bangalore",
-        description: "Serving Bangalore brands from Hyderabad.",
-        icon: MapPin,
-      },
+      // Hidden for now — Bangalore location page kept in codebase
+      // {
+      //   title: "Bangalore",
+      //   href: "/digital-marketing-agency-bangalore",
+      //   description: "Serving Bangalore brands from Hyderabad.",
+      //   icon: MapPin,
+      // },
       {
         title: "Global",
         href: "/global",
@@ -269,7 +270,7 @@ export const mainNav: NavItem[] = [
       },
       {
         title: "Free Growth Audit",
-        href: "/#growth-audit",
+        href: "/growth-audit",
         description: "Get your free three-win growth audit.",
         icon: ScanSearch,
       },
@@ -283,6 +284,7 @@ export const mainNav: NavItem[] = [
 ]
 
 export const contactHref = "/contact"
+export const growthAuditHref = "/growth-audit"
 
 /** WhatsApp deep link — number from digicarotene.com. */
 export const whatsappHref = siteContact.whatsappHref

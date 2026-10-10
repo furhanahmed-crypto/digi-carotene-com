@@ -6,7 +6,7 @@ import { Menu, X as XIcon } from "lucide-react"
 
 import { DesktopNav } from "@/components/home/desktop-nav"
 import { MobileNav } from "@/components/home/mobile-nav"
-import { contactHref } from "@/constants/home/navigation"
+import { growthAuditHref } from "@/constants/home/navigation"
 import { ModeToggle } from "@/components/shared/mode-toggle"
 import { SiteLogo } from "@/components/shared/site-logo"
 import { Button } from "@/components/ui/button"
@@ -58,10 +58,10 @@ export function Header() {
             <Button
               variant="default"
               nativeButton={false}
-              render={<Link href={contactHref} />}
+              render={<Link href={growthAuditHref} />}
               className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
             >
-              Contact Us
+              Growth Audit
             </Button>
           </div>
 

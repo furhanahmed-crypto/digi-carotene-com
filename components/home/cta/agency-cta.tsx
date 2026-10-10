@@ -1,12 +1,9 @@
-import { ArrowRight } from "lucide-react"
-
 import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
 import { ctaDecor } from "@/components/home/section-decors"
 import { homeSections } from "@/constants/home/sections"
 import { Reveal } from "@/components/motion/reveal"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
-import { Button } from "@/components/ui/button"
 
 export function AgencyCta() {
   const { cta } = homeSections
@@ -35,16 +32,6 @@ export function AgencyCta() {
             ctaLocation="home_final_cta"
             className="bg-ink text-paper hover:bg-ink/90 hover:text-paper"
           />
-          <Button
-            nativeButton={false}
-            render={<a href={cta.secondary.href} />}
-            size="lg"
-            variant="outline"
-            className="border-border bg-card/80 text-foreground hover:border-foreground hover:bg-card dark:bg-transparent"
-          >
-            {cta.secondary.label}
-            <ArrowRight className="size-4" />
-          </Button>
         </div>
       </Reveal>
     </SectionLayout>

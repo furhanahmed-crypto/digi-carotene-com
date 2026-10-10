@@ -1,15 +1,15 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
-import { GoogleReviews } from "@/components/shared/google-reviews"
 import { PageHeader } from "@/components/shared/page-header"
 import { SectionLayout } from "@/components/shared/section-layout"
 import { pageWhiteDecor } from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { PageCta } from "@/components/shared/page-cta"
-import { TrackedCtaLink } from "@/components/shared/tracked-cta-link"
+import { StaticReviews } from "@/components/shared/static-reviews"
 import { Reveal } from "@/components/motion/reveal"
 import { Button } from "@/components/ui/button"
 import { whatsappHref, siteContact } from "@/constants/home/navigation"
@@ -24,21 +24,6 @@ import { metadataFor } from "@/lib/seo/page-meta"
 export const metadata: Metadata = metadataFor(
   "/digital-marketing-agency-hyderabad"
 )
-
-const mixSteps = [
-  {
-    title: "Understand your business model",
-    body: "Customers, margins, sales cycle and what's working today.",
-  },
-  {
-    title: "Choose the right services",
-    body: "Only the channels that fit your goals and budget.",
-  },
-  {
-    title: "Measure in leads and revenue",
-    body: "Cost per lead, ROAS and repeat customers, reported monthly.",
-  },
-] as const
 
 const digitalServices = [
   {
@@ -91,9 +76,6 @@ const digitalServices = [
     body: "In-house photo and reel shoots at your outlet, anywhere in Hyderabad.",
     href: "/services/digital-marketing/insta-shoot/",
   },
-] as const
-
-const secondaryServices = [
   {
     title: "BTL Activations",
     body: "Mall, society, campus and festival activations measured with QR, WhatsApp and offer codes.",
@@ -164,29 +146,6 @@ export default function HyderabadAgencyPage() {
 
               <div
                 data-reveal-group
-                className="mt-10 grid gap-4 sm:grid-cols-3"
-              >
-                {mixSteps.map((step, index) => (
-                  <article
-                    key={step.title}
-                    data-reveal="card"
-                    className="rounded-2xl border border-border bg-secondary/40 p-5"
-                  >
-                    <p className="text-xs font-semibold tracking-loose text-muted-foreground uppercase">
-                      Step {index + 1}
-                    </p>
-                    <h3 className="mt-2 font-display text-lg font-medium">
-                      {step.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {step.body}
-                    </p>
-                  </article>
-                ))}
-              </div>
-
-              <div
-                data-reveal-group
                 className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
               >
                 {digitalServices.map((item) => (
@@ -206,27 +165,6 @@ export default function HyderabadAgencyPage() {
                 ))}
               </div>
 
-              <div
-                data-reveal-group
-                className="mt-4 grid gap-4 sm:grid-cols-2"
-              >
-                {secondaryServices.map((item) => (
-                  <Link
-                    key={item.title}
-                    href={item.href}
-                    data-reveal="card"
-                    className="group rounded-2xl border border-dashed border-border bg-secondary/30 p-5 transition-colors hover:border-foreground/30"
-                  >
-                    <h3 className="font-display text-lg font-medium group-hover:underline">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {item.body}
-                    </p>
-                  </Link>
-                ))}
-              </div>
-
               <div data-reveal="cta" className="mt-8">
                 <OpenGrowthAuditButton
                   label="Get a Free Growth Audit"
@@ -237,7 +175,7 @@ export default function HyderabadAgencyPage() {
             </Reveal>
           </div>
 
-          <GoogleReviews title="What Hyderabad Clients Say" />
+          <StaticReviews title="What Hyderabad Clients Say" />
 
           <div className="rounded-2xl border border-border bg-[#f3efe6] p-6 md:p-8 dark:bg-secondary">
             <Reveal>
@@ -261,10 +199,8 @@ export default function HyderabadAgencyPage() {
               <PageCta
                 title="Ready to grow in Hyderabad?"
                 action={
-                  <TrackedCtaLink
-                    href="/contact/"
+                  <OpenEnquiryButton
                     label="Contact Us"
-                    ctaLocation="hyderabad_final_cta"
                     className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
                   />
                 }

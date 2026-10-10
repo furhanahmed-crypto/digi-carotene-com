@@ -10,7 +10,7 @@ import { WhoWeWorkWith } from "@/components/home/audiences/who-we-work-with"
 import { ResultsSpeak } from "@/components/home/results/results-speak"
 import { GrowthFramework } from "@/components/home/growth-framework/growth-framework"
 import { Differentiators } from "@/components/home/ratings/differentiators"
-import { VisualShowcase } from "@/components/home/VisualShowcase"
+// import { VisualShowcase } from "@/components/home/VisualShowcase"
 import { CreativeReels } from "@/components/home/reels/creative-reels"
 import { FAQ } from "@/components/home/FAQ"
 import { AgencyCta } from "@/components/home/cta/agency-cta"
@@ -31,7 +31,9 @@ export default function Page() {
       <ResultsSpeak />
       <GrowthFramework />
       <Differentiators />
+      {/* Hidden for now — campaign assets pending confirmation
       <VisualShowcase />
+      */}
       <CreativeReels />
       <FAQ />
       <AgencyCta />

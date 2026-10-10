@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
+import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { GlobalClientStories } from "@/components/global/global-client-stories"
 import {
   InfoCardGrid,
@@ -10,8 +9,6 @@ import {
 } from "@/components/inner/outline-section"
 import { PageCta } from "@/components/shared/page-cta"
 import { PageHeader } from "@/components/shared/page-header"
-import { Button } from "@/components/ui/button"
-import { contactHref } from "@/constants/home/navigation"
 import { bannerCtaPrimaryClassName } from "@/constants/ui/banner-cta"
 import { metadataFor } from "@/lib/seo/page-meta"
 
@@ -95,15 +92,10 @@ export default function GlobalPage() {
         description="Brands abroad work with Digi Carotene for one reason: a senior, full-stack marketing team that delivers like an in-house department — at a cost that makes long-term growth possible."
         mark="Global Markets"
         actions={
-          <Button
-            nativeButton={false}
-            render={<Link href={contactHref} />}
-            size="lg"
+          <OpenEnquiryButton
+            label="Enquire"
             className={bannerCtaPrimaryClassName}
-          >
-            Book a Call in Your Time Zone
-            <ArrowRight className="size-4" />
-          </Button>
+          />
         }
       />
 
@@ -119,15 +111,12 @@ export default function GlobalPage() {
       <OutlineSection
         tone="cream"
         mark="Services"
-        eyebrow="What we offer"
-        title="Services for Global Brands"
+        eyebrow="Capabilities"
+        title="What We Deliver for Global Brands"
       >
         <InfoCardGrid
           columns="3"
-          items={globalServices.map((title) => ({
-            title,
-            body: "Delivered by one Hyderabad pod with overlap hours in your time zone.",
-          }))}
+          items={globalServices.map((title) => ({ title }))}
         />
       </OutlineSection>
 
@@ -136,49 +125,34 @@ export default function GlobalPage() {
         mark="Markets"
         eyebrow="Where we work"
         title="Markets We Serve"
-        body="We support international brands remotely and India market-entry on the ground."
       >
-        <InfoCardGrid items={markets} colorful columns="3" />
+        <InfoCardGrid items={markets} columns="3" />
       </OutlineSection>
 
       <OutlineSection
         tone="cream"
-        mark="Why India"
-        eyebrow="Why Hyderabad"
-        title="Why Choose an Indian Agency — and Why Hyderabad"
-        body="Hyderabad is one of India's largest technology hubs, home to global capability centres of major tech companies. That talent pool — strong in tech, data and English-first communication — is what our team is built from."
-      />
-
-      <OutlineSection
-        tone="white"
-        mark="Coverage"
-        eyebrow="Availability"
-        title="Time-Zone Coverage"
+        mark="Hours"
+        eyebrow="Time zones"
+        title="How Collaboration Works Across Time Zones"
       >
-        <div
-          data-reveal="card"
-          className="overflow-x-auto rounded-2xl border border-border bg-card"
-        >
-          <table className="w-full min-w-[32rem] text-left text-sm">
-            <thead className="border-b border-border bg-secondary/60 text-xs tracking-label uppercase">
+        <div className="overflow-x-auto rounded-2xl border border-border">
+          <table className="w-full min-w-[36rem] text-left text-sm">
+            <thead className="bg-secondary/60 text-xs tracking-loose text-muted-foreground uppercase">
               <tr>
                 <th scope="col" className="px-5 py-3 font-medium">
-                  Client region
+                  Region
                 </th>
                 <th scope="col" className="px-5 py-3 font-medium">
-                  Overlap hours (IST)
+                  Overlap
                 </th>
                 <th scope="col" className="px-5 py-3 font-medium">
-                  Meeting windows
+                  Meetings
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="divide-y divide-border">
               {timeZones.map((region) => (
-                <tr
-                  key={region}
-                  className="border-b border-border last:border-0"
-                >
+                <tr key={region}>
                   <th scope="row" className="px-5 py-4 font-medium">
                     {region}
                   </th>
@@ -196,7 +170,7 @@ export default function GlobalPage() {
       </OutlineSection>
 
       <OutlineSection
-        tone="cream"
+        tone="white"
         mark="Trust"
         eyebrow="Contracts"
         title="Security, Contracts and Payments"
@@ -209,7 +183,7 @@ export default function GlobalPage() {
       </OutlineSection>
 
       <OutlineSection
-        tone="white"
+        tone="cream"
         mark="Proof"
         eyebrow="Stories"
         title="Global Client Stories"
@@ -219,7 +193,7 @@ export default function GlobalPage() {
       </OutlineSection>
 
       <OutlineSection
-        tone="cream"
+        tone="white"
         mark="FAQs"
         eyebrow="Questions"
         title="FAQs for International Clients"
@@ -244,9 +218,13 @@ export default function GlobalPage() {
       <PageCta
         band
         mark="Global clients"
-        title="Book a call in your time zone."
-        label="Book a Call"
-        href={contactHref}
+        title="Ready to talk about your market?"
+        action={
+          <OpenEnquiryButton
+            label="Enquire"
+            className="bg-ink text-paper hover:bg-ink/90 dark:bg-brand-yellow dark:text-ink dark:hover:bg-brand-yellow/90"
+          />
+        }
       />
     </div>
   )

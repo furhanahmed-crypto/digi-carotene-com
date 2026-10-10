@@ -56,7 +56,7 @@ const checkboxClassName =
 type GrowthAuditFormProps = {
   ctaLocation: AuditCtaLocation
   initialIndustry?: string
-  registerDirty: (dirty: boolean) => void
+  registerDirty?: (dirty: boolean) => void
   onStepChange?: (step: GrowthAuditStep) => void
 }
 
@@ -98,7 +98,7 @@ export function GrowthAuditForm({
   React.useEffect(() => {
     if (!hydrated.current) return
     persistForm(form)
-    registerDirty(formIsDirty(form))
+    registerDirty?.(formIsDirty(form))
   }, [form, registerDirty])
 
   React.useEffect(() => {
@@ -235,7 +235,7 @@ export function GrowthAuditForm({
     })
 
     clearFormStorage()
-    registerDirty(false)
+    registerDirty?.(false)
 
     const href = buildGrowthAuditThankYouHref({
       name: firstNameFrom(normalized.full_name),

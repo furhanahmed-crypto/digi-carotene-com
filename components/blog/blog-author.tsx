@@ -19,7 +19,6 @@ export function BlogAuthorBox({ author, dateModified }: BlogAuthorBoxProps) {
           Author
         </p>
         <p className="mt-2 font-display text-xl font-medium">{author.name}</p>
-        <p className="mt-1 text-sm text-muted-foreground">{author.role}</p>
         <p className="mt-2 text-sm text-muted-foreground">
           Last updated {formatBlogDate(dateModified)}
         </p>

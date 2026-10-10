@@ -31,13 +31,19 @@
     "/services/digital-marketing/whatsapp-marketing",
     "/blog/nmc-advertising-guidelines-2026-doctors-hospitals"
   ],
-  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "schema": [
+    "Article",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
   "h1": "How a Dermatology Clinic Can Cut Cost per Appointment by 66% in 90 Days",
   "quickAnswer": "In this benchmark scenario, a single-location dermatology clinic spending ₹60,000 a month moves budget to Google Search, swaps discount ads for NMC-compliant educational Reels, and replies to every enquiry on WhatsApp within five minutes. Booked appointments rise from 35 to 104 a month, and cost per appointment falls from ₹1,714 to ₹577.",
   "headlineMetric": "−66%",
   "headlineMetricLabel": "Cost per appointment",
   "cardSummary": "Cost per booked appointment down from ₹1,700 to under ₹600 in 90 days, at the same ad budget.",
-  "tags": ["Healthcare"],
+  "tags": [
+    "Healthcare"
+  ],
   "homeFeatured": true,
   "businessPattern": {
     "type": "Single-location specialist clinic, 2 consultant dermatologists",
@@ -76,14 +82,42 @@
   ],
   "resultsTitle": "Results (90 Days)",
   "results": {
-    "headers": ["Metric", "Before", "After 90 days", "Benchmark basis"],
+    "headers": [
+      "Metric",
+      "Before",
+      "After 90 days"
+    ],
     "rows": [
-      ["Monthly ad spend", "₹60,000", "₹60,000", "—"],
-      ["Cost per lead", "₹420", "₹230", "Indian healthcare Meta CPL ₹180–380 (OwlClaw)"],
-      ["Leads per month", "140", "260", "Spend ÷ CPL"],
-      ["Enquiry-to-appointment rate", "25%", "40%", "Modelled effect of instant WhatsApp follow-up"],
-      ["Booked appointments per month", "35", "104", "Leads × booking rate"],
-      ["Cost per booked appointment", "₹1,714", "₹577", "Spend ÷ appointments (−66%)"]
+      [
+        "Monthly ad spend",
+        "₹60,000",
+        "₹60,000"
+      ],
+      [
+        "Cost per lead",
+        "₹420",
+        "₹230"
+      ],
+      [
+        "Leads per month",
+        "140",
+        "260"
+      ],
+      [
+        "Enquiry-to-appointment rate",
+        "25%",
+        "40%"
+      ],
+      [
+        "Booked appointments per month",
+        "35",
+        "104"
+      ],
+      [
+        "Cost per booked appointment",
+        "₹1,714",
+        "₹577"
+      ]
     ]
   },
   "whatMadeTheDifference": "Speed of follow-up, not ad targeting. Most of the gain came from booking 40% of enquiries instead of 25%. Google Search brought higher-intent patients, and the instant WhatsApp reply caught them before they called the next clinic.",
@@ -106,10 +140,22 @@
     }
   ],
   "servicesUsed": [
-    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
-    {"label": "Local SEO & Google Business Profile", "href": "/services/digital-marketing/seo"},
-    {"label": "WhatsApp Marketing & Automation", "href": "/services/digital-marketing/whatsapp-marketing"},
-    {"label": "Content Marketing", "href": "/services/digital-marketing/content"}
+    {
+      "label": "Performance Marketing",
+      "href": "/services/digital-marketing/performance-marketing"
+    },
+    {
+      "label": "Local SEO & Google Business Profile",
+      "href": "/services/digital-marketing/seo"
+    },
+    {
+      "label": "WhatsApp Marketing & Automation",
+      "href": "/services/digital-marketing/whatsapp-marketing"
+    },
+    {
+      "label": "Content Marketing",
+      "href": "/services/digital-marketing/content"
+    }
   ],
   "cta": {
     "body": "Get results like these for your business.",
@@ -117,6 +163,5 @@
     "primaryHref": "/contact",
     "secondaryLabel": "Chat on WhatsApp",
     "secondaryHref": "https://wa.me/919398682206"
-  },
-  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+  }
 }

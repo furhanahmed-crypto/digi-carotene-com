@@ -17,7 +17,10 @@ import { cn } from "@/lib/utils"
 
 export type ModalProps = {
   open: boolean
-  onOpenChange: (open: boolean) => void
+  onOpenChange: (
+    open: boolean,
+    eventDetails?: DialogPrimitive.Root.ChangeEventDetails
+  ) => void
   title: string
   description?: string
   children: ReactNode
@@ -30,6 +33,8 @@ export type ModalProps = {
    * full `true` scroll-lock blocks wheel on those popups.
    */
   modal?: DialogPrimitive.Root.Props["modal"]
+  /** When true, backdrop / outside presses do not close the dialog. */
+  disablePointerDismissal?: boolean
 }
 
 /**
@@ -51,6 +56,7 @@ export function Modal({
   contentClassName,
   showCloseButton = true,
   modal = "trap-focus",
+  disablePointerDismissal = false,
 }: ModalProps) {
   const lenis = useLenis()
 
@@ -81,7 +87,12 @@ export function Modal({
   }, [open, lenis])
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} modal={modal}>
+    <Dialog
+      open={open}
+      onOpenChange={onOpenChange}
+      modal={modal}
+      disablePointerDismissal={disablePointerDismissal}
+    >
       <DialogContent
         showCloseButton={showCloseButton}
         className={cn(

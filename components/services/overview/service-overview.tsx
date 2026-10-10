@@ -38,6 +38,7 @@ export function ServiceOverview({ name, whatIs }: ServiceOverviewProps) {
             <div data-reveal="cta" className="mt-8">
               <OpenEnquiryButton
                 serviceName={name}
+                label="Talk to our strategists"
                 className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
               />
             </div>

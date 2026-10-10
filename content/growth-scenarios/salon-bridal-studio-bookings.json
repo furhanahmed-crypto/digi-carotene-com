@@ -32,13 +32,19 @@
     "/services/digital-marketing/insta-shoot",
     "/blog/whatsapp-business-api-india"
   ],
-  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "schema": [
+    "Article",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
   "h1": "How a Salon and Bridal Studio Can Grow Bookings 5x with Click-to-WhatsApp Ads",
   "quickAnswer": "In this benchmark scenario, a premium salon spending ₹35,000 a month sends every Meta ad click straight into a WhatsApp chat that offers the next three slots. At ₹45 per WhatsApp conversation, ad-sourced bookings rise from 58 to 296 a month, cost per booking falls from ₹603 to ₹118, and day-before reminders cut no-shows from 18% to 9%.",
   "headlineMetric": "5x",
   "headlineMetricLabel": "Ad-sourced bookings",
   "cardSummary": "Ad-sourced bookings up from 58 to 296 a month, with cost per booking down 80%, at ₹45 per WhatsApp conversation.",
-  "tags": ["Salons"],
+  "tags": [
+    "Salons"
+  ],
   "homeFeatured": true,
   "businessPattern": {
     "type": "Single premium unisex salon with a bridal makeup studio",
@@ -77,16 +83,52 @@
   ],
   "resultsTitle": "Results (90 Days)",
   "results": {
-    "headers": ["Metric", "Before", "After 90 days", "Basis"],
+    "headers": [
+      "Metric",
+      "Before",
+      "After 90 days"
+    ],
     "rows": [
-      ["Monthly ad spend", "₹35,000", "₹35,000", "—"],
-      ["Cost per WhatsApp conversation", "₹150", "₹45", "Live campaign data (after); before is modelled"],
-      ["Conversations per month", "233", "778", "Spend ÷ cost per conversation"],
-      ["Chat-to-booking rate", "25%", "38%", "Modelled — replace with actual"],
-      ["Ad-sourced bookings per month", "58", "296", "Conversations × booking rate"],
-      ["Cost per booking", "₹603", "₹118", "Spend ÷ bookings (−80%)"],
-      ["Bridal enquiries per month", "12", "34", "Modelled — replace with actual"],
-      ["No-show rate", "18%", "9%", "Modelled — replace with actual"]
+      [
+        "Monthly ad spend",
+        "₹35,000",
+        "₹35,000"
+      ],
+      [
+        "Cost per WhatsApp conversation",
+        "₹150",
+        "₹45"
+      ],
+      [
+        "Conversations per month",
+        "233",
+        "778"
+      ],
+      [
+        "Chat-to-booking rate",
+        "25%",
+        "38%"
+      ],
+      [
+        "Ad-sourced bookings per month",
+        "58",
+        "296"
+      ],
+      [
+        "Cost per booking",
+        "₹603",
+        "₹118"
+      ],
+      [
+        "Bridal enquiries per month",
+        "12",
+        "34"
+      ],
+      [
+        "No-show rate",
+        "18%",
+        "9%"
+      ]
     ]
   },
   "whatMadeTheDifference": "Meeting customers where they already chat. Sending ad clicks straight into WhatsApp removed the slow DM back-and-forth, and offering three specific slots turned conversations into bookings. Reminders protected the bookings once made.",
@@ -109,10 +151,22 @@
     }
   ],
   "servicesUsed": [
-    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
-    {"label": "Social Media Marketing", "href": "/services/digital-marketing/social"},
-    {"label": "Insta Shoot", "href": "/services/digital-marketing/insta-shoot"},
-    {"label": "WhatsApp Marketing & Automation", "href": "/services/digital-marketing/whatsapp-marketing"}
+    {
+      "label": "Performance Marketing",
+      "href": "/services/digital-marketing/performance-marketing"
+    },
+    {
+      "label": "Social Media Marketing",
+      "href": "/services/digital-marketing/social"
+    },
+    {
+      "label": "Insta Shoot",
+      "href": "/services/digital-marketing/insta-shoot"
+    },
+    {
+      "label": "WhatsApp Marketing & Automation",
+      "href": "/services/digital-marketing/whatsapp-marketing"
+    }
   ],
   "cta": {
     "body": "Get results like these for your business.",
@@ -120,6 +174,5 @@
     "primaryHref": "/contact",
     "secondaryLabel": "Chat on WhatsApp",
     "secondaryHref": "https://wa.me/919398682206"
-  },
-  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+  }
 }

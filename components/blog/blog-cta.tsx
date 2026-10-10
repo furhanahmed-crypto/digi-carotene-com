@@ -1,6 +1,9 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { OpenGrowthAuditButton } from "@/components/growth-audit/open-growth-audit-button"
 import { Button } from "@/components/ui/button"
 import type { BlogCta } from "@/types/blog"
 
@@ -8,7 +11,17 @@ type BlogCtaBoxProps = {
   cta: BlogCta
 }
 
+function opensGrowthAudit(cta: BlogCta) {
+  return (
+    /growth audit/i.test(cta.primaryLabel) ||
+    cta.primaryHref.includes("growth-audit") ||
+    cta.primaryHref.includes("audit=1")
+  )
+}
+
 export function BlogCtaBox({ cta }: BlogCtaBoxProps) {
+  const auditPrimary = opensGrowthAudit(cta)
+
   return (
     <aside className="mt-12 rounded-2xl border border-ink/10 bg-brand-yellow p-6 text-ink md:p-8">
       <p className="text-xs font-medium tracking-widest uppercase">
@@ -18,15 +31,23 @@ export function BlogCtaBox({ cta }: BlogCtaBoxProps) {
         {cta.body}
       </p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <Button
-          nativeButton={false}
-          render={<Link href={cta.primaryHref} />}
-          size="lg"
-          className="bg-ink text-paper hover:bg-ink/90"
-        >
-          {cta.primaryLabel}
-          <ArrowRight className="size-4" />
-        </Button>
+        {auditPrimary ? (
+          <OpenGrowthAuditButton
+            label={cta.primaryLabel}
+            ctaLocation="blog_cta"
+            className="bg-ink text-paper hover:bg-ink/90"
+          />
+        ) : (
+          <Button
+            nativeButton={false}
+            render={<Link href={cta.primaryHref} />}
+            size="lg"
+            className="bg-ink text-paper hover:bg-ink/90"
+          >
+            {cta.primaryLabel}
+            <ArrowRight className="size-4" />
+          </Button>
+        )}
         <Button
           nativeButton={false}
           render={<Link href={cta.secondaryHref} />}

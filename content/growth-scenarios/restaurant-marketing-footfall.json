@@ -32,13 +32,19 @@
     "/services/digital-marketing/insta-shoot",
     "/blog/google-business-profile-checklist-hyderabad"
   ],
-  "schema": ["Article", "FAQPage", "BreadcrumbList"],
+  "schema": [
+    "Article",
+    "FAQPage",
+    "BreadcrumbList"
+  ],
   "h1": "How a Restaurant Can Fill Weekdays and Turn First Visits into Regulars",
   "quickAnswer": "In this benchmark scenario, a two-outlet restaurant spends ₹40,000 a month on radius-targeted Instagram Reels with a weekday first-visit offer redeemed on WhatsApp. It tracks 520 first visits a month at ₹77 each — about ₹3.38 lakh in sales, an 8.5x return — and repeat customers rise from 18% to 27%.",
   "headlineMetric": "8.5x",
   "headlineMetricLabel": "Return on ad spend",
   "cardSummary": "520 tracked first visits a month from Instagram, and repeat customers up from 18% to 27% in 90 days.",
-  "tags": ["Restaurants"],
+  "tags": [
+    "Restaurants"
+  ],
   "homeFeatured": true,
   "businessPattern": {
     "type": "Two outlets, dine-in plus delivery apps, regional menu",
@@ -77,15 +83,47 @@
   ],
   "resultsTitle": "Results (90 Days)",
   "results": {
-    "headers": ["Metric", "Before", "After 90 days", "Benchmark basis"],
+    "headers": [
+      "Metric",
+      "Before",
+      "After 90 days"
+    ],
     "rows": [
-      ["Monthly ad spend", "₹40,000 (boosted posts)", "₹40,000", "—"],
-      ["Google Maps direction requests / month", "180", "420", "Modelled from profile completeness and weekly activity"],
-      ["Tracked first visits from ads / month", "Not tracked", "520", "Indian Meta CPC ₹8–25 (OwlClaw) and restaurant search conversion rate ~8% (LocaliQ, US data)"],
-      ["Cost per tracked first visit", "—", "₹77", "Spend ÷ redemptions"],
-      ["Revenue from tracked visits / month", "—", "₹3.38 lakh", "520 visits × ₹650 average bill"],
-      ["Repeat-customer rate (90-day)", "18%", "27%", "Modelled effect of the WhatsApp loyalty loop"],
-      ["Return on ad spend", "—", "8.5x", "Revenue ÷ spend"]
+      [
+        "Monthly ad spend",
+        "₹40,000 (boosted posts)",
+        "₹40,000"
+      ],
+      [
+        "Google Maps direction requests / month",
+        "180",
+        "420"
+      ],
+      [
+        "Tracked first visits from ads / month",
+        "Not tracked",
+        "520"
+      ],
+      [
+        "Cost per tracked first visit",
+        "—",
+        "₹77"
+      ],
+      [
+        "Revenue from tracked visits / month",
+        "—",
+        "₹3.38 lakh"
+      ],
+      [
+        "Repeat-customer rate (90-day)",
+        "18%",
+        "27%"
+      ],
+      [
+        "Return on ad spend",
+        "—",
+        "8.5x"
+      ]
     ]
   },
   "whatMadeTheDifference": "Tracking. Once every first visit was counted through a WhatsApp redemption, the restaurant could see which outlet, day and creative paid back — and stop paying for the rest. The WhatsApp list also turned one-off diners into a channel the restaurant owns.",
@@ -108,11 +146,26 @@
     }
   ],
   "servicesUsed": [
-    {"label": "Performance Marketing", "href": "/services/digital-marketing/performance-marketing"},
-    {"label": "Social Media Marketing", "href": "/services/digital-marketing/social"},
-    {"label": "Insta Shoot", "href": "/services/digital-marketing/insta-shoot"},
-    {"label": "Local SEO & Google Business Profile", "href": "/services/digital-marketing/seo"},
-    {"label": "WhatsApp Marketing", "href": "/services/digital-marketing/whatsapp-marketing"}
+    {
+      "label": "Performance Marketing",
+      "href": "/services/digital-marketing/performance-marketing"
+    },
+    {
+      "label": "Social Media Marketing",
+      "href": "/services/digital-marketing/social"
+    },
+    {
+      "label": "Insta Shoot",
+      "href": "/services/digital-marketing/insta-shoot"
+    },
+    {
+      "label": "Local SEO & Google Business Profile",
+      "href": "/services/digital-marketing/seo"
+    },
+    {
+      "label": "WhatsApp Marketing",
+      "href": "/services/digital-marketing/whatsapp-marketing"
+    }
   ],
   "cta": {
     "body": "Get results like these for your business.",
@@ -120,6 +173,5 @@
     "primaryHref": "/contact",
     "secondaryLabel": "Chat on WhatsApp",
     "secondaryHref": "https://wa.me/919398682206"
-  },
-  "disclaimer": "Benchmark scenario: results are modelled from published industry benchmarks. Replace them with actual client data before presenting this as a client result."
+  }
 }

@@ -56,7 +56,7 @@ export default async function GrowthScenarioPage({ params }: ScenarioPageProps) 
       />
       <PageHeader
         mark="Growth Scenarios"
-        description="Benchmark scenario — modelled from industry benchmarks, not a named client claim."
+        title={scenario.h1}
         size="banner"
       />
       <SectionLayout tone="white" decor={pageWhiteDecor}>

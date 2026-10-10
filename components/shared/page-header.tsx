@@ -77,7 +77,7 @@ export function PageHeader({
         ) : null}
 
         {actions ? (
-          <div data-reveal="cta" className="mt-8 flex flex-col gap-3">
+          <div data-reveal="cta" className="mt-8 flex flex-col items-start gap-3">
             {actions}
           </div>
         ) : null}

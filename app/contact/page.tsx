@@ -12,10 +12,11 @@ import {
   pageWhiteDecor,
 } from "@/components/shared/page-decors"
 import { SectionMark } from "@/components/shared/section-mark"
+import { SocialLinks } from "@/components/shared/social-links"
+import { WhatsAppIcon } from "@/components/shared/whatsapp-icon"
 import { Button } from "@/components/ui/button"
 import { FormSelect } from "@/components/ui/form-select"
 import { siteContact, whatsappHref } from "@/constants/home/navigation"
-import { WhatsAppIcon } from "@/components/shared/whatsapp-icon"
 import {
   buildThankYouHref,
   enquiryServiceOptions,
@@ -241,41 +242,7 @@ export default function ContactPage() {
               />
             </div>
 
-            <div className="rounded-2xl border border-border bg-white/90 p-5 shadow-sm dark:bg-card">
-              <h3 className="font-display text-lg font-medium">
-                What happens next
-              </h3>
-              <ol className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
-                <li>
-                  <span className="font-medium text-foreground">1. Review —</span>{" "}
-                  A strategist studies your business, website and competitors.
-                </li>
-                <li>
-                  <span className="font-medium text-foreground">
-                    2. 30-minute call —
-                  </span>{" "}
-                  We discuss your goals, challenges and what we found.
-                </li>
-                <li>
-                  <span className="font-medium text-foreground">3. Your plan —</span>{" "}
-                  Scope, timelines and reportable targets — clearly written.
-                </li>
-              </ol>
-            </div>
-
-            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              {siteContact.socials.map((social) => (
-                <Link
-                  key={social.href}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium text-foreground underline decoration-brand-yellow underline-offset-4"
-                >
-                  {social.label}
-                </Link>
-              ))}
-            </div>
+            <SocialLinks />
           </aside>
         </div>
       </SectionLayout>

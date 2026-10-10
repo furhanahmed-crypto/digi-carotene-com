@@ -19,7 +19,7 @@ type OpenGrowthAuditButtonProps = {
   variant?: "default" | "outline" | "ghost" | "secondary" | "destructive" | "link"
 }
 
-/** Opens the growth-audit modal; no-JS fallback is /contact?audit=1. */
+/** Opens the growth-audit modal; no-JS fallback is /growth-audit. */
 export function OpenGrowthAuditButton({
   label,
   ctaLocation,
