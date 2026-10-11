@@ -1,5 +1,7 @@
 export type FormKind = "growth_audit" | "enquiry" | "contact"
 
+
+
 type SubmitPayload = {
   form: FormKind
   [key: string]: string | number | boolean | string[] | undefined
