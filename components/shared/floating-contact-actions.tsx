@@ -1,10 +1,12 @@
 "use client"
 
 import type { ReactNode } from "react"
+import { usePathname } from "next/navigation"
 import { Mail } from "lucide-react"
 
 import { useEnquiry } from "@/components/enquiry/enquiry-provider"
 import { whatsappHref } from "@/constants/home/navigation"
+import { isLandingPath } from "@/constants/landing/paths"
 import { cn } from "@/lib/utils"
 
 import { WhatsAppIcon } from "./whatsapp-icon"
@@ -92,7 +94,10 @@ function ExpandAction({
 }
 
 export function FloatingContactActions() {
+  const pathname = usePathname()
   const { openEnquiry } = useEnquiry()
+
+  if (isLandingPath(pathname)) return null
 
   return (
     <div

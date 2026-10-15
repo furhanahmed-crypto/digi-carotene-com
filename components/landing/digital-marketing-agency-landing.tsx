@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
+import { LandingFaqSection } from "@/components/landing/landing-faq-section"
 import { LandingMobileCallBar } from "@/components/landing/landing-mobile-call-bar"
 import { ProgressSteps } from "@/components/landing/progress-steps"
 import { TrackedContactLink } from "@/components/landing/tracked-contact-link"
@@ -17,7 +18,6 @@ import { SectionMark } from "@/components/shared/section-mark"
 import { StaticReviews } from "@/components/shared/static-reviews"
 import { Button } from "@/components/ui/button"
 import {
-  dmHydAreas,
   dmHydClosing,
   dmHydFaqs,
   dmHydHero,
@@ -389,64 +389,10 @@ export function DigitalMarketingAgencyLanding() {
         </div>
       </SectionLayout>
 
-      <SectionLayout tone="cream" decor={pageCreamDecor}>
-        <Reveal>
-          <SectionMark data-reveal="eyebrow">{dmHydAreas.eyebrow}</SectionMark>
-          <h2
-            data-reveal="heading"
-            className="mt-6 max-w-3xl font-display text-[28px] leading-heading font-medium tracking-display md:text-4xl"
-          >
-            {dmHydAreas.title}
-          </h2>
-          <p
-            data-reveal="text"
-            className="mt-4 max-w-2xl text-base leading-body text-muted-foreground"
-          >
-            {dmHydAreas.body}
-          </p>
-          <ul
-            data-reveal-group
-            className="mt-10 grid grid-cols-2 gap-x-4 gap-y-2 text-sm leading-body text-foreground/85 md:grid-cols-4"
-          >
-            {dmHydAreas.areas.map((area) => (
-              <li key={area} data-reveal="card">
-                {area}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </SectionLayout>
-
-      <SectionLayout tone="white" decor={pageWhiteDecor}>
-        <Reveal>
-          <SectionMark data-reveal="eyebrow">FAQ</SectionMark>
-          <h2
-            data-reveal="heading"
-            className="mt-6 max-w-3xl font-display text-[28px] leading-heading font-medium tracking-display md:text-4xl"
-          >
-            Questions about hiring a digital marketing agency in Hyderabad
-          </h2>
-          <div data-reveal-group className="mt-10 space-y-3">
-            {dmHydFaqs.map((faq, index) => (
-              <details
-                key={faq.question}
-                data-reveal="card"
-                open={index === 0}
-                className="group border border-line bg-background open:bg-yellow-tint"
-              >
-                <summary className="cursor-pointer list-none px-5 py-4 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring [&::-webkit-details-marker]:hidden">
-                  <h3 className="pr-8 font-display text-lg font-medium leading-title">
-                    {faq.question}
-                  </h3>
-                </summary>
-                <p className="border-t border-line px-5 py-4 text-base leading-body text-muted-foreground">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </Reveal>
-      </SectionLayout>
+      <LandingFaqSection
+        title="Questions about hiring a digital marketing agency in Hyderabad"
+        faqs={dmHydFaqs}
+      />
 
       <SectionLayout tone="yellow" decor={pageCtaDecor}>
         <Reveal className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-start">

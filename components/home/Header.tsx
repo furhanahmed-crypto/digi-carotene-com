@@ -13,16 +13,10 @@ import { ModeToggle } from "@/components/shared/mode-toggle"
 import { SiteLogo } from "@/components/shared/site-logo"
 import { Button } from "@/components/ui/button"
 import { growthAuditHref } from "@/constants/home/navigation"
+import { isLandingPath } from "@/constants/landing/paths"
 import { siteContact } from "@/constants/site/contact"
 import { useScrolled } from "@/hooks/use-scrolled"
 import { cn } from "@/lib/utils"
-
-const LANDING_PATHS = new Set([
-  "/website-development-company-hyderabad",
-  "/website-development-company-hyderabad/",
-  "/digital-marketing-agency-in-hyderabad",
-  "/digital-marketing-agency-in-hyderabad/",
-])
 
 function landingServiceName(pathname: string) {
   if (pathname.includes("website-development")) return "Website Development"
@@ -32,7 +26,7 @@ function landingServiceName(pathname: string) {
 
 export function Header() {
   const pathname = usePathname()
-  const isLanding = LANDING_PATHS.has(pathname)
+  const isLanding = isLandingPath(pathname)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const isScrolled = useScrolled(50)
 

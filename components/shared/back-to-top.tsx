@@ -2,14 +2,19 @@
 
 import { ArrowUp } from "lucide-react"
 import { useLenis } from "lenis/react"
+import { usePathname } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
+import { isLandingPath } from "@/constants/landing/paths"
 import { useScrolled } from "@/hooks/use-scrolled"
 import { cn } from "@/lib/utils"
 
 export function BackToTop() {
+  const pathname = usePathname()
   const isVisible = useScrolled(10)
   const lenis = useLenis()
+
+  if (isLandingPath(pathname)) return null
 
   const scrollToTop = () => {
     if (lenis) {

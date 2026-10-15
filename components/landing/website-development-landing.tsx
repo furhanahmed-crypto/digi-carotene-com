@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRight, Check } from "lucide-react"
 
 import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
+import { LandingFaqSection } from "@/components/landing/landing-faq-section"
 import { LandingMobileCallBar } from "@/components/landing/landing-mobile-call-bar"
 import { ProgressSteps } from "@/components/landing/progress-steps"
 import { TrackedContactLink } from "@/components/landing/tracked-contact-link"
@@ -16,7 +17,6 @@ import { SectionLayout } from "@/components/shared/section-layout"
 import { SectionMark } from "@/components/shared/section-mark"
 import { Button } from "@/components/ui/button"
 import {
-  websiteDevHydAreas,
   websiteDevHydClosing,
   websiteDevHydFaqs,
   websiteDevHydHero,
@@ -106,17 +106,25 @@ export function WebsiteDevelopmentLanding() {
       >
         <Reveal
           mode="load"
-          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-10 xl:gap-14"
+          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-8 xl:gap-12"
         >
-          <div>
+          <div className="min-w-0">
             <SectionMark data-reveal="eyebrow" tone="paper">
               {websiteDevHydHero.eyebrow}
             </SectionMark>
             <h1
               data-reveal="heading"
-              className="mt-6 font-display text-4xl leading-display-sm font-medium tracking-display text-ink md:text-[44px] lg:text-[52px] dark:text-foreground"
+              className="mt-6 max-w-none font-display text-4xl leading-display-sm font-medium tracking-display text-ink md:text-[44px] lg:text-[38px] xl:text-[42px] 2xl:text-[44px] dark:text-foreground"
             >
-              {websiteDevHydHero.h1}
+              <span className="lg:block lg:whitespace-nowrap">
+                Website{"\u00A0"}Development
+              </span>{" "}
+              <span className="lg:block lg:whitespace-nowrap">
+                Company{"\u00A0"}in{"\u00A0"}Hyderabad.
+              </span>{" "}
+              <span className="lg:block lg:whitespace-nowrap">
+                Live{"\u00A0"}in{"\u00A0"}7{"\u00A0"}days.
+              </span>
             </h1>
             <p
               data-reveal="text"
@@ -480,66 +488,10 @@ export function WebsiteDevelopmentLanding() {
         </Reveal>
       </SectionLayout>
 
-      <SectionLayout tone="cream" decor={pageCreamDecor}>
-        <Reveal>
-          <SectionMark data-reveal="eyebrow">
-            {websiteDevHydAreas.eyebrow}
-          </SectionMark>
-          <h2
-            data-reveal="heading"
-            className="mt-6 max-w-3xl font-display text-[28px] leading-heading font-medium tracking-display md:text-4xl"
-          >
-            {websiteDevHydAreas.title}
-          </h2>
-          <p
-            data-reveal="text"
-            className="mt-4 max-w-2xl text-base leading-body text-muted-foreground"
-          >
-            {websiteDevHydAreas.body}
-          </p>
-          <ul
-            data-reveal-group
-            className="mt-10 grid grid-cols-2 gap-x-4 gap-y-2 text-sm leading-body text-foreground/85 md:grid-cols-4"
-          >
-            {websiteDevHydAreas.areas.map((area) => (
-              <li key={area} data-reveal="card">
-                {area}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-      </SectionLayout>
-
-      <SectionLayout tone="white" decor={pageWhiteDecor}>
-        <Reveal>
-          <SectionMark data-reveal="eyebrow">FAQ</SectionMark>
-          <h2
-            data-reveal="heading"
-            className="mt-6 max-w-3xl font-display text-[28px] leading-heading font-medium tracking-display md:text-4xl"
-          >
-            Questions about website development in Hyderabad
-          </h2>
-          <div data-reveal-group className="mt-10 space-y-3">
-            {websiteDevHydFaqs.map((faq, index) => (
-              <details
-                key={faq.question}
-                data-reveal="card"
-                open={index === 0}
-                className="group border border-line bg-background open:bg-yellow-tint"
-              >
-                <summary className="cursor-pointer list-none px-5 py-4 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring [&::-webkit-details-marker]:hidden">
-                  <h3 className="font-display text-lg font-medium leading-title pr-8">
-                    {faq.question}
-                  </h3>
-                </summary>
-                <p className="border-t border-line px-5 py-4 text-base leading-body text-muted-foreground">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </Reveal>
-      </SectionLayout>
+      <LandingFaqSection
+        title="Questions about website development in Hyderabad"
+        faqs={websiteDevHydFaqs}
+      />
 
       <SectionLayout tone="yellow" decor={pageCtaDecor}>
         <Reveal className="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-start">
