@@ -35,28 +35,60 @@ import {
 } from "@/constants/ui/banner-cta"
 import { cn } from "@/lib/utils"
 
+/** Decorative desktop browser — landscape site preview (not a phone frame). */
 function BrowserMockup() {
   return (
     <div
       aria-hidden
-      className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-ink/15 bg-paper shadow-lg dark:border-border dark:bg-card"
+      className="mx-auto w-full max-w-[34rem] overflow-hidden rounded-xl border border-ink/15 bg-paper shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)] dark:border-border dark:bg-card"
     >
-      <div className="flex items-center gap-1.5 border-b border-ink/10 bg-ink/[0.04] px-3 py-2.5 dark:border-border dark:bg-secondary">
-        <span className="size-2.5 rounded-full bg-ink/20" />
-        <span className="size-2.5 rounded-full bg-ink/20" />
-        <span className="size-2.5 rounded-full bg-ink/20" />
-        <span className="ml-2 h-5 flex-1 rounded-md bg-ink/8 dark:bg-foreground/10" />
-      </div>
-      <div className="space-y-3 p-5">
-        <div className="h-3 w-24 rounded bg-brand-yellow" />
-        <div className="h-4 w-[85%] rounded bg-ink/15 dark:bg-foreground/20" />
-        <div className="h-3 w-full rounded bg-ink/8 dark:bg-foreground/10" />
-        <div className="h-3 w-[90%] rounded bg-ink/8 dark:bg-foreground/10" />
-        <div className="mt-4 grid grid-cols-2 gap-2">
-          <div className="h-16 rounded-lg bg-ink/6 dark:bg-foreground/8" />
-          <div className="h-16 rounded-lg bg-ink/6 dark:bg-foreground/8" />
+      <div className="flex items-center gap-2 border-b border-ink/10 bg-ink/[0.04] px-3.5 py-2.5 dark:border-border dark:bg-secondary">
+        <span className="size-2.5 shrink-0 rounded-full bg-[#FF5F57]" />
+        <span className="size-2.5 shrink-0 rounded-full bg-[#FEBC2E]" />
+        <span className="size-2.5 shrink-0 rounded-full bg-[#28C840]" />
+        <div className="ml-1 flex h-6 flex-1 items-center rounded-md bg-paper px-3 text-[10px] text-ink/45 shadow-sm dark:bg-background dark:text-muted-foreground">
+          digicarotene.com/preview
         </div>
-        <div className="mt-2 h-9 w-32 rounded-full bg-brand-yellow" />
+      </div>
+      <div className="bg-paper p-4 sm:p-5 dark:bg-card">
+        <div className="flex items-center justify-between gap-3 border-b border-ink/8 pb-3 dark:border-border">
+          <div className="h-2.5 w-20 rounded-full bg-brand-yellow" />
+          <div className="hidden items-center gap-2 sm:flex">
+            <span className="h-1.5 w-10 rounded-full bg-ink/15" />
+            <span className="h-1.5 w-10 rounded-full bg-ink/15" />
+            <span className="h-1.5 w-10 rounded-full bg-ink/15" />
+            <span className="h-6 w-16 rounded-full bg-brand-yellow/90" />
+          </div>
+        </div>
+        <div className="mt-4 grid gap-4 sm:grid-cols-[1.2fr_0.8fr] sm:items-center">
+          <div className="space-y-2.5">
+            <div className="h-3 w-[92%] rounded bg-ink/20 dark:bg-foreground/25" />
+            <div className="h-3 w-[78%] rounded bg-ink/20 dark:bg-foreground/25" />
+            <div className="h-2 w-full rounded bg-ink/10 dark:bg-foreground/12" />
+            <div className="h-2 w-[88%] rounded bg-ink/10 dark:bg-foreground/12" />
+            <div className="pt-1">
+              <div className="h-8 w-28 rounded-full bg-brand-yellow" />
+            </div>
+          </div>
+          <div className="hidden aspect-[4/3] rounded-lg bg-gradient-to-br from-brand-yellow/35 via-ink/5 to-ink/10 sm:block dark:from-brand-yellow/25 dark:via-foreground/5 dark:to-foreground/10" />
+        </div>
+        <div className="mt-4 grid grid-cols-3 gap-2">
+          <div className="h-14 rounded-lg border border-ink/8 bg-ink/[0.03] p-2 dark:border-border dark:bg-foreground/5">
+            <div className="h-1.5 w-8 rounded bg-brand-yellow/80" />
+            <div className="mt-2 h-1.5 w-full rounded bg-ink/10" />
+            <div className="mt-1 h-1.5 w-[70%] rounded bg-ink/10" />
+          </div>
+          <div className="h-14 rounded-lg border border-ink/8 bg-ink/[0.03] p-2 dark:border-border dark:bg-foreground/5">
+            <div className="h-1.5 w-8 rounded bg-brand-yellow/80" />
+            <div className="mt-2 h-1.5 w-full rounded bg-ink/10" />
+            <div className="mt-1 h-1.5 w-[70%] rounded bg-ink/10" />
+          </div>
+          <div className="h-14 rounded-lg border border-ink/8 bg-ink/[0.03] p-2 dark:border-border dark:bg-foreground/5">
+            <div className="h-1.5 w-8 rounded bg-brand-yellow/80" />
+            <div className="mt-2 h-1.5 w-full rounded bg-ink/10" />
+            <div className="mt-1 h-1.5 w-[70%] rounded bg-ink/10" />
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -71,35 +103,9 @@ export function WebsiteDevelopmentLanding() {
         decor={pageHeaderDecor}
         aria-label="Page header"
       >
-        <nav
-          aria-label="Breadcrumb"
-          className="mb-6 text-sm text-ink/70 dark:text-muted-foreground"
-        >
-          <ol className="flex flex-wrap items-center gap-1.5">
-            <li>
-              <Link href="/" className="underline-offset-2 hover:underline">
-                Home
-              </Link>
-            </li>
-            <li aria-hidden>/</li>
-            <li>
-              <Link
-                href="/services/"
-                className="underline-offset-2 hover:underline"
-              >
-                Services
-              </Link>
-            </li>
-            <li aria-hidden>/</li>
-            <li className="font-medium text-ink dark:text-foreground">
-              Website Development Company in Hyderabad
-            </li>
-          </ol>
-        </nav>
-
         <Reveal
           mode="load"
-          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-12"
+          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-10 xl:gap-14"
         >
           <div>
             <SectionMark data-reveal="eyebrow" tone="paper">
@@ -176,7 +182,7 @@ export function WebsiteDevelopmentLanding() {
               ))}
             </ul>
           </div>
-          <div data-reveal="image" className="lg:justify-self-end">
+          <div data-reveal="image" className="w-full lg:justify-self-stretch">
             <BrowserMockup />
           </div>
         </Reveal>

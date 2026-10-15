@@ -36,44 +36,55 @@ import {
 } from "@/constants/ui/banner-cta"
 import { cn } from "@/lib/utils"
 
+/** Decorative monthly report card — bars only, no numbers (PDF §1). */
 function ReportCardGraphic() {
   const bars = [42, 68, 55, 82, 74, 90]
   return (
     <div
       aria-hidden
-      className="mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-ink/15 bg-paper shadow-lg dark:border-border dark:bg-card"
+      className="mx-auto w-full max-w-[34rem] overflow-hidden rounded-xl border border-ink/15 bg-paper shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)] dark:border-border dark:bg-card"
     >
-      <div className="border-b border-ink/10 bg-ink/[0.04] px-5 py-4 dark:border-border dark:bg-secondary">
-        <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
-          {dmHydHero.reportCard.title}
-        </p>
-        <p className="mt-1 font-display text-lg font-medium text-ink dark:text-foreground">
-          {dmHydHero.reportCard.business}
-        </p>
-        <p className="text-sm text-muted-foreground">{dmHydHero.reportCard.city}</p>
+      <div className="flex items-start justify-between gap-4 border-b border-ink/10 bg-ink/[0.04] px-5 py-4 dark:border-border dark:bg-secondary">
+        <div>
+          <p className="text-xs font-medium tracking-label text-muted-foreground uppercase">
+            {dmHydHero.reportCard.title}
+          </p>
+          <p className="mt-1 font-display text-lg font-medium text-ink dark:text-foreground">
+            {dmHydHero.reportCard.business}
+          </p>
+          <p className="text-sm text-muted-foreground">
+            {dmHydHero.reportCard.city}
+          </p>
+        </div>
+        <div className="hidden shrink-0 rounded-full bg-brand-yellow/90 px-3 py-1 text-[10px] font-semibold tracking-label text-ink uppercase sm:block">
+          Live
+        </div>
       </div>
-      <div className="space-y-4 p-5">
-        <div className="flex h-28 items-end gap-2">
+      <div className="space-y-5 p-5 sm:p-6">
+        <div className="flex h-32 items-end gap-2.5 sm:h-36 sm:gap-3">
           {bars.map((h, i) => (
             <div
               key={i}
-              className="flex-1 rounded-t bg-brand-yellow/80"
+              className="flex-1 rounded-t-md bg-brand-yellow/85"
               style={{ height: `${h}%` }}
             />
           ))}
         </div>
-        <ul className="grid grid-cols-2 gap-2 text-xs font-medium text-foreground/80">
+        <ul className="grid grid-cols-2 gap-2.5 text-xs font-medium text-foreground/80 sm:text-sm">
           {dmHydHero.reportCard.metrics.map((metric) => (
-            <li key={metric} className="rounded-md bg-ink/5 px-2.5 py-2 dark:bg-foreground/8">
+            <li
+              key={metric}
+              className="rounded-lg bg-ink/5 px-3 py-2.5 dark:bg-foreground/8"
+            >
               {metric}
             </li>
           ))}
         </ul>
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-2">
           {dmHydHero.reportCard.chips.map((chip) => (
             <span
               key={chip}
-              className="rounded-full border border-ink/10 px-2.5 py-1 text-[11px] font-medium text-ink/70 dark:border-border dark:text-muted-foreground"
+              className="rounded-full border border-ink/10 px-3 py-1 text-[11px] font-medium text-ink/70 dark:border-border dark:text-muted-foreground"
             >
               {chip}
             </span>
@@ -95,7 +106,7 @@ export function DigitalMarketingAgencyLanding() {
       >
         <Reveal
           mode="load"
-          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-12"
+          className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-10 xl:gap-14"
         >
           <div>
             <SectionMark data-reveal="eyebrow" tone="paper">
@@ -169,7 +180,7 @@ export function DigitalMarketingAgencyLanding() {
               ))}
             </ul>
           </div>
-          <div data-reveal="image" className="lg:justify-self-end">
+          <div data-reveal="image" className="w-full lg:justify-self-stretch">
             <ReportCardGraphic />
           </div>
         </Reveal>
