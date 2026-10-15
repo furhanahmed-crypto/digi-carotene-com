@@ -1,7 +1,9 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { LandingMobileCallBar } from "@/components/landing/landing-mobile-call-bar"
+import { ProgressSteps } from "@/components/landing/progress-steps"
 import { TrackedContactLink } from "@/components/landing/tracked-contact-link"
 import { Reveal } from "@/components/motion/reveal"
 import {
@@ -135,11 +137,16 @@ export function DigitalMarketingAgencyLanding() {
                   />
                 }
                 size="lg"
-                className={bannerCtaPrimaryClassName}
+                className={cn(bannerCtaPrimaryClassName, "lg:hidden")}
               >
                 WhatsApp us
                 <ArrowRight className="size-4" />
               </Button>
+              <OpenEnquiryButton
+                label="Enquire now"
+                serviceName="Digital Marketing"
+                className={cn(bannerCtaPrimaryClassName, "hidden lg:inline-flex")}
+              />
             </div>
             <p
               data-reveal="text"
@@ -243,8 +250,8 @@ export function DigitalMarketingAgencyLanding() {
       </SectionLayout>
 
       <SectionLayout tone="cream" decor={pageCreamDecor}>
-        <Reveal className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
-          <div>
+        <Reveal className="grid gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
             <SectionMark data-reveal="eyebrow">
               {dmHydReporting.eyebrow}
             </SectionMark>
@@ -261,15 +268,14 @@ export function DigitalMarketingAgencyLanding() {
               {dmHydReporting.body}
             </p>
           </div>
-          <ul data-reveal-group className="space-y-5">
+          <ul data-reveal-group className="lg:col-span-7">
             {dmHydReporting.items.map((item) => (
               <li
                 key={item.label}
                 data-reveal="card"
-                className="border border-line bg-background p-5"
+                className="border-b border-line py-5 first:pt-0 last:border-b-0 last:pb-0"
               >
-                <span className="text-xs font-medium tracking-label text-muted-foreground uppercase">
-                  <span className="mr-1.5 inline-block size-1.5 rounded-full bg-brand-yellow align-middle" />
+                <span className="text-xs font-medium tracking-label text-brand-yellow uppercase">
                   {item.label}
                 </span>
                 <p className="mt-2 font-display text-lg font-medium leading-title">
@@ -299,37 +305,14 @@ export function DigitalMarketingAgencyLanding() {
           >
             {dmHydProcess.body}
           </p>
-          <ol
-            data-reveal-group
-            className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {dmHydProcess.stages.map((stage, index) => (
-              <li
-                key={stage.title}
-                data-reveal="card"
-                className="relative border border-line bg-background p-5"
-              >
-                <span
-                  className={cn(
-                    "mb-3 flex size-3 rounded-full",
-                    index === dmHydProcess.stages.length - 1
-                      ? "bg-brand-yellow"
-                      : "bg-ink/20 dark:bg-foreground/25"
-                  )}
-                  aria-hidden
-                />
-                <span className="text-xs font-medium tracking-label text-muted-foreground uppercase">
-                  {stage.stage}
-                </span>
-                <h3 className="mt-2 font-display text-lg font-medium leading-title">
-                  {stage.title}
-                </h3>
-                <p className="mt-2 text-sm leading-body text-muted-foreground">
-                  {stage.body}
-                </p>
-              </li>
-            ))}
-          </ol>
+          <ProgressSteps
+            columns={4}
+            steps={dmHydProcess.stages.map((stage) => ({
+              label: stage.stage,
+              title: stage.title,
+              body: stage.body,
+            }))}
+          />
         </Reveal>
       </SectionLayout>
 
@@ -497,11 +480,16 @@ export function DigitalMarketingAgencyLanding() {
                   />
                 }
                 size="lg"
-                className={bannerCtaPrimaryClassName}
+                className={cn(bannerCtaPrimaryClassName, "lg:hidden")}
               >
                 Call {siteContact.phoneDisplay}
                 <ArrowRight className="size-4" />
               </Button>
+              <OpenEnquiryButton
+                label="Enquire now"
+                serviceName="Digital Marketing"
+                className={cn(bannerCtaPrimaryClassName, "hidden lg:inline-flex")}
+              />
               <Button
                 nativeButton={false}
                 render={

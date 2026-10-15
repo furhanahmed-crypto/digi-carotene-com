@@ -11,6 +11,7 @@ import {
 } from "@/constants/home/navigation"
 import { SiteLogo } from "@/components/shared/site-logo"
 import { SocialLinks } from "@/components/shared/social-links"
+import { WhatsAppIcon } from "@/components/shared/whatsapp-icon"
 
 const servicesNav = mainNav.find((item) => item.type === "groups")
 const serviceGroups =
@@ -71,15 +72,16 @@ export function Footer() {
               </p>
               <p>{siteContact.hoursShort}</p>
             </div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2">
               <SocialLinks />
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm font-medium text-muted-foreground underline decoration-brand-yellow underline-offset-4 transition-colors hover:text-foreground dark:text-white/65"
+                aria-label="WhatsApp"
+                className="inline-flex size-10 items-center justify-center rounded-full border border-border bg-brand-yellow text-ink transition-colors hover:bg-brand-yellow/90"
               >
-                WhatsApp
+                <WhatsAppIcon className="size-4" />
               </a>
             </div>
             <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground dark:text-white/65">

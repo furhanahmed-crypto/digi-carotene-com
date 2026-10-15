@@ -1,7 +1,9 @@
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react"
 
+import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { LandingMobileCallBar } from "@/components/landing/landing-mobile-call-bar"
+import { ProgressSteps } from "@/components/landing/progress-steps"
 import { TrackedContactLink } from "@/components/landing/tracked-contact-link"
 import { Reveal } from "@/components/motion/reveal"
 import {
@@ -137,11 +139,16 @@ export function WebsiteDevelopmentLanding() {
                   />
                 }
                 size="lg"
-                className={bannerCtaPrimaryClassName}
+                className={cn(bannerCtaPrimaryClassName, "lg:hidden")}
               >
                 WhatsApp us
                 <ArrowRight className="size-4" />
               </Button>
+              <OpenEnquiryButton
+                label="Enquire now"
+                serviceName="Website Development"
+                className={cn(bannerCtaPrimaryClassName, "hidden lg:inline-flex")}
+              />
             </div>
             <p
               data-reveal="text"
@@ -167,8 +174,8 @@ export function WebsiteDevelopmentLanding() {
       </SectionLayout>
 
       <SectionLayout tone="cream" decor={pageCreamDecor}>
-        <Reveal className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
-          <div>
+        <Reveal className="grid gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+          <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
             <SectionMark data-reveal="eyebrow">
               {websiteDevHydPain.eyebrow}
             </SectionMark>
@@ -185,12 +192,12 @@ export function WebsiteDevelopmentLanding() {
               {websiteDevHydPain.body}
             </p>
           </div>
-          <ul data-reveal-group className="space-y-5">
+          <ul data-reveal-group className="lg:col-span-7">
             {websiteDevHydPain.items.map((item) => (
               <li
                 key={item.label}
                 data-reveal="card"
-                className="border border-line bg-background p-5"
+                className="border-b border-line py-5 first:pt-0 last:border-b-0 last:pb-0"
               >
                 <span className="text-xs font-medium tracking-label text-muted-foreground uppercase">
                   {item.label}
@@ -293,7 +300,7 @@ export function WebsiteDevelopmentLanding() {
                 <p className="mt-3 text-sm leading-body text-muted-foreground">
                   {pkg.body}
                 </p>
-                <ul className="mt-5 flex-1 space-y-2 text-sm leading-body text-foreground/85">
+                <ul className="mt-5 flex-1 space-y-2.5 text-sm leading-body text-foreground/85">
                   {pkg.features.map((feature) => {
                     const link =
                       "featureLink" in pkg && pkg.featureLink
@@ -301,8 +308,12 @@ export function WebsiteDevelopmentLanding() {
                         : null
                     if (link && feature === link.match) {
                       return (
-                        <li key={feature} className="flex gap-2">
-                          <span className="mt-2 size-1 shrink-0 rounded-full bg-brand-yellow" />
+                        <li key={feature} className="flex gap-2.5">
+                          <Check
+                            className="mt-0.5 size-4 shrink-0 text-brand-yellow"
+                            strokeWidth={2.5}
+                            aria-hidden
+                          />
                           <span>
                             1 month of{" "}
                             <Link
@@ -316,8 +327,12 @@ export function WebsiteDevelopmentLanding() {
                       )
                     }
                     return (
-                      <li key={feature} className="flex gap-2">
-                        <span className="mt-2 size-1 shrink-0 rounded-full bg-brand-yellow" />
+                      <li key={feature} className="flex gap-2.5">
+                        <Check
+                          className="mt-0.5 size-4 shrink-0 text-brand-yellow"
+                          strokeWidth={2.5}
+                          aria-hidden
+                        />
                         <span>{feature}</span>
                       </li>
                     )
@@ -380,37 +395,14 @@ export function WebsiteDevelopmentLanding() {
           >
             {websiteDevHydTimeline.body}
           </p>
-          <ol
-            data-reveal-group
-            className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
-          >
-            {websiteDevHydTimeline.steps.map((step, index) => (
-              <li
-                key={step.title}
-                data-reveal="card"
-                className="relative border border-line bg-background p-5"
-              >
-                <span
-                  className={cn(
-                    "mb-3 flex size-3 rounded-full",
-                    index === websiteDevHydTimeline.steps.length - 1
-                      ? "bg-brand-yellow"
-                      : "bg-ink/20 dark:bg-foreground/25"
-                  )}
-                  aria-hidden
-                />
-                <span className="text-xs font-medium tracking-label text-muted-foreground uppercase">
-                  {step.day}
-                </span>
-                <h3 className="mt-2 font-display text-lg font-medium leading-title">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-sm leading-body text-muted-foreground">
-                  {step.body}
-                </p>
-              </li>
-            ))}
-          </ol>
+          <ProgressSteps
+            columns={6}
+            steps={websiteDevHydTimeline.steps.map((step) => ({
+              label: step.day,
+              title: step.title,
+              body: step.body,
+            }))}
+          />
           <p
             data-reveal="text"
             className="mt-8 max-w-2xl text-base leading-body text-muted-foreground"
@@ -581,11 +573,16 @@ export function WebsiteDevelopmentLanding() {
                   />
                 }
                 size="lg"
-                className={bannerCtaPrimaryClassName}
+                className={cn(bannerCtaPrimaryClassName, "lg:hidden")}
               >
                 Call {siteContact.phoneDisplay}
                 <ArrowRight className="size-4" />
               </Button>
+              <OpenEnquiryButton
+                label="Enquire now"
+                serviceName="Website Development"
+                className={cn(bannerCtaPrimaryClassName, "hidden lg:inline-flex")}
+              />
               <Button
                 nativeButton={false}
                 render={
