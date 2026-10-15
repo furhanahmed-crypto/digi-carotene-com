@@ -67,6 +67,11 @@ export const pageMetaBySlug = {
     title: "Website Design Company Hyderabad, Bangalore",
     description: "Fast, mobile-first, SEO and AEO-ready websites and landing pages built to convert. Website design and development in Hyderabad and Bangalore.",
   },
+  "/website-development-company-hyderabad": {
+    title: "Website Development Company in Hyderabad | Digi Carotene",
+    description:
+      "Website development company in Hyderabad. Fast, mobile-first business websites, landing pages and e-commerce, live in as little as 7 days. Call Digi Carotene for a quote.",
+  },
   "/services/digital-marketing/personal-branding": {
     title: "Personal Branding Agency Bangalore & Hyderabad",
     description: "LinkedIn, Instagram and PR-led personal branding for founders, doctors and leaders in Bangalore and Hyderabad. Become the name your industry trusts.",
@@ -126,6 +131,11 @@ export const pageMetaBySlug = {
   "/digital-marketing-agency-hyderabad": {
     title: "Best Digital Marketing Agency in Hyderabad",
     description: "Hyderabad's data-led digital marketing agency. 7+ years, 300+ clients. SEO, Google and Meta ads, social, web and BTL activations across the city.",
+  },
+  "/digital-marketing-agency-in-hyderabad": {
+    title: "Digital Marketing Agency in Hyderabad | Digi Carotene",
+    description:
+      "Digital marketing agency in Hyderabad for Google ads, Meta ads, social media, SEO and WhatsApp marketing. 7+ years, 300+ brands. Call for a growth plan.",
   },
   "/digital-marketing-agency-bangalore": {
     title: "Digital Marketing Agency in Bangalore",
