@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { LandingMobileCallBar } from "@/components/landing/landing-mobile-call-bar"
 import { TrackedContactLink } from "@/components/landing/tracked-contact-link"
 import { Reveal } from "@/components/motion/reveal"
@@ -97,7 +96,7 @@ function ReportCardGraphic() {
 
 export function DigitalMarketingAgencyLanding() {
   return (
-    <div className="min-h-svh pb-16 sm:pb-0">
+    <div className="min-h-svh pb-16">
       <SectionLayout
         tone="yellow"
         size="hero"
@@ -129,26 +128,6 @@ export function DigitalMarketingAgencyLanding() {
                 nativeButton={false}
                 render={
                   <TrackedContactLink
-                    href={siteContact.phoneHref}
-                    event="call_click"
-                    buttonLocation="hero"
-                  />
-                }
-                size="lg"
-                className={cn(bannerCtaPrimaryClassName, "lg:hidden")}
-              >
-                Call {siteContact.phoneDisplay}
-                <ArrowRight className="size-4" />
-              </Button>
-              <OpenEnquiryButton
-                label="Enquire now"
-                serviceName="Digital Marketing"
-                className={cn(bannerCtaPrimaryClassName, "hidden lg:inline-flex")}
-              />
-              <Button
-                nativeButton={false}
-                render={
-                  <TrackedContactLink
                     href={dmHydQuoteWhatsappHref}
                     event="whatsapp_click"
                     buttonLocation="hero"
@@ -156,8 +135,7 @@ export function DigitalMarketingAgencyLanding() {
                   />
                 }
                 size="lg"
-                variant="outline"
-                className={bannerCtaSecondaryClassName}
+                className={bannerCtaPrimaryClassName}
               >
                 WhatsApp us
                 <ArrowRight className="size-4" />
@@ -587,7 +565,8 @@ export function DigitalMarketingAgencyLanding() {
       </SectionLayout>
 
       <LandingMobileCallBar
-        callLabel="Call for a plan"
+        callLabel="Call us"
+        serviceName="Digital Marketing"
         whatsappHref={dmHydQuoteWhatsappHref}
       />
     </div>

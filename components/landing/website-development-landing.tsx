@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { LandingMobileCallBar } from "@/components/landing/landing-mobile-call-bar"
 import { TrackedContactLink } from "@/components/landing/tracked-contact-link"
 import { Reveal } from "@/components/motion/reveal"
@@ -96,7 +95,7 @@ function BrowserMockup() {
 
 export function WebsiteDevelopmentLanding() {
   return (
-    <div className="min-h-svh pb-16 sm:pb-0">
+    <div className="min-h-svh pb-16">
       <SectionLayout
         tone="yellow"
         size="hero"
@@ -131,26 +130,6 @@ export function WebsiteDevelopmentLanding() {
                 nativeButton={false}
                 render={
                   <TrackedContactLink
-                    href={siteContact.phoneHref}
-                    event="call_click"
-                    buttonLocation="hero"
-                  />
-                }
-                size="lg"
-                className={cn(bannerCtaPrimaryClassName, "lg:hidden")}
-              >
-                Call {siteContact.phoneDisplay}
-                <ArrowRight className="size-4" />
-              </Button>
-              <OpenEnquiryButton
-                label="Enquire now"
-                serviceName="Website Development"
-                className={cn(bannerCtaPrimaryClassName, "hidden lg:inline-flex")}
-              />
-              <Button
-                nativeButton={false}
-                render={
-                  <TrackedContactLink
                     href={websiteDevQuoteWhatsappHref}
                     event="whatsapp_click"
                     buttonLocation="hero"
@@ -158,8 +137,7 @@ export function WebsiteDevelopmentLanding() {
                   />
                 }
                 size="lg"
-                variant="outline"
-                className={bannerCtaSecondaryClassName}
+                className={bannerCtaPrimaryClassName}
               >
                 WhatsApp us
                 <ArrowRight className="size-4" />
@@ -665,7 +643,8 @@ export function WebsiteDevelopmentLanding() {
       </SectionLayout>
 
       <LandingMobileCallBar
-        callLabel="Call for price"
+        callLabel="Call us"
+        serviceName="Website Development"
         whatsappHref={websiteDevQuoteWhatsappHref}
       />
     </div>

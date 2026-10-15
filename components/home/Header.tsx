@@ -2,18 +2,37 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X as XIcon } from "lucide-react"
 
+import { OpenEnquiryButton } from "@/components/enquiry/open-enquiry-button"
 import { DesktopNav } from "@/components/home/desktop-nav"
 import { MobileNav } from "@/components/home/mobile-nav"
-import { growthAuditHref } from "@/constants/home/navigation"
+import { TrackedContactLink } from "@/components/landing/tracked-contact-link"
 import { ModeToggle } from "@/components/shared/mode-toggle"
 import { SiteLogo } from "@/components/shared/site-logo"
 import { Button } from "@/components/ui/button"
+import { growthAuditHref } from "@/constants/home/navigation"
+import { siteContact } from "@/constants/site/contact"
 import { useScrolled } from "@/hooks/use-scrolled"
 import { cn } from "@/lib/utils"
 
+const LANDING_PATHS = new Set([
+  "/website-development-company-hyderabad",
+  "/website-development-company-hyderabad/",
+  "/digital-marketing-agency-in-hyderabad",
+  "/digital-marketing-agency-in-hyderabad/",
+])
+
+function landingServiceName(pathname: string) {
+  if (pathname.includes("website-development")) return "Website Development"
+  if (pathname.includes("digital-marketing-agency-in")) return "Digital Marketing"
+  return undefined
+}
+
 export function Header() {
+  const pathname = usePathname()
+  const isLanding = LANDING_PATHS.has(pathname)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const isScrolled = useScrolled(50)
 
@@ -27,6 +46,10 @@ export function Header() {
     window.addEventListener("resize", onResize)
     return () => window.removeEventListener("resize", onResize)
   }, [isMenuOpen])
+
+  React.useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50 p-2">
@@ -49,47 +72,78 @@ export function Header() {
             <SiteLogo priority heightClassName="h-11 sm:h-12" />
           </Link>
 
-          <div className="hidden flex-1 items-center justify-center py-3 lg:flex">
-            <DesktopNav />
-          </div>
+          {!isLanding ? (
+            <div className="hidden flex-1 items-center justify-center py-3 lg:flex">
+              <DesktopNav />
+            </div>
+          ) : null}
 
-          <div className="hidden items-center gap-2 py-3 pr-3 lg:flex">
-            <ModeToggle />
-            <Button
-              variant="default"
-              nativeButton={false}
-              render={<Link href={growthAuditHref} />}
-              className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
-            >
-              Growth Audit
-            </Button>
-          </div>
+          {isLanding ? (
+            <div className="flex items-center gap-2 py-3 pr-3">
+              <ModeToggle />
+              <Button
+                nativeButton={false}
+                render={
+                  <TrackedContactLink
+                    href={siteContact.phoneHref}
+                    event="call_click"
+                    buttonLocation="header"
+                  />
+                }
+                className="bg-brand-yellow text-ink hover:bg-brand-yellow/90 lg:hidden"
+              >
+                Call us
+              </Button>
+              <OpenEnquiryButton
+                label="Enquire now"
+                serviceName={landingServiceName(pathname)}
+                size="default"
+                className="hidden bg-brand-yellow text-ink hover:bg-brand-yellow/90 lg:inline-flex"
+              />
+            </div>
+          ) : (
+            <>
+              <div className="hidden items-center gap-2 py-3 pr-3 lg:flex">
+                <ModeToggle />
+                <Button
+                  variant="default"
+                  nativeButton={false}
+                  render={<Link href={growthAuditHref} />}
+                  className="bg-brand-yellow text-ink hover:bg-brand-yellow/90"
+                >
+                  Growth Audit
+                </Button>
+              </div>
 
-          <button
-            type="button"
-            className="relative mr-1 flex size-12 shrink-0 items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus:outline-hidden lg:hidden"
-            onClick={() => setIsMenuOpen((open) => !open)}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMenuOpen}
-          >
-            <Menu
-              size={24}
-              className={cn(
-                "transition-all duration-300",
-                isMenuOpen ? "opacity-0 blur-lg" : "opacity-100 blur-0"
-              )}
-            />
-            <XIcon
-              size={24}
-              className={cn(
-                "absolute transition-all duration-300",
-                isMenuOpen ? "opacity-100 blur-0" : "opacity-0 blur-lg"
-              )}
-            />
-          </button>
+              <button
+                type="button"
+                className="relative mr-1 flex size-12 shrink-0 items-center justify-center text-muted-foreground transition-colors hover:text-foreground focus:outline-hidden lg:hidden"
+                onClick={() => setIsMenuOpen((open) => !open)}
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMenuOpen}
+              >
+                <Menu
+                  size={24}
+                  className={cn(
+                    "transition-all duration-300",
+                    isMenuOpen ? "opacity-0 blur-lg" : "opacity-100 blur-0"
+                  )}
+                />
+                <XIcon
+                  size={24}
+                  className={cn(
+                    "absolute transition-all duration-300",
+                    isMenuOpen ? "opacity-100 blur-0" : "opacity-0 blur-lg"
+                  )}
+                />
+              </button>
+            </>
+          )}
         </div>
 
-        <MobileNav open={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+        {!isLanding ? (
+          <MobileNav open={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+        ) : null}
       </nav>
     </header>
   )
