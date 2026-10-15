@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next"
 
 import { pageMetaBySlug } from "@/lib/seo/page-meta"
 
+/** Required for `output: "export"` — sitemap must be fully static. */
+export const dynamic = "force-static"
+
 const SITE = "https://digicarotene.com"
 
 /** Static sitemap from page-meta slugs (excludes redirect aliases). */
